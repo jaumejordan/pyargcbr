@@ -11,6 +11,9 @@ class DomainContext(Context):
     def remove_premise(self, old_premise: Premise):
         del self.premises[old_premise.id]
 
-    def set_premises_from_list(self, new_premises: list[Premise]):
-       for new_premise in new_premises:
+    def add_premise(self, new_premise: Premise):
         self.premises[new_premise.id] = new_premise
+
+    def set_premises_from_list(self, new_premises: list):
+        for new_premise in new_premises:
+            self.premises[new_premise.id] = new_premise

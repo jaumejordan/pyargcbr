@@ -1,10 +1,11 @@
 from dataclasses import dataclass, field
 
+from knowledge_resources.case_component import CaseComponent
 from knowledge_resources.conclusion import Conclusion
 
 
 @dataclass
-class Solution:
-    conclusion: Conclusion = field(default=Conclusion())
+class Solution(CaseComponent):
+    conclusion: Conclusion = Conclusion()
     value: str = ""
     timesUsed: int = 0

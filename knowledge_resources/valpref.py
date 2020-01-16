@@ -8,6 +8,9 @@ class ValPref:
     def remove_value(self, old_value: str):
         self.values.remove(old_value)
 
+    def add_value(self, new_value: str):
+        self.values.append(new_value)
+
     def get_preferred(self):
         try:
             return self.values[0]
