@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from typing import Dict, List
 
 from knowledge_resources.domain_case import DomainCase
 from knowledge_resources.premise import Premise
@@ -9,10 +10,8 @@ class Position:
     agent_id: str
     dialogue_id: str
     solution: Solution
-    # [int, Premise]
-    premises: dict
-    # DomainCase
-    domain_cases: list
+    premises: Dict[int, Premise]
+    domain_cases: List[DomainCase]
     domain_case_similarity: float
     arg_suitability_factor: float
     final_suitability: float

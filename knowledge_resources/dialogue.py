@@ -1,12 +1,12 @@
 from dataclasses import dataclass
-
+from typing import List
 from knowledge_resources.problem import Problem
 
 
 @dataclass
 class Dialogue:
     dialogue_id: str
-    agent_ids = list
+    agent_ids = List[str]
     problem: Problem
 
     def remove_agent_ids(self, agent_id: str):

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-
+from typing import List
 from knowledge_resources.argumentation_scheme import ArgumentationScheme
 from knowledge_resources.dialogue_graph import DialogueGraph
 from knowledge_resources.justification import Justification
@@ -7,10 +7,10 @@ from knowledge_resources.justification import Justification
 
 @dataclass
 class ArgumentJustification(Justification):
-    domain_cases_ids: list = field(default=[])
-    argument_cases_ids: list = field(default=[])
-    schemes: list = field(default=[])
-    dialogue_graphs: list = field(default=[])
+    domain_cases_ids: List[int] = field(default=[])
+    argument_cases_ids: List[int] = field(default=[])
+    schemes: List[ArgumentationScheme] = field(default=[])
+    dialogue_graphs: List[DialogueGraph] = field(default=[])
 
     def remove_argumentation_scheme(self, old_argumentation_scheme: ArgumentationScheme):
         self.schemes.remove(old_argumentation_scheme)

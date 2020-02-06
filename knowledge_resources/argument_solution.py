@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
-
+from typing import List
 from knowledge_resources.acceptability_status import AcceptabilityStatus
 from knowledge_resources.premise import Premise
 from knowledge_resources.solution import Solution
@@ -15,12 +15,12 @@ class ArgumentType(Enum):
 class ArgumentSolution(Solution):
     argument_type: ArgumentType = None
     acceptability_status: AcceptabilityStatus = AcceptabilityStatus.UNDECIDED
-    dist_premises: list = field(default=[])
-    presumptions: list = field(default=[])
-    exceptions: list = field(default=[])
+    dist_premises: List[Premise] = field(default=[])
+    presumptions: List[Premise] = field(default=[])
+    exceptions: List[Premise] = field(default=[])
 
-    counter_examples_arg_case_id: list = field(default=[])
-    counter_examples_dom_case_id: list = field(default=[])
+    counter_examples_arg_case_id: List[int] = field(default=[])
+    counter_examples_dom_case_id: List[int] = field(default=[])
 
     def remove_counter_example_arg_case_id(self, old_counter_example_arg_case_id: int):
         self.counter_examples_arg_case_id.remove(old_counter_example_arg_case_id)

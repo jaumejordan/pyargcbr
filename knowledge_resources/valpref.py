@@ -1,9 +1,10 @@
 from dataclasses import dataclass, field
+from typing import List
 
 
 @dataclass
 class ValPref:
-    values: list[str] = field(default=[])
+    values: List[str] = field(default=[])
 
     def remove_value(self, old_value: str):
         self.values.remove(old_value)

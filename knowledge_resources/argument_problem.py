@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-
 from knowledge_resources.problem import Problem
 from knowledge_resources.social_context import SocialContext
 

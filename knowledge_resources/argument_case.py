@@ -13,12 +13,6 @@ class ArgumentCase(Case):
     justification: ArgumentJustification = ArgumentJustification()
     times_used: int = 0
 
-    # TODO Do not know how to implement .hashCode()
-    def print_argument_case(self, arg_case):
-        print("********************* ArgumentCase hasID: ", arg_case.id, "************************")
-        print("ArgumentCase creation_date: ", arg_case.creation_date)
-        #print("ArgumentCase hasArgumentProblem: " + arg_case.argument_problem.hashCode())
-
     def __str__(self):
         st = "id: " + str(self.id) + " creationDate: " + self.creation_date + "\n"
         st += "Domain context. Premises:\n"

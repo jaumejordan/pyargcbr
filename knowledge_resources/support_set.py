@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+from typing import List
 
 from knowledge_resources.argument_case import ArgumentCase
 from knowledge_resources.argumentation_scheme import ArgumentationScheme
@@ -8,16 +9,16 @@ from knowledge_resources.premise import Premise
 
 @dataclass
 class SupportSet:
-    premises: list = field(default=[])
-    domain_cases: list = field(default=[])
-    argument_cases: list = field(default=[])
-    schemes: list = field(default=[])
-    dist_premises: list = field(default=[])
-    presumptions: list = field(default=[])
-    exceptions: list = field(default=[])
+    premises: List[Premise] = field(default=[])
+    domain_cases: List[DomainCase] = field(default=[])
+    argument_cases: List[ArgumentCase] = field(default=[])
+    schemes: List[ArgumentationScheme] = field(default=[])
+    dist_premises: List[Premise] = field(default=[])
+    presumptions: List[Premise] = field(default=[])
+    exceptions: List[Premise] = field(default=[])
 
-    counter_examples_dom_cases: list = field(default=[])
-    counter_examples_arg_cases: list = field(default=[])
+    counter_examples_dom_cases: List[DomainCase] = field(default=[])
+    counter_examples_arg_cases: List[ArgumentCase] = field(default=[])
 
     def remove_argumentation_scheme(self, old_argumentation_scheme: ArgumentationScheme):
         self.schemes.remove(old_argumentation_scheme)
@@ -72,12 +73,12 @@ class SupportSet:
         if self.premises and len(self.premises) > 0:
             st += "premises: "
             for p in self.premises:
-                st += str(p.id) + "=" + p.contennt + " "
+                st += str(p.id) + "=" + p.content + " "
 
         if self.dist_premises and len(self.dist_premises) > 0:
             st += "\ndist_premises: "
             for p in self.dist_premises:
-                st += str(p.id) + "=" + p.contennt + " "
+                st += str(p.id) + "=" + p.content + " "
 
         if self.counter_examples_arg_cases and len(self.counter_examples_arg_cases) > 0:
             st += "\ndist_premises: "

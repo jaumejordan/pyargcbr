@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+from typing import List
 from knowledge_resources.case import Case
 from knowledge_resources.justification import Justification
 from knowledge_resources.problem import Problem
@@ -7,9 +8,8 @@ from knowledge_resources.solution import Solution
 
 @dataclass
 class DomainCase(Case):
-    problem: Problem = field(default=Problem())
-    # Solution
-    solutions: list = field(default=[])
+    problem: Problem = Problem()
+    solutions: List[Solution] = field(default=[])
     justification: Justification = Justification()
 
     def remove_solution(self, old_solution: Solution):

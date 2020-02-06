@@ -4,6 +4,6 @@ from knowledge_resources.domain_case import DomainCase
 
 
 @dataclass
-class SimilarDomainClass:
+class SimilarDomainCase:
     caseb: DomainCase
     similarity: float

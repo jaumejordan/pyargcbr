@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from enum import Enum
+from typing import List
 
 
 class NodeType(Enum):
@@ -12,7 +13,7 @@ class NodeType(Enum):
 @dataclass
 class ArgNode:
     arg_case_id: int
-    child_arg_case_id_list: list
+    child_arg_case_id_list: List[int]
     parent_arg_case_id: int
     node_type: NodeType
 

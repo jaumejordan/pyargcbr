@@ -1,4 +1,6 @@
 from dataclasses import dataclass, field
+from typing import List
+
 from knowledge_resources.norm import Norm
 from knowledge_resources.valpref import ValPref
 
@@ -8,7 +10,7 @@ class SocialEntity:
     id: int = 1
     name: str = ""
     role: str = ""
-    norms: list[Norm] = field(default=[])
+    norms: List[Norm] = field(default=[])
     valpref: ValPref = ValPref()
 
     def delete_norm(self, old_norm: Norm):
