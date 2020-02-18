@@ -8,4 +8,4 @@ from knowledge_resources.conclusion import Conclusion
 class Solution(CaseComponent):
     conclusion: Conclusion = Conclusion()
     value: str = ""
-    timesUsed: int = 0
+    times_used: int = 0

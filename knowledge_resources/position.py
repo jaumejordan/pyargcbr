@@ -22,3 +22,7 @@ class Position:
 
     def add_domain_cases(self,new_domain_case: DomainCase):
         self.domain_cases.append(new_domain_case)
+
+    def __cmp__(self, other):
+        other_position = other.position
+        return round(other.final_suitability * 100000 - self.final_suitability * 100000)
