@@ -26,7 +26,6 @@ def save_object(obj, file_name: str):
         dump(obj, fh)
 
 
-@dataclass
 class DomainCBR:
     """
      This class implements the domain CBR.
@@ -175,7 +174,7 @@ class DomainCBR:
                     sol_found = False
                     for b_solution in current_case.solutions:
                         if b_solution.conclusion.id == a_solution.conclusion.id:
-                            b_solution.times_used += 1  # Update times used
+                            b_solution.times_used += a_solution.times_used  # TODO check if this is now correct (in Java was different)
                             sol_found = True
                             break
                     if not sol_found:
@@ -228,7 +227,7 @@ class DomainCBR:
     @staticmethod  # TODO is it useful for this method to be static?
     def get_premises_similarity(premises1: Dict[int, Premise], premises2: Dict[int, Premise]):
         """
-         Obtains the similarity between two Dicttionaries of premises using the similarity algorithm specified in the
+         Obtains the similarity between two Dictionaries of premises using the similarity algorithm specified in the
          configuration of this class.
 
         Parameters:
@@ -240,8 +239,8 @@ class DomainCBR:
         """
         c = Configuration()
         similarity_type = c.domain_cbrs_similarity
-        cas = DomainCase(Problem(DomainContext(premises2)), [],
-                         Justification())  # TODO check the reason of the warnings
+        cas = DomainCase(problem=Problem(DomainContext(premises2)), solutions=[],
+                         justification=Justification())
         case_list = List[DomainCase]
         case_list.append(cas)
         final_candidates: List[SimilarDomainCase] = []
