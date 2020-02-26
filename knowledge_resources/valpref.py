@@ -4,7 +4,7 @@ from typing import List
 
 @dataclass
 class ValPref:
-    values: List[str] = field(default=[])
+    values: List[str] = field(default_factory=lambda:[])
 
     def remove_value(self, old_value: str):
         self.values.remove(old_value)

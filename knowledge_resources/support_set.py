@@ -9,13 +9,13 @@ from knowledge_resources.premise import Premise
 
 @dataclass
 class SupportSet:
-    premises: List[Premise] = field(default=[])
-    domain_cases: List[DomainCase] = field(default=[])
-    argument_cases: List[ArgumentCase] = field(default=[])
-    schemes: List[ArgumentationScheme] = field(default=[])
-    dist_premises: List[Premise] = field(default=[])
-    presumptions: List[Premise] = field(default=[])
-    exceptions: List[Premise] = field(default=[])
+    premises: List[Premise] = field(default_factory=lambda:[])
+    domain_cases: List[DomainCase] = field(default_factory=lambda:[])
+    argument_cases: List[ArgumentCase] = field(default_factory=lambda:[])
+    schemes: List[ArgumentationScheme] = field(default_factory=lambda:[])
+    dist_premises: List[Premise] = field(default_factory=lambda:[])
+    presumptions: List[Premise] = field(default_factory=lambda:[])
+    exceptions: List[Premise] = field(default_factory=lambda:[])
 
     counter_examples_dom_cases: List[DomainCase] = field(default=[])
     counter_examples_arg_cases: List[ArgumentCase] = field(default=[])

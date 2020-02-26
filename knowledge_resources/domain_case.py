@@ -9,7 +9,7 @@ from knowledge_resources.solution import Solution
 @dataclass
 class DomainCase(Case):
     problem: Problem = Problem()
-    solutions: List[Solution] = field(default=[])
+    solutions: List[Solution] = field(default_factory=lambda:[])
     justification: Justification = Justification()
 
     def remove_solution(self, old_solution: Solution):

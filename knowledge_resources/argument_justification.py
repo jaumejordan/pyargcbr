@@ -7,10 +7,10 @@ from knowledge_resources.justification import Justification
 
 @dataclass
 class ArgumentJustification(Justification):
-    domain_cases_ids: List[int] = field(default=[])
-    argument_cases_ids: List[int] = field(default=[])
-    schemes: List[ArgumentationScheme] = field(default=[])
-    dialogue_graphs: List[DialogueGraph] = field(default=[])
+    domain_cases_ids: List[int] = field(default_factory=lambda:[])
+    argument_cases_ids: List[int] = field(default_factory=lambda:[])
+    schemes: List[ArgumentationScheme] = field(default_factory=lambda:[])
+    dialogue_graphs: List[DialogueGraph] = field(default_factory=lambda:[])
 
     def remove_argumentation_scheme(self, old_argumentation_scheme: ArgumentationScheme):
         self.schemes.remove(old_argumentation_scheme)

@@ -6,7 +6,7 @@ from knowledge_resources.premise import Premise
 
 @dataclass
 class DomainContext(Context):
-    premises: Dict[int, Premise] = field(default_factory=dict)
+    premises: Dict[int, Premise] = field(default_factory=lambda:{})
 
     def remove_premise(self, old_premise: Premise):
         del self.premises[old_premise.id]

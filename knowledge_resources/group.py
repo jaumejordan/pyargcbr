@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 
 @dataclass
 class Group(SocialEntity):
-    agents: List[SocialEntity] = field(default=[])
+    agents: List[SocialEntity] = field(default_factory=lambda:[])
 
     def remove_member(self, old_member: SocialEntity):
         self.agents.remove(old_member)

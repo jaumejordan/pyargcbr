@@ -10,7 +10,7 @@ class SocialEntity:
     id: int = 1
     name: str = ""
     role: str = ""
-    norms: List[Norm] = field(default=[])
+    norms: List[Norm] = field(default_factory=lambda:[])
     valpref: ValPref = ValPref()
 
     def delete_norm(self, old_norm: Norm):

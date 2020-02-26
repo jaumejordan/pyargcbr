@@ -6,7 +6,7 @@ from knowledge_resources.arg_node import ArgNode, NodeType
 
 @dataclass
 class DialogueGraph:
-    nodes: List[ArgNode] = field(default=[])
+    nodes: List[ArgNode] = field(default_factory=lambda:[])
 
     def remove_node(self, old_node: ArgNode):
         self.nodes.remove(old_node)

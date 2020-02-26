@@ -17,7 +17,7 @@ class Argument:
     support_set: SupportSet = SupportSet()
     acceptability_state: AcceptabilityStatus = AcceptabilityStatus.UNDECIDED
     attacking_to_arg_id: int = -1
-    received_attacks_counter_examples: List[Argument] = field(default=[])  # TODO find a way to make List[Argument] work
+    received_attacks_counter_examples: List[Argument] = field(default_factory=lambda:[])  # TODO find a way to make List[Argument] work
     received_attacks_dist_premises: List = field(default=[])
 
     def __str__(self):

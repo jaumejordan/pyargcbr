@@ -12,9 +12,9 @@ class ArgumentationScheme:
     arg_title: str = ""
     creation_date: str = ""
     author: Author = Author()
-    premises: list = field(default=[])
-    presumptions: list = field(default=[])
-    exceptions: list = field(default=[])
+    premises: list = field(default_factory=lambda:[])
+    presumptions: list = field(default_factory=lambda:[])
+    exceptions: list = field(default_factory=lambda:[])
 
     def remove_premise(self, old_premise: Premise):
         self.premises.remove(old_premise)
