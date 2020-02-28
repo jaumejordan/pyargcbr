@@ -1,0 +1,3362 @@
+{"domain_case": [
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_ha_confirmado_averia_con_el_informatico_del_area",
+						"content":"2649"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"bull_compuprint"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"914n"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"55",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"612",
+					"description":"comunicar_incidencia_a_bull_anotar_numero_de_incidencia_para_posibles_reclamaciones"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_ha_confirmado_averia_con_el_informatico_del_area",
+						"content":"2649"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"bull_compuprint"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"914n"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"55",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"612",
+					"description":"comunicar_incidencia_a_bull_anotar_numero_de_incidencia_para_posibles_reclamaciones"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_ha_confirmado_averia_con_el_informatico_del_area",
+						"content":"2649"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"bull_compuprint"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"914n"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"55",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"612",
+					"description":"comunicar_incidencia_a_bull_anotar_numero_de_incidencia_para_posibles_reclamaciones"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_ha_confirmado_averia_con_el_informatico_del_area",
+						"content":"2649"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"bull_compuprint"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"914n"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"55",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"612",
+					"description":"comunicar_incidencia_a_bull_anotar_numero_de_incidencia_para_posibles_reclamaciones"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_ha_confirmado_averia_con_el_informatico_del_area",
+						"content":"2649"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"bull_compuprint"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"914n"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"55",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"612",
+					"description":"comunicar_incidencia_a_bull_anotar_numero_de_incidencia_para_posibles_reclamaciones"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_ha_confirmado_averia_con_el_informatico_del_area",
+						"content":"2649"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"bull_compuprint"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"914n"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"55",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"612",
+					"description":"comunicar_incidencia_a_bull_anotar_numero_de_incidencia_para_posibles_reclamaciones"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_ha_confirmado_averia_con_el_informatico_del_area",
+						"content":"2649"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"bull_compuprint"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"914n"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"55",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"612",
+					"description":"comunicar_incidencia_a_bull_anotar_numero_de_incidencia_para_posibles_reclamaciones"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_ha_confirmado_averia_con_el_informatico_del_area",
+						"content":"2649"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"bull_compuprint"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"914n"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"55",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"612",
+					"description":"comunicar_incidencia_a_bull_anotar_numero_de_incidencia_para_posibles_reclamaciones"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_ha_confirmado_averia_con_el_informatico_del_area",
+						"content":"2649"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"bull_compuprint"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"914n"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"55",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"612",
+					"description":"comunicar_incidencia_a_bull_anotar_numero_de_incidencia_para_posibles_reclamaciones"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_ha_confirmado_averia_con_el_informatico_del_area",
+						"content":"2649"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"bull_compuprint"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"914n"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"55",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"612",
+					"description":"comunicar_incidencia_a_bull_anotar_numero_de_incidencia_para_posibles_reclamaciones"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"No_se_puede_examinar_la_red",
+						"content":"1820"
+					},
+
+					{
+						"id":"48",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"49",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"50",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"51",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"47",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"72",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"35",
+					"description":"comprobar_dominio_y_nombre_de_usuario_comprobar_latiguillo_de_red"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"No_se_puede_examinar_la_red",
+						"content":"1820"
+					},
+
+					{
+						"id":"48",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"49",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"50",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"51",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"47",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"27",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"34",
+					"description":"legal-_comprobar_que_introduce_bien_la_contrasenya_si_continua_sin_acceder_pedir_nombre_de_usuario_y_caducar_la_contrasenya"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"No_se_puede_examinar_la_red",
+						"content":"1820"
+					},
+
+					{
+						"id":"48",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"49",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"50",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"51",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"47",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"27",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"34",
+					"description":"legal-_comprobar_que_introduce_bien_la_contrasenya_si_continua_sin_acceder_pedir_nombre_de_usuario_y_caducar_la_contrasenya"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"No_se_puede_examinar_la_red",
+						"content":"1820"
+					},
+
+					{
+						"id":"48",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"49",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"50",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"51",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"47",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"27",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"34",
+					"description":"legal-_comprobar_que_introduce_bien_la_contrasenya_si_continua_sin_acceder_pedir_nombre_de_usuario_y_caducar_la_contrasenya"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"34",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"448",
+					"description":"fallan_ficheros_habituales_bloqueados_de_sistema_operativo_backup_bueno"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"3",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"398",
+					"description":"revisar_logs_en_el_servidor_y-o_correos_para_comprobar_si_ha_fallado_la_copia_completa_o_solamente_algun_fichero_sin_importancia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"3",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"398",
+					"description":"revisar_logs_en_el_servidor_y-o_correos_para_comprobar_si_ha_fallado_la_copia_completa_o_solamente_algun_fichero_sin_importancia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"51",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"hp"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"laserjet_4000n"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"1",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"25",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"hp"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"2100_tn"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"51",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"No_imprime",
+						"content":"1958"
+					},
+
+					{
+						"id":"1",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"8",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"11",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"12",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"13",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"14",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"15",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"16",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"17",
+						"name":"()",
+						"content":"letter"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"22",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"73",
+					"description":"reiniciar_pc_por_si_no_pudo_cargar_los_controladores_de_impresion"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"No_imprime",
+						"content":"1958"
+					},
+
+					{
+						"id":"1",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"laserjet"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"4000"
+					},
+
+					{
+						"id":"8",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"11",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"12",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"13",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"14",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"15",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"16",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"17",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"22",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"111",
+					"description":"desenchufar_impresora_y_volverla_a_enchufar_a_la_corriente_electrica"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"No_imprime",
+						"content":"1958"
+					},
+
+					{
+						"id":"1",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"8",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"11",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"12",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"13",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"14",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"15",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"16",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"17",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"22",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"12",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"17",
+					"description":"legal-_comprobar_que_esta_en_red_consultando_si_puede_ver_los_directorios_xyw_si_esta_en_red_ir_a_inicio-configuracion-impresoras_pulsar_sobre_la_impresora_que_utiliza_el_boton_derecho_del_raton_comprobar_que_tenga_marcada_la_opcion_configurar_como_predeterminada_y_desmarcada_la_opcion_trabajar_sin_conexion_a_la_red"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Unix_Client",
+						"content":"61"
+					},
+
+					{
+						"id":"64",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"26",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"27",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"28",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"63",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"2",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"394",
+					"description":"se_levanta_el_recurso_xmui_con_el_comamdo_correspondiente_de_syop_y_se_revisa_el_log_por_si_aparecen_otros_posibles_problemas_relacionados"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Unix_Client",
+						"content":"61"
+					},
+
+					{
+						"id":"64",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"26",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"27",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"28",
+						"name":"()",
+						"content":"error_en_cambio_de_conexion"
+					},
+
+					{
+						"id":"63",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"2",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"394",
+					"description":"se_levanta_el_recurso_xmui_con_el_comamdo_correspondiente_de_syop_y_se_revisa_el_log_por_si_aparecen_otros_posibles_problemas_relacionados"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"NT_Client",
+						"content":"56"
+					},
+
+					{
+						"id":"26",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"27",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"28",
+						"name":"()",
+						"content":"cplc_caido"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"4",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"391",
+					"description":"parar_el_proceso_cplc_si_todabia_esta_activo_y_arrancarlo_de_nuevo"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"NT_Client",
+						"content":"56"
+					},
+
+					{
+						"id":"26",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"27",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"28",
+						"name":"()",
+						"content":"cplc_caido"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"4",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"391",
+					"description":"parar_el_proceso_cplc_si_todabia_esta_activo_y_arrancarlo_de_nuevo"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Monitor_en_negro",
+						"content":"2231"
+					},
+
+					{
+						"id":"33",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"34",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"35",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"29",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"30",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"13",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"65",
+					"description":"apagar_el_monitor_desde_el_boton_y_volver_a_encenderlo_pulsar_la_barra_del_espacio_para_reestablecer_la_senyal_de_video"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Monitor_en_negro",
+						"content":"2231"
+					},
+
+					{
+						"id":"33",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"34",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"35",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"29",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"30",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"2",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"33",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Error_mostrado_en_DISPLAY",
+						"content":"1959"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"3",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"20",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"xerox"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"4030"
+					},
+
+					{
+						"id":"7",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"8",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"10",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"101",
+					"description":"la_impresora_en_cuestion_es_una_xerox_4030_estas_impresoras_tras_cambiar_el_toner_es_necesario_en_la_primera_puesta_en_funcionamiento_mantener_presionado_un_boton_pequenyo_tipo_reset_que_existe_al_lado_del_interruptor_de_encendido"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Error_mostrado_en_DISPLAY",
+						"content":"1959"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"3",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"20",
+						"name":"()",
+						"content":"error_50_service"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"canon"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"laser_lbp-83_mark"
+					},
+
+					{
+						"id":"7",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"8",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"10",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"31",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Tras_mirar_Fecha_de_paso_en_la_pantalla__Situacion_de_tarjeta_desde_esta_fecha_hasta_hoy_no_ha_pasado_un_mes",
+						"content":"1519"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"0"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"29",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"575",
+					"description":"se_informa_al_ciudadano_que_debe_esperar"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_bloquea",
+						"content":"1798"
+					},
+
+					{
+						"id":"42",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"43",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"44",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"79",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"306",
+					"description":"pulsar_5_segundos_el_boton_de_arranque"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Tras_mirar_Fecha_de_paso_en_la_pantalla__Situacion_de_tarjeta_desde_esta_fecha_hasta_hoy_no_ha_pasado_un_mes",
+						"content":"1538"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"0"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"68",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"568",
+					"description":"se_informa_al_ciudadano_que_debe_esperar"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Tras_comprobar_todos_los_datos_imprescindibles_para_recibir_la_tarjeta_falta_alguno",
+						"content":"1529"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"40",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"564",
+					"description":"se_han_completado_y_se_ha_comprobado_que_la_situacion_de_tarjeta_cambia_a_p2_o_p1"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Acreditacion_provisional_Menor_de_3_meses",
+						"content":"1528"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"2"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"99",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"559",
+					"description":"se_ha_informado_al_ciudadano_que_tiene_que_esperr_al_cruce_con_la_tesorerira_de_la_ss"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Acreditacion_provisional_mayor_de_3_meses_y_tras_verificar_NSS_se_detecta_un_error",
+						"content":"1532"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"4"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"29",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"561",
+					"description":"se_deriva_al_centro_de_salud_con_el_documento_de_acreditacion"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Tras_mirar_Fecha_de_paso_en_la_pantalla__Situacion_de_tarjeta_desde_esta_fecha_hasta_hoy_no_ha_pasado_un_mes",
+						"content":"1547"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"0"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"32",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"566",
+					"description":"se_informa_al_ciudadano_que_debe_esperar"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"No_tiene_recursos_economicos",
+						"content":"1523"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"21",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"629",
+					"description":"remitir_al_trabajador_social_del_centro_de_salud"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Tarjeta_en_P4",
+						"content":"1544"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"21",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"570",
+					"description":"se_ha_revisado_y_actualizado_la_direccion_si_no_fuera_correcta_se_ha_verificado_que_la_tarjeta_se_reconstruye"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Tras_mirar_Fecha_de_paso_en_la_pantalla__Situacion_de_tarjeta_desde_esta_fecha_hasta_hoy_no_ha_pasado_dos_meses",
+						"content":"1551"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"1"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"51",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"571",
+					"description":"se_indica_al_usuario_que_puede_recibirla_y_que_sino_la_ha_recibido_pasados_los_2_meses_vuelva_a_llamar"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Acreditacion_provisional_mayor_de_3_meses_y_tras_verificar_datos_son_correctos",
+						"content":"1526"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"4"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"313",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"562",
+					"description":"se_deriva_al_centro_de_salud"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Tras_mirar_Fecha_de_paso_en_la_pantalla__Situacion_de_tarjeta_desde_esta_fecha_hasta_hoy_ha_pasado_mas_de_dos_meses",
+						"content":"1550"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"3"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"272",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"572",
+					"description":"se_ha_cambiado_manualmente_el_estado_de_tarjeta_a_d8_distribuida_y_no_recibida"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"No_se_puede_Navegar",
+						"content":"1881"
+					},
+
+					{
+						"id":"39",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"40",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"41",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"2",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"61",
+					"description":"micro-_comprobar_si_navega_por_wwwgvaes_si_navega_por_esta_web_comprobar_si_navega_por_wwwyahoocom_o_cualquier_web_que_no_sea_de_la_gva_si_por_esa_no_navega_le_comunico_que_se_ha_cortado_la_conexion_con_el_exteriror_de_gva_y_que_el_pc_funciona_correctamente_si_continua_sin_funcionar_al_cabo_de_unos_dias_que_lo_verifique_con_sus_companyeros_y_vuelva_a_llamar_si_fuese_necesario"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Hace_ruidos_anormales_al_imprimir",
+						"content":"1957"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"canon"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"bjc_4200"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"29",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Cliente",
+						"content":"1162"
+					},
+
+					{
+						"id":"66",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"3",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"91",
+					"description":"seguir_el_procedimiento_de_instalacion_explicado_en_la_instruccion_de_trabajo_itaplifc-pcl07005_adjunta_a_esta_solucion"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"La_fecha_de_paso_en_la_pantalla__Situacion_de_tarjeta_es_reciente",
+						"content":"2621"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"0"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"1372",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"557",
+					"description":"se_informa_al_ciudadano_que_debe_esperar_a_recibirla_en_su_domicilio_se_ha_comprobado_direccion"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Endpoint",
+						"content":"68"
+					},
+
+					{
+						"id":"62",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"2",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"385",
+					"description":"comprobar_que_no_exinten_los_procesos_lcfd_ni_dm_ep_valsr55root>_ps_-ef_grep_lcfd_____root__5646__5629__0_09-59-42_pts-ta____0-00_grep_lcfd_valsr55root>_ps_-ef_grep_dm_ep_____root__5655__5629__1_10-02-30_pts-ta____0-00_grep_dm_ep_se_accede_al_directorio_valsr55root>_pwd_-usr-local-tivoli-lcf-dat-1_valsr55root>_-lcfdsh_start_apr_01_10-03-04_1_lcfd_command_line_argv0-usr-local-tivoli-lcf-bin-hpux10-mrt-lcfd_apr_01_10-03-04_2_lcfd_writing_gcs_file-_-usr-local-tivoli-lcf-dat-1-lastcfg_apr_01_10-03-04_3_lcfd_local_ip_interface_address-_0000_apr_01_10-03-04_1_lcfd_starting_unix_daemon_valsr55root>_ps_-ef_grep_lcfd_____root__5663_____1__0_10-03-04__________0-00_-usr-local-tivoli-lcf-bin-hpux10-mrt-lcfd_____root__5667__5629__0_10-03-24_pts-ta____0-00_grep_lcfd"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	}
+]}
