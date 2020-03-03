@@ -1,6 +1,6 @@
 import json
 from pickle import dump, load
-from typing import List
+from typing import List, Any, Dict
 
 from knowledge_resources.conclusion import Conclusion
 from knowledge_resources.domain_case import DomainCase
@@ -22,9 +22,10 @@ def save_object(obj, file_name: str):
         dump(obj, fh)
 
 
-def load_object(file_name: str):
-    with open(file_name, 'rb') as fh:
-        return load(fh)
+def save_objects(objs: List[Any], file_name: str):
+    with open(file_name, 'wb') as fh:
+        for obj in objs:
+            dump(obj, fh)
 
 
 if __name__ == "__main__":
@@ -45,13 +46,13 @@ if __name__ == "__main__":
         new_context = DomainContext()
         context_dict = problem_dict["context"]
 
-        new_premises: List[Premise] = []
+        new_premises: Dict[int, Premise] = {}
         for premise_dict in context_dict["premises"]:
             new_premise = Premise()
             new_premise.id = premise_dict["id"]
             new_premise.name = premise_dict["name"]
             new_premise.content = premise_dict["content"]
-            new_premises.append(new_premise)
+            new_premises[new_premise.id] = new_premise
 
         new_context.premises = new_premises
         new_problem.context = new_context
@@ -79,23 +80,9 @@ if __name__ == "__main__":
 
         new_domain_cases.append(new_domain_case)
 
-    save_object(new_domain_cases, "domain_cases_py.dat")
+    save_objects(new_domain_cases, "domain_cases_py.dat")
 
-    reloaded_domain_cases = load_object("domain_cases_py.dat")
-
-    print("Número de DomainCase en el la lista creada: ", len(reloaded_domain_cases))
-    print("Toda la lista creada:")
-    for d in reloaded_domain_cases:
-        print(d)
-
-    # TODO -> From this code we learnt that to make incremental cache saves the file must be kept open
-    # Probando pickle
-    fh = open("kk.dat", 'wb')
-    for d in reloaded_domain_cases:
-        dump(d, fh)
-    fh.close()
-
-    fh = open("kk.dat", 'rb')
+    fh = open("domain_cases_py.dat", 'rb')
     print("\n\n\nTodo el contenido del fichero:")
     count = 0
     while True:

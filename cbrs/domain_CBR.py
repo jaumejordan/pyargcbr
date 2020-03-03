@@ -58,19 +58,21 @@ class DomainCBR:
         introduced = 0
         not_introduced = 0
         str_ids = ""
-        with open(self.storing_file_path) as fh:
-            aux = load(fh)
-            while aux:
-                if type(aux) == DomainCase:
-                    a_case = aux
-                    str_ids += a_case.solutions[0].conclusion.id + " "
-                    returned_value = self.add_case(a_case)
-                    if returned_value:
-                        introduced += 1
-                    else:
-                        not_introduced += 1
-                aux = load(fh)
-
+        with open(self.file_path, 'rb') as fh:
+            while True:
+                try:
+                    aux = load(fh)
+                    print(type(aux))
+                    if type(aux) == DomainCase:
+                        a_case = aux
+                        str_ids += a_case.solutions[0].conclusion.id + " "
+                        returned_value = self.add_case(a_case)
+                        if returned_value:
+                            introduced += 1
+                        else:
+                            not_introduced += 1
+                except EOFError:
+                    break
         print(self.file_path, "domain_cases: ", introduced + not_introduced,
               "introduced: ", introduced, "not_introduced: ", not_introduced, "sols: ", str_ids)
 
@@ -117,7 +119,7 @@ class DomainCBR:
         similar_cases = self.get_most_similar(premises, threshold, c.domain_cbrs_similarity)
         return similar_cases
 
-    def add_case(self, new_case: DomainCase):
+    def add_case(self, new_case: DomainCase) -> bool:
         """
         Adds a new domain-case to domain case-base. Otherwise, if the same domain-case exists in the case-base, adds
         the relevant data to the existing domain-case.
