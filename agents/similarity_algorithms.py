@@ -42,10 +42,16 @@ def normalized_euclidean_similarity(premises: Dict[int, Premise], candidate_case
             index += 1
 
         # Now we normalize the distances -> [0.0...1.0]
-        aux_dist = [aux_dist[i] / max_dist for i in range(num_cases) if not max_dist_vec[i]]
-        aux_dist = [aux_dist[i] * aux_dist[i] for i in range(num_cases)]  # Square
-        for i in range(num_cases):
-            accum_dist[i] += aux_dist[i]
+        for index in range(num_cases):
+            if not max_dist:
+                aux_dist[index] = 0
+            elif max_dist_vec[index]:
+                aux_dist[index] = 1
+            else:
+                aux_dist[index] /= max_dist
+
+            aux_dist[index] += aux_dist[index]
+            accum_dist[index] += aux_dist[index]
 
     final_candidates: List[SimilarDomainCase] = []
     index = 0
@@ -58,7 +64,7 @@ def normalized_euclidean_similarity(premises: Dict[int, Premise], candidate_case
         final_candidates.append(SimilarDomainCase(candidate, similarity))
         index += 1
 
-    return sorted(final_candidates)
+    return sorted(final_candidates, reverse=True)
 
 
 def weighted_euclidean_similarity(premises: Dict[int, Premise], candidate_cases: List[DomainCase]) \
@@ -97,7 +103,7 @@ def weighted_euclidean_similarity(premises: Dict[int, Premise], candidate_cases:
         similarity: float = 1 / (sqrt(distance) + 1)
         final_candidates.append(SimilarDomainCase(candidate, similarity))
 
-    return sorted(final_candidates)
+    return sorted(final_candidates, reverse=True)
 
 
 def normalized_tversky_similarity(premises: Dict[int, Premise], candidate_cases: List[DomainCase]) \
@@ -154,4 +160,4 @@ def normalized_tversky_similarity(premises: Dict[int, Premise], candidate_cases:
         final_candidates.append(SimilarDomainCase(candidate, similarity))
         index += 1
 
-    return sorted(final_candidates)
+    return sorted(final_candidates, reverse=True)

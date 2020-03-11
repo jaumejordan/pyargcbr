@@ -62,10 +62,9 @@ class DomainCBR:
             while True:
                 try:
                     aux = load(fh)
-                    print(type(aux))
                     if type(aux) == DomainCase:
                         a_case = aux
-                        str_ids += a_case.solutions[0].conclusion.id + " "
+                        str_ids += str(a_case.solutions[0].conclusion.id) + " "
                         returned_value = self.add_case(a_case)
                         if returned_value:
                             introduced += 1
@@ -89,7 +88,7 @@ class DomainCBR:
         """
         c = Configuration()
         similar_cases = self.get_most_similar(dom_case.problem.context.premises, threshold, c.domain_cbrs_similarity)
-        if not similar_cases:
+        if similar_cases:
             for similar_case in similar_cases:
                 if similar_case.similarity < 1.0:
                     dom_case.solutions = similar_case.caseb.solutions
@@ -131,19 +130,19 @@ class DomainCBR:
             True if the domain-case is added, else False.
         """
         main_premise_id = -1
-        main_premise_value = str
-        cases = List[DomainCase]
+        main_premise_value: str = ""
+        cases: List[DomainCase] = []
 
         if self.index != -1:
             main_premise_value = new_case.problem.context.premises[self.index].content
-            cases = self.domain_cb[main_premise_value]
+            cases = self.domain_cb.get(main_premise_value)
         else:
             new_case_premises_list: List[int] = []
             for premise in new_case.problem.context.premises.values():
                 new_case_premises_list.append(premise.id)
             new_case_premises_list = sorted(new_case_premises_list)
             main_premise_id = new_case_premises_list[0]
-            cases = self.domain_cb[str(main_premise_id)]  # TODO validate this line
+            cases = self.domain_cb.get(str(main_premise_id))
 
         if not cases:
             cases = [new_case]
@@ -207,8 +206,8 @@ class DomainCBR:
             List of :class:'SimilarDomainCase'.
         """
         candidate_cases = self.get_candidate_cases(premises)
-        final_candidates = List[SimilarDomainCase]
-        more_similar_candidates = List[SimilarDomainCase]
+        final_candidates: List[SimilarDomainCase] = []
+        more_similar_candidates: List[SimilarDomainCase] = []
 
         if similarity_type == SimilarityType.NORMALIZED_EUCLIDEAN:
             final_candidates = sim_algs.normalized_euclidean_similarity(premises, candidate_cases)
@@ -243,7 +242,7 @@ class DomainCBR:
         similarity_type = c.domain_cbrs_similarity
         cas = DomainCase(problem=Problem(DomainContext(premises2)), solutions=[],
                          justification=Justification())
-        case_list = List[DomainCase]
+        case_list: List[DomainCase] = []
         case_list.append(cas)
         final_candidates: List[SimilarDomainCase] = []
 
@@ -306,8 +305,8 @@ class DomainCBR:
             :class:'DomainCase' List
         """
         candidate_cases: List[DomainCase] = []
-        main_premise_id = -1
-        main_premise_value = str
+        main_premise_id: int = -1
+        main_premise_value: str
 
         if self.index != -1:
             main_premise_value = premises[self.index].content
@@ -315,13 +314,13 @@ class DomainCBR:
             if not candidate_cases:
                 candidate_cases = []
         else:
-            new_case_premises_list = []
-            for premise in premises.keys():
-                new_case_premises_list.append(premise)
-            new_case_premises_list = sorted(new_case_premises_list)
+            new_case_premises_list: List[int] = []
+            for premise in premises.values():
+                new_case_premises_list.append(premise.id)
+            new_case_premises_list = sorted(new_case_premises_list) #  TODO for sorted '15' < '2' (sorts alphabeticaly)
             for premise_id in new_case_premises_list:
                 main_premise_id = premise_id
-                dom_cases = self.domain_cb[str(main_premise_id)]  # TODO validate this line
+                dom_cases = self.domain_cb.get(str(main_premise_id))
                 if dom_cases:
-                    candidate_cases.append(dom_cases)
+                    candidate_cases += dom_cases
         return candidate_cases

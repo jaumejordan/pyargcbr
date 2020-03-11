@@ -32,8 +32,8 @@ def do_dist(a: str, b: str):
 
 
 def levenshtein_distance(x: str, y: str):
-    current_row = [0] * len(x)
-    previous_row = [0] * len(x)
+    current_row = [0] * (len(x) + 1)
+    previous_row = [0] * (len(x) + 1)
     for i in range(1, len(x) + 1):
         current_row[i] = current_row[i - 1] + 1
 

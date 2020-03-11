@@ -23,6 +23,23 @@ class Position:
     def add_domain_cases(self,new_domain_case: DomainCase):
         self.domain_cases.append(new_domain_case)
 
-    def __cmp__(self, other):
-        other_position = other.position
+    def my_cmp(self, other):
         return round(other.final_suitability * 100000 - self.final_suitability * 100000)
+
+    def __lt__(self, other):
+        return self.my_cmp(other) < 0
+
+    def __gt__(self, other):
+        return self.my_cmp(other) > 0
+
+    def __eq__(self, other):
+        return self.my_cmp(other) == 0
+
+    def __le__(self, other):
+        return self.my_cmp(other) <= 0
+
+    def __ge__(self, other):
+        return self.my_cmp(other) >= 0
+
+    def __ne__(self, other):
+        return self.my_cmp(other) != 0

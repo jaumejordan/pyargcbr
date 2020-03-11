@@ -37,7 +37,7 @@ if __name__ == "__main__":
     new_domain_cases: List[DomainCase] = []
     for domain_case_dict in domain_cases:
         new_domain_case = DomainCase()
-        new_domain_case.id = domain_case_dict["id"]
+        new_domain_case.id = int(domain_case_dict["id"])
         new_domain_case.creation_date = domain_case_dict["creation_date"]
 
         new_problem = Problem()
@@ -49,7 +49,7 @@ if __name__ == "__main__":
         new_premises: Dict[int, Premise] = {}
         for premise_dict in context_dict["premises"]:
             new_premise = Premise()
-            new_premise.id = premise_dict["id"]
+            new_premise.id = int(premise_dict["id"])
             new_premise.name = premise_dict["name"]
             new_premise.content = premise_dict["content"]
             new_premises[new_premise.id] = new_premise
@@ -61,12 +61,12 @@ if __name__ == "__main__":
         new_solutions: List[Solution] = []
         for solution_dict in domain_case_dict["solutions"]:
             new_solution = Solution()
-            new_solution.times_used = solution_dict["times_used"]
+            new_solution.times_used = int(solution_dict["times_used"])
             new_solution.value = solution_dict["value"]
 
             new_conclusion = Conclusion()
             conclusion_dict = solution_dict["conclusion"]
-            new_conclusion.id = conclusion_dict["id"]
+            new_conclusion.id = int(conclusion_dict["id"])
             new_conclusion.description = conclusion_dict["description"]
             new_solution.conclusion = new_conclusion
 

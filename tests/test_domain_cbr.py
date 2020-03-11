@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
 """Tests for `pyargcbr` package."""
+from typing import List, Dict
+from agents.metrics import levenshtein_distance as compare
 
 import pytest
 
@@ -28,8 +30,67 @@ class TestDomainCBR():
             retrieved_cases = self.cbr.retrieve_and_retain(a_case, 1.0)
             for sim_case in retrieved_cases:
                 comp:bool = sim_case.caseb.problem.context.premises == a_case.problem.context.premises
-                print(comp)
                 assert comp # TODO is this a good way to compare two dicts?
+
+    def retrieval_consistency(self):
+        all_cases = self.cbr.get_all_cases()
+        all_cases2: List[DomainCase] = []
+        for cases_list in all_cases:
+            all_cases2 += cases_list
+
+        for cases_list in all_cases:
+            for a_case in cases_list:
+                # Query the domainCBR for the list similarCases1
+                similar_cases1 = self.cbr.retrieve_and_retain(a_case, 0.0)
+                # Query again the domainCBR for the list of similarCases2
+                similar_cases2 = self.cbr.retrieve_and_retain(a_case, 0.0)
+                for case1 in similar_cases1:
+                    found: bool = False
+                    for case2 in similar_cases1:
+                        if case1.similarity == case2.similarity and \
+                            compare(case1.caseb.justification.description, case2.caseb.justification.description) == 0:
+                            assert True # TODO not all the comparisons have been translated
+                            found = True
+                    if not found:
+                        assert False
+
+    def case_duplication(self):
+        all_cases = self.cbr.get_all_cases()
+        all_cases2: List[DomainCase] = []
+        for cases_list in all_cases:
+            all_cases2 += cases_list
+
+        for cases_list in all_cases:
+            for a_case in cases_list:
+                similar_cases = self.cbr.retrieve_and_retain(a_case, 0.0)
+                for i in range(len(similar_cases)):
+                    case1 = similar_cases[i]
+                    similar_cases.remove(case1)
+                    i -= 1
+                    assert case1 not in similar_cases
+
+    def operability(self):
+        first_case = self.cbr.get_all_cases_list()[0]
+        similar_to_first_case = self.cbr.retrieve_and_retain(first_case, 0.0)
+        assert similar_to_first_case[0] == first_case # TODO not all the comparisons have been translated
+
+        premises: Dict[int, Premise] = {}
+        for premise in first_case.problem.context.premises.values():
+            premises[premise.id] = premise
+
+        first_premise = list(premises.values())[0]
+        first_premise.content += "aa"
+        solutions = first_case.solutions
+        justification = Justification("justification")
+        dom_case = DomainCase(problem=Problem(
+            context=DomainContext(premises=premises)), solutions=solutions, justification=justification)
+
+        self.cbr.add_case(dom_case)
+
+        similar_cases = self.cbr.retrieve_and_retain(dom_case, 0.0)
+        assert similar_cases[0] == dom_case # TODO not all the comparisons have been translated
+        similar_cases = self.cbr.retrieve_and_retain(first_case, 0.0) # TODO check if there was an error in the original code
+        assert similar_to_first_case[0] == first_case # TODO not all the comparisons have been translated
 
     @pytest.fixture
     def response(self):

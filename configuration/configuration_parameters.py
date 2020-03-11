@@ -25,9 +25,9 @@ class DomainCBR:
 
 @dataclass
 class ArgCbr:
-    opponent_id_weight: int = 1
-    proponent_pref_weight: int = 1
-    proponent_id_weight: int = 1
-    opponent_pref_weight: int = 1
-    group_id_weight: int = 1
-    group_pref_weight: int = 1
+    opponent_id_weight: float = 1.0
+    proponent_pref_weight: float = 1.0
+    proponent_id_weight: float = 1.0
+    opponent_pref_weight: float = 1.0
+    group_id_weight: float = 1.0
+    group_pref_weight: float = 1.0
