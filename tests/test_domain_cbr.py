@@ -2,7 +2,7 @@
 
 """Tests for `pyargcbr` package."""
 from typing import List, Dict
-from agents.metrics import levenshtein_distance as compare
+from agents.metrics import levenshtein_distance as cmp
 
 import pytest
 
@@ -18,6 +18,26 @@ from knowledge_resources.solution import Solution
 
 from cbrs.domain_CBR import DomainCBR
 
+def similar_domain_case_comparison(case1: SimilarDomainCase, case2: SimilarDomainCase):
+    premises1 = list(case1.caseb.problem.context.premises.values())
+    premises2 = list(case2.caseb.problem.context.premises.values())
+    solutions1 = case1.caseb.solutions
+    solutions2 = case2.caseb.solutions
+    if case1.similarity == case2.similarity \
+        and cmp(case1.caseb.justification.description, case2.caseb.justification.description) == 0 \
+        and len(premises1) == len(premises2) \
+        and len(solutions1) == len(solutions2):
+        equal: bool = True
+        for i in range(0, len(premises1)):
+            if premises1[i] != premises2[i]:
+                return False
+        for i in range(0, len(solutions1)):
+            if solutions1[i].conclusion.id != solutions2[i].conclusion.id \
+                or cmp(solutions1[i].conclusion.description, solutions2[i].conclusion.description) > 0:
+                return False
+    return True
+
+
 
 class TestDomainCBR():
     cbr: DomainCBR = None
@@ -29,8 +49,13 @@ class TestDomainCBR():
         for a_case in self.cbr.get_all_cases_list():
             retrieved_cases = self.cbr.retrieve_and_retain(a_case, 1.0)
             for sim_case in retrieved_cases:
-                comp:bool = sim_case.caseb.problem.context.premises == a_case.problem.context.premises
-                assert comp # TODO is this a good way to compare two dicts?
+                equal = True # sim_case.caseb.problem.context.premises == a_case.problem.context.premises
+                sim_premises = list(sim_case.caseb.problem.context.premises.values())
+                a_premises = list(a_case.problem.context.premises.values())
+                for i in range(0, len(a_premises)):
+                    if sim_premises[i] != a_premises[i]:
+                        equal = False
+                assert equal
 
     def retrieval_consistency(self):
         all_cases = self.cbr.get_all_cases()
@@ -46,11 +71,11 @@ class TestDomainCBR():
                 similar_cases2 = self.cbr.retrieve_and_retain(a_case, 0.0)
                 for case1 in similar_cases1:
                     found: bool = False
-                    for case2 in similar_cases1:
-                        if case1.similarity == case2.similarity and \
-                            compare(case1.caseb.justification.description, case2.caseb.justification.description) == 0:
-                            assert True # TODO not all the comparisons have been translated
+                    for case2 in similar_cases2:
+                        if similar_domain_case_comparison(case1, case2):
+                            assert True
                             found = True
+                            break
                     if not found:
                         assert False
 
@@ -98,4 +123,7 @@ class TestDomainCBR():
 
     def test_content(self, response):
         self.set_up()
-        self.retrieval_accuracy()
+        #self.retrieval_accuracy()
+        self.retrieval_consistency()
+        #self.case_duplication()
+        self.operability()

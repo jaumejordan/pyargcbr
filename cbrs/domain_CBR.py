@@ -306,7 +306,7 @@ class DomainCBR:
         """
         candidate_cases: List[DomainCase] = []
         main_premise_id: int = -1
-        main_premise_value: str
+        main_premise_value: str = ''
 
         if self.index != -1:
             main_premise_value = premises[self.index].content
