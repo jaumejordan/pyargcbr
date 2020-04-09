@@ -6,11 +6,11 @@ from knowledge_resources.problem import Problem
 from knowledge_resources.solution import Solution
 
 
-@dataclass
 class DomainCase(Case):
-    problem: Problem = Problem()
-    solutions: List[Solution] = field(default_factory=lambda:[])
-    justification: Justification = Justification()
+    def __init__(self):
+        self.problem = Problem()
+        self.solutions = []
+        self.justification = Justification()
 
     def remove_solution(self, old_solution: Solution):
         self.solutions.remove(old_solution)

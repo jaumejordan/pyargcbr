@@ -3,6 +3,7 @@ from pickle import load, dump
 from typing import Dict, List, ValuesView
 from agents.configuration import Configuration
 import agents.similarity_algorithms as sim_algs
+from cbrs.CBR import CBR
 from configuration.configuration_parameters import SimilarityType
 from knowledge_resources.domain_case import DomainCase
 from knowledge_resources.domain_context import DomainContext
@@ -13,20 +14,7 @@ from knowledge_resources.position import Position
 from knowledge_resources.similar_domain_case import SimilarDomainCase
 
 
-# TODO check about https://www.jetbrains.com/help/pycharm/using-docstrings-to-specify-types.html
-def save_object(obj, file_name: str):
-    """
-    Saves an object in the file corresponding to the path; it's incremental.
-
-    Parameters:
-        obj (Object): The object that will be stored.
-        file_name: The path to the file where the object will be stored.
-    """
-    with open(file_name, 'wb') as fh:
-        dump(obj, fh)
-
-
-class DomainCBR:
+class DomainCBR(CBR):
     """
      This class implements the domain CBR.
 
@@ -34,31 +22,28 @@ class DomainCBR:
      and select the :class:'Position' (solution) to defend in an argumentation dialogue.
 
      Attributes:
-         domain_cb (Dict[str, List[DomainCase]]): .
-         file_path (str): The path of the file to load the initial domain-cases.
+         case_base (Dict[str, List[DomainCase]]): .
+         initial_file_path (str): The path of the file to load the initial domain-cases.
          storing_file_path (str): The path of the file where the final domain-cases will be stored.
          index (int): The identifier of the premise which value will be used as a hash index; -1 means indexation is not used
     """
-    domain_cb: Dict[str, List[DomainCase]]
-    file_path: str
-    storing_file_path: str
     index: int = -1
 
-    def __init__(self, file_path: str, storing_file_path: str, index: int):
-        self.file_path = file_path
-        self.storing_file_path = storing_file_path
+    def __init__(self, initial_file_path: str, storing_file_path: str, index: int):
+        super().__init__(initial_file_path, storing_file_path)
         self.index = index
         self.load_case_base()
 
-    def load_case_base(self):
+    def load_case_base(self, verbose: bool = False):
         """
         Loads the case-base stored in the initial file path.
+        :param verbose: If true prints a summary of th result after the execution
         """
-        self.domain_cb = {}
+        self.case_base = {}
         introduced = 0
         not_introduced = 0
         str_ids = ""
-        with open(self.file_path, 'rb') as fh:
+        with open(self.initial_file_path, 'rb') as fh:
             while True:
                 try:
                     aux = load(fh)
@@ -72,7 +57,8 @@ class DomainCBR:
                             not_introduced += 1
                 except EOFError:
                     break
-        print(self.file_path, "domain_cases: ", introduced + not_introduced,
+        if verbose:
+            print(self.initial_file_path, "domain_cases: ", introduced + not_introduced,
               "introduced: ", introduced, "not_introduced: ", not_introduced, "sols: ", str_ids)
 
     def retrieve_and_retain(self, dom_case: DomainCase, threshold: float) -> List[SimilarDomainCase]:
@@ -135,22 +121,22 @@ class DomainCBR:
 
         if self.index != -1:
             main_premise_value = new_case.problem.context.premises[self.index].content
-            cases = self.domain_cb.get(main_premise_value)
+            cases = self.case_base.get(main_premise_value)
         else:
             new_case_premises_list: List[int] = []
             for premise in new_case.problem.context.premises.values():
                 new_case_premises_list.append(premise.id)
             new_case_premises_list = sorted(new_case_premises_list)
             main_premise_id = new_case_premises_list[0]
-            cases = self.domain_cb.get(str(main_premise_id))
+            cases = self.case_base.get(str(main_premise_id))
 
         if not cases:
             cases = [new_case]
 
             if main_premise_value:
-                self.domain_cb[main_premise_value] = cases
+                self.case_base[main_premise_value] = cases
             else:
-                self.domain_cb[str(main_premise_id)] = cases
+                self.case_base[str(main_premise_id)] = cases
             return True
 
         found = False
@@ -257,43 +243,6 @@ class DomainCBR:
 
         return final_candidates[0].similarity
 
-    def do_cache(self):
-        """
-        Stores the current domain-cases case-base to the storing file path.
-        """
-        with open(self.storing_file_path) as f:
-            f.write(None)  # TODO This is supposed to reset the file
-        self.do_cache_inc()
-
-    def do_cache_inc(self):
-        """
-        Stores the current domain-cases case-base to the storing file path without removing the previous objects.
-        """
-        for a_case in self.get_all_cases():
-            save_object(a_case, self.storing_file_path)
-
-    def get_all_cases(self) -> ValuesView[List[DomainCase]]:  # TODO What is ValuesView? D:
-        """
-        Returns all the cases.
-
-        Returns:
-            ValuesView[List[DomainCase]].
-        """
-        return self.domain_cb.values()
-
-    def get_all_cases_list(self) -> List[DomainCase]:
-        """
-        Returns all the cases.
-
-        Returns:
-            List[DomainCase].
-        """
-        cases: List[DomainCase] = []
-        for list_cases in self.get_all_cases():
-            cases += list_cases
-        return cases
-    # TODO get_all_cases_list, get_all_cases and get_all_cases_vector might be implemented as one
-
     def get_candidate_cases(self, premises: Dict[int, Premise]) -> List[DomainCase]:
         """
         Gets a :class:'DomainCase' List with the domain_cases that fit the given premises
@@ -310,7 +259,7 @@ class DomainCBR:
 
         if self.index != -1:
             main_premise_value = premises[self.index].content
-            candidate_cases = self.domain_cb[main_premise_value]
+            candidate_cases = self.case_base[main_premise_value]
             if not candidate_cases:
                 candidate_cases = []
         else:
@@ -320,7 +269,7 @@ class DomainCBR:
             new_case_premises_list = sorted(new_case_premises_list) #  TODO for sorted '15' < '2' (sorts alphabeticaly)
             for premise_id in new_case_premises_list:
                 main_premise_id = premise_id
-                dom_cases = self.domain_cb.get(str(main_premise_id))
+                dom_cases = self.case_base.get(str(main_premise_id))
                 if dom_cases:
                     candidate_cases += dom_cases
         return candidate_cases

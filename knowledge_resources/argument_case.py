@@ -9,7 +9,7 @@ from knowledge_resources.case import Case
 @dataclass
 class ArgumentCase(Case):
     problem: ArgumentProblem = ArgumentProblem()
-    solution: ArgumentSolution = ArgumentSolution()
+    solutions: ArgumentSolution = ArgumentSolution()  # Keeping the plural is not accurate. It is for code coherence
     justification: ArgumentJustification = ArgumentJustification()
     times_used: int = 0
 
