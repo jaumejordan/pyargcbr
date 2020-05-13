@@ -6,6 +6,7 @@ from knowledge_resources.social_entity import SocialEntity
 
 
 class DependencyRelation(Enum):
+    """Different types of dependency relations considered"""
     POWER = 1
     AUTHORISATION = 2
     CHARITY = 3
@@ -13,6 +14,10 @@ class DependencyRelation(Enum):
 
 @dataclass
 class SocialContext(Context):
+    """Implementation of the concept SocialContext
+
+    SocialContext is a specialization of Context
+    """
     proponent: SocialEntity = field(default=SocialEntity())
     opponent: SocialEntity = field(default=SocialEntity())
     group: Group = field(default=Group())

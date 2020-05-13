@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from pickle import load, dump
-from typing import Dict, List, ValuesView
+from typing import Dict, List, ValuesView, Mapping
 from agents.configuration import Configuration
 import agents.similarity_algorithms as sim_algs
 from cbrs.CBR import CBR
@@ -15,29 +15,32 @@ from knowledge_resources.similar_domain_case import SimilarDomainCase
 
 
 class DomainCBR(CBR):
-    """
-     This class implements the domain CBR.
-
-     This CBR stores domain knowledge of previously solved problems. It is used by the argumentative agent to generate
-     and select the :class:'Position' (solution) to defend in an argumentation dialogue.
-
-     Attributes:
-         case_base (Dict[str, List[DomainCase]]): .
-         initial_file_path (str): The path of the file to load the initial domain-cases.
-         storing_file_path (str): The path of the file where the final domain-cases will be stored.
-         index (int): The identifier of the premise which value will be used as a hash index; -1 means indexation is not used
-    """
+    """This class implements the domain CBR."""
     index: int = -1
 
     def __init__(self, initial_file_path: str, storing_file_path: str, index: int):
+        """This CBR stores domain knowledge of previously solved problems. It is
+        used by the argumentative agent to generate and select the Position
+        (solution) to defend in an argumentation dialogue.
+
+        Args:
+            initial_file_path (str): The path of the file to load the initial
+                domain cases.
+            storing_file_path (str): The path of the file to store the domain
+                cases
+            index (int): Identifier of the premise wich value will be used as a
+                hash index. If not indexation is used, just set is value to -1
+        """
         super().__init__(initial_file_path, storing_file_path)
         self.index = index
         self.load_case_base()
 
     def load_case_base(self, verbose: bool = False):
-        """
-        Loads the case-base stored in the initial file path.
-        :param verbose: If true prints a summary of th result after the execution
+        """Loads the case-base stored in the initial file path.
+
+        Args:
+            verbose (bool): If True prints a summary of th result after the
+                execution. By default is set to False
         """
         self.case_base = {}
         introduced = 0
@@ -59,18 +62,19 @@ class DomainCBR(CBR):
                     break
         if verbose:
             print(self.initial_file_path, "domain_cases: ", introduced + not_introduced,
-              "introduced: ", introduced, "not_introduced: ", not_introduced, "sols: ", str_ids)
+                  "introduced: ", introduced, "not_introduced: ", not_introduced, "sols: ", str_ids)
 
     def retrieve_and_retain(self, dom_case: DomainCase, threshold: float) -> List[SimilarDomainCase]:
-        """
-        Retrieves the domain_cases that are in a range of similarity degree with the given one.
+        """Retrieves the domain_cases that are in a range of similarity degree
+        with the given one.
 
-        Parameters:
-            dom_case (DomainCase): The domain-case (representing a problem to solve) that needs a solution from the CBR
-            threshold (float): The threshold of minimum degree of similarity of the domain-cases to return.
+        Args:
+            dom_case (DomainCase): The domain-case (representing a problem to
+                solve) that needs a solution from the CBR
+            threshold (float): The threshold of minimum degree of similarity of
 
         Returns:
-            List of :class:'SimilarDomainCase'.
+            List[SimilarDomainCase]: A list with the domain cases
         """
         c = Configuration()
         similar_cases = self.get_most_similar(dom_case.problem.context.premises, threshold, c.domain_cbrs_similarity)
@@ -89,15 +93,16 @@ class DomainCBR(CBR):
         return similar_cases
 
     def retrieve(self, premises: Dict[int, Premise], threshold: float) -> List[SimilarDomainCase]:
-        """
-        Retrieves the domain_cases that are in a range of similarity degree with the given premises.
+        """Retrieves the domain_cases that are in a range of similarity degree
+        with the given premises.
 
-        Parameters:
-            premises (Dict[int, Premise]): Dictionary of premises that describe the problem to solve.
-            threshold (float): The threshold of minimum degree of similarity of the domain-cases to return.
+        Args:
+            premises (Dict[int, Premise]): The given premises
+            threshold (float): The threshold that determines the range
 
         Returns:
-            List of :class:'SimilarDomainCase'.
+            List[SimilarDomainCase]: The domain cases that fit in the range of
+            similarity
         """
         # TODO The parameter times_used can be also increased depending of the application domain
         c = Configuration()
@@ -105,15 +110,15 @@ class DomainCBR(CBR):
         return similar_cases
 
     def add_case(self, new_case: DomainCase) -> bool:
-        """
-        Adds a new domain-case to domain case-base. Otherwise, if the same domain-case exists in the case-base, adds
-        the relevant data to the existing domain-case.
+        """Adds a new domain-case to domain case-base. Otherwise, if the same
+        domain-case exists in the case-base, adds the relevant data to the
+        existing domain-case.
 
-        Parameters:
-            new_case(DomainCase): :class:'DomainCase' that could be added.
+        Args:
+            new_case (DomainCase): :class:'DomainCase' that could be added.
 
         Returns:
-            True if the domain-case is added, else False.
+            bool: True if the domain-case is added, else False.
         """
         main_premise_id = -1
         main_premise_value: str = ""
@@ -177,19 +182,21 @@ class DomainCBR(CBR):
 
         return False
 
-    def get_most_similar(self, premises: Dict[int, Premise], threshold: float, similarity_type: SimilarityType) -> List[
-        SimilarDomainCase]:
-        """
-        Gets the most similar domain-cases that are in a range of similarity degree with the given premises
-        The similarity algorithm is determined by an integer parameter.
+    def get_most_similar(self, premises: Mapping[int, Premise], threshold: float, similarity_type: SimilarityType) \
+        -> List[SimilarDomainCase]:
+        """Gets the most similar domain cases that are in a range of similarity
+        degree with the given premises The similarity algorithm is determined by
+        a parameter.
 
-        Parameters:
-            threshold (float): The threshold of minimum degree of similarity of the domain-cases to return.
-            similarity_type (SimilarityType): A :class:'SimilarDomainCase' to specify which similarity algorithm has to
-            be used.
+        Args:
+            premises (Mapping[int, Premise]): The given premises
+            threshold (float): The threshold of minimum degree of similarity of
+                the domain-cases to return.
+            similarity_type (SimilarityType): A parameter to specify which
+                similarity algorithm has to be used
 
         Returns:
-            List of :class:'SimilarDomainCase'.
+            List[SimilarDomainCase]
         """
         candidate_cases = self.get_candidate_cases(premises)
         final_candidates: List[SimilarDomainCase] = []
@@ -212,17 +219,16 @@ class DomainCBR(CBR):
         return more_similar_candidates
 
     @staticmethod  # TODO is it useful for this method to be static?
-    def get_premises_similarity(premises1: Dict[int, Premise], premises2: Dict[int, Premise]):
-        """
-         Obtains the similarity between two Dictionaries of premises using the similarity algorithm specified in the
-         configuration of this class.
+    def get_premises_similarity(premises1: Mapping[int, Premise], premises2: Mapping[int, Premise]) -> float:
+        """Obtains the similarity between two Dictionaries of premises using the
+        similarity algorithm specified in the configuration of this class.
 
-        Parameters:
-            premises1 (Dict[int, Premise]): Dictionary of premises 1.
-            premises2 (Dict[int, Premise]): Dictionary of premises 2.
+        Args:
+            premises1 (Mapping[int, Premise]): Dictionary of premises 1.
+            premises2 (Mapping[int, Premise]): Dictionary of premises 2.
 
         Returns:
-            The value of the similarity.
+            float: The value of the similarity.
         """
         c = Configuration()
         similarity_type = c.domain_cbrs_similarity
@@ -243,15 +249,16 @@ class DomainCBR(CBR):
 
         return final_candidates[0].similarity
 
-    def get_candidate_cases(self, premises: Dict[int, Premise]) -> List[DomainCase]:
-        """
-        Gets a :class:'DomainCase' List with the domain_cases that fit the given premises
+    def get_candidate_cases(self, premises: Mapping[int, Premise]) -> List[DomainCase]:
+        """Gets a :class:'DomainCase' List with the domain_cases that fit the
+        given premises
 
-        Parameters:
-            premises (Dict[int, Premise]): Dictionary of premises that describes the problem
+        Args:
+            premises (Mapping[int, Premise]): Dictionary of premises that describes
+                the problem
 
         Returns:
-            :class:'DomainCase' List
+            class: 'DomainCase' List
         """
         candidate_cases: List[DomainCase] = []
         main_premise_id: int = -1
@@ -266,7 +273,7 @@ class DomainCBR(CBR):
             new_case_premises_list: List[int] = []
             for premise in premises.values():
                 new_case_premises_list.append(premise.id)
-            new_case_premises_list = sorted(new_case_premises_list) #  TODO for sorted '15' < '2' (sorts alphabeticaly)
+            new_case_premises_list = sorted(new_case_premises_list)  # TODO for sorted '15' < '2' (sorts alphabeticaly)
             for premise_id in new_case_premises_list:
                 main_premise_id = premise_id
                 dom_cases = self.case_base.get(str(main_premise_id))

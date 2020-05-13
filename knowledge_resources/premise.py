@@ -4,11 +4,22 @@ from agents.metrics import do_dist as compare
 
 @dataclass
 class Premise:
+    """Implementation of the concept Premise"""
     id: int = -1
     name: str = field(default="", compare=False)
     content: str = field(default="", compare=False)
 
-    def my_cmp(self, other):
+    def my_cmp(self, other: Premise) -> int:
+        """Comparator used to calculate all the comparison functions for the
+        Premise objects
+
+        Args:
+            other (Premise): The other premise to compare with
+
+        Returns:
+            int: A negative integer if the other premise is greater, 0 if both
+            premises are equals and a positive integer otherwise
+        """
         return self.id - other.id
 
     def __lt__(self, other):

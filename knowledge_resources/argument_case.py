@@ -1,3 +1,4 @@
+from collections import Sequence
 from dataclasses import dataclass
 
 from knowledge_resources.argument_justification import ArgumentJustification
@@ -8,12 +9,29 @@ from knowledge_resources.case import Case
 
 @dataclass
 class ArgumentCase(Case):
-    problem: ArgumentProblem = ArgumentProblem()
-    solutions: ArgumentSolution = ArgumentSolution()  # Keeping the plural is not accurate. It is for code coherence
-    justification: ArgumentJustification = ArgumentJustification()
+    """Implementation of the concept ArgumentCase"""
     times_used: int = 0
 
+    def __init__(self, problem: ArgumentProblem = ArgumentProblem(),
+                 solution: ArgumentSolution = ArgumentSolution(),
+                 justification: ArgumentJustification = ArgumentJustification()):
+        """DomainCase is a specialization of Case
+
+        Args:
+            problem (ArgumentProblem): Argument cases problems are ArgumentProblem
+            solution (ArgumentSolution): The argument cases have only one solution
+            justification (ArgumentJustification): Argument cases solutions have ArgumentSolutions
+        """
+        self.problem = problem
+        self.solutions = solution
+        self.justification = justification
+
     def __str__(self):
+        """Default 'to string' method rewritten
+
+        Returns:
+            str: A descriptive str of the ArgumentCase
+        """
         st = "id: " + str(self.id) + " creationDate: " + self.creation_date + "\n"
         st += "Domain context. Premises:\n"
         premises = self.problem.context.premises
