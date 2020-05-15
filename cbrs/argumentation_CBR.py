@@ -37,7 +37,7 @@ class ArgCBR(CBR):
         self.case_base = {}
         introduced = 0
         not_introduced = 0
-        str_ids:str = ""  # This was not on the original code ()
+        str_ids: str = ""  # This was not on the original code ()
         with open(self.initial_file_path, 'rb') as fh:
             while True:
                 try:
@@ -71,13 +71,55 @@ class ArgCBR(CBR):
         if len(new_case_premises_list) > 0:
             first_case_premise: Premise = new_case_premises_list[0]
             first_case_premise_id: int = first_case_premise.id
-            candidate_cases: List[ArgumentCase] = self.case_base.get(first_case_premise_id) # Problems with Union[]
+            candidate_cases: List[ArgumentCase] = self.case_base.get(first_case_premise_id, [])
             if candidate_cases:
                 for arg_case in candidate_cases:
                     arg_case_premises = arg_case.problem.context.premises
                     # if the premises are the same with the same content, check
                     # if social context conclusion and state of acceptability
                     # are the same
+                    if (self.is_same_domain_context_precise(new_case_premises_list, arg_case_premises)
+                        and self.is_same_social_context(new_arg_case.problem.social_context,
+                                                        arg_case.problem.social_context)):
+                        # It is the same argument-case, so it is not introduced
+                        # but we add associated cases and attacks received,
+                        # and dialogue graphs and increase timesUsed
+
+                        # Increase times used
+                        arg_case.times_used += new_arg_case.times_used
+
+                        # distinguishing premises
+                        # Take care that distinguishing premises are NEVER translated to Dict
+                        # (there are several dp with the same ID but different content in the List)
+                        # TODO Take into acount when testing that this part has been highly changed
+                        distinguishing_premises = arg_case.solutions.dist_premises
+                        new_distinguishing_premises = new_arg_case.solutions.dist_premises
+                        if not new_distinguishing_premises:  # TODO it's a literal translation, maybe not necessary
+                            new_distinguishing_premises = []
+                        if not distinguishing_premises:
+                            arg_case.solutions.dist_premises = new_distinguishing_premises
+                        else:
+                            arg_case.solutions.merge_distinguishing_premises(new_distinguishing_premises)
+
+                        # exceptions # TODO  Unify similarCases
+                        exceptions = arg_case.solutions.exceptions
+                        new_exceptions = new_arg_case.solutions.exceptions
+                        if not new_exceptions:
+                            new_exceptions = []
+                        if not exceptions:
+                            arg_case.solutions.exceptions = new_exceptions
+                        else:
+                            arg_case.solutions.merge_exceptions(new_exceptions)
+
+                        # presumptions
+                        presumptions = arg_case.solutions.presumptions
+                        new_presumptions = new_arg_case.solutions.presumptions
+                        if not new_presumptions:
+                            new_presumptions = []
+                        if not presumptions:
+                            arg_case.solutions.presumptions = new_presumptions
+                        else:
+                            arg_case.solutions.merge_presumptions(new_presumptions)
 
         return True
 
@@ -114,8 +156,13 @@ class ArgCBR(CBR):
                 with
 
         Returns:
-
+            bool: True if the contexts are the same, False otherwise
         """
         # If used in the application domain, add list of proponents,
         # opponents and groups (checking that norms and valprefs are the same)
-
+        if (social_context1.relation != social_context2.relation
+            or social_context1.group.id != social_context2.group.id
+            or social_context1.opponent.id != social_context2.opponent.id
+            or social_context1.proponent.id != social_context2.proponent.id):
+            return False
+        return True

@@ -1,4 +1,4 @@
-from typing import Dict, List, Union, Type, ValuesView, Sequence
+from typing import Dict, List, Union, Type, ValuesView, Sequence, Iterable
 from pickle import load, dump
 
 
@@ -18,7 +18,7 @@ def save_object(obj, file_name: str):
 
 class CBR:
     """Parent class for all the CBRs of the project"""
-    case_base: Dict[Union[int, str], List[Type[Case]]]
+    case_base: Dict[Union[int, str], List[Case]]
     initial_file_path: str
     storing_file_path: str
 
@@ -62,7 +62,7 @@ class CBR:
         for a_case in self.get_all_cases():
             save_object(a_case, self.storing_file_path)
 
-    def get_all_cases(self) -> ValuesView[Sequence[Type[Case]]]:
+    def get_all_cases(self) -> ValuesView[Sequence[Case]]:
         """Returns all the cases from the cases base
 
         Returns:
@@ -70,7 +70,7 @@ class CBR:
         """
         return self.case_base.values()
 
-    def get_all_cases_list(self) -> Sequence[Type[Case]]:
+    def get_all_cases_list(self) -> Sequence[Case]:
         """Returns all the cases of the case-base
 
         Returns:

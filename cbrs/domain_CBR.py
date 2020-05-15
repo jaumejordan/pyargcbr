@@ -81,7 +81,7 @@ class DomainCBR(CBR):
         if similar_cases:
             for similar_case in similar_cases:
                 if similar_case.similarity < 1.0:
-                    dom_case.solutions = similar_case.caseb.solutions
+                    dom_case.solutions = similar_case.case.solutions
                     returned_value = self.add_case(dom_case)
                     if returned_value:
                         print("New case Introduced")
@@ -126,14 +126,14 @@ class DomainCBR(CBR):
 
         if self.index != -1:
             main_premise_value = new_case.problem.context.premises[self.index].content
-            cases = self.case_base.get(main_premise_value)
+            cases = self.case_base.get(main_premise_value, [])
         else:
             new_case_premises_list: List[int] = []
             for premise in new_case.problem.context.premises.values():
                 new_case_premises_list.append(premise.id)
             new_case_premises_list = sorted(new_case_premises_list)
             main_premise_id = new_case_premises_list[0]
-            cases = self.case_base.get(str(main_premise_id))
+            cases = self.case_base.get(str(main_premise_id), [])
 
         if not cases:
             cases = [new_case]
@@ -182,7 +182,7 @@ class DomainCBR(CBR):
 
         return False
 
-    def get_most_similar(self, premises: Mapping[int, Premise], threshold: float, similarity_type: SimilarityType) \
+    def get_most_similar(self, premises: Dict[int, Premise], threshold: float, similarity_type: SimilarityType) \
         -> List[SimilarDomainCase]:
         """Gets the most similar domain cases that are in a range of similarity
         degree with the given premises The similarity algorithm is determined by
@@ -219,7 +219,7 @@ class DomainCBR(CBR):
         return more_similar_candidates
 
     @staticmethod  # TODO is it useful for this method to be static?
-    def get_premises_similarity(premises1: Mapping[int, Premise], premises2: Mapping[int, Premise]) -> float:
+    def get_premises_similarity(premises1: Dict[int, Premise], premises2: Dict[int, Premise]) -> float:
         """Obtains the similarity between two Dictionaries of premises using the
         similarity algorithm specified in the configuration of this class.
 
@@ -266,7 +266,7 @@ class DomainCBR(CBR):
 
         if self.index != -1:
             main_premise_value = premises[self.index].content
-            candidate_cases = self.case_base[main_premise_value]
+            candidate_cases = self.case_base.get(main_premise_value, [])
             if not candidate_cases:
                 candidate_cases = []
         else:

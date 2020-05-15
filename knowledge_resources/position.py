@@ -1,5 +1,8 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 from typing import Dict, List
+
 
 from knowledge_resources.domain_case import DomainCase
 from knowledge_resources.premise import Premise
@@ -62,5 +65,5 @@ class Position:
     def __ge__(self, other) -> bool:
         return self.my_cmp(other) >= 0
 
-    def __ne__(self, other)-> bool:
+    def __ne__(self, other) -> bool:
         return self.my_cmp(other) != 0

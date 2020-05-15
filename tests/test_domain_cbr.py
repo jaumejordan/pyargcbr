@@ -19,12 +19,12 @@ from knowledge_resources.solution import Solution
 from cbrs.domain_CBR import DomainCBR
 
 def similar_domain_case_comparison(case1: SimilarDomainCase, case2: SimilarDomainCase):
-    premises1 = list(case1.caseb.problem.context.premises.values())
-    premises2 = list(case2.caseb.problem.context.premises.values())
-    solutions1 = case1.caseb.solutions
-    solutions2 = case2.caseb.solutions
+    premises1 = list(case1.case.problem.context.premises.values())
+    premises2 = list(case2.case.problem.context.premises.values())
+    solutions1 = case1.case.solutions
+    solutions2 = case2.case.solutions
     if case1.similarity == case2.similarity \
-        and cmp(case1.caseb.justification.description, case2.caseb.justification.description) == 0 \
+        and cmp(case1.case.justification.description, case2.case.justification.description) == 0 \
         and len(premises1) == len(premises2) \
         and len(solutions1) == len(solutions2):
         equal: bool = True
@@ -50,7 +50,7 @@ class TestDomainCBR():
             retrieved_cases = self.cbr.retrieve_and_retain(a_case, 1.0)
             for sim_case in retrieved_cases:
                 equal = True # sim_case.caseb.problem.context.premises == a_case.problem.context.premises
-                sim_premises = list(sim_case.caseb.problem.context.premises.values())
+                sim_premises = list(sim_case.case.problem.context.premises.values())
                 a_premises = list(a_case.problem.context.premises.values())
                 for i in range(0, len(a_premises)):
                     if sim_premises[i] != a_premises[i]:

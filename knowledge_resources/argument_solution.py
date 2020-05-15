@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import List
+from typing import List, Sequence
 from knowledge_resources.acceptability_status import AcceptabilityStatus
 from knowledge_resources.premise import Premise
 from knowledge_resources.solution import Solution
@@ -110,3 +110,32 @@ class ArgumentSolution(Solution):
             new_presumption (Premise): The presumption that will be added
         """
         self.presumptions.append(new_presumption)
+
+    def merge_distinguishing_premises(self, new_distinguishing_premises: Sequence[Premise]):
+        """Adds new distinguishing premises to the solution skipping the
+        duplicates (same ID and content)
+
+        Args:
+            new_distinguishing_premises (Sequence[Premise]): New premises to be
+                merged with
+        """
+        Premise.merge_premises_lists(self.dist_premises, new_distinguishing_premises)
+
+    def merge_presumptions(self, new_presumptions: Sequence[Premise]):
+        """Adds new presumptions to the solution skipping the duplicates (same
+        ID and content)
+
+        Args:
+            new_presumptions (Sequence[Premise]): New presumptions to be merged
+                with
+        """
+        Premise.merge_premises_lists(self.dist_premises, new_presumptions)
+
+    def merge_exceptions(self, new_exceptions: Sequence[Premise]):
+        """Adds new exceptions to the solution skipping the duplicates (same ID
+        and content)
+
+        Args:
+            new_exceptions (Sequence[Premise]): New exceptions to be merged with
+        """
+        Premise.merge_premises_lists(self.dist_premises, new_exceptions)

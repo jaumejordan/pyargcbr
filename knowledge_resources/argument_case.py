@@ -11,10 +11,13 @@ from knowledge_resources.case import Case
 class ArgumentCase(Case):
     """Implementation of the concept ArgumentCase"""
     times_used: int = 0
+    problem: ArgumentProblem = ArgumentProblem()
+    solutions: ArgumentSolution = ArgumentSolution()
+    justification: ArgumentJustification = ArgumentJustification()
 
-    def __init__(self, problem: ArgumentProblem = ArgumentProblem(),
-                 solution: ArgumentSolution = ArgumentSolution(),
-                 justification: ArgumentJustification = ArgumentJustification()):
+    def __init__(self, problem: ArgumentProblem,
+                 solution: ArgumentSolution,
+                 justification: ArgumentJustification):
         """DomainCase is a specialization of Case
 
         Args:

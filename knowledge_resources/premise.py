@@ -1,4 +1,8 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
+from typing import Sequence, List
+
 from agents.metrics import do_dist as compare
 
 
@@ -42,3 +46,28 @@ class Premise:
 
     def __ne__(self, other):
         return not self.__eq__(other)
+
+    @staticmethod
+    def merge_premises_lists(target_list: List[Premise], new_premises_list: Sequence[Premise]):
+        """Merge two lists of premises into one. The duplicates (same ID and
+        content) are removed
+
+        Args:
+            target_list (List[Premise]): The first list of premises and the one
+                that will be modified
+            new_premises_list (Sequence[Premise])): The list of premises to be
+                merged with
+
+        Returns:
+            None: The target list is passed by reference, so it is modified
+            directly
+        """
+        for premise2 in new_premises_list:
+            add_premise = True
+            for premise1 in target_list:
+                if (premise2.id == premise1.id
+                    and premise2.content == premise1.content):
+                    add_premise = False
+                    break
+            if add_premise:
+                target_list.append(premise2)
