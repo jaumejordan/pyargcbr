@@ -16,7 +16,7 @@ from knowledge_resources.problem import Problem
 from knowledge_resources.similar_domain_case import SimilarDomainCase
 from knowledge_resources.solution import Solution
 
-from cbrs.domain_CBR import DomainCBR
+from cbrs.domain_cbr import DomainCBR
 
 
 def similar_domain_case_comparison(case1: SimilarDomainCase, case2: SimilarDomainCase):
@@ -48,7 +48,7 @@ class TestDomainCBR():
         for a_case in self.cbr.get_all_cases_list():
             retrieved_cases = self.cbr.retrieve_and_retain(a_case, 1.0)
             for sim_case in retrieved_cases:
-                equal = True # sim_case.caseb.problem.context.premises == a_case.problem.context.premises
+                equal = True
                 sim_premises = list(sim_case.case.problem.context.premises.values())
                 a_premises = list(a_case.problem.context.premises.values())
                 for i in range(0, len(a_premises)):
@@ -58,11 +58,11 @@ class TestDomainCBR():
 
     def retrieval_consistency(self):
         all_cases = self.cbr.get_all_cases()
-        all_cases2: List[DomainCase] = []
+        all_cases2: List[List[DomainCase]] = []
         for cases_list in all_cases:
-            all_cases2 += cases_list
+            all_cases2.append(cases_list)
 
-        for cases_list in all_cases:
+        for cases_list in all_cases2:
             for a_case in cases_list:
                 # Query the domainCBR for the list similarCases1
                 similar_cases1 = self.cbr.retrieve_and_retain(a_case, 0.0)

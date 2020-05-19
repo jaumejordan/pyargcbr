@@ -2,7 +2,7 @@ from math import inf
 from typing import Dict, List, Union, Sequence, Mapping, ValuesView
 
 from agents.configuration import Configuration
-from cbrs.CBR import CBR
+from cbrs.cbr import CBR
 from pickle import load, dump
 
 from knowledge_resources.acceptability_status import AcceptabilityStatus
@@ -733,8 +733,8 @@ class ArgCBR(CBR):
     def do_cache_inc(self):
         super().do_cache_inc()
 
-    def get_all_cases(self) -> ValuesView[Sequence[ArgumentCase]]:
+    def get_all_cases(self) -> ValuesView[Sequence[ArgumentCase]]:  # TODO here we go again with annotations
         return super().get_all_cases()
 
-    def get_all_cases_list(self) -> Sequence[ArgumentCase]:
+    def get_all_cases_list(self) -> Sequence[ArgumentCase]:  # TODO here we go again with annotations
         return super().get_all_cases_list()

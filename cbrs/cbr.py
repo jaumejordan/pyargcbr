@@ -66,7 +66,7 @@ class CBR:
         """Returns all the cases from the cases base
 
         Returns:
-            ValuesView[Sequence[Type[Case]]]: The list of cases
+            ValuesView[Sequence[Case]]: The list of cases
         """
         return self.case_base.values()
 
@@ -74,7 +74,7 @@ class CBR:
         """Returns all the cases of the case-base
 
         Returns:
-            Sequence[Type[Case]]: The list of cases
+            Sequence[Case]: The list of cases
         """
         cases: List[Case] = []
         for list_cases in self.get_all_cases():

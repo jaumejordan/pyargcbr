@@ -3,7 +3,7 @@ from pickle import load, dump
 from typing import Dict, List, ValuesView, Mapping, Sequence
 from agents.configuration import Configuration
 import agents.similarity_algorithms as sim_algs
-from cbrs.CBR import CBR
+from cbrs.cbr import CBR
 from configuration.configuration_parameters import SimilarityType
 from knowledge_resources.case import Case
 from knowledge_resources.domain_case import DomainCase
