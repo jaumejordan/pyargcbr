@@ -1,10 +1,11 @@
 from dataclasses import dataclass
 from pickle import load, dump
-from typing import Dict, List, ValuesView, Mapping
+from typing import Dict, List, ValuesView, Mapping, Sequence
 from agents.configuration import Configuration
 import agents.similarity_algorithms as sim_algs
 from cbrs.CBR import CBR
 from configuration.configuration_parameters import SimilarityType
+from knowledge_resources.case import Case
 from knowledge_resources.domain_case import DomainCase
 from knowledge_resources.domain_context import DomainContext
 from knowledge_resources.justification import Justification
@@ -280,3 +281,15 @@ class DomainCBR(CBR):
                 if dom_cases:
                     candidate_cases += dom_cases
         return candidate_cases
+
+    def do_cache(self):
+        super().do_cache()
+
+    def do_cache_inc(self):
+        super().do_cache_inc()
+
+    def get_all_cases(self) -> ValuesView[Sequence[DomainCase]]:
+        return super().get_all_cases()
+
+    def get_all_cases_list(self) -> Sequence[DomainCase]:
+        return super().get_all_cases_list()

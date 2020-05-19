@@ -1,5 +1,5 @@
 from math import inf
-from typing import Dict, List, Union, Sequence, Mapping
+from typing import Dict, List, Union, Sequence, Mapping, ValuesView
 
 from agents.configuration import Configuration
 from cbrs.CBR import CBR
@@ -726,3 +726,15 @@ class ArgCBR(CBR):
             or social_context1.proponent.id != social_context2.proponent.id):
             return False
         return True
+
+    def do_cache(self):
+        super().do_cache()
+
+    def do_cache_inc(self):
+        super().do_cache_inc()
+
+    def get_all_cases(self) -> ValuesView[Sequence[ArgumentCase]]:
+        return super().get_all_cases()
+
+    def get_all_cases_list(self) -> Sequence[ArgumentCase]:
+        return super().get_all_cases_list()

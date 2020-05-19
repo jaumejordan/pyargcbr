@@ -18,6 +18,7 @@ from knowledge_resources.solution import Solution
 
 from cbrs.domain_CBR import DomainCBR
 
+
 def similar_domain_case_comparison(case1: SimilarDomainCase, case2: SimilarDomainCase):
     premises1 = list(case1.case.problem.context.premises.values())
     premises2 = list(case2.case.problem.context.premises.values())
@@ -26,17 +27,15 @@ def similar_domain_case_comparison(case1: SimilarDomainCase, case2: SimilarDomai
     if case1.similarity == case2.similarity \
         and cmp(case1.case.justification.description, case2.case.justification.description) == 0 \
         and len(premises1) == len(premises2) \
-        and len(solutions1) == len(solutions2):
-        equal: bool = True
+            and len(solutions1) == len(solutions2):
         for i in range(0, len(premises1)):
             if premises1[i] != premises2[i]:
                 return False
         for i in range(0, len(solutions1)):
             if solutions1[i].conclusion.id != solutions2[i].conclusion.id \
-                or cmp(solutions1[i].conclusion.description, solutions2[i].conclusion.description) > 0:
+                    or cmp(solutions1[i].conclusion.description, solutions2[i].conclusion.description) > 0:
                 return False
     return True
-
 
 
 class TestDomainCBR():
@@ -92,10 +91,11 @@ class TestDomainCBR():
                     case1 = similar_cases.pop(0)
                     assert case1 not in similar_cases
 
-    def operability(self):
-        first_case = self.cbr.get_all_cases_list()[0]
+    def operating(self):
+        first_case: DomainCase = self.cbr.get_all_cases_list()[0]
         similar_to_first_case = self.cbr.retrieve_and_retain(first_case, 0.0)
-        assert similar_to_first_case[0] == first_case # TODO not comparable
+        assert similar_domain_case_comparison(similar_to_first_case[0],
+                                              SimilarDomainCase(first_case, similar_to_first_case[0].similarity))
 
         premises: Dict[int, Premise] = {}
         for premise in first_case.problem.context.premises.values():
@@ -111,9 +111,11 @@ class TestDomainCBR():
         self.cbr.add_case(dom_case)
 
         similar_cases = self.cbr.retrieve_and_retain(dom_case, 0.0)
-        assert similar_cases[0] == dom_case # TODO not all the comparisons have been translated
-        similar_to_first_case = self.cbr.retrieve_and_retain(first_case, 0.0) # TODO check if there was an error in the original code
-        assert similar_to_first_case[0] == first_case # TODO not all the comparisons have been translated
+        assert similar_domain_case_comparison(similar_cases[0],
+                                              SimilarDomainCase(dom_case, similar_cases[0].similarity))
+        similar_to_first_case = self.cbr.retrieve_and_retain(first_case, 0.0)
+        assert similar_domain_case_comparison(similar_to_first_case[0],
+                                              SimilarDomainCase(first_case, similar_to_first_case[0].similarity))
 
     @pytest.fixture
     def response(self):
@@ -123,5 +125,5 @@ class TestDomainCBR():
         self.set_up()
         self.retrieval_accuracy()
         self.retrieval_consistency()
-        #self.case_duplication() #TODO fix
-        #self.operability() #TODO fix
+        self.case_duplication()         # This part is really slow
+        self.operating() #TODO fix
