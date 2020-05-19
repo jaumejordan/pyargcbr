@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Sequence
+
+from cbrs import lists_operations
 from knowledge_resources.acceptability_status import AcceptabilityStatus
 from knowledge_resources.premise import Premise
 from knowledge_resources.solution import Solution
@@ -139,3 +141,21 @@ class ArgumentSolution(Solution):
             new_exceptions (Sequence[Premise]): New exceptions to be merged with
         """
         Premise.merge_premises_lists(self.dist_premises, new_exceptions)
+
+    def merge_counter_examples_arg_cases_ids(self, new_ids: Sequence[int]):
+        """Adds new counter examples IDs to the Solution skipping the duplicates
+
+        Args:
+            new_ids: The new IDs to be merged with
+        """
+        lists_operations.merge_lists_using_sets(self.counter_examples_arg_case_id, new_ids)
+        # lists_operations.merge_lists_using_sets(self.counter_examples_arg_case_id, new_ids)
+
+    def merge_counter_examples_dom_cases_ids(self, new_ids: Sequence[int]):
+        """Adds new counter examples IDs to the Solution skipping the duplicates
+
+        Args:
+            new_ids: The new IDs to be merged with
+        """
+        lists_operations.merge_lists_using_sets(self.counter_examples_dom_case_id, new_ids)
+        # lists_operations.merge_lists_by_looping(self.counter_examples_dom_case_id, new_ids)

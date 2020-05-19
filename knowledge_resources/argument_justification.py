@@ -1,5 +1,7 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Sequence
+
+from cbrs import lists_operations
 from knowledge_resources.argumentation_scheme import ArgumentationScheme
 from knowledge_resources.dialogue_graph import DialogueGraph
 from knowledge_resources.justification import Justification
@@ -85,3 +87,21 @@ class ArgumentJustification(Justification):
                 added
         """
         self.dialogue_graphs.append(new_dialog_graph)
+
+    def merge_domain_cases_ids(self, new_ids: Sequence[int]):
+        """Adds new domain cases IDs to the Justification skipping the duplicates
+
+        Args:
+            new_ids: The new IDs to be merged with
+        """
+        lists_operations.merge_lists_using_sets(self.domain_cases_ids, new_ids)
+        # lists_operations.merge_lists_by_looping(self.domain_cases_ids, new_ids)
+
+    def merge_argument_cases_ids(self, new_ids: Sequence[int]):
+        """Adds new argument cases IDs to the Justification skipping the duplicates
+
+        Args:
+            new_ids: The new IDs to be merged with
+        """
+        lists_operations.merge_lists_using_sets(self.argument_cases_ids, new_ids)
+        # lists_operations.merge_lists_by_looping(self.argument_cases_ids, new_ids)

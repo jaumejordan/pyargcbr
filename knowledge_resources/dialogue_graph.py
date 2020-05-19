@@ -87,29 +87,40 @@ class DialogueGraph:
                 arg_n.append(node)
         return arg_n
 
-    def distance_to_final(self, arg_node: ArgNode) -> int:
-        """Gets the distance to the final node from the provided node
+    def distance_to_final(self, arg_node: Union[ArgNode, int]) -> int:
+        """Gets the distance to the final node from the provided node. The node can be provided
+        via its ID or via the node itself
 
         Args:
-            arg_node (ArgNode): The provided node
+            arg_node (Union[ArgNode, int]): The provided node
 
         Returns:
             int: The amount of nodes between the provided one and the last one. If
             the provided node is not contained in the graph returns the size of
             the graph
+
+        Raises:
+            TypeError: When the type of the parameter is neither an ArgNode nor an int
+            ValueError: When the node provided is not a node of the dialogue graph
         """
-        arg_pos = 1
+        arg_pos = -2
         distance = 0
         if type(arg_node) is int:
+            arg_pos += 1
             for node in self.nodes:
+                arg_pos += 1
                 if node.arg_case_id == arg_node:
                     break
-                arg_pos += 1
         elif type(arg_node) is ArgNode:
+            arg_pos += 1
             for node in self.nodes:
+                arg_pos += 1
                 if node == arg_node:
                     break
-                arg_pos += 1
+        if arg_node < -1:
+            raise TypeError
+        elif arg_node < 0:
+            raise ValueError
         for j in range(arg_pos, self.size()):
             if self.nodes[j].arg_case_id == NodeType.AGREE:
                 break
