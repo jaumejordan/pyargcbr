@@ -29,7 +29,7 @@ def save_objects(objs: List[Any], file_name: str):
 
 
 if __name__ == "__main__":
-    f = load_json("test1.json")
+    f = load_json("test_domain_case.json")
     domain_cases = f["domain_case"]
     #print("Número de domain-cases en el JSON: ", len(domain_cases))
     #print("Toda la lista: ", domain_cases)
