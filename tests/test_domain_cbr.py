@@ -7,14 +7,12 @@ from agents.metrics import levenshtein_distance as cmp
 import pytest
 
 
-from pyargcbr import pyargcbr
 from knowledge_resources.domain_case import DomainCase
 from knowledge_resources.domain_context import DomainContext
 from knowledge_resources.justification import Justification
 from knowledge_resources.premise import Premise
 from knowledge_resources.problem import Problem
 from knowledge_resources.similar_domain_case import SimilarDomainCase
-from knowledge_resources.solution import Solution
 
 from cbrs.domain_cbr import DomainCBR
 
@@ -38,7 +36,7 @@ def similar_domain_case_comparison(case1: SimilarDomainCase, case2: SimilarDomai
     return True
 
 
-class TestDomainCBR():
+class TestDomainCBR:
     cbr: DomainCBR = None
 
     def set_up(self):

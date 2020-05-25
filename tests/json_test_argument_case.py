@@ -108,6 +108,7 @@ if __name__ == "__main__":
         new_social_context.group = new_group
         new_social_context.relation = social_context_dict["relation"]
 
+        new_problem.social_context = new_social_context
         #####################################################################
         # ArgumentSolutions
 

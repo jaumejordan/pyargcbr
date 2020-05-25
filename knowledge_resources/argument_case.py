@@ -1,4 +1,3 @@
-from collections import Sequence
 from dataclasses import dataclass
 
 from knowledge_resources.argument_justification import ArgumentJustification

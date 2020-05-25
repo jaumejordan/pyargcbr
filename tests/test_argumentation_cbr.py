@@ -2,7 +2,6 @@
 
 """Tests for `pyargcbr` package."""
 from typing import List
-from agents.metrics import levenshtein_distance as cmp
 
 import pytest
 
@@ -14,7 +13,7 @@ class TestArgumentationCBR:
     cbr: ArgCBR = None
 
     def set_up(self):
-        self.cbr = ArgCBR("domain_cases_py.dat", "tmp/null")
+        self.cbr = ArgCBR("argument_cases_py.dat", "tmp/null")
 
     def retrieval_accuracy(self):
         # For each ticket in arguments case base
@@ -25,7 +24,7 @@ class TestArgumentationCBR:
                 sim_case = retrieved_cases[0]
                 assert sim_case.case.id == a_case.id
             else:
-                assert False # TODO This was not in the original code, but I guess is needed
+                assert False  # TODO This was not in the original code, but I guess is needed
 
     def retrieval_consistency(self):
         all_cases = self.cbr.get_all_cases()
@@ -70,6 +69,6 @@ class TestArgumentationCBR:
 
     def test_content(self, response):
         self.set_up()
-        self.retrieval_accuracy()
+        #self.retrieval_accuracy()
         self.retrieval_consistency()
         self.case_duplication()

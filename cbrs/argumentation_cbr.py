@@ -31,7 +31,7 @@ class ArgCBR(CBR):
                 domain-cases will be stored.
         """
         super().__init__(initial_file_path, storing_file_path)
-        self.load_case_base()
+        self.load_case_base(verbose=True)
 
     def load_case_base(self, verbose: bool = False):
         """Loads the case-base stored in the initial file path
@@ -89,7 +89,9 @@ class ArgCBR(CBR):
                     # are the same
                     if (self.is_same_domain_context_precise(new_case_premises_list, arg_case_premises)
                         and self.is_same_social_context(new_arg_case.problem.social_context,
-                                                        arg_case.problem.social_context)):
+                                                        arg_case.problem.social_context)
+                        and new_arg_case.solutions.conclusion.id == arg_case.solutions.conclusion.id
+                            and new_arg_case.solutions.acceptability_status == arg_case.solutions.acceptability_status):
                         # It is the same argument-case, so it is not introduced
                         # but we add associated cases and attacks received,
                         # and dialogue graphs and increase timesUsed
@@ -183,7 +185,7 @@ class ArgCBR(CBR):
                                     node.arg_case_id = arg_case.id
                                 graphs.append(diag)
 
-                            return False
+                        return False
 
             # the same case is not stored, so it is added
             if not candidate_cases:
@@ -659,7 +661,7 @@ class ArgCBR(CBR):
             first_case_premise = desired_premises_list[0]
             first_premise_id = first_case_premise.id
             candidate_cases = self.case_base.get(first_premise_id, [])
-            if not candidate_cases:
+            if candidate_cases:
                 for arg_case in candidate_cases:
                     arg_case_premises = arg_case.problem.context.premises
                     # If the premises are the same with the same content. it is asimilar
@@ -723,7 +725,7 @@ class ArgCBR(CBR):
         if (social_context1.relation != social_context2.relation
             or social_context1.group.id != social_context2.group.id
             or social_context1.opponent.id != social_context2.opponent.id
-            or social_context1.proponent.id != social_context2.proponent.id):
+                or social_context1.proponent.id != social_context2.proponent.id):
             return False
         return True
 
