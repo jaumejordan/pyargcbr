@@ -1,0 +1,25 @@
+PROTOCOL = "protocol"
+PERFORMATIVE = "performative"
+
+REGISTER_PROTOCOL = "REGISTER"
+REQUEST_PROTOCOL = "REQUEST"
+
+REQUEST_PERF = "request"    # To ask for registration
+ACCEPT_PERF = "accept"      # To confirm registration
+
+LAST_MODIFICATION_DATE_PERF = "last_modification_date"
+ADD_ARGUMENT_PERF = "add_argument"
+REMOVE_ARGUMENT_PERF = "remove_argument"
+ADD_POSITION_PERF = "add_position"
+GET_POSITION_PERF = "get_position"
+GET_ALL_POSITIONS_PERF = "get_all_positions"
+NO_COMMIT_PERF = "no_commit"
+ASSERT_PERF = "assert"
+ATTACK_PERF = "attack"
+ADD_DIALOGUE_PERF = "add_dialogue"
+GET_DIALOGUE_PERF = "get_dialogue"
+ENTER_DIALOGUE_PERF = "enter_dialogue"
+WITHDRAW_DIALOGUE_PERF = "withdraw_dialogue"
+DIE_PERF = "die"
+
+CONVERSATION = "conversation"

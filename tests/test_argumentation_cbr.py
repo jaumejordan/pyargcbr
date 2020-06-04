@@ -69,6 +69,6 @@ class TestArgumentationCBR:
 
     def test_content(self, response):
         self.set_up()
-        #self.retrieval_accuracy()
+        self.retrieval_accuracy()   # TODO check
         self.retrieval_consistency()
         self.case_duplication()
