@@ -1,3 +1,9 @@
+import pickle
+import codecs
+from typing import TypeVar, Any
+
+from spade.message import Message
+
 PROTOCOL = "protocol"
 PERFORMATIVE = "performative"
 
@@ -23,3 +29,19 @@ WITHDRAW_DIALOGUE_PERF = "withdraw_dialogue"
 DIE_PERF = "die"
 
 CONVERSATION = "conversation"
+
+
+class MessageCodification:
+    PickledObject = TypeVar("PickledObject")
+
+    @staticmethod
+    def pickle_object(obj: Any) -> PickledObject:
+        return codecs.encode(pickle.dumps(obj), "base64").decode()
+
+    @staticmethod
+    def unpickle_object(obj: PickledObject):
+        return pickle.loads(codecs.decode(obj.encode(), "base64"))
+
+    @staticmethod
+    def get_decoded_message_content(msg: Message) -> Any:
+        return MessageCodification.unpickle_object(msg.body)

@@ -10,16 +10,16 @@ from knowledge_resources.premise import Premise
 @dataclass
 class SupportSet:
     """Implementation of the concept SupportSet"""
-    premises: List[Premise] = field(default_factory=lambda:[])
-    domain_cases: List[DomainCase] = field(default_factory=lambda:[])
-    argument_cases: List[ArgumentCase] = field(default_factory=lambda:[])
-    schemes: List[ArgumentationScheme] = field(default_factory=lambda:[])
-    dist_premises: List[Premise] = field(default_factory=lambda:[])
-    presumptions: List[Premise] = field(default_factory=lambda:[])
-    exceptions: List[Premise] = field(default_factory=lambda:[])
+    premises: List[Premise] = field(default_factory=lambda: [])
+    domain_cases: List[DomainCase] = field(default_factory=lambda: [])
+    argument_cases: List[ArgumentCase] = field(default_factory=lambda: [])
+    schemes: List[ArgumentationScheme] = field(default_factory=lambda: [])
+    dist_premises: List[Premise] = field(default_factory=lambda: [])
+    presumptions: List[Premise] = field(default_factory=lambda: [])
+    exceptions: List[Premise] = field(default_factory=lambda: [])
 
-    counter_examples_dom_cases: List[DomainCase] = field(default=[])
-    counter_examples_arg_cases: List[ArgumentCase] = field(default=[])
+    counter_examples_dom_cases: List[DomainCase] = field(default_factory=lambda: [])
+    counter_examples_arg_cases: List[ArgumentCase] = field(default_factory=lambda: [])
 
     def remove_argumentation_scheme(self, old_argumentation_scheme: ArgumentationScheme):
         """Removes an argumentation scheme from the list of argumentation

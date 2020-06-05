@@ -20,8 +20,8 @@ class Argument:
     support_set: SupportSet = SupportSet()
     acceptability_state: AcceptabilityStatus = AcceptabilityStatus.UNDECIDED
     attacking_to_arg_id: int = -1
-    received_attacks_counter_examples: List[Argument] = field(default_factory=lambda:[])
-    received_attacks_dist_premises: List = field(default=[])
+    received_attacks_counter_examples: List[Argument] = field(default_factory=lambda: [])
+    received_attacks_dist_premises: List = field(default_factory=lambda: [])
 
     def __str__(self):
         """Default 'to string' method rewritten

@@ -1,14 +1,13 @@
-import datetime
-import asyncio
+from datetime import datetime
 from asyncio import CancelledError
-from typing import Dict, List
+from typing import Dict, List, Optional, Any
 
 from spade.template import Template
 
 from agents.protocol import ADD_ARGUMENT_PERF, REMOVE_ARGUMENT_PERF, ADD_POSITION_PERF, ATTACK_PERF, ADD_POSITION_PERF,\
     GET_POSITION_PERF, GET_ALL_POSITIONS_PERF, NO_COMMIT_PERF, ASSERT_PERF, ATTACK_PERF, ADD_DIALOGUE_PERF,\
     GET_DIALOGUE_PERF, ENTER_DIALOGUE_PERF, WITHDRAW_DIALOGUE_PERF, DIE_PERF, REGISTER_PROTOCOL, REQUEST_PROTOCOL,\
-    ACCEPT_PERF, REQUEST_PERF, LAST_MODIFICATION_DATE_PERF, PROTOCOL, PERFORMATIVE, CONVERSATION
+    ACCEPT_PERF, REQUEST_PERF, LAST_MODIFICATION_DATE_PERF, PROTOCOL, PERFORMATIVE, CONVERSATION, MessageCodification
 
 from spade.agent import Agent
 from spade.behaviour import CyclicBehaviour
@@ -26,10 +25,10 @@ class CommitmentStore(Agent):
     def __init__(self, agentjid, password):
         super().__init__(jid=agentjid, password=password)
         self.agent_id = agentjid
-        self.dialogues: Dict[str, Dialogue] = {}
-        self.arguments: Dict[str, Dict[str, List[Argument]]] = {}
+        self.dialogues: Dict[str, Dialogue]  = {}
+        self.arguments: Dict[str, Dict[str, List[Argument]]]  = {}
         self.positions: Dict[str, Dict[str, Position]] = {}
-        self.last_modifications: Dict[str, int] = {}
+        self.last_modification_dates: Dict[str, int] = {}
 
     def finalize(self):
         pass
@@ -62,9 +61,10 @@ class CommitmentStore(Agent):
     def create_message(self, agent_jid: str, performative: str, conversation_id: str, content_object) -> Message:
         msg = Message()
         msg.to = agent_jid
-        msg.set_metadata(CONVERSATION, conversation_id) # TODO check
+        msg.sender = self.agent_id
+        msg.set_metadata(CONVERSATION, conversation_id)  # TODO check
         msg.set_metadata(PERFORMATIVE, performative)
-        msg.body = content_object
+        msg.body = MessageCodification.pickle_object(content_object)
         print(self.name, ": message to send to: ", msg.to, " dialogueID: ", msg.get_metadata(CONVERSATION))
         return msg
 
@@ -119,7 +119,7 @@ class CommitmentStore(Agent):
         agent_pos[dialogue_id] = pos
         self.positions[agent_id] = agent_pos
 
-    def get_positions(self, agent_id: str, dialogue_id: str) -> Position:
+    def get_position(self, agent_id: str, dialogue_id: str) -> Position:
         """Returns the position of the given agent in the given dialogue
 
         Args:
@@ -213,48 +213,80 @@ class RegistrationBehaviour(CyclicBehaviour):
 
 
 class ReplierBehaviour(CyclicBehaviour):
+    agent: CommitmentStore
+
     def __init__(self):
         super().__init__()
-        self.last_modification_date = "19/2/2013"
 
     async def on_start(self):
         print("Starting behaviour . . .")
 
-    async def run(self):
+    def do_respond(self, msg: Optional[Message]) -> Optional[Message]:
+        response: Optional[Message] = None
         try:
-            print("WAITING")
-            msg = await self.receive(timeout=5)
             if msg:
-                agent_id = msg.sender
                 performative = msg.get_metadata(PERFORMATIVE)
-                print(msg)
+                agent_id = str(msg.sender) # TODO probably only the first part of the JID is needed
+                conversation_id = str(msg.get_metadata(CONVERSATION))
                 if performative == LAST_MODIFICATION_DATE_PERF:
-                    pass
+                    last_date = self.agent.last_modification_dates.get(conversation_id, 0)
+                    millis_difference = datetime.now().microsecond - last_date
+                    print("The millis difference before sending is: ", millis_difference)
+                    response = self.agent.create_message(agent_id, LAST_MODIFICATION_DATE_PERF,
+                                                         conversation_id, millis_difference)
                 elif performative == ADD_ARGUMENT_PERF:
-                    pass
+                    self.agent.last_modification_dates[conversation_id] = datetime.now().microsecond
+                    arg: Argument = MessageCodification.get_decoded_message_content(msg)
+                    self.agent.add_argument(arg, agent_id, conversation_id)
                 elif performative == REMOVE_ARGUMENT_PERF:
-                    pass
+                    self.agent.last_modification_dates[conversation_id] = datetime.now().microsecond
+                    arg: Argument = MessageCodification.get_decoded_message_content(msg)
+                    self.agent.remove_argument(arg, agent_id, conversation_id)
                 elif performative == ADD_POSITION_PERF:
-                    pass
+                    self.agent.last_modification_dates[conversation_id] = datetime.now().microsecond
+                    pos: Position = MessageCodification.get_decoded_message_content(msg)
+                    self.agent.add_position(pos, agent_id, conversation_id)
                 elif performative == GET_POSITION_PERF:
-                    pass
+                    pos: Position = self.agent.get_position(agent_id, conversation_id)
+                    response = self.agent.create_message(agent.agent_id, LAST_MODIFICATION_DATE_PERF,
+                                                         conversation_id, pos)
                 elif performative == GET_ALL_POSITIONS_PERF:
-                    pass
+                    all_positions: List[Position] = self.agent.get_all_positions(agent_id, conversation_id)
+                    response = self.agent.create_message(agent.agent_id, LAST_MODIFICATION_DATE_PERF,
+                                                         conversation_id, all_positions)
                 elif performative == NO_COMMIT_PERF:
-                    pass
+                    self.agent.last_modification_dates[conversation_id] = datetime.now().microsecond
+                    pos: Position = MessageCodification.get_decoded_message_content(msg)
+                    self.agent.remove_position(pos, agent_id, conversation_id)
                 elif performative == ADD_DIALOGUE_PERF:
-                    pass
+                    self.agent.last_modification_dates[conversation_id] = datetime.now().microsecond
+                    dialogue: Dialogue = MessageCodification.get_decoded_message_content(msg)
+                    self.agent.add_dialogue(dialogue)
                 elif performative == GET_DIALOGUE_PERF:
-                    pass
+                    dialogue: Dialogue = self.agent.get_dialogue(agent_id)
+                    response = self.agent.create_message(agent.agent_id, LAST_MODIFICATION_DATE_PERF,
+                                                         conversation_id, dialogue)
                 elif performative == ENTER_DIALOGUE_PERF:
-                    pass
+                    self.agent.last_modification_dates[conversation_id] = datetime.now().microsecond
+                    dialogue: Dialogue = self.agent.dialogues.get(conversation_id)
+                    dialogue.add_agent_ids(agent_id)  # TODO what if the dialogue does not exist?
                 elif performative == WITHDRAW_DIALOGUE_PERF:
-                    pass
+                    self.agent.last_modification_dates[conversation_id] = datetime.now().microsecond
+                    dialogue: Dialogue = self.agent.dialogues.get(conversation_id)
+                    dialogue.remove_agent_ids(agent_id)  # TODO what if the dialogue does not exist?
                 elif performative == DIE_PERF:
                     pass
                 else:
                     print("{} not understood".format(self.agent))
         except CancelledError:
-            pass
+            print("Cancelled")
         except Exception as e:
-            pass
+            print("Something went wrong: ", e)
+        return response
+
+    async def run(self):
+        print("WAITING")
+        msg_req = await self.receive(timeout=5)
+        msg_res = self.do_respond(msg_req)
+        if msg_res:
+            await self.send(msg_res)
