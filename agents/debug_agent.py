@@ -56,7 +56,7 @@ class DebugAgent(Agent):
             else:
                 date = await self.ask_last_modification_date()
                 if date:
-                    logger.info("The millis is: ", date)
+                    logger.info("The millis is: {}".format(date))
                 else:
                     logger.error("FAIL")
                 await self.agent.stop()

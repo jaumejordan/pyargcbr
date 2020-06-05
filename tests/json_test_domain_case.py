@@ -91,6 +91,6 @@ if __name__ == "__main__":
             logger.info(load(fh))
             count += 1
         except EOFError:
-            logger.info("Número de DomainCase en el fichero: ", count)
+            logger.info("Amount of DomainCase inside the file: {}".format(count))
             break
     fh.close()

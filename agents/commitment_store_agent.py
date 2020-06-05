@@ -66,7 +66,8 @@ class CommitmentStore(Agent):
         msg.set_metadata(CONVERSATION, conversation_id)  # TODO check
         msg.set_metadata(PERFORMATIVE, performative)
         msg.body = MessageCodification.pickle_object(content_object)
-        logger.info(self.name, ": message to send to: ", msg.to, " dialogueID: ", msg.get_metadata(CONVERSATION))
+        logger.info("{}: message to send to: {} | dialogue_id: {}".format(self.name, msg.to,
+                                                                          msg.get_metadata(CONVERSATION)))
         return msg
 
     def add_argument(self, arg: Argument, agent_id: str, dialogue_id: str) -> None:
@@ -281,7 +282,7 @@ class ReplierBehaviour(CyclicBehaviour):
         except CancelledError:
             logger.exception("Cancelled")
         except Exception as e:
-            logger.exception("Something went wrong: ", e)
+            logger.exception("Something went wrong: ".format(e))
         return response
 
     async def run(self):

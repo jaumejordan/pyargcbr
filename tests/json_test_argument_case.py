@@ -240,18 +240,19 @@ if __name__ == "__main__":
     fh = open("argument_cases_py.dat", 'rb')
     logger.info("\n\n\nTodo el contenido del fichero:")
     count = 0
+    inf = ""
     while True:
         try:
             arg_case: ArgumentCase = load(fh)
-            logger.info("Argument case (", count, ")[", type(arg_case),"]:")
-            logger.info("Times Used: ", arg_case.times_used)
-            logger.info("Creation Date: ", arg_case.creation_date)
-            logger.info("ID: ", arg_case.id)
-            logger.info("Problem: ", arg_case.problem)
-            logger.info("Solution: ", arg_case.solutions)
-            logger.info("Justification: ", arg_case.justification, "\n")
+            inf += "Argument case ({})[{}]\n".format(count, type(arg_case))
+            inf += "Times Used: {}\nCreationDate: {}\nID: {}\n".format(arg_case.times_used,
+                                                                       arg_case.creation_date, arg_case.id)
+            inf += "Problem: {}\n".format(arg_case.problem)
+            inf += "Solution: {}\n".format(arg_case.solutions)
+            inf += "Justification: {}\n".format(arg_case.justification)
             count += 1
         except EOFError:
-            logger.info("Número de DomainCase en el fichero: ", count)
+            logger.info(inf)
+            logger.info("Amount of ArgumentCase inside the file: {}".format(count))
             break
     fh.close()
