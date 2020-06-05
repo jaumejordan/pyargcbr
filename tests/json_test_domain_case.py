@@ -1,6 +1,7 @@
 import json
 from pickle import dump, load
 from typing import List, Any, Dict
+from loguru import logger
 
 from knowledge_resources.conclusion import Conclusion
 from knowledge_resources.domain_case import DomainCase
@@ -83,13 +84,13 @@ if __name__ == "__main__":
     save_objects(new_domain_cases, "domain_cases_py.dat")
 
     fh = open("domain_cases_py.dat", 'rb')
-    print("\n\n\nTodo el contenido del fichero:")
+    logger.info("\n\n\nTodo el contenido del fichero:")
     count = 0
     while True:
         try:
-            print(load(fh))
+            logger.info(load(fh))
             count += 1
         except EOFError:
-            print("Número de DomainCase en el fichero: ", count)
+            logger.info("Número de DomainCase en el fichero: ", count)
             break
     fh.close()

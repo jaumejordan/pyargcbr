@@ -1,6 +1,7 @@
 from datetime import datetime
 from asyncio import CancelledError
 from typing import Dict, List, Optional, Any
+from loguru import logger
 
 from spade.template import Template
 
@@ -34,7 +35,7 @@ class CommitmentStore(Agent):
         pass
 
     async def setup(self):
-        print("Commitment Store starting . . .")
+        logger.info("Commitment Store starting . . .")
 
         try:
             template = Template()
@@ -42,10 +43,10 @@ class CommitmentStore(Agent):
             register_behaviour = RegistrationBehaviour()
             self.add_behaviour(register_behaviour, template)
             while not self.has_behaviour(register_behaviour):
-                print("Commitment Store {} could not create RegisterBehaviour. Retrying...".format(self.agent_id))
+                logger.error("Commitment Store {} could not create RegisterBehaviour. Retrying...".format(self.agent_id))
                 self.add_behaviour(register_behaviour, template)
         except Exception as e:
-            print("EXCEPTION creating RegisterBehaviour in Directory {}: {}".format(self.agent_id, e))
+            logger.exception("EXCEPTION creating RegisterBehaviour in Directory {}: {}".format(self.agent_id, e))
 
         try:
             template = Template()
@@ -53,10 +54,10 @@ class CommitmentStore(Agent):
             replier_behaviour = ReplierBehaviour()
             self.add_behaviour(replier_behaviour, template)
             while not self.has_behaviour(replier_behaviour):
-                print("Commitment Store {} could not create ReplierBehaviour. Retrying...".format(self.agent_id))
+                logger.error("Commitment Store {} could not create ReplierBehaviour. Retrying...".format(self.agent_id))
                 self.add_behaviour(replier_behaviour, template)
         except Exception as e:
-            print("EXCEPTION creating ReplierBehaviour in Directory {}: {}".format(self.agent_id, e))
+            logger.exception("EXCEPTION creating ReplierBehaviour in Directory {}: {}".format(self.agent_id, e))
 
     def create_message(self, agent_jid: str, performative: str, conversation_id: str, content_object) -> Message:
         msg = Message()
@@ -65,7 +66,7 @@ class CommitmentStore(Agent):
         msg.set_metadata(CONVERSATION, conversation_id)  # TODO check
         msg.set_metadata(PERFORMATIVE, performative)
         msg.body = MessageCodification.pickle_object(content_object)
-        print(self.name, ": message to send to: ", msg.to, " dialogueID: ", msg.get_metadata(CONVERSATION))
+        logger.info(self.name, ": message to send to: ", msg.to, " dialogueID: ", msg.get_metadata(CONVERSATION))
         return msg
 
     def add_argument(self, arg: Argument, agent_id: str, dialogue_id: str) -> None:
@@ -184,7 +185,7 @@ class CommitmentStore(Agent):
 
 class RegistrationBehaviour(CyclicBehaviour):
     async def on_start(self):
-        print("Starting RegistrationBehaviour")
+        logger.info("Starting RegistrationBehaviour")
 
     async def send_confirmation(self, agent_id):
         """
@@ -203,13 +204,13 @@ class RegistrationBehaviour(CyclicBehaviour):
                 agent_id = msg.sender
                 performative = msg.get_metadata(PERFORMATIVE)
                 if performative == REQUEST_PERF:
-                    print("Registration in the Commitment Store {} of the agent {}".format(self.agent.name,
+                    logger.success("Registration in the Commitment Store {} of the agent {}".format(self.agent.name,
                                                                                            agent_id))
                     await self.send_confirmation(agent_id)
         except CancelledError:
-            print("Cancelling async tasks...")
+            logger.exception("Cancelling async tasks...")
         except Exception as e:
-            print("EXCEPTION in DirectoryRegister Behaviour of Commitment Store {}: {}".format(self.agent.name, e))
+            logger.exception("EXCEPTION in DirectoryRegister Behaviour of Commitment Store {}: {}".format(self.agent.name, e))
 
 
 class ReplierBehaviour(CyclicBehaviour):
@@ -219,7 +220,7 @@ class ReplierBehaviour(CyclicBehaviour):
         super().__init__()
 
     async def on_start(self):
-        print("Starting behaviour . . .")
+        logger.info("Starting behaviour . . .")
 
     def do_respond(self, msg: Optional[Message]) -> Optional[Message]:
         response: Optional[Message] = None
@@ -231,7 +232,6 @@ class ReplierBehaviour(CyclicBehaviour):
                 if performative == LAST_MODIFICATION_DATE_PERF:
                     last_date = self.agent.last_modification_dates.get(conversation_id, 0)
                     millis_difference = datetime.now().microsecond - last_date
-                    print("The millis difference before sending is: ", millis_difference)
                     response = self.agent.create_message(agent_id, LAST_MODIFICATION_DATE_PERF,
                                                          conversation_id, millis_difference)
                 elif performative == ADD_ARGUMENT_PERF:
@@ -277,15 +277,15 @@ class ReplierBehaviour(CyclicBehaviour):
                 elif performative == DIE_PERF:
                     pass
                 else:
-                    print("{} not understood".format(self.agent))
+                    logger.error("{} not understood".format(self.agent))
         except CancelledError:
-            print("Cancelled")
+            logger.exception("Cancelled")
         except Exception as e:
-            print("Something went wrong: ", e)
+            logger.exception("Something went wrong: ", e)
         return response
 
     async def run(self):
-        print("WAITING")
+        logger.info("WAITING")
         msg_req = await self.receive(timeout=5)
         msg_res = self.do_respond(msg_req)
         if msg_res:

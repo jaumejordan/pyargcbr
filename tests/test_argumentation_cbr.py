@@ -2,7 +2,7 @@
 
 """Tests for `pyargcbr` package."""
 from typing import List
-
+from loguru import logger
 import pytest
 
 from cbrs.argumentation_cbr import ArgCBR

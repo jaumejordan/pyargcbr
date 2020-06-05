@@ -1,5 +1,6 @@
 import asyncio
 import time
+from loguru import logger
 
 from spade.agent import Agent
 from spade.behaviour import CyclicBehaviour
@@ -19,10 +20,10 @@ class DebugAgent(Agent):
 
         async def on_start(self):
             time.sleep(3)
-            print("Starting kk_behaviour . . .")
+            logger.info("Starting kk_behaviour . . .")
 
         async def ask_last_modification_date(self):
-            print("Asking for last modification date")
+            logger.info("Asking for last modification date")
             request = Message()
             request.to = "commitment_store@localhost"
             request.set_metadata(PROTOCOL, REQUEST_PROTOCOL)
@@ -35,7 +36,7 @@ class DebugAgent(Agent):
                 return None
 
         async def ask_for_registration(self):
-            print("Asking for registration")
+            logger.info("Asking for registration")
             request = Message()
             request.to = "commitment_store@localhost"
             request.set_metadata(PROTOCOL, REGISTER_PROTOCOL)
@@ -44,10 +45,10 @@ class DebugAgent(Agent):
             msg = await self.receive(timeout=5)
             if msg:
                 if msg.get_metadata(PERFORMATIVE) == ACCEPT_PERF:
-                    print("YAHOO! I have been accepted and registered!")
+                    logger.success("YAHOO! I have been accepted and registered!")
                     self.accepted = True
                 else:
-                    print("YIKES! I have been regret")
+                    logger.error("YIKES! I have been regret")
 
         async def run(self):
             if not self.accepted:
@@ -55,13 +56,13 @@ class DebugAgent(Agent):
             else:
                 date = await self.ask_last_modification_date()
                 if date:
-                    print("The millis difference after receiving is: ", date)
+                    logger.info("The millis is: ", date)
                 else:
-                    print("FAIL")
+                    logger.error("FAIL")
                 await self.agent.stop()
 
     async def setup(self):
-        print("Agent starting . . .")
+        logger.info("Agent starting . . .")
         b = self.KKBehaviour()
         self.add_behaviour(b)
 

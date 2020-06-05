@@ -1,6 +1,7 @@
 import json
 from pickle import dump, load
 from typing import List, Any, Dict
+from loguru import logger
 
 from knowledge_resources.arg_node import ArgNode
 from knowledge_resources.argument_case import ArgumentCase
@@ -237,20 +238,20 @@ if __name__ == "__main__":
     save_objects(new_argument_cases, "argument_cases_py.dat")
 
     fh = open("argument_cases_py.dat", 'rb')
-    print("\n\n\nTodo el contenido del fichero:")
+    logger.info("\n\n\nTodo el contenido del fichero:")
     count = 0
     while True:
         try:
             arg_case: ArgumentCase = load(fh)
-            print("Argument case (", count, ")[", type(arg_case),"]:")
-            print("Times Used: ", arg_case.times_used)
-            print("Creation Date: ", arg_case.creation_date)
-            print("ID: ", arg_case.id)
-            print("Problem: ", arg_case.problem)
-            print("Solution: ", arg_case.solutions)
-            print("Justification: ", arg_case.justification, "\n")
+            logger.info("Argument case (", count, ")[", type(arg_case),"]:")
+            logger.info("Times Used: ", arg_case.times_used)
+            logger.info("Creation Date: ", arg_case.creation_date)
+            logger.info("ID: ", arg_case.id)
+            logger.info("Problem: ", arg_case.problem)
+            logger.info("Solution: ", arg_case.solutions)
+            logger.info("Justification: ", arg_case.justification, "\n")
             count += 1
         except EOFError:
-            print("Número de DomainCase en el fichero: ", count)
+            logger.info("Número de DomainCase en el fichero: ", count)
             break
     fh.close()

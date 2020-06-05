@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from pickle import load, dump
+from loguru import logger
 from typing import Dict, List, ValuesView, Mapping, Sequence
 from agents.configuration import Configuration
 import agents.similarity_algorithms as sim_algs
@@ -36,13 +37,8 @@ class DomainCBR(CBR):
         self.index = index
         self.load_case_base()
 
-    def load_case_base(self, verbose: bool = False):
-        """Loads the case-base stored in the initial file path.
-
-        Args:
-            verbose (bool): If True prints a summary of th result after the
-                execution. By default is set to False
-        """
+    def load_case_base(self):
+        """Loads the case-base stored in the initial file path"""
         self.case_base = {}
         introduced = 0
         not_introduced = 0
@@ -61,9 +57,8 @@ class DomainCBR(CBR):
                             not_introduced += 1
                 except EOFError:
                     break
-        if verbose:
-            print(self.initial_file_path, "domain_cases: ", introduced + not_introduced,
-                  "introduced: ", introduced, "not_introduced: ", not_introduced, "sols: ", str_ids)
+        logger.info(self.initial_file_path, "domain_cases: ", introduced + not_introduced,
+                    "introduced: ", introduced, "not_introduced: ", not_introduced, "sols: ", str_ids)
 
     def retrieve_and_retain(self, dom_case: DomainCase, threshold: float) -> List[SimilarDomainCase]:
         """Retrieves the domain_cases that are in a range of similarity degree
@@ -85,11 +80,11 @@ class DomainCBR(CBR):
                     dom_case.solutions = similar_case.case.solutions
                     returned_value = self.add_case(dom_case)
                     if returned_value:
-                        print("New case Introduced")
+                        logger.info("New case Introduced")
                     else:
-                        print("New case NOT Introduced")
+                        logger.info("New case NOT Introduced")
                 else:
-                    print("New case NOT Introduced. Similar 1.0")
+                    logger.info("New case NOT Introduced. Similar 1.0")
 
         return similar_cases
 

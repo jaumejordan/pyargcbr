@@ -4,6 +4,7 @@ from typing import Dict, List, Union, Sequence, Mapping, ValuesView
 from agents.configuration import Configuration
 from cbrs.cbr import CBR
 from pickle import load, dump
+from loguru import logger
 
 from knowledge_resources.acceptability_status import AcceptabilityStatus
 from knowledge_resources.argument_case import ArgumentCase
@@ -31,15 +32,10 @@ class ArgCBR(CBR):
                 domain-cases will be stored.
         """
         super().__init__(initial_file_path, storing_file_path)
-        self.load_case_base(verbose=True)
+        self.load_case_base()
 
-    def load_case_base(self, verbose: bool = False):
-        """Loads the case-base stored in the initial file path
-
-        Args:
-            verbose (bool): If true prints a summary of th result after the
-                execution
-        """
+    def load_case_base(self):
+        """Loads the case-base stored in the initial file path"""
         super().load_case_base()  # Currently it does nothing
         self.case_base = {}
         introduced = 0
@@ -59,9 +55,8 @@ class ArgCBR(CBR):
                             not_introduced += 1
                 except EOFError:
                     break
-        if verbose:
-            print(self.initial_file_path, "argument_cases: ", introduced + not_introduced,
-                  "introduced: ", introduced, "not_introduced: ", not_introduced, "sols: ", str_ids)
+        logger.info(self.initial_file_path, "argument_cases: ", introduced + not_introduced,
+                    "introduced: ", introduced, "not_introduced: ", not_introduced, "sols: ", str_ids)
 
     def add_case(self, new_arg_case: ArgumentCase) -> bool:
         """Two cases are equal if they have the same domain context, social
@@ -178,8 +173,8 @@ class ArgCBR(CBR):
                             for diag in dialogue_graphs:
                                 nodes_to_change = diag.get_nodes(new_arg_case.id)
                                 if not nodes_to_change:
-                                    print("ERROR updating argument-case case-base.",
-                                          "No Argument-nodes matching in DialogueGraph")
+                                    logger.error("ERROR updating argument-case case-base.",
+                                                 "No Argument-nodes matching in DialogueGraph")
                                     continue
                                 for node in nodes_to_change:
                                     node.arg_case_id = arg_case.id
@@ -458,7 +453,7 @@ class ArgCBR(CBR):
                     try:
                         dialogue_steps = dialogue_graph.distance_to_final(sim_arg_case_position.case.id)
                     except (ValueError, TypeError) as e:
-                        print(e)
+                        logger.exception(e)
                         continue
                     if dialogue_steps < min_steps:
                         min_steps = dialogue_steps
