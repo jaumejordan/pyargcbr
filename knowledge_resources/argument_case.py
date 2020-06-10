@@ -14,19 +14,19 @@ class ArgumentCase(Case):
     solutions: ArgumentSolution = ArgumentSolution()
     justification: ArgumentJustification = ArgumentJustification()
 
-    def __init__(self, problem: ArgumentProblem,
+    def __init__(self, arg_id: int, creation_date: str, problem: ArgumentProblem,
                  solution: ArgumentSolution,
-                 justification: ArgumentJustification):
-        """DomainCase is a specialization of Case
+                 justification: ArgumentJustification, times_used: int = 0):
+        """ArgumentCase is a specialization of Case
 
         Args:
             problem (ArgumentProblem): Argument cases problems are ArgumentProblem
             solution (ArgumentSolution): The argument cases have only one solution
             justification (ArgumentJustification): Argument cases solutions have ArgumentSolutions
         """
-        self.problem = problem
-        self.solutions = solution
-        self.justification = justification
+        super().__init__(id=arg_id, creation_date=creation_date, problem=problem, solutions=solution,
+                         justification=justification)
+        self.times_used = times_used
 
     def __str__(self):
         """Default 'to string' method rewritten

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Optional
 
 from knowledge_resources.acceptability_status import AcceptabilityStatus
 from knowledge_resources.conclusion import Conclusion
@@ -12,12 +12,12 @@ from knowledge_resources.support_set import SupportSet
 @dataclass
 class Argument:
     """Implementation of the concept Argument"""
-    proponent_depen_relation: DependencyRelation # TODO notice that the order of the attributes is different from the java version
     id: int = 1
     conclusion: Conclusion = Conclusion()
     times_used_conclusion: int = 0
     value: str = ""
     support_set: SupportSet = SupportSet()
+    proponent_depen_relation: Optional[DependencyRelation] = None
     acceptability_state: AcceptabilityStatus = AcceptabilityStatus.UNDECIDED
     attacking_to_arg_id: int = -1
     received_attacks_counter_examples: List[Argument] = field(default_factory=lambda: [])

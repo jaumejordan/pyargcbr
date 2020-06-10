@@ -22,8 +22,15 @@ from knowledge_resources.position import Position
 class CommitmentStore(Agent):
     """This agent, named Commitment Store, stores all the information about the dialogues, including: positions,
     arguments and modification times.
-    It responds to the petitions of the agents in the dialogue process"""
-    def __init__(self, agentjid, password):
+    It responds to the petitions of the agents in the dialogue process
+    """
+    def __init__(self, agentjid: str, password: str):
+        """Main method to build commitment stores
+
+        Args:
+            agentjid (str): jid used to identify the agent (spade)
+            password (str): password of the agent (spade)
+        """
         super().__init__(jid=agentjid, password=password)
         self.agent_id = agentjid
         self.dialogues: Dict[str, Dialogue]  = {}
@@ -31,7 +38,7 @@ class CommitmentStore(Agent):
         self.positions: Dict[str, Dict[str, Position]] = {}
         self.last_modification_dates: Dict[str, int] = {}
 
-    def finalize(self):
+    def finalize(self):   # TODO
         pass
 
     async def setup(self):
@@ -276,7 +283,7 @@ class ReplierBehaviour(CyclicBehaviour):
                     dialogue: Dialogue = self.agent.dialogues.get(conversation_id)
                     dialogue.remove_agent_ids(agent_id)  # TODO what if the dialogue does not exist?
                 elif performative == DIE_PERF:
-                    pass
+                    self.agent.finalize()
                 else:
                     logger.error("{} not understood".format(self.agent))
         except CancelledError:

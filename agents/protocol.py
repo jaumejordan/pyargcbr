@@ -28,6 +28,9 @@ ENTER_DIALOGUE_PERF = "enter_dialogue"
 WITHDRAW_DIALOGUE_PERF = "withdraw_dialogue"
 DIE_PERF = "die"
 
+WHY_PERF = "why"
+NOTHING_PERF = "nothing"
+
 CONVERSATION = "conversation"
 
 

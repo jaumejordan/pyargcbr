@@ -227,11 +227,12 @@ if __name__ == "__main__":
                 new_dialogue_graph.nodes.append(new_node)
             new_justification.dialogue_graphs.append(new_dialogue_graph)
 
-        new_argument_case = ArgumentCase(new_problem, new_solution, new_justification)
-        new_argument_case.times_used = argument_case_dict["times_used"]
-        new_argument_case.id = argument_case_dict["id"]
-        new_argument_case.creation_date = argument_case_dict["creation_date"]
-
+        new_argument_case = ArgumentCase(arg_id=argument_case_dict["id"],
+                                         times_used= argument_case_dict["times_used"],
+                                         creation_date=argument_case_dict["creation_date"],
+                                         problem=new_problem,
+                                         solution=new_solution,
+                                         justification=new_justification)
         new_argument_cases.append(new_argument_case)
         count += 1
 

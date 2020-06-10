@@ -1,5 +1,7 @@
 from dataclasses import dataclass, field
 from enum import Enum
+from typing import Optional
+
 from knowledge_resources.context import Context
 from knowledge_resources.group import Group
 from knowledge_resources.social_entity import SocialEntity
@@ -18,7 +20,7 @@ class SocialContext(Context):
 
     SocialContext is a specialization of Context
     """
-    proponent: SocialEntity = field(default=SocialEntity())
-    opponent: SocialEntity = field(default=SocialEntity())
-    group: Group = field(default=Group())
-    relation: DependencyRelation = DependencyRelation.CHARITY
+    proponent: Optional[SocialEntity] = field(default=SocialEntity())
+    opponent: Optional[SocialEntity] = field(default=SocialEntity())
+    group: Optional[Group] = field(default=Group())
+    relation: Optional[DependencyRelation] = DependencyRelation.CHARITY

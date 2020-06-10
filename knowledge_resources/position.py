@@ -1,8 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Dict, List
-
+from typing import Dict, List, Optional
 
 from knowledge_resources.domain_case import DomainCase
 from knowledge_resources.premise import Premise
@@ -15,11 +14,11 @@ class Position:
     dialogue_id: str
     solution: Solution
     premises: Dict[int, Premise]
-    domain_cases: List[DomainCase]
+    domain_cases: Optional[List[DomainCase]]
     domain_case_similarity: float
-    arg_suitability_factor: float
-    final_suitability: float
-    times_accepted: int
+    arg_suitability_factor: Optional[float] = None
+    final_suitability: Optional[float] = None
+    times_accepted: int = 0
 
     def remove_domain_cases(self, old_domain_case: DomainCase):
         """Removes a domain case from the domain cases list (domain_cases)
