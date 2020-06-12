@@ -3,7 +3,7 @@ from datetime import datetime
 
 from loguru import logger
 from spade.agent import Agent
-from spade.behaviour import FSMBehaviour
+from spade.behaviour import FSMBehaviour, State
 from spade.message import Message
 
 from agents.arg_message import ArgMessage
@@ -18,7 +18,7 @@ from knowledge_resources.argument import Argument
 from knowledge_resources.argument_case import ArgumentCase
 from knowledge_resources.argument_justification import ArgumentJustification
 from knowledge_resources.argument_problem import ArgumentProblem
-from knowledge_resources.argument_solution import ArgumentSolution
+from knowledge_resources.argument_solution import ArgumentSolution, ArgumentType
 from knowledge_resources.argumentation_scheme import ArgumentationScheme
 from knowledge_resources.dialogue_graph import DialogueGraph
 from knowledge_resources.domain_case import DomainCase
@@ -35,6 +35,23 @@ from knowledge_resources.solution import Solution
 from knowledge_resources.support_set import SupportSet
 
 DATE_FORMAT = "%m/%d/%Y, %H:%M:%S"
+BEGIN_STATE = "BEGIN_STATE"
+OPEN_STATE = "OPEN_STATE"
+DIE_STATE = "DIE_STATE"
+ENTER_STATE = "ENTER_STATE"
+PROPOSE_STATE = "PROPOSE_STATE"
+CENTRAL_STATE = "CENTRAL_STATE"
+ASSERT_STATE = "ASSERT_STATE"
+WAIT_ATTACK_STATE = "WAIT_ATTACK_STATE"
+DEFEND_STATE = "DEFEND_STATE"
+QUERY_POSITIONS_STATE = "QUERY_POSITIONS_STATE"
+GET_POSITIONS_STATE = "GET_POSITIONS_STATE"
+SEND_POSITION_STATE = "SEND_POSITION_STATE"
+SOLUTION_STATE = "SOLUTION_STATE"
+WHY_STATE = "WHY_STATE"
+WAIT_ASSERT_STATE = "WAIT_ASSERT_STATE"
+ATTACK_STATE = "ATTACK_STATE"
+ATTACK2_STATE = "ATTACK2_STATE"
 
 
 class ArgAgent(Agent):
@@ -136,7 +153,55 @@ class ArgAgent(Agent):
         self.store_arguments: Dict[str, List[Argument]] = {}
 
     async def setup(self):  # TODO
-        pass
+        fsm = ArgBehaviour()
+        fsm.add_state(name=BEGIN_STATE, state=BeginState(), initial=True)
+        fsm.add_state(name=OPEN_STATE, state=OpenState())
+        fsm.add_state(name=DIE_STATE, state=DieState())
+        fsm.add_state(name=ENTER_STATE, state=EnterState())
+        fsm.add_state(name=PROPOSE_STATE, state=ProposeState())
+        fsm.add_state(name=CENTRAL_STATE, state=CentralState())
+        fsm.add_state(name=ASSERT_STATE, state=AssertState())
+        fsm.add_state(name=WAIT_ATTACK_STATE, state=WaitAttackState())
+        fsm.add_state(name=DEFEND_STATE, state=DefendState())
+        fsm.add_state(name=QUERY_POSITIONS_STATE, state=QueryPositionsState())
+        fsm.add_state(name=GET_POSITIONS_STATE, state=GetPositionsState())
+        fsm.add_state(name=SEND_POSITION_STATE, state=SendPositionState())
+        fsm.add_state(name=SOLUTION_STATE, state=SolutionState())
+        fsm.add_state(name=WHY_STATE, state=WhyState())
+        fsm.add_state(name=WAIT_ASSERT_STATE, state=WaitAssertState())
+        fsm.add_state(name=ATTACK_STATE, state=AttackState())
+        fsm.add_state(name=ATTACK2_STATE, state=Attack2State())
+        # Transitions from one state to itself are not necessary to add like this TODO aren't they?
+        fsm.add_transition(source=BEGIN_STATE, dest=OPEN_STATE)
+        fsm.add_transition(source=OPEN_STATE, dest=DIE_STATE)
+        fsm.add_transition(source=OPEN_STATE, dest=ENTER_STATE)
+        fsm.add_transition(source=ENTER_STATE, dest=PROPOSE_STATE)
+        fsm.add_transition(source=ENTER_STATE, dest=OPEN_STATE)
+        fsm.add_transition(source=PROPOSE_STATE, dest=OPEN_STATE)
+        fsm.add_transition(source=PROPOSE_STATE, dest=CENTRAL_STATE)
+        fsm.add_transition(source=CENTRAL_STATE, dest=ASSERT_STATE)
+        fsm.add_transition(source=CENTRAL_STATE, dest=QUERY_POSITIONS_STATE)
+        fsm.add_transition(source=CENTRAL_STATE, dest=SEND_POSITION_STATE)
+        fsm.add_transition(source=SEND_POSITION_STATE, dest=SOLUTION_STATE)
+        fsm.add_transition(source=SOLUTION_STATE, dest=OPEN_STATE)
+        fsm.add_transition(source=ASSERT_STATE, dest=WAIT_ATTACK_STATE)
+        fsm.add_transition(source=ASSERT_STATE, dest=CENTRAL_STATE)
+        fsm.add_transition(source=ASSERT_STATE, dest=PROPOSE_STATE)
+        fsm.add_transition(source=WAIT_ATTACK_STATE, dest=CENTRAL_STATE)
+        fsm.add_transition(source=WAIT_ATTACK_STATE, dest=DEFEND_STATE)
+        fsm.add_transition(source=DEFEND_STATE, dest=WAIT_ATTACK_STATE)
+        fsm.add_transition(source=DEFEND_STATE, dest=PROPOSE_STATE)
+        fsm.add_transition(source=QUERY_POSITIONS_STATE, dest=GET_POSITIONS_STATE)
+        fsm.add_transition(source=GET_POSITIONS_STATE, dest=WHY_STATE)
+        fsm.add_transition(source=GET_POSITIONS_STATE, dest=SEND_POSITION_STATE)
+        fsm.add_transition(source=GET_POSITIONS_STATE, dest=CENTRAL_STATE)
+        fsm.add_transition(source=WHY_STATE, dest=CENTRAL_STATE)
+        fsm.add_transition(source=WHY_STATE, dest=WAIT_ASSERT_STATE)
+        fsm.add_transition(source=WAIT_ASSERT_STATE, dest=CENTRAL_STATE)
+        fsm.add_transition(source=WAIT_ASSERT_STATE, dest=ATTACK_STATE)
+        fsm.add_transition(source=ATTACK_STATE, dest=ATTACK2_STATE)
+        fsm.add_transition(source=ATTACK_STATE, dest=CENTRAL_STATE)
+        fsm.add_transition(source=ATTACK2_STATE, dest=CENTRAL_STATE)
 
     def finalize(self):  # TODO
         pass
@@ -946,6 +1011,38 @@ class ArgAgent(Agent):
         self.my_used_locutions += 1
         return self.create_message(self.commitment_store_id, ADD_POSITION_PERF, dialogue_id, None)
 
+    def get_different_positions(self, positions: List[Position]) -> List[Position]:
+        """Returns a list of positions that are different from the defended
+        position and also are not asked yet
+
+        Args:
+            positions (List[Position]): List with all the positions in the dialogue
+
+        Returns:
+            List[Position]: List of positions that are different from the defended position
+        """
+        if not positions:
+            return []
+        different_positions = []
+        # If it has not position, all positions are considered different
+        if not self.current_position:
+            return positions
+        for pos in positions:
+            asked = False
+            for asked_pos in self.asked_positions:
+                if asked_pos:
+                    asked_pos_agent_id = asked_pos.agent_id
+                    pos_agent_id = pos.agent_id
+                    if (pos_agent_id == asked_pos_agent_id
+                    and asked_pos.solution.conclusion.id == pos.solution.conclusion.id
+                    and asked_pos.solution.value == pos.solution.value):
+                        logger.info("{}: position already asked".format(self.name))
+                        asked = True
+                        break
+            if not asked:
+                different_positions.append(pos)
+        return different_positions
+
     def enter_dialogue_cs(self, dialogue_id: str) -> ArgMessage:
         """Returns a message with the performative ENTER_DIALOGUE_PERF to send to the commitment store
 
@@ -957,6 +1054,93 @@ class ArgAgent(Agent):
         """
         self.my_used_locutions += 1
         return self.create_message(self.commitment_store_id, ENTER_DIALOGUE_PERF, dialogue_id, None)
+
+    @staticmethod
+    def domain_cases_to_int_ids(domain_cases: List[DomainCase]) -> List[int]:
+        """Returns the list of IDs of the given domain cases
+
+        Args:
+            domain_cases (List[DomainCase]): The domain cases to get the IDs from
+
+        Returns:
+            List[int]: The list of IDs of the given domain cases
+        """
+        return [case.id for case in domain_cases]
+
+    @staticmethod
+    def argument_cases_to_int_ids(argument_cases: List[ArgumentCase]) -> List[int]:
+        """Returns the list of IDs of the givenargument cases
+
+        Args:
+            argument_cases (List[ArgumentCase]): The argument cases to get the IDs from
+
+        Returns:
+            List[int]: The list of IDs of the given argument cases
+        """
+        return [case.id for case in argument_cases]
+
+    def update_case_bases(self, solution: Solution):
+        """ Adds the final solution to the current problem and adds it in the domain cases case base.
+        Also, stores all the generated argumentation data in the argument cases case base.
+        Finally, makes a cache of the domain CBR and the argumentation CBR
+
+        Args:
+            solution (Solution): The final solution to the current problem
+        """
+        # Add the solution to the ticket and add the ticket to domainCBR
+        solutions = [solution]
+        case_added = self.domain_cbr.add_case(self.current_dom_case_to_solve)
+        if case_added:
+            logger.info("{}: Domain case Introduced".format("self.name"))
+        else:
+            logger.info("{}: Domain case Not Introduced".format("self.name"))
+
+        # Add argument-cases generated during the dialogue
+        domain_context = DomainContext(self.current_dom_case_to_solve.problem.context.premises)
+        index = 0
+        for friend in self.my_friends:
+            relation = self.dependency_relations[index]
+            social_context = SocialContext(self.my_social_entity, friend, self.my_group, relation)
+            dialogues = self.dialogue_graphs.get(friend.name)
+
+            # Support argument
+            list_args = self.store_arguments.get(friend.name, [])
+            for arg in list_args:
+                argument_problem = ArgumentProblem(domain_context, social_context)
+                # TODO are these soft copies enough? There are more all over the code. Tests will tell
+                dist_premises = [p for p in arg.received_attacks_dist_premises]
+                # TODO this has been slightly changed, maybe it was more efficient the other way (like in Java version)
+                counter_example_dom = self.domain_cases_to_int_ids(
+                    [c_ex_dom for c_ex_doms in arg.received_attacks_counter_examples for c_ex_dom in
+                     c_ex_doms.support_set.counter_examples_dom_cases])
+                counter_example_arg = self.argument_cases_to_int_ids(
+                    [c_ex_arg for c_ex_args in arg.received_attacks_counter_examples for c_ex_arg in
+                     c_ex_args.support_set.counter_examples_arg_cases])
+                # Put presumptions and exceptions
+                argument_solution = ArgumentSolution(argument_type=ArgumentType.INDUCTIVE,
+                                                     acceptability_status=arg.acceptability_state, value=arg.value,
+                                                     dist_premises=dist_premises, times_used=arg.times_used_conclusion,
+                                                     presumptions=[], exceptions=[], conclusion=arg.conclusion,
+                                                     counter_examples_arg_case_id=counter_example_dom,
+                                                     counter_examples_dom_case_id=counter_example_arg)
+                domain_cases_ids = [dom_case.id for dom_case in arg.support_set.domain_cases]
+                argument_cases_ids = [arg_case.id for arg_case in arg.support_set.argument_cases]
+                # Take the dialogues where this argument is implied
+                diags: List[DialogueGraph] = []
+                if dialogues:
+                    diags = [d for d in dialogues if arg.id in d]
+
+                argument_justification = ArgumentJustification(domain_cases_ids=domain_cases_ids,
+                                                               argument_cases_ids=argument_cases_ids, schemes=
+                                                               arg.support_set.schemes, dialogue_graphs=diags)
+                new_argument_case = ArgumentCase(arg.id, datetime.now().strftime(DATE_FORMAT), argument_problem,
+                                                 argument_solution, argument_justification)
+                case_added = self.arg_cbr.add_case(new_argument_case)
+                if case_added:
+                    logger.info("{}: friend={}({}) -> Argument case Introduced".format(self.name, index, friend.name))
+                else:
+                    logger.info("{}: friend={}({}) -> Argument case Updated".format(self.name, index, friend.name))
+            index += 1
 
     def get_preferred_value_index(self, value: str) -> int:
         """Returns the index of the given preference value
@@ -987,9 +1171,6 @@ class ArgAgent(Agent):
                 return index
             index += 1
         return -1
-
-    def get_different_positions(self):
-        pass
 
     def create_message(self, agent_id: str, performative: str, dialogue_id: str, content_object: Optional[Any]) -> \
         ArgMessage:
@@ -1034,7 +1215,7 @@ class ArgBehaviour(FSMBehaviour):
     agent: ArgAgent
 
     async def send(self, msg: ArgMessage):
-        for receiver in msg.to:
+        for receiver in msg.to:  # TODO Is this the way to do it?
             yield await super().send(Message(to=receiver, sender=msg.sender, metadata=msg.metadata, body=msg.body))
 
     def __init__(self):
@@ -1048,3 +1229,89 @@ class ArgBehaviour(FSMBehaviour):
 
     async def run(self):
         pass
+
+
+class BeginState(State):
+    async def run(self):
+        logger.info("{}: Entering BeginState")
+
+
+class OpenState(State):
+    async def run(self):
+        logger.info("{}: Entering OpenState")
+
+
+class EnterState(State):
+    async def run(self):
+        logger.info("{}: Entering EnterState")
+
+
+class DieState(State):
+    async def run(self):
+        logger.info("{}: Entering DieState")
+
+
+class ProposeState(State):
+    async def run(self):
+        logger.info("{}: Entering ProposeState")
+
+
+class CentralState(State):
+    async def run(self):
+        logger.info("{}: Entering CentralState")
+
+
+class AssertState(State):
+    async def run(self):
+        logger.info("{}: Entering AssertState")
+
+
+class WaitAttackState(State):
+    async def run(self):
+        logger.info("{}: Entering WaitAttackState")
+
+
+class DefendState(State):
+    async def run(self):
+        logger.info("{}: Entering DefendState")
+
+
+class QueryPositionsState(State):
+    async def run(self):
+        logger.info("{}: Entering QueryPositionsState")
+
+
+class SendPositionState(State):
+    async def run(self):
+        logger.info("{}: Entering SendPositionState")
+
+
+class SolutionState(State):
+    async def run(self):
+        logger.info("{}: Entering SolutionState")
+
+
+class GetPositionsState(State):
+    async def run(self):
+        logger.info("{}: Entering GetPositionsState")
+
+
+class WhyState(State):
+    async def run(self):
+        logger.info("{}: Entering WhyState")
+
+
+class WaitAssertState(State):
+    async def run(self):
+        logger.info("{}: Entering WaitAssertState")
+
+
+class AttackState(State):
+    async def run(self):
+        logger.info("{}: Entering AttackState")
+
+
+class Attack2State(State):
+    async def run(self):
+        logger.info("{}: Entering Attack2State")
+
