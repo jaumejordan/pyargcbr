@@ -27,11 +27,18 @@ GET_DIALOGUE_PERF = "get_dialogue"
 ENTER_DIALOGUE_PERF = "enter_dialogue"
 WITHDRAW_DIALOGUE_PERF = "withdraw_dialogue"
 DIE_PERF = "die"
+OPEN_DIALOGUE_PERF = "open_dialogue"
 
 WHY_PERF = "why"
 NOTHING_PERF = "nothing"
+FINISH_DIALOGUE_PERF = "finish_dialogue"
+ACCEPTS_PERF = "accepts"
+ATTACKS_PERF = "attack"
+ASSERTS_PERF = "asserts"
 
 CONVERSATION = "conversation"
+
+MSG_TIMEOUT = 5
 
 
 class MessageCodification:

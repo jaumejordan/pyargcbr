@@ -23,7 +23,7 @@ class ArgNode:
     parent_arg_case_id: int
     node_type: NodeType
 
-    def delete_arg_node(self, arg_case_id: int):
+    def delete_child_arg_node(self, arg_case_id: int):
         """Deletes an ArgNode from the list of ArgumentCase Children IDs
 
         Args:
@@ -31,7 +31,7 @@ class ArgNode:
         """
         self.child_arg_case_id_list.remove(arg_case_id)
 
-    def add_arg_node(self, arg_case_id: int):
+    def add_child_arg_node(self, arg_case_id: int):
         """Adds an ArgNode from the list of ArgumentCase Children IDs
         (child_arg_case_id_list)
 

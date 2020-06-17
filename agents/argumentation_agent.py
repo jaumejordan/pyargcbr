@@ -1,3 +1,4 @@
+from random import random
 from typing import List, Dict, Optional, Any, Mapping, Union
 from datetime import datetime
 
@@ -10,10 +11,14 @@ from agents.arg_message import ArgMessage
 from agents.protocol import ADD_ARGUMENT_PERF, REMOVE_ARGUMENT_PERF, ADD_POSITION_PERF, ATTACK_PERF, ADD_POSITION_PERF, \
     GET_POSITION_PERF, GET_ALL_POSITIONS_PERF, NO_COMMIT_PERF, ASSERT_PERF, ATTACK_PERF, ADD_DIALOGUE_PERF, \
     GET_DIALOGUE_PERF, ENTER_DIALOGUE_PERF, WITHDRAW_DIALOGUE_PERF, DIE_PERF, REGISTER_PROTOCOL, REQUEST_PROTOCOL, \
-    ACCEPT_PERF, REQUEST_PERF, LAST_MODIFICATION_DATE_PERF, PROTOCOL, PERFORMATIVE, CONVERSATION, MessageCodification, \
-    WHY_PERF, NOTHING_PERF
+    ACCEPT_PERF, REQUEST_PERF, LAST_MODIFICATION_DATE_PERF, PROTOCOL, PERFORMATIVE, CONVERSATION, WHY_PERF, \
+    NOTHING_PERF, MSG_TIMEOUT, OPEN_DIALOGUE_PERF, MessageCodification as msg_cod, ACCEPTS_PERF, FINISH_DIALOGUE_PERF,\
+    ATTACKS_PERF, ASSERTS_PERF
+
 from cbrs.argumentation_cbr import ArgCBR
 from cbrs.domain_cbr import DomainCBR
+from knowledge_resources.acceptability_status import AcceptabilityStatus
+from knowledge_resources.arg_node import ArgNode, NodeType
 from knowledge_resources.argument import Argument
 from knowledge_resources.argument_case import ArgumentCase
 from knowledge_resources.argument_justification import ArgumentJustification
@@ -130,7 +135,7 @@ class ArgAgent(Agent):
         self.current_dialogue_graph: Optional[DialogueGraph] = None
 
         self.sub_dialogue_agent_id: str = ""
-        self.different_positions: List[Position]
+        self.different_positions: Optional[List[Position]] = None
 
         self.dialogue_time: float = 0.0
         self.current_pos_accepted: int = 0
@@ -144,13 +149,16 @@ class ArgAgent(Agent):
         self.positions_generated: bool = False
         self.asked_positions: List[Position] = []
         self.attended_why_petitions: Dict[str, List[Position]] = {}
-        self.my_support_argument: Dict[str, List[Argument]] = {}
+        self.my_support_arguments: Dict[str, List[Argument]] = {}
         self.my_used_locutions: int = 0  # TODO locutions or performatives
 
         self.my_used_support_arguments: Dict[str, List[Argument]] = {}
         self.my_used_attack_arguments: Dict[str, List[Argument]] = {}
 
         self.store_arguments: Dict[str, List[Argument]] = {}
+
+        self.current_why_agent_id: Optional[str] = None
+
 
     async def setup(self):  # TODO
         fsm = ArgBehaviour()
@@ -1200,7 +1208,7 @@ class ArgAgent(Agent):
         msg.set_metadata(PERFORMATIVE, performative)
 
         if content_object:
-            msg.body = MessageCodification.pickle_object(content_object)
+            msg.body = msg_cod.pickle_object(content_object)
 
         receivers_str = ""
         for receiver in msg.to:
@@ -1210,10 +1218,385 @@ class ArgAgent(Agent):
                     msg.get_metadata(PERFORMATIVE))
         return msg
 
+    def do_propose(self, msg: Message) -> bool:
+        """Proposes a position to defend in the dialogue. If it can not, it does a withdraw dialogue
+
+        Args:
+            msg (Message): Message to send with the position to propose (ADD_POSITION_PERF) or WITHDRAW_DIALOGUE_PERF
+
+        Returns:
+            bool: True if it makes an ADD_POSITION_PERF, False if it makes a WITHDRAW_DIALOGUE_PERF
+        """
+        if not self.positions_generated:
+            self.my_positions = self.generate_positions(self.current_problem)
+        self.current_position = None
+        if self.my_positions:
+            self.current_position = self.my_positions.pop(
+                0)  # Extract the first and remove it from the list
+            if self.current_position:
+                self.last_position_before_none = Position(self.current_position.agent_id,
+                                                                self.current_position.dialogue_id,
+                                                                self.current_position.solution,
+                                                                self.current_position.premises,
+                                                                self.current_position.domain_cases,
+                                                                self.current_position.domain_case_similarity)
+            self.current_pos_accepted = 0
+            self.my_support_arguments = {}
+            self.my_used_support_arguments = {}
+            self.my_used_attack_arguments = {}
+            self.current_dialogue_graph = None
+        if self.current_position:
+            msg = self.propose(self.current_position, self.current_dialogue_id)
+            logger.info("{}::propose::{}\n".format(self.my_id, self.current_position.solution. conclusion.description))
+            return True
+        else:
+            msg = self.withdraw_dialogue()
+            logger.info("{}::withdraw::\n".format(self.my_id))
+            return False
+
+    def do_assert(self, msg: Message, why_agent_id: str) -> str:
+        """Try to assert a support argument to respond to the WHY received previously
+
+        Args:
+            msg (Message): Message to send with an argument and locution ASSERT_PERF, a performative NO_COMMIT_PERF,
+                or a performative NOTHING_PERF
+            why_agent_id (str): Agent identifier that has made the WHY_PERF
+
+        Returns:
+            str: String describing if it makes an ASSERT_PERF, NO_COMMIT_PERF or, WAIT_CENTRAL_PERF
+        """
+        logger.info("{}<-{}::why::{}\n".format(self.my_id, why_agent_id,
+                                          self.current_position.solution.conclusion.description))
+        # Clean other possible WHY sent by the same agent and attend only one
+        my_positions_asked = self.attended_why_petitions.get(why_agent_id)
+        if my_positions_asked and self.current_position in my_positions_asked:
+            # I have already replied this agent with my current position, do not reply him
+            msg = self.nothing_msg()
+            return CENTRAL_STATE # send message with performative NOTHING_PERF to noOne (non existing agent)
+        else:
+            # try to generate a support argument with:
+            # 1) Argument-cases 2) domain-cases 3) premises
+            support_args = self.generate_support_arguments(self.current_position, why_agent_id)
+            arg: Optional[Argument] = None
+            if support_args:
+                arg = support_args.pop(0)
+            self.my_support_arguments[why_agent_id] = support_args
+            if arg:  # Assert the argument
+                logger.info("***************{} received WHY_PERF, generating support arg. ASSERTING".format(self.my_id))
+                logger.info("{}->{}::assert::{}\n".format(self.my_id, why_agent_id,
+                                                          self.current_position.solution.conclusion))
+                msg = self.asserts(why_agent_id, arg)
+                # I am now talking only with this agent
+                self.sub_dialogue_agent_id = why_agent_id
+
+                # Add argument to myUsedSupportArguments
+                support_args_used = self.my_used_support_arguments
+                if not support_args_used:
+                    support_args_used = []
+                support_args_used.append(arg)
+                self.my_used_support_arguments[why_agent_id] = support_args_used
+
+                # Add argument to dialogue graph, it is the first
+                arg_node = ArgNode(arg.id, [], -1, NodeType.FIRST)
+                current_dialogue_graph = DialogueGraph()
+                current_dialogue_graph.add_node(arg_node)
+
+                return ASSERT_PERF
+            else: # Can not generate support arguments, no commit
+                logger.info("***************{} received WHY_PERF, generating support arg. NO_COMMIT".format(self.my_id))
+                msg = self.no_commit(why_agent_id, self.current_position)
+                return NO_COMMIT_PERF
+
+    def do_attack(self, msg_to_send: ArgMessage, msg_received: Message, defending: bool) -> bool:
+        """Actions to perform to generate an attack argument against an attack or assert received
+
+        Args:
+            msg_to_send (ArgMessage): Message to send with the attack argument or a NO_COMMIT_PERF
+            msg_received (Message): Message received with an attack or assert
+            defending (bool): Bool that indicates if it is defending its position or attacking another agent position
+
+        Returns:
+            bool: True if an attack argument has been generated, False otherwise
+        """
+        against_argument: Argument = msg_cod.get_decoded_message_content(msg_received)
+        self.sub_dialogue_agent_id = msg_received.sender
+
+        # Store this attack into the corresponding argument
+        my_last_used_arg = self.get_my_last_used_argument(self.sub_dialogue_agent_id, against_argument.
+                                                          attacking_to_arg_id)
+        if my_last_used_arg:
+            # If attack was a counter-example
+            if (against_argument.support_set.counter_examples_dom_cases
+                or against_argument.support_set.counter_examples_arg_cases):
+                my_last_used_arg.add_received_attacks_counter_examples(against_argument)
+            else:  # It is a distinguishing premises attack
+                my_last_used_arg.add_received_attacks_dist_premises(against_argument)
+
+        arg_node = Optional[ArgNode] = None
+        if msg_received.get_metadata(PERFORMATIVE) == ASSERT_PERF:
+            # Add his position to my asked positions
+            sol = Solution(against_argument.conclusion, against_argument.value, against_argument.times_used_conclusion)
+            his_position = Position(self.sub_dialogue_agent_id, self.current_dialogue_id, sol, None, None, 0.0)
+            self.asked_positions.append(his_position)
+            arg_node = ArgNode(against_argument.id, [], -1, NodeType.FIRST)
+            self.current_dialogue_graph = DialogueGraph()
+            logger.info("{}<-{}::assert::{}\n".format(self.my_id, self.sub_dialogue_agent_id,
+                                                      against_argument.conclusion.description))
+        else:
+            if defending:
+                my_positions_asked: List[Position] = self.attended_why_petitions.get(self.sub_dialogue_agent_id, [])
+                my_positions_asked.append(self.current_position)
+                self.attended_why_petitions[self.sub_dialogue_agent_id] = my_positions_asked
+            logger.info("{}<-{}::attack::{}\n".format(self.my_id, self.sub_dialogue_agent_id,
+                                                      against_argument.conclusion.description))
+            attack_node = self.current_dialogue_graph.get_node(against_argument.attacking_to_arg_id)
+            if not attack_node:
+                logger.error("{} sub_dialogue_agent_id {} GETTING NODE {}".format(self.my_id,
+                             self.sub_dialogue_agent_id, against_argument.attacking_to_arg_id))
+                for node in self.current_dialogue_graph.nodes:
+                    logger.error("{}: {} PARENT {}\n".format(self.my_id, node.node_type, node.parent_arg_case_id))
+                for sup in self.my_used_support_arguments.keys():
+                    my_supports = self.my_used_support_arguments.get(sup)
+                    if my_supports:
+                        for supp in my_supports:
+                            logger.error("{} sub_dialogue_agent_id {} Support Argument {}".format(self.my_id, sup,
+                                                                                                  supp.id))
+                for att in self.my_used_attack_arguments.keys():
+                    my_attacks = self.my_used_attack_arguments.get(att)
+                    if my_attacks:
+                        for attack in my_attacks:
+                            logger.error("{} sub_dialogue_agent_id {} Support Argument {}".format(self.my_id, att,
+                                                                                                  attack.id))
+            else:
+                attack_node.add_child_arg_node(against_argument.id)
+
+        self.current_dialogue_graph.add_node(arg_node)
+        # Try to generate an attack argument: Distinguishing premise or Counter Example,
+        # depending on the attack received
+        logger.info("+++++++ {} performative = {}".format(self.my_id, msg_received.get_metadata(PERFORMATIVE)))
+        logger.info("+++++++ {}: do_attack from {}".format(self.my_id, self.sub_dialogue_agent_id))
+        logger.info("+++++++ {} preceiver {}".format(self.my_id, msg_received.to))
+        attack_argument = self.generate_attack_argument(against_argument, self.sub_dialogue_agent_id)
+
+        if attack_argument:
+            msg = self.attack(self.sub_dialogue_agent_id, attack_argument)
+            # Clean message queue from old messages
+            attack_arguments: List[Argument] = self.my_used_attack_arguments.get(self.sub_dialogue_agent_id, [])
+            attack_arguments.append(attack_argument)
+            self.my_used_attack_arguments[self.sub_dialogue_agent_id] = attack_arguments
+
+            logger.info("\n{}: my_used_attack_args with {} {} {}\n".format(self.my_id, self.sub_dialogue_agent_id,
+                        len(attack_arguments), len(self.my_used_attack_arguments.get(self.sub_dialogue_agent_id, []))))
+            logger.info("{}->sub_dialogue_agent_id::attack::{}\n".format(self.my_id, self.sub_dialogue_agent_id,
+                        self.current_position.solution.conclusion.description))
+
+            # Add the attack argument to dialogue graph
+            att_node = self.current_dialogue_graph.get_node(against_argument.id)
+            if not att_node:
+                logger.error("{} GETTING NODE {}".format(self.my_id, against_argument.id))
+                for node in self.current_dialogue_graph.nodes:
+                    logger.error("{}: {} PARENT {}\n".format(self.my_id, node.node_type, node.parent_arg_case_id))
+            att_node.add_child_arg_node(attack_argument.id)
+            attack_node = ArgNode(attack_argument.id, [], against_argument.id, NodeType.NODE)
+            self.current_dialogue_graph.add_node(attack_node)
+
+            return True
+        else:
+            # If the agent cannot generate another attack, it retracts its attack argument. If it has no more attacks,
+            # it has to retract the support argument, if it has no more support arguments,
+            # it has to withdraw its position with a noCommit locution
+
+            # Search my last attack argument, the one I told this agent
+            attack_arguments = self.my_used_attack_arguments.get(self.sub_dialogue_agent_id)
+            if attack_arguments:
+                my_last_attack_arg = attack_arguments[-1]
+                # Put acceptability status to Unacceptable
+                my_last_attack_arg.acceptability_state = AcceptabilityStatus.UNACCEPTABLE
+                # Retract my last attack argument
+                store_list: List[Argument] = self.store_arguments.get(self.sub_dialogue_agent_id, {})
+                store_list.append(my_last_attack_arg)
+                self.store_arguments[self.sub_dialogue_agent_id] = store_list
+
+                # Set the last node of this branch of the dialogue graph
+                this_node = self.current_dialogue_graph.get_node(my_last_attack_arg.id)
+                if not this_node:
+                    logger.error("{} GETTING NODE {}".format(self.my_id, my_last_attack_arg.id))
+                    for node in self.current_dialogue_graph.nodes:
+                        logger.error("{}: {} PARENT {}\n".format(self.my_id, node.node_type, node.parent_arg_case_id))
+                else:
+                    this_node.node_type = NodeType.LAST
+
+            return False
+
+    def do_query_positions(self, msg: ArgMessage):
+        """Creates a message to send to the Commitment Store with the performative GET_ALL_POSITIONS_PERF
+        to obtain all the positions of the dialogue
+
+        Args:
+            msg (ArgMessage): Message to send to the Commitment Store with the performative GET_ALL_POSITIONS_PERF
+        """
+        msg = self.create_message(self.commitment_store_id, GET_ALL_POSITIONS_PERF, self.current_dialogue_id, None)
+
+    def do_get_positions(self, msg: Message):
+        """Get the positions of the agents in the dialogue sent by the Commitment Store as an object
+
+        Args:
+            msg (ArgMessage): Message with performative GET_ALL_POSITIONS_PERF and the positions
+            of other agents in the dialogue
+        """
+        self.different_positions = self.get_different_positions(msg_cod.get_decoded_message_content(msg))
+
+    def do_why(self, msg: Message) -> bool:
+        """Choose a position to send a WHY_PERF message if it can, or NOTHING_PERF
+
+        Args:
+            msg (ArgMessage): Message with performative WHY_PERF or NOTHING_PERF if there is not any position to ask
+        Returns:
+            bool: True if it makes a WHY_PERF, False if it makes a NOTHING_PERF
+        """
+        if not self.different_positions:  # Some positions to ask
+            rand_pos = int(random() * len(self.different_positions))
+            pos = self.different_positions[rand_pos] # position choosen randomly
+
+            # We only add the position of the other agent when the other agent responds
+            msg = self.why(pos.agent_id, pos)
+            logger.info("------------ ------ {}: WHY to {}".format(self.my_id, pos.agent_id))
+            logger.info("{}->{}::why::{}\n".format(self.my_id, pos.agent_id, pos.solution.conclusion.description))
+
+            return True
+        else:  # Nothing to challenge, remain in this state send NOTHING message
+            msg = self.nothing_msg()
+            logger.info("{}: NOT WHY nothing to challenge".format(self.my_id))
+            return False
+
+    def do_open_dialogue(self, msg: Message):
+        """Takes the domain case to solve and the dialogue ID from the message given
+
+        Args:
+            msg (Message): Message with the domain-case to solve and the dialogue ID
+        """
+        self.current_dom_case_to_solve = msg_cod.get_decoded_message_content(msg)
+        self.current_dialogue_id = msg.get_metadata(CONVERSATION)
+
+    def do_enter_dialogue(self, msg: Message) -> bool:
+        """Evaluates if the agent can enter in the dialogue offering a solution. If it can not,
+        it does a withdraw dialogue
+
+        Args:
+            msg (Message): Message to send to Commitment Store, with performative
+                ENTER_DIALOGUE_perf or WITHDRAW_DIALOGUE_PERF
+
+        Returns:
+            bool: True if it makes an ENTER_DIALOGUE_perf, False if it makes a WITHDRAW_DIALOGUE_PERF
+        """
+        self.agreement_reached = 0
+        self.acceptance_frequency = 0
+        self.used_arg_cases = 0
+
+        msg = self.enter_dialogue(self.current_dom_case_to_solve, self.current_dialogue_id)
+        perf = msg.get_metadata(PERFORMATIVE)
+        logger.info("{}: message {} receiver: {}".format(self.my_id, perf, msg.to))
+        if perf == ENTER_DIALOGUE_PERF:
+            return True
+        else:
+            return False
+
+    def finish_dialogue(self):
+        """Actions to be executed when the dialogue has to finish"""
+        pass
+
+    def do_send_position(self, msg: Message):
+        """Prepares a message with the position defended by the agent
+
+        Args:
+            msg: A message to send with the position defended by the agent
+        """
+        if self.current_position:
+            msg = self.create_message(self.commitment_store_id, ADD_POSITION_PERF, self.current_dialogue_id,
+                                      self.current_position)
+        else:
+            logger.error("{}: NONE CURRENT POSITION".format(self.my_id))
+
+    def do_solution(self, msg: Message):
+        """Actions to perform when the final solution to the current problem to solve arrives in a message
+
+        Args:
+            msg: Message received with the solution to the current problem
+        """
+        solution = msg_cod.get_decoded_message_content(msg)
+        if solution.conclusion.id != -1:
+            self.update_case_bases(solution)
+        logger.info("{}: SOLUTION received from: {}\n dom_case_num={}\narg_cases_num={}".format(self.my_id, msg.sender,
+                    len(self.domain_cbr.get_all_cases_list()), len(self.arg_cbr.get_all_cases_list())))
+
+    def do_die(self):
+        """Actions to perform when the message with locution DIE is received"""
+        self.stop()
+
+    def do_my_position_accepted(self, msg: Message):
+        """Actions to perform when the position of the agent has been accepted
+
+        Args:
+            msg (Message): Message with the performative ACCEPT_PERF TODO ACCEPT Vs ACCEPTS
+        """
+        # my position is accepted, increase timesAccepted of my position
+        self.current_position.times_accepted += 1
+        logger.info("{}: increasing vote for my position. SolID={} current votes={}\n".format(self.my_id,
+                    self.current_position.solution.conclusion.id, self.current_position.times_accepted))
+        logger.info("{}<-{}::accept::{}::{}\n".format(self.name, msg.sender, self.current_position.solution.conclusion.
+                                                      description, self.current_position.times_accepted))
+        # Change my support argument acceptability status search my support argument, the one I told this agent
+        support_args: List[Argument] = self.my_used_support_arguments.get(msg.sender, [])
+        # TODO each time we index using a message sender as reference in Java the name is the only part used
+        my_last_support_arg = support_args[-1]
+        my_last_support_arg.acceptability_state = AcceptabilityStatus.ACCEPTABLE
+        support_args[-1] = my_last_support_arg  # TODO redundant?
+        self.my_support_arguments[msg.sender] = support_args
+        store_list: List[Argument] = self.store_arguments.get(msg.sender, [])
+        store_list.append(my_last_support_arg)
+        self.store_arguments[msg.sender] = store_list
+        # Change type of the last node in dialogue graph that corresponds to the last argument that I gave
+        if self.current_dialogue_graph.nodes:
+            self.current_dialogue_graph.nodes[-1].node_type = NodeType.AGREE
+        else:
+            logger.error("{}: GETTING NODE".format(self.my_id))
+            for node in self.current_dialogue_graph.nodes:
+                logger.error("{}: {} PARENT {}\n".format(self.my_id, node.node_type, node.parent_arg_case_id))
+
+        # Add finished dialogue to the dict
+        these_graphs: List[DialogueGraph] = self.dialogue_graphs.get(msg.sender, [])
+        these_graphs.append(self.current_dialogue_graph)
+        self.dialogue_graphs[msg.sender] = these_graphs
+
+    def do_no_commit(self, msg: Message):
+        """Creates a message to send with the performative NO_COMMIT_PERF
+
+        Args:
+            msg (Message): Message to send with the performative NO_COMMIT_PERF
+        """
+        msg = self.no_commit(self.sub_dialogue_agent_id, self.current_position)
+        logger.info("{}->{}::no_commit::\n".format(self.my_id, self.sub_dialogue_agent_id))
+
+    def do_other_no_commit(self, msg: Message):
+        """Actions to perform when the other agent does NO_COMMIT_PERF
+
+        Args:
+            msg (Message): Message received with a NO_COMMIT_PERF
+        """
+        logger.info("{}<-{}::no_commit::\n".format(self.my_id, self.sub_dialogue_agent_id))
+
+    def do_accept(self, msg: Message):
+        """Actions to perform and sena a message accepting the other agent's position or argument
+
+        Args:
+            msg (Message): Message accepting the other agent's position or argument
+        """
+        msg = self.accept(self.sub_dialogue_agent_id)
+        logger.info("{}->{}::accept::\n".format(self.my_id, self.sub_dialogue_agent_id))
+
+
 
 class ArgBehaviour(FSMBehaviour):
-    agent: ArgAgent
-
     async def send(self, msg: ArgMessage):
         for receiver in msg.to:  # TODO Is this the way to do it?
             yield await super().send(Message(to=receiver, sender=msg.sender, metadata=msg.metadata, body=msg.body))
@@ -1228,90 +1611,288 @@ class ArgBehaviour(FSMBehaviour):
         pass
 
     async def run(self):
-        pass
+        pass  # TODO how to manage messages with the performatives FINISH_DIALOGUE_PERF AND DIE_PERF
 
 
 class BeginState(State):
-    async def run(self):
+    async def on_start(self):
         logger.info("{}: Entering BeginState")
+
+    async def run(self):
+        self.next_state(OPEN_STATE)
 
 
 class OpenState(State):
-    async def run(self):
+    agent: ArgAgent
+
+    async def on_start(self):
         logger.info("{}: Entering OpenState")
 
 
-class EnterState(State):
     async def run(self):
+        msg = await self.receive(timeout=MSG_TIMEOUT)
+        if msg:
+            perf = msg.get_metadata(PERFORMATIVE)
+            if perf == DIE_PERF:
+                self.next_state(DIE_STATE)
+            elif perf == OPEN_DIALOGUE_PERF:
+                self.agent.do_open_dialogue(msg)
+                self.next_state(ENTER_STATE)
+
+
+class EnterState(State):
+    agent: ArgAgent
+
+    async def on_start(self):
         logger.info("{}: Entering EnterState")
+
+    async def run(self):
+        msg = await self.receive(timeout=MSG_TIMEOUT)
+        if msg:
+            enter_dialogue = self.agent.do_enter_dialogue(msg)
+            await self.send(msg)
+            if enter_dialogue:
+                self.next_state(PROPOSE_STATE)
+            else:
+                self.next_state(OPEN_STATE)
 
 
 class DieState(State):
-    async def run(self):
+    agent: ArgAgent
+
+    async def on_start(self):
         logger.info("{}: Entering DieState")
+
+    async def run(self):
+        msg = await self.receive(timeout=MSG_TIMEOUT)
+        if msg:
+            self.agent.do_die()
 
 
 class ProposeState(State):
-    async def run(self):
+    agent: ArgAgent
+
+    async def on_start(self):
         logger.info("{}: Entering ProposeState")
+
+    async def run(self):
+        msg = await self.receive(timeout=MSG_TIMEOUT)
+        if msg:
+            propose = self.agent.do_propose(msg)
+            await self.send(msg)
+            if propose:
+                self.next_state(CENTRAL_STATE)
+            else:
+                self.next_state(OPEN_STATE)
 
 
 class CentralState(State):
-    async def run(self):
+    agent: ArgAgent
+
+    async def on_start(self):
         logger.info("{}: Entering CentralState")
+
+    async def run(self):
+        msg = await self.receive(timeout=MSG_TIMEOUT)
+        if msg:
+            performative = msg.get_metadata(PERFORMATIVE)
+            if performative == WHY_PERF:
+                self.agent.current_why_agent_id = msg.sender
+                self.next_state(ASSERT_STATE)
+            elif performative == FINISH_DIALOGUE_PERF:
+                self.agent.finish_dialogue()
+                self.next_state(SEND_POSITION_STATE)
+            elif performative == ACCEPTS_PERF:
+                self.agent.do_my_position_accepted(msg)
+                self.next_state(CENTRAL_STATE)
+            else:
+                self.next_state(CENTRAL_STATE)
 
 
 class AssertState(State):
-    async def run(self):
+    agent: ArgAgent
+
+    async def on_start(self):
         logger.info("{}: Entering AssertState")
+
+    async def run(self):
+        msg = await self.receive(timeout=MSG_TIMEOUT)
+        if msg:
+            asserts = self.agent.do_assert(msg, self.agent.current_why_agent_id)
+            await self.send(msg)
+            if asserts == ASSERT_PERF:
+                self.next_state(WAIT_ATTACK_STATE)
+            elif asserts == NO_COMMIT_PERF:
+                self.agent.do_no_commit(msg)
+                self.next_state(PROPOSE_STATE)
+            else:
+                self.next_state(CENTRAL_STATE)
 
 
 class WaitAttackState(State):
-    async def run(self):
+    agent: ArgAgent
+
+    async def on_start(self):
         logger.info("{}: Entering WaitAttackState")
+
+    async def run(self):
+        msg = await self.receive(timeout=MSG_TIMEOUT)
+        if msg:
+            performative = msg.get_metadata(PERFORMATIVE)
+            if performative == ACCEPTS_PERF:
+                self.agent.do_my_position_accepted(msg)
+                self.next_state(CENTRAL_STATE)
+            elif performative == ATTACKS_PERF:
+                self.next_state(DEFEND_STATE)
+            else:
+                self.next_state(CENTRAL_STATE)
 
 
 class DefendState(State):
-    async def run(self):
+    agent: ArgAgent
+
+    async def on_start(self):
         logger.info("{}: Entering DefendState")
+
+    async def run(self):
+        msg = await self.receive(timeout=MSG_TIMEOUT)
+        if msg:
+            msg_to_send = ArgMessage()
+            attack = self.agent.do_attack(msg_to_send, msg, True)
+            if attack:
+                self.next_state(WAIT_ATTACK_STATE)
+            else:
+                self.agent.do_no_commit(msg)
+                self.next_state(PROPOSE_STATE)
 
 
 class QueryPositionsState(State):
-    async def run(self):
+    agent: ArgAgent
+
+    async def on_start(self):
         logger.info("{}: Entering QueryPositionsState")
+
+    async def run(self):
+        msg = await self.receive(timeout=MSG_TIMEOUT)
+        if msg:
+            msg_to_send = ArgMessage()
+            self.agent.do_query_positions(msg_to_send)
+            await self.send(msg_to_send)
+            self.next_state(GET_POSITIONS_STATE)  # TODO more doubts with the wait states
 
 
 class SendPositionState(State):
-    async def run(self):
+    agent: ArgAgent
+
+    async def on_start(self):
         logger.info("{}: Entering SendPositionState")
+
+    async def run(self):
+        msg = await self.receive(timeout=MSG_TIMEOUT)
+        if msg:  # TODO is this necessary? The content of the message seems irrelevant
+            self.agent.do_send_position(msg)
+            await self.send(msg)
+            self.next_state(SOLUTION_STATE)
 
 
 class SolutionState(State):
-    async def run(self):
+    agent: ArgAgent
+
+    async def on_start(self):
         logger.info("{}: Entering SolutionState")
+
+    async def run(self):
+        msg = await self.receive(timeout=MSG_TIMEOUT)
+        if msg:
+            self.agent.do_solution(msg)
+            await self.send(msg)
+            self.next_state(OPEN_STATE)
 
 
 class GetPositionsState(State):
-    async def run(self):
+    agent: ArgAgent
+
+    async def on_start(self):
         logger.info("{}: Entering GetPositionsState")
+
+    async def run(self):
+        msg = await self.receive(timeout=MSG_TIMEOUT)
+        if msg:
+            performative = msg.get_metadata(PERFORMATIVE)
+            if performative == FINISH_DIALOGUE_PERF:
+                self.next_state(SEND_POSITION_STATE)
+            elif performative == GET_ALL_POSITIONS_PERF:
+                self.agent.do_get_positions(msg)
+            else:
+                self.next_state(CENTRAL_STATE)
 
 
 class WhyState(State):
-    async def run(self):
+    agent: ArgAgent
+
+    async def on_start(self):
         logger.info("{}: Entering WhyState")
+
+    async def run(self):
+        msg = await self.receive(timeout=MSG_TIMEOUT)
+        if msg:
+            why = self.agent.do_why(msg)
+            if why:
+                self.next_state(WAIT_ASSERT_STATE)
+            else:
+                self.next_state(CENTRAL_STATE)
 
 
 class WaitAssertState(State):
-    async def run(self):
+    agent: ArgAgent
+
+    async def on_start(self):
         logger.info("{}: Entering WaitAssertState")
+
+    async def run(self):
+        msg = await self.receive(timeout=MSG_TIMEOUT)
+        if msg:
+            performative = msg.get_metadata(PERFORMATIVE)
+            if performative == ASSERTS_PERF:
+                self.next_state(ATTACK_PERF)
+            elif performative == NO_COMMIT_PERF:
+                self.next_state(CENTRAL_STATE)
+            else:
+                self.next_state(CENTRAL_STATE)
 
 
 class AttackState(State):
-    async def run(self):
+    agent: ArgAgent
+
+    async def on_start(self):
         logger.info("{}: Entering AttackState")
+
+    async def run(self):
+        msg = await self.receive(timeout=MSG_TIMEOUT)
+        if msg:
+            msg_to_send = ArgMessage()
+            attack = self.agent.do_attack(msg_to_send, msg, False)
+            if attack:
+                self.next_state(ATTACK2_STATE)
+            else:
+                self.agent.do_no_commit(msg)
+                self.next_state(CENTRAL_STATE)
 
 
 class Attack2State(State):
-    async def run(self):
+    agent: ArgAgent
+
+    async def on_start(self):
         logger.info("{}: Entering Attack2State")
 
+    async def run(self):
+        msg = await self.receive(timeout=MSG_TIMEOUT)
+        if msg:
+            performative = msg.get_metadata(PERFORMATIVE)
+            if performative == ATTACKS_PERF:
+                self.next_state(ATTACK_STATE)
+            elif performative == NO_COMMIT_PERF:
+                self.agent.do_other_no_commit(msg)
+                self.next_state(CENTRAL_STATE)
+            else:
+                self.next_state(CENTRAL_STATE)

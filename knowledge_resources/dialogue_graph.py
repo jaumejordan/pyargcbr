@@ -87,6 +87,14 @@ class DialogueGraph:
                 arg_n.append(node)
         return arg_n
 
+    def add_node(self, node: ArgNode):
+        """Adds a node to the nodes list
+
+        Args:
+            node (ArgNode): The new node for the list
+        """
+        self.nodes.append(node)
+
     def distance_to_final(self, arg_node: Union[ArgNode, int]) -> int:
         """Gets the distance to the final node from the provided node. The node can be provided
         via its ID or via the node itself

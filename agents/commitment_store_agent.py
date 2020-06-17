@@ -8,7 +8,8 @@ from spade.template import Template
 from agents.protocol import ADD_ARGUMENT_PERF, REMOVE_ARGUMENT_PERF, ADD_POSITION_PERF, ATTACK_PERF, ADD_POSITION_PERF,\
     GET_POSITION_PERF, GET_ALL_POSITIONS_PERF, NO_COMMIT_PERF, ASSERT_PERF, ATTACK_PERF, ADD_DIALOGUE_PERF,\
     GET_DIALOGUE_PERF, ENTER_DIALOGUE_PERF, WITHDRAW_DIALOGUE_PERF, DIE_PERF, REGISTER_PROTOCOL, REQUEST_PROTOCOL,\
-    ACCEPT_PERF, REQUEST_PERF, LAST_MODIFICATION_DATE_PERF, PROTOCOL, PERFORMATIVE, CONVERSATION, MessageCodification
+    ACCEPT_PERF, REQUEST_PERF, LAST_MODIFICATION_DATE_PERF, PROTOCOL, PERFORMATIVE, CONVERSATION, MessageCodification,\
+    MSG_TIMEOUT
 
 from spade.agent import Agent
 from spade.behaviour import CyclicBehaviour
@@ -207,7 +208,7 @@ class RegistrationBehaviour(CyclicBehaviour):
 
     async def run(self):
         try:
-            msg = await self.receive(timeout=5)
+            msg = await self.receive(timeout=MSG_TIMEOUT)
             if msg:
                 agent_id = msg.sender
                 performative = msg.get_metadata(PERFORMATIVE)
@@ -294,7 +295,7 @@ class ReplierBehaviour(CyclicBehaviour):
 
     async def run(self):
         logger.info("WAITING")
-        msg_req = await self.receive(timeout=5)
+        msg_req = await self.receive(timeout=MSG_TIMEOUT)
         msg_res = self.do_respond(msg_req)
         if msg_res:
             await self.send(msg_res)

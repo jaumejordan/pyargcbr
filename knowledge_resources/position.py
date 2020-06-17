@@ -13,7 +13,7 @@ class Position:
     agent_id: str
     dialogue_id: str
     solution: Solution
-    premises: Dict[int, Premise]
+    premises: Optional[Dict[int, Premise]]
     domain_cases: Optional[List[DomainCase]]
     domain_case_similarity: float
     arg_suitability_factor: Optional[float] = None
