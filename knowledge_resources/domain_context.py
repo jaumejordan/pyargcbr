@@ -1,11 +1,11 @@
-from typing import Dict, Sequence
 from dataclasses import dataclass, field
-from knowledge_resources.context import Context
+from typing import Dict, Sequence
+
 from knowledge_resources.premise import Premise
 
 
 @dataclass
-class DomainContext(Context):
+class DomainContext:
     """Implementation of the concept DomainCase"""
     premises: Dict[int, Premise] = field(default_factory=lambda:{})
 

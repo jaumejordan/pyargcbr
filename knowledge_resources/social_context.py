@@ -2,7 +2,6 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Optional
 
-from knowledge_resources.context import Context
 from knowledge_resources.group import Group
 from knowledge_resources.social_entity import SocialEntity
 
@@ -15,7 +14,7 @@ class DependencyRelation(Enum):
 
 
 @dataclass
-class SocialContext(Context):
+class SocialContext:
     """Implementation of the concept SocialContext
 
     SocialContext is a specialization of Context

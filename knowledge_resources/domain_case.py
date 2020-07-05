@@ -1,7 +1,6 @@
-from dataclasses import dataclass, field
-from typing import List, Sequence
+from typing import List
+
 from knowledge_resources.case import Case
-from knowledge_resources.case_component import CaseComponent
 from knowledge_resources.justification import Justification
 from knowledge_resources.problem import Problem
 from knowledge_resources.solution import Solution

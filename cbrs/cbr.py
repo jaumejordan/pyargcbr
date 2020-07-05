@@ -51,8 +51,8 @@ class CBR:
         """Stores the current domain-cases case-base to the storing file
         path.
         """
-        with open(self.storing_file_path) as f:
-            f.write(None)  # TODO This is supposed to reset the file
+        with open(self.storing_file_path, "wb") as f:
+            pass  # TODO This is supposed to reset the file    pending check
         self.do_cache_inc()
 
     def do_cache_inc(self):

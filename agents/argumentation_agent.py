@@ -74,7 +74,7 @@ class ArgAgent(Agent):
 
     def __init__(self, jid: str, password: str, my_social_entity: SocialEntity, my_friends: List[SocialEntity],
                  dependency_relations: List[DependencyRelation], group: Group, commitment_store_id: str,
-                 tester_agent_id: str, ini_domain_cases_file_path: str, fin_domain_cases_file_path: str,
+                 ini_domain_cases_file_path: str, fin_domain_cases_file_path: str,
                  dom_cbr_index: int, dom_cbr_threshold: float, ini_arg_cases_file_path: str,
                  fin_arg_cases_file_path: str, wpd: float, wsd: float, wrd: float, wad: float, wed: float, wep: float):
         """Main method to build Argumentative Agents
@@ -88,7 +88,6 @@ class ArgAgent(Agent):
             of the agent with its friends
             group Group: The group the agent belongs to
             commitment_store_id (str): ID of the commitment store
-            tester_agent_id (str): TODO ID of the tester agent to run tests in the system
             ini_domain_cases_file_path (str): File with the original domain cases case base
             fin_domain_cases_file_path (str): File to write the updated domain cases case base
             dom_cbr_index (int):
@@ -159,8 +158,7 @@ class ArgAgent(Agent):
 
         self.current_why_agent_id: Optional[str] = None
 
-
-    async def setup(self):  # TODO
+    async def setup(self):
         fsm = ArgBehaviour()
         fsm.add_state(name=BEGIN_STATE, state=BeginState(), initial=True)
         fsm.add_state(name=OPEN_STATE, state=OpenState())
@@ -297,12 +295,11 @@ class ArgAgent(Agent):
         self.my_used_locutions += 1
         return self.create_message(agent_id, WHY_PERF, self.current_dialogue_id, pos)
 
-    def no_commit(self, agent_id: str, pos: Position) -> ArgMessage:
+    def no_commit(self, agent_id: str) -> ArgMessage:
         """Returns a message with the performative NO_COMMIT_PERF to challenge the given position
 
         Args:
             agent_id (str): Agent identifier to tell NO_COMMIT
-            pos (Position): Position that the agent does NO_COMMIT TODO it seems like it's not used... weird
 
         Returns:
             ArgMessage: The message to be sent
@@ -356,14 +353,6 @@ class ArgAgent(Agent):
         """
         self.my_used_locutions += 1
         return self.create_message(agent_id, ATTACK_PERF, self.current_dialogue_id, arg)
-
-    def nothing_msg(self) -> ArgMessage:
-        """Returns a message with the performative NOTHING_PERF to send to any agent
-
-        Returns:
-            ArgMessage: The message to be sent
-        """  # TODO a way to properly the "noOne" identifier part
-        return self.create_message("noOne", NOTHING_PERF, self.current_dialogue_id, None)
 
     def get_my_last_used_argument(self, agent_id: str, arg_id: int) -> Optional[Argument]:
         """Returns the last used argument with another specified agent and with the given id
@@ -451,7 +440,7 @@ class ArgAgent(Agent):
                     support_degree = degrees[1]
                     risk_degree = degrees[2]
                     attack_degree = degrees[3]
-                    efficiency_degree = degrees[40]
+                    efficiency_degree = degrees[4]
                     explanatory_power = degrees[5]
                     # SF =( (wPD * PD + wSD * SD + wRD * (1 - RD) + wAD * (1 - AD) + wED * ED + wEP * EP) ) / 6
                     arg_suitability_factor = (self.wpd * persuasiveness_degree + self.wsd * support_degree + self.wrd
@@ -501,7 +490,7 @@ class ArgAgent(Agent):
         friend_index = self.get_friend_index(agent_id)
 
         if friend_index < 0:
-            pass  # TODO can this situation happen?
+            return final_support_arguments
         opponent = self.my_friends[friend_index]
         relation = self.dependency_relations[friend_index]
         # Try to generate a support argument of the type:
@@ -641,7 +630,8 @@ class ArgAgent(Agent):
         # Distinguishing premise or Counter-Example, depending on the attack received
         friend_index = self.get_friend_index(agent_id)
         if friend_index < 0:
-            pass  # TODO can this situation happen?
+            return None
+
         opponent = self.my_friends[friend_index]
         relation = self.dependency_relations[friend_index]
         # If the opponent is more powerful than me, do not attack
@@ -676,7 +666,7 @@ class ArgAgent(Agent):
             )))
 
         # This list contains positions that represent the different argument-cases
-        # extracted just to calculate the degrees with the function get_degrees() TODO almost duplicated code
+        # extracted just to calculate the degrees with the function get_degrees()
         all_positions: List[Position] = []
         for similar_argument_case in arg_cases:
             solution = Solution(similar_argument_case.case.solutions.conclusion,
@@ -1117,7 +1107,6 @@ class ArgAgent(Agent):
                 argument_problem = ArgumentProblem(domain_context, social_context)
                 # TODO are these soft copies enough? There are more all over the code. Tests will tell
                 dist_premises = [p for p in arg.received_attacks_dist_premises]
-                # TODO this has been slightly changed, maybe it was more efficient the other way (like in Java version)
                 counter_example_dom = self.domain_cases_to_int_ids(
                     [c_ex_dom for c_ex_doms in arg.received_attacks_counter_examples for c_ex_dom in
                      c_ex_doms.support_set.counter_examples_dom_cases])
@@ -1271,7 +1260,6 @@ class ArgAgent(Agent):
         my_positions_asked = self.attended_why_petitions.get(why_agent_id)
         if my_positions_asked and self.current_position in my_positions_asked:
             # I have already replied this agent with my current position, do not reply him
-            msg = self.nothing_msg()
             return CENTRAL_STATE # send message with performative NOTHING_PERF to noOne (non existing agent)
         else:
             # try to generate a support argument with:
@@ -1465,7 +1453,6 @@ class ArgAgent(Agent):
 
             return True
         else:  # Nothing to challenge, remain in this state send NOTHING message
-            msg = self.nothing_msg()
             logger.info("{}: NOT WHY nothing to challenge".format(self.my_id))
             return False
 
@@ -1547,10 +1534,9 @@ class ArgAgent(Agent):
                                                       description, self.current_position.times_accepted))
         # Change my support argument acceptability status search my support argument, the one I told this agent
         support_args: List[Argument] = self.my_used_support_arguments.get(msg.sender, [])
-        # TODO each time we index using a message sender as reference in Java the name is the only part used
         my_last_support_arg = support_args[-1]
         my_last_support_arg.acceptability_state = AcceptabilityStatus.ACCEPTABLE
-        support_args[-1] = my_last_support_arg  # TODO redundant?
+        support_args[-1] = my_last_support_arg
         self.my_support_arguments[msg.sender] = support_args
         store_list: List[Argument] = self.store_arguments.get(msg.sender, [])
         store_list.append(my_last_support_arg)
@@ -1595,7 +1581,6 @@ class ArgAgent(Agent):
         logger.info("{}->{}::accept::\n".format(self.my_id, self.sub_dialogue_agent_id))
 
 
-
 class ArgBehaviour(FSMBehaviour):
     async def send(self, msg: ArgMessage):
         for receiver in msg.to:  # TODO Is this the way to do it?
@@ -1627,7 +1612,6 @@ class OpenState(State):
 
     async def on_start(self):
         logger.info("{}: Entering OpenState")
-
 
     async def run(self):
         msg = await self.receive(timeout=MSG_TIMEOUT)
@@ -1693,7 +1677,7 @@ class CentralState(State):
         logger.info("{}: Entering CentralState")
 
     async def run(self):
-        msg = await self.receive(timeout=MSG_TIMEOUT)
+        msg = await self.receive(timeout=int(random() * MSG_TIMEOUT))
         if msg:
             performative = msg.get_metadata(PERFORMATIVE)
             if performative == WHY_PERF:
@@ -1705,8 +1689,8 @@ class CentralState(State):
             elif performative == ACCEPTS_PERF:
                 self.agent.do_my_position_accepted(msg)
                 self.next_state(CENTRAL_STATE)
-            else:
-                self.next_state(CENTRAL_STATE)
+        else:
+            self.next_state(CENTRAL_STATE)
 
 
 class AssertState(State):

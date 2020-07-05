@@ -100,7 +100,7 @@ class DomainCBR(CBR):
             List[SimilarDomainCase]: The domain cases that fit in the range of
             similarity
         """
-        # TODO The parameter times_used can be also increased depending of the application domain
+        # The parameter times_used can be also increased depending of the application domain
         c = Configuration()
         similar_cases = self.get_most_similar(premises, threshold, c.domain_cbrs_similarity)
         return similar_cases
@@ -162,7 +162,7 @@ class DomainCBR(CBR):
                     sol_found = False
                     for b_solution in current_case.solutions:
                         if b_solution.conclusion.id == a_solution.conclusion.id:
-                            b_solution.times_used += a_solution.times_used  # TODO check if this is now correct (in Java was different)
+                            b_solution.times_used += a_solution.times_used
                             sol_found = True
                             break
                     if not sol_found:
@@ -214,7 +214,7 @@ class DomainCBR(CBR):
                 break
         return more_similar_candidates
 
-    @staticmethod  # TODO is it useful for this method to be static?
+    @staticmethod
     def get_premises_similarity(premises1: Dict[int, Premise], premises2: Dict[int, Premise]) -> float:
         """Obtains the similarity between two Dictionaries of premises using the
         similarity algorithm specified in the configuration of this class.
@@ -269,7 +269,7 @@ class DomainCBR(CBR):
             new_case_premises_list: List[int] = []
             for premise in premises.values():
                 new_case_premises_list.append(premise.id)
-            new_case_premises_list = sorted(new_case_premises_list)  # TODO for sorted '15' < '2' (sorts alphabeticaly)
+            new_case_premises_list = sorted(new_case_premises_list)  # for sorted '15' < '2'
             for premise_id in new_case_premises_list:
                 main_premise_id = premise_id
                 dom_cases = self.case_base.get(str(main_premise_id))

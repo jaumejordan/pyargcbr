@@ -1,11 +1,10 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
-from knowledge_resources.case_component import CaseComponent
 from knowledge_resources.conclusion import Conclusion
 
 
 @dataclass
-class Solution(CaseComponent):
+class Solution:
     """Implementation of the concept Solution"""
     conclusion: Conclusion = Conclusion()
     value: str = ""

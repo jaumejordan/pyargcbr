@@ -97,10 +97,9 @@ class ArgCBR(CBR):
                         # distinguishing premises
                         # Take care that distinguishing premises are NEVER translated to Dict
                         # (there are several dp with the same ID but different content in the List)
-                        # TODO Take into account when testing that this part has been highly changed
                         distinguishing_premises = arg_case.solutions.dist_premises
                         new_distinguishing_premises = new_arg_case.solutions.dist_premises
-                        if not new_distinguishing_premises:  # TODO it's a literal translation, maybe not necessary
+                        if not new_distinguishing_premises:  # it's a literal translation, maybe not necessary
                             new_distinguishing_premises = []
                         if not distinguishing_premises:
                             arg_case.solutions.dist_premises = new_distinguishing_premises
@@ -316,14 +315,15 @@ class ArgCBR(CBR):
         """
         return [i for i in same_problem_arg_cases if i.case.solutions.conclusion == solution.conclusion]
 
-    @staticmethod  # TODO this method has the same implementation as get_same_problem_accepted_arg_cases
+    @staticmethod
     def get_same_problem_conclusion_accepted_arg_cases(same_problem_conclusion_arg_cases: List[SimilarArgumentCase]) -> \
         List[SimilarArgumentCase]:
         """Get similar argument cases to the given one with the same problem
         description, conclusion and that were accepted in the past
 
         Args:
-            same_problem_conclusion_arg_cases (List[SimilarArgumentCase]): Argument cases with the same problem description and conclusion
+            same_problem_conclusion_arg_cases (List[SimilarArgumentCase]): Argument cases with the same problem
+                description and conclusion
 
         Returns:
             Similar argument cases with the same problem description,
@@ -568,7 +568,6 @@ class ArgCBR(CBR):
                                c.arg_cbr_opponent_id_weight + c.arg_cbr_opponent_pref_weight +
                                c.arg_cbr_group_id_weight + c.arg_cbr_group_pref_weight)
 
-                # TODO Is this the correct ident for this instruction?
                 final_arg_cases.append(SimilarArgumentCase(current_arg_case, suitability))
         # Only with the same solution ID, and the same promoted value. Only accepted cases
         return [i for i in final_arg_cases if i.case.solutions.conclusion.id == solution
@@ -598,7 +597,7 @@ class ArgCBR(CBR):
         for current_arg_case in domain_similar_arg_cases:
             suitability = 0.0
             social_context = arg_problem.social_context
-            if social_context:  # TODO I think this is always evaluated as Truw
+            if social_context:
                 if (not social_context.relation or
                         social_context.relation == current_arg_case.problem.social_context.relation):
                     proponent_id_comp = 0.0
@@ -730,8 +729,8 @@ class ArgCBR(CBR):
     def do_cache_inc(self):
         super().do_cache_inc()
 
-    def get_all_cases(self) -> ValuesView[Sequence[ArgumentCase]]:  # TODO here we go again with annotations
+    def get_all_cases(self) -> ValuesView[Sequence[ArgumentCase]]:  # here we go again with annotations
         return super().get_all_cases()
 
-    def get_all_cases_list(self) -> Sequence[ArgumentCase]:  # TODO here we go again with annotations
+    def get_all_cases_list(self) -> Sequence[ArgumentCase]:
         return super().get_all_cases_list()

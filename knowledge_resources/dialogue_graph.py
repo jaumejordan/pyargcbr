@@ -134,32 +134,3 @@ class DialogueGraph:
                 break
             distance += 1
         return distance
-
-    # TODO:  Revisar método distance_to_final, en java estaba implementado como dos métodos sobrecargados, esto es replicable en python usando @typing.overload
-    """
-    def distance_to_final(self, arg_id: int):
-        arg_pos = 1
-        distance = 0
-        for node in self.nodes:
-            if node.get_id() == arg_id:
-                break
-            arg_pos += 1
-        for j in range(arg_pos, self.size()):
-            if self.nodes[j].get_node_type() == NodeType.AGREE:
-                break
-            distance += 1
-        return distance
-
-    def distance_to_final(self, arg_node: ArgNode):
-        arg_pos = 1
-        distance = 0
-        for node in self.nodes:
-            if node == arg_node:
-                break
-            arg_pos += 1
-        for j in range(arg_pos, self.size()):
-            if self.nodes[j].get_node_type() == NodeType.AGREE:
-                break
-            distance += 1
-        return distance
-    """

@@ -39,7 +39,7 @@ class CommitmentStore(Agent):
         self.positions: Dict[str, Dict[str, Position]] = {}
         self.last_modification_dates: Dict[str, int] = {}
 
-    def finalize(self):   # TODO
+    def finalize(self):
         pass
 
     async def setup(self):
@@ -71,7 +71,7 @@ class CommitmentStore(Agent):
         msg = Message()
         msg.to = agent_jid
         msg.sender = self.agent_id
-        msg.set_metadata(CONVERSATION, conversation_id)  # TODO check
+        msg.set_metadata(CONVERSATION, conversation_id)
         msg.set_metadata(PERFORMATIVE, performative)
         msg.body = MessageCodification.pickle_object(content_object)
         logger.info("{}: message to send to: {} | dialogue_id: {}".format(self.name, msg.to,
@@ -236,7 +236,7 @@ class ReplierBehaviour(CyclicBehaviour):
         try:
             if msg:
                 performative = msg.get_metadata(PERFORMATIVE)
-                agent_id = str(msg.sender) # TODO probably only the first part of the JID is needed
+                agent_id = str(msg.sender)
                 conversation_id = str(msg.get_metadata(CONVERSATION))
                 if performative == LAST_MODIFICATION_DATE_PERF:
                     last_date = self.agent.last_modification_dates.get(conversation_id, 0)
@@ -257,11 +257,11 @@ class ReplierBehaviour(CyclicBehaviour):
                     self.agent.add_position(pos, agent_id, conversation_id)
                 elif performative == GET_POSITION_PERF:
                     pos: Position = self.agent.get_position(agent_id, conversation_id)
-                    response = self.agent.create_message(agent.agent_id, LAST_MODIFICATION_DATE_PERF,
+                    response = self.agent.create_message(self.agent.agent_id, LAST_MODIFICATION_DATE_PERF,
                                                          conversation_id, pos)
                 elif performative == GET_ALL_POSITIONS_PERF:
                     all_positions: List[Position] = self.agent.get_all_positions(agent_id, conversation_id)
-                    response = self.agent.create_message(agent.agent_id, LAST_MODIFICATION_DATE_PERF,
+                    response = self.agent.create_message(self.agent.agent_id, LAST_MODIFICATION_DATE_PERF,
                                                          conversation_id, all_positions)
                 elif performative == NO_COMMIT_PERF:
                     self.agent.last_modification_dates[conversation_id] = datetime.now().microsecond
@@ -273,16 +273,16 @@ class ReplierBehaviour(CyclicBehaviour):
                     self.agent.add_dialogue(dialogue)
                 elif performative == GET_DIALOGUE_PERF:
                     dialogue: Dialogue = self.agent.get_dialogue(agent_id)
-                    response = self.agent.create_message(agent.agent_id, LAST_MODIFICATION_DATE_PERF,
+                    response = self.agent.create_message(self.agent.agent_id, LAST_MODIFICATION_DATE_PERF,
                                                          conversation_id, dialogue)
                 elif performative == ENTER_DIALOGUE_PERF:
                     self.agent.last_modification_dates[conversation_id] = datetime.now().microsecond
                     dialogue: Dialogue = self.agent.dialogues.get(conversation_id)
-                    dialogue.add_agent_ids(agent_id)  # TODO what if the dialogue does not exist?
+                    dialogue.add_agent_ids(agent_id)  # what if the dialogue does not exist?
                 elif performative == WITHDRAW_DIALOGUE_PERF:
                     self.agent.last_modification_dates[conversation_id] = datetime.now().microsecond
                     dialogue: Dialogue = self.agent.dialogues.get(conversation_id)
-                    dialogue.remove_agent_ids(agent_id)  # TODO what if the dialogue does not exist?
+                    dialogue.remove_agent_ids(agent_id)  # what if the dialogue does not exist?
                 elif performative == DIE_PERF:
                     self.agent.finalize()
                 else:

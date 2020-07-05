@@ -24,7 +24,7 @@ class TestArgumentationCBR:
                 sim_case = retrieved_cases[0]
                 assert sim_case.case.id == a_case.id
             else:
-                assert False  # TODO This was not in the original code, but I guess is needed
+                assert False
 
     def retrieval_consistency(self):
         all_cases = self.cbr.get_all_cases()

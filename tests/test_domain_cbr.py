@@ -124,4 +124,4 @@ class TestDomainCBR:
         self.retrieval_accuracy()
         self.retrieval_consistency()
         self.case_duplication()         # This part is really slow
-        self.operating() #TODO fix
+        self.operating()
