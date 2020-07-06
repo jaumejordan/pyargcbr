@@ -26,7 +26,9 @@ Case-Based Argumentation Infrastructure in Python
 Features
 --------
 
-* TODO
+* Argumentative agents that solve problems reasoning about the possible solutions.
+* Domain CBR (Case-based Reasoning) system to store and update domain knowledge.
+* Argumentation CBR system to store and update argumentation knowledge of agents.
 
 Credits
 -------
