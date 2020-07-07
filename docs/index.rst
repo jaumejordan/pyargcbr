@@ -8,7 +8,7 @@ Welcome to PyArgCBR's documentation!
    readme
    installation
    usage
-   modules
+   api
    contributing
    authors
    history

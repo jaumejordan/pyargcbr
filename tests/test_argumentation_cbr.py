@@ -2,11 +2,10 @@
 
 """Tests for `pyargcbr` package."""
 from typing import List
-from loguru import logger
 import pytest
 
-from cbrs.argumentation_cbr import ArgCBR
-from knowledge_resources.argument_case import ArgumentCase
+from pyargcbr.cbrs.argumentation_cbr import ArgCBR
+from pyargcbr.knowledge_resources import ArgumentCase
 
 
 class TestArgumentationCBR:

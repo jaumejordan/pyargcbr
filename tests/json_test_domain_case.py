@@ -3,13 +3,13 @@ from pickle import dump, load
 from typing import List, Any, Dict
 from loguru import logger
 
-from knowledge_resources.conclusion import Conclusion
-from knowledge_resources.domain_case import DomainCase
-from knowledge_resources.domain_context import DomainContext
-from knowledge_resources.justification import Justification
-from knowledge_resources.premise import Premise
-from knowledge_resources.problem import Problem
-from knowledge_resources.solution import Solution
+from pyargcbr.knowledge_resources.conclusion import Conclusion
+from pyargcbr.knowledge_resources.domain_case import DomainCase
+from pyargcbr.knowledge_resources import DomainContext
+from pyargcbr.knowledge_resources import Justification
+from pyargcbr.knowledge_resources import Premise
+from pyargcbr.knowledge_resources import Problem
+from pyargcbr.knowledge_resources import Solution
 
 
 def load_json(filename):

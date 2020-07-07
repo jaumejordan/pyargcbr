@@ -1,8 +1,8 @@
 import time
 from loguru import logger
 
-from agents.commitment_store_agent import CommitmentStore
-from agents.debug_agent import DebugAgent
+from pyargcbr.agents import CommitmentStore
+from pyargcbr.agents import DebugAgent
 
 if __name__ == "__main__":
     cs = CommitmentStore("commitment_store@localhost", "secret")
