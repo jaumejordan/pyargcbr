@@ -2,6 +2,13 @@
 History
 =======
 
+0.2.1 (2020-07-07)
+------------------
+
+* Modified package structure
+* API documentation generated
+ 
+
 0.2.0 (2020-07-06)
 ------------------
 
