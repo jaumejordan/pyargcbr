@@ -3,20 +3,20 @@ from pickle import dump, load
 from typing import List, Any, Dict
 from loguru import logger
 
-from knowledge_resources.arg_node import ArgNode
-from knowledge_resources.argument_case import ArgumentCase
-from knowledge_resources.argument_justification import ArgumentJustification
-from knowledge_resources.argument_problem import ArgumentProblem
-from knowledge_resources.argument_solution import ArgumentSolution
-from knowledge_resources.argumentation_scheme import ArgumentationScheme
-from knowledge_resources.author import Author
-from knowledge_resources.conclusion import Conclusion
-from knowledge_resources.dialogue_graph import DialogueGraph
-from knowledge_resources.domain_context import DomainContext
-from knowledge_resources.premise import Premise
-from knowledge_resources.social_context import SocialContext
-from knowledge_resources.social_entity import SocialEntity
-from knowledge_resources.valpref import ValPref
+from pyargcbr.knowledge_resources import ArgNode
+from pyargcbr.knowledge_resources import ArgumentCase
+from pyargcbr.knowledge_resources import ArgumentJustification
+from pyargcbr.knowledge_resources import ArgumentProblem
+from pyargcbr.knowledge_resources import ArgumentSolution
+from pyargcbr.knowledge_resources.argumentation_scheme import ArgumentationScheme
+from pyargcbr.knowledge_resources import Author
+from pyargcbr.knowledge_resources.conclusion import Conclusion
+from pyargcbr.knowledge_resources import DialogueGraph
+from pyargcbr.knowledge_resources import DomainContext
+from pyargcbr.knowledge_resources import Premise
+from pyargcbr.knowledge_resources import SocialContext
+from pyargcbr.knowledge_resources import SocialEntity
+from pyargcbr.knowledge_resources import ValPref
 
 
 def load_json(filename):

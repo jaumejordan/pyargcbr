@@ -2,19 +2,19 @@
 
 """Tests for `pyargcbr` package."""
 from typing import List, Dict
-from agents.metrics import levenshtein_distance as cmp
+from pyargcbr.agents import levenshtein_distance as cmp
 
 import pytest
 
 
-from knowledge_resources.domain_case import DomainCase
-from knowledge_resources.domain_context import DomainContext
-from knowledge_resources.justification import Justification
-from knowledge_resources.premise import Premise
-from knowledge_resources.problem import Problem
-from knowledge_resources.similar_domain_case import SimilarDomainCase
+from pyargcbr.knowledge_resources.domain_case import DomainCase
+from pyargcbr.knowledge_resources import DomainContext
+from pyargcbr.knowledge_resources import Justification
+from pyargcbr.knowledge_resources import Premise
+from pyargcbr.knowledge_resources import Problem
+from pyargcbr.knowledge_resources import SimilarDomainCase
 
-from cbrs.domain_cbr import DomainCBR
+from pyargcbr.cbrs.domain_cbr import DomainCBR
 
 
 def similar_domain_case_comparison(case1: SimilarDomainCase, case2: SimilarDomainCase):

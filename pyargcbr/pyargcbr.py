@@ -1,7 +1,8 @@
 """Main module."""
 import logging
-from loguru import logger
 import sys
+
+from loguru import logger
 
 
 def main(verbose = 0):
