@@ -8,6 +8,7 @@ from .solution import Solution
 
 class DomainCase(Case):
     """Implementation of the concept DomainCase"""
+
     def __init__(self, problem: Problem = Problem(), solutions: List[Solution] = [],
                  justification: Justification = Justification()):
         """DomainCase is a specialization of Case"""

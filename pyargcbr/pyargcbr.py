@@ -5,7 +5,7 @@ import sys
 from loguru import logger
 
 
-def main(verbose = 0):
+def main(verbose=0):
     """Main function"""
 
     # Console script for pyargcbr

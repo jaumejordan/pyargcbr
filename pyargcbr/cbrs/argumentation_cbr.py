@@ -85,7 +85,7 @@ class ArgCBR(CBR):
                         and self.is_same_social_context(new_arg_case.problem.social_context,
                                                         arg_case.problem.social_context)
                         and new_arg_case.solutions.conclusion.id == arg_case.solutions.conclusion.id
-                            and new_arg_case.solutions.acceptability_status == arg_case.solutions.acceptability_status):
+                        and new_arg_case.solutions.acceptability_status == arg_case.solutions.acceptability_status):
                         # It is the same argument-case, so it is not introduced
                         # but we add associated cases and attacks received,
                         # and dialogue graphs and increase timesUsed
@@ -298,7 +298,7 @@ class ArgCBR(CBR):
 
     @staticmethod
     def get_same_problem_conclusion_arg_cases(same_problem_arg_cases: List[SimilarArgumentCase], solution: Solution) -> \
-            List[SimilarArgumentCase]:
+        List[SimilarArgumentCase]:
         """Get similar argument cases to the given one with the same problem
         description and conclusion
 
@@ -496,14 +496,14 @@ class ArgCBR(CBR):
         for arg_cases_list in all_position_cases:
             kr_average = 0.0
             for sim_arg_case_position in arg_cases_list:
-                n_kr = len(sim_arg_case_position.case.justification.schemes)\
-                    + len(sim_arg_case_position.case.justification.domain_cases_ids)\
-                    + len(sim_arg_case_position.case.justification.argument_cases_ids)
+                n_kr = len(sim_arg_case_position.case.justification.schemes) \
+                       + len(sim_arg_case_position.case.justification.domain_cases_ids) \
+                       + len(sim_arg_case_position.case.justification.argument_cases_ids)
                 if n_kr < min_kr:
                     min_kr = n_kr
                 if n_kr > max_kr:
                     max_kr = n_kr
-                kr_average += n_kr # Adds knowledge resources to the count to obtain the average
+                kr_average += n_kr  # Adds knowledge resources to the count to obtain the average
 
             # Calculate knowledge resources average of this position and store it in the list
             kr_average /= len(arg_cases_list)
@@ -545,8 +545,8 @@ class ArgCBR(CBR):
                 group_pref_comp = 0.0
                 if social_context.proponent.id == current_arg_case.problem.social_context.proponent.id:
                     proponent_id_comp = c.arg_cbr_proponent_id_weight
-                if social_context.proponent.valpref.get_preferred() ==\
-                        current_arg_case.problem.social_context.proponent.valpref.get_preferred():
+                if social_context.proponent.valpref.get_preferred() == \
+                    current_arg_case.problem.social_context.proponent.valpref.get_preferred():
                     proponent_pref_comp = c.arg_cbr_proponent_pref_weight
 
                 if social_context.opponent.id == current_arg_case.problem.social_context.opponent.id:
@@ -557,8 +557,8 @@ class ArgCBR(CBR):
 
                 if social_context.group.id == current_arg_case.problem.social_context.group.id:
                     group_id_comp = c.arg_cbr_group_id_weight
-                if social_context.group.valpref.get_preferred() ==\
-                        current_arg_case.problem.social_context.group.valpref.get_preferred():
+                if social_context.group.valpref.get_preferred() == \
+                    current_arg_case.problem.social_context.group.valpref.get_preferred():
                     group_pref_comp = c.arg_cbr_group_pref_weight
 
                 suitability = (proponent_id_comp + proponent_pref_comp + opponent_id_comp + opponent_pref_comp
@@ -598,7 +598,7 @@ class ArgCBR(CBR):
             social_context = arg_problem.social_context
             if social_context:
                 if (not social_context.relation or
-                        social_context.relation == current_arg_case.problem.social_context.relation):
+                    social_context.relation == current_arg_case.problem.social_context.relation):
                     proponent_id_comp = 0.0
                     proponent_pref_comp = 0.0
                     opponent_id_comp = 0.0
@@ -609,19 +609,19 @@ class ArgCBR(CBR):
                     if arg_problem.social_context.proponent.id == current_arg_case.problem.social_context.proponent.id:
                         proponent_id_comp = c.arg_cbr_proponent_id_weight
                     if arg_problem.social_context.proponent.valpref.get_preferred() == \
-                            current_arg_case.problem.social_context.proponent.valpref.get_preferred():
+                        current_arg_case.problem.social_context.proponent.valpref.get_preferred():
                         proponent_pref_comp = c.arg_cbr_proponent_pref_weight
 
                     if arg_problem.social_context.opponent.id == current_arg_case.problem.social_context.opponent.id:
                         opponent_id_comp = c.arg_cbr_opponent_id_weight
                     if arg_problem.social_context.opponent.valpref.get_preferred() == \
-                            current_arg_case.problem.social_context.opponent.valpref.get_preferred():
+                        current_arg_case.problem.social_context.opponent.valpref.get_preferred():
                         opponent_pref_comp = c.arg_cbr_opponent_pref_weight
 
                     if arg_problem.social_context.group.id == current_arg_case.problem.social_context.group.id:
                         group_id_comp = c.arg_cbr_group_id_weight
                     if arg_problem.social_context.group.valpref.get_preferred() == \
-                            current_arg_case.problem.social_context.group.valpref.get_preferred():
+                        current_arg_case.problem.social_context.group.valpref.get_preferred():
                         group_pref_comp = c.arg_cbr_group_pref_weight
 
                     suitability = (proponent_id_comp + proponent_pref_comp + opponent_id_comp + opponent_pref_comp
@@ -718,7 +718,7 @@ class ArgCBR(CBR):
         if (social_context1.relation != social_context2.relation
             or social_context1.group.id != social_context2.group.id
             or social_context1.opponent.id != social_context2.opponent.id
-                or social_context1.proponent.id != social_context2.proponent.id):
+            or social_context1.proponent.id != social_context2.proponent.id):
             return False
         return True
 

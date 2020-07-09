@@ -16,9 +16,9 @@ class ArgumentationScheme:
     arg_title: str = ""
     creation_date: str = ""
     author: Author = Author()
-    premises: list = field(default_factory=lambda:[])
-    presumptions: list = field(default_factory=lambda:[])
-    exceptions: list = field(default_factory=lambda:[])
+    premises: list = field(default_factory=lambda: [])
+    presumptions: list = field(default_factory=lambda: [])
+    exceptions: list = field(default_factory=lambda: [])
 
     def remove_premise(self, old_premise: Premise):
         """Removes a premise from the premises list (premises)
@@ -67,6 +67,3 @@ class ArgumentationScheme:
             new_presumption (Premise): The premise that will be added
         """
         self.presumptions.append(new_presumption)
-
-
-

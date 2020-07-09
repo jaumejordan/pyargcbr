@@ -1,15 +1,16 @@
 import json
 from pickle import dump, load
 from typing import List, Any, Dict
+
 from loguru import logger
 
 from pyargcbr.knowledge_resources.conclusion import Conclusion
 from pyargcbr.knowledge_resources.domain_case import DomainCase
-from pyargcbr.knowledge_resources import DomainContext
-from pyargcbr.knowledge_resources import Justification
-from pyargcbr.knowledge_resources import Premise
-from pyargcbr.knowledge_resources import Problem
-from pyargcbr.knowledge_resources import Solution
+from pyargcbr.knowledge_resources.domain_context import DomainContext
+from pyargcbr.knowledge_resources.justification import Justification
+from pyargcbr.knowledge_resources.premise import Premise
+from pyargcbr.knowledge_resources.problem import Problem
+from pyargcbr.knowledge_resources.solution import Solution
 
 
 def load_json(filename):
@@ -32,8 +33,8 @@ def save_objects(objs: List[Any], file_name: str):
 if __name__ == "__main__":
     f = load_json("test_domain_case.json")
     domain_cases = f["domain_case"]
-    #print("Número de domain-cases en el JSON: ", len(domain_cases))
-    #print("Toda la lista: ", domain_cases)
+    # print("Número de domain-cases en el JSON: ", len(domain_cases))
+    # print("Toda la lista: ", domain_cases)
 
     new_domain_cases: List[DomainCase] = []
     for domain_case_dict in domain_cases:

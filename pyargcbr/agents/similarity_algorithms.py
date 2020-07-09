@@ -97,7 +97,7 @@ def weighted_euclidean_similarity(premises: Dict[int, Premise], candidate_cases:
 
         for candidate_premise in candidate.problem.context.premises.values():
             domain_case_premise = premises.get(candidate_premise.id, None)
-            if not domain_case_premise: # Not found
+            if not domain_case_premise:  # Not found
                 distance += 1
 
         similarity: float = 1 / (sqrt(distance) + 1)

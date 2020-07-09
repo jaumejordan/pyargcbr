@@ -1,5 +1,5 @@
-import pickle
 import codecs
+import pickle
 from typing import TypeVar, Any
 
 from spade.message import Message
@@ -10,8 +10,8 @@ PERFORMATIVE = "performative"
 REGISTER_PROTOCOL = "REGISTER"
 REQUEST_PROTOCOL = "REQUEST"
 
-REQUEST_PERF = "request"    # To ask for registration
-ACCEPT_PERF = "accept"      # To confirm registration
+REQUEST_PERF = "request"  # To ask for registration
+ACCEPT_PERF = "accept"  # To confirm registration
 
 LAST_MODIFICATION_DATE_PERF = "last_modification_date"
 ADD_ARGUMENT_PERF = "add_argument"
