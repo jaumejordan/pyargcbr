@@ -2,11 +2,16 @@
 History
 =======
 
+0.2.4 (2020-07-10)
+------------------
+
+* Package only compatible with python >= 3.7
+* Tox updated
+
 0.2.3 (2020-07-09)
 ------------------
 
 * Tests fixed for build.
-
 
 0.2.2 (2020-07-07)
 ------------------
