@@ -5,7 +5,7 @@ from typing import List, Union
 @dataclass
 class ValPref:
     """Implementation of the concept ValPref"""
-    values: List[str] = field(default_factory=lambda:[])
+    values: List[str] = field(default_factory=lambda: [])
 
     def remove_value(self, old_value: str):
         """Removes a value from the values list (values)

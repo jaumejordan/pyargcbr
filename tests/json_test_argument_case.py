@@ -1,22 +1,23 @@
 import json
 from pickle import dump, load
 from typing import List, Any, Dict
+
 from loguru import logger
 
-from pyargcbr.knowledge_resources import ArgNode
-from pyargcbr.knowledge_resources import ArgumentCase
-from pyargcbr.knowledge_resources import ArgumentJustification
-from pyargcbr.knowledge_resources import ArgumentProblem
-from pyargcbr.knowledge_resources import ArgumentSolution
+from pyargcbr.knowledge_resources.arg_node import ArgNode
+from pyargcbr.knowledge_resources.argument_case import ArgumentCase
+from pyargcbr.knowledge_resources.argument_justification import ArgumentJustification
+from pyargcbr.knowledge_resources.argument_problem import ArgumentProblem
+from pyargcbr.knowledge_resources.argument_solution import ArgumentSolution
 from pyargcbr.knowledge_resources.argumentation_scheme import ArgumentationScheme
-from pyargcbr.knowledge_resources import Author
+from pyargcbr.knowledge_resources.author import Author
 from pyargcbr.knowledge_resources.conclusion import Conclusion
-from pyargcbr.knowledge_resources import DialogueGraph
-from pyargcbr.knowledge_resources import DomainContext
-from pyargcbr.knowledge_resources import Premise
-from pyargcbr.knowledge_resources import SocialContext
-from pyargcbr.knowledge_resources import SocialEntity
-from pyargcbr.knowledge_resources import ValPref
+from pyargcbr.knowledge_resources.dialogue_graph import DialogueGraph
+from pyargcbr.knowledge_resources.domain_context import DomainContext
+from pyargcbr.knowledge_resources.premise import Premise
+from pyargcbr.knowledge_resources.social_context import SocialContext
+from pyargcbr.knowledge_resources.social_entity import SocialEntity
+from pyargcbr.knowledge_resources.valpref import ValPref
 
 
 def load_json(filename):
@@ -228,7 +229,7 @@ if __name__ == "__main__":
             new_justification.dialogue_graphs.append(new_dialogue_graph)
 
         new_argument_case = ArgumentCase(arg_id=argument_case_dict["id"],
-                                         times_used= argument_case_dict["times_used"],
+                                         times_used=argument_case_dict["times_used"],
                                          creation_date=argument_case_dict["creation_date"],
                                          problem=new_problem,
                                          solution=new_solution,

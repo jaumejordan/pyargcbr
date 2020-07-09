@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 import pyargcbr.configuration.settings as settings
 from ..configuration.configuration_parameters import SimilarityType
 

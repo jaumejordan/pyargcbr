@@ -184,4 +184,3 @@ class SupportSet:
                 st += "arc_case_id=" + str(arg_case.id) + " "
 
         return st
-

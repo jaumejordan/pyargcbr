@@ -30,8 +30,8 @@ class Argument:
             A descriptive str of the Argument
         """
         return "id=" + str(self.id) + "sol_id= " + str(self.conclusion.id) + str(self.conclusion.id) + \
-            " promoted_value=" + self.value + " attacking_to_arg_id=" + str(self.attacking_to_arg_id) + \
-            "\nSupport Set: " + str(self.support_set)
+               " promoted_value=" + self.value + " attacking_to_arg_id=" + str(self.attacking_to_arg_id) + \
+               "\nSupport Set: " + str(self.support_set)
 
     def add_received_attacks_counter_examples(self, new_arg: Argument):
         """Adds an argument to the list of received attacks counter examples

@@ -7,7 +7,7 @@ from .social_entity import SocialEntity
 @dataclass
 class Group(SocialEntity):
     """Implementation of the concept Group"""
-    agents: List[SocialEntity] = field(default_factory=lambda:[])
+    agents: List[SocialEntity] = field(default_factory=lambda: [])
 
     def remove_member(self, old_member: SocialEntity):
         """Removes a member from the agents list (agents)

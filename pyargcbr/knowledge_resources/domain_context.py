@@ -7,7 +7,7 @@ from .premise import Premise
 @dataclass
 class DomainContext:
     """Implementation of the concept DomainCase"""
-    premises: Dict[int, Premise] = field(default_factory=lambda:{})
+    premises: Dict[int, Premise] = field(default_factory=lambda: {})
 
     def remove_premise(self, old_premise: Premise):
         """Removes a premise from the premises dict

@@ -1,20 +1,19 @@
 #!/usr/bin/env python
 
 """Tests for `pyargcbr` package."""
+import os
 from typing import List, Dict
-from pyargcbr.agents import levenshtein_distance as cmp
 
 import pytest
 
-
-from pyargcbr.knowledge_resources.domain_case import DomainCase
-from pyargcbr.knowledge_resources import DomainContext
-from pyargcbr.knowledge_resources import Justification
-from pyargcbr.knowledge_resources import Premise
-from pyargcbr.knowledge_resources import Problem
-from pyargcbr.knowledge_resources import SimilarDomainCase
-
+from pyargcbr.agents.metrics import levenshtein_distance as cmp
 from pyargcbr.cbrs.domain_cbr import DomainCBR
+from pyargcbr.knowledge_resources.domain_case import DomainCase
+from pyargcbr.knowledge_resources.domain_context import DomainContext
+from pyargcbr.knowledge_resources.justification import Justification
+from pyargcbr.knowledge_resources.premise import Premise
+from pyargcbr.knowledge_resources.problem import Problem
+from pyargcbr.knowledge_resources.similar_domain_case import SimilarDomainCase
 
 
 def similar_domain_case_comparison(case1: SimilarDomainCase, case2: SimilarDomainCase):
@@ -25,22 +24,19 @@ def similar_domain_case_comparison(case1: SimilarDomainCase, case2: SimilarDomai
     if case1.similarity == case2.similarity \
         and cmp(case1.case.justification.description, case2.case.justification.description) == 0 \
         and len(premises1) == len(premises2) \
-            and len(solutions1) == len(solutions2):
+        and len(solutions1) == len(solutions2):
         for i in range(0, len(premises1)):
             if premises1[i] != premises2[i]:
                 return False
         for i in range(0, len(solutions1)):
             if solutions1[i].conclusion.id != solutions2[i].conclusion.id \
-                    or cmp(solutions1[i].conclusion.description, solutions2[i].conclusion.description) > 0:
+                or cmp(solutions1[i].conclusion.description, solutions2[i].conclusion.description) > 0:
                 return False
     return True
 
 
 class TestDomainCBR:
     cbr: DomainCBR = None
-
-    def set_up(self):
-        self.cbr = DomainCBR("domain_cases_py.dat", "tmp/null", -1)
 
     def retrieval_accuracy(self):
         for a_case in self.cbr.get_all_cases_list():
@@ -116,12 +112,12 @@ class TestDomainCBR:
                                               SimilarDomainCase(first_case, similar_to_first_case[0].similarity))
 
     @pytest.fixture
-    def response(self):
-        pass
+    def domain_cbr_setup(self):
+        file = os.path.abspath("tests/domain_cases_py.dat")
+        self.cbr = DomainCBR(file, "/tmp/null", -1)
 
-    def test_content(self, response):
-        self.set_up()
+    def test_content(self, domain_cbr_setup):
         self.retrieval_accuracy()
         self.retrieval_consistency()
-        self.case_duplication()         # This part is really slow
+        self.case_duplication()  # This part is really slow
         self.operating()

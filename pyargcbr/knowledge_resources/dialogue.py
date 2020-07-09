@@ -23,7 +23,8 @@ class Dialogue:
         if agent_id in self.agent_ids:
             self.agent_ids.remove(agent_id)
             return True
-        else: return False
+        else:
+            return False
 
     def add_agent_ids(self, agent_id: str) -> bool:
         """Adds an ID to the agent IDs list (agent_ids)

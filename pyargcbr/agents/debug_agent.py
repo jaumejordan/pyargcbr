@@ -1,11 +1,11 @@
 import time
-from loguru import logger
 
+from loguru import logger
 from spade.agent import Agent
 from spade.behaviour import CyclicBehaviour
 from spade.message import Message
 
-from .protocol import REGISTER_PROTOCOL, REQUEST_PROTOCOL,\
+from .protocol import REGISTER_PROTOCOL, REQUEST_PROTOCOL, \
     ACCEPT_PERF, REQUEST_PERF, LAST_MODIFICATION_DATE_PERF, PROTOCOL, PERFORMATIVE, MessageCodification
 
 
@@ -62,4 +62,3 @@ class DebugAgent(Agent):
         logger.info("Agent starting . . .")
         b = self.KKBehaviour()
         self.add_behaviour(b)
-

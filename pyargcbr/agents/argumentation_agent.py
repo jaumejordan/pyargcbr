@@ -1,20 +1,19 @@
+from datetime import datetime
 from random import random
 from typing import List, Dict, Optional, Any, Mapping, Union
-from datetime import datetime
 
 from loguru import logger
-from spade.agent import Agent
 from spade.agent import Agent
 from spade.behaviour import FSMBehaviour, State
 from spade.message import Message
 
-from ..agents.arg_message import ArgMessage
 from .protocol import ADD_POSITION_PERF, \
-    GET_ALL_POSITIONS_PERF, NO_COMMIT_PERF, ASSERT_PERF, ATTACK_PERF, ENTER_DIALOGUE_PERF, WITHDRAW_DIALOGUE_PERF, DIE_PERF, \
+    GET_ALL_POSITIONS_PERF, NO_COMMIT_PERF, ASSERT_PERF, ATTACK_PERF, ENTER_DIALOGUE_PERF, WITHDRAW_DIALOGUE_PERF, \
+    DIE_PERF, \
     ACCEPT_PERF, PERFORMATIVE, CONVERSATION, WHY_PERF, \
     MSG_TIMEOUT, OPEN_DIALOGUE_PERF, MessageCodification as msg_cod, ACCEPTS_PERF, FINISH_DIALOGUE_PERF, \
     ATTACKS_PERF, ASSERTS_PERF
-
+from ..agents.arg_message import ArgMessage
 from ..cbrs.argumentation_cbr import ArgCBR
 from ..cbrs.domain_cbr import DomainCBR
 from ..knowledge_resources.acceptability_status import AcceptabilityStatus
@@ -415,7 +414,7 @@ class ArgAgent(Agent):
                         for similar_domain_case2 in self.similar_domain_cases:
                             for solution2 in similar_domain_case2.case.solutions:
                                 if (solution2.conclusion.id == solution.conclusion.id
-                                        and solution2.value == solution.value):
+                                    and solution2.value == solution.value):
                                     support_domain_cases.append(similar_domain_case2)
                                     similar_domain_case2.case.remove_solution(solution2)
 
@@ -445,7 +444,7 @@ class ArgAgent(Agent):
                     # SF =( (wPD * PD + wSD * SD + wRD * (1 - RD) + wAD * (1 - AD) + wED * ED + wEP * EP) ) / 6
                     arg_suitability_factor = (self.wpd * persuasiveness_degree + self.wsd * support_degree + self.wrd
                                               * (1 - risk_degree) + self.wad * (
-                                                      1 - attack_degree) + self.wed * efficiency_degree
+                                                  1 - attack_degree) + self.wed * efficiency_degree
                                               + self.wed * explanatory_power)
                     position.arg_suitability_factor = arg_suitability_factor
 
@@ -553,7 +552,7 @@ class ArgAgent(Agent):
             # SF =( (wPD * PD + wSD * SD + wRD * (1 - RD) + wAD * (1 - AD) + wED * ED + wEP * EP) ) / 6
             arg_suitability_factor = (self.wpd * persuasiveness_degree + self.wsd * support_degree + self.wrd
                                       * (1 - risk_degree) + self.wad * (
-                                              1 - attack_degree) + self.wed * efficiency_degree
+                                          1 - attack_degree) + self.wed * efficiency_degree
                                       + self.wed * explanatory_power)
             # Assign weights in accordance with the quantity of knowledge of each type
             domain_cases_num = len(self.similar_domain_cases)
@@ -691,7 +690,7 @@ class ArgAgent(Agent):
             # SF =( (wPD * PD + wSD * SD + wRD * (1 - RD) + wAD * (1 - AD) + wED * ED + wEP * EP) ) / 6
             arg_suitability_factor = (self.wpd * persuasiveness_degree + self.wsd * support_degree + self.wrd
                                       * (1 - risk_degree) + self.wad * (
-                                              1 - attack_degree) + self.wed * efficiency_degree
+                                          1 - attack_degree) + self.wed * efficiency_degree
                                       + self.wed * explanatory_power)
             # Assign weights in accordance with the quantity of knowledge of each type
             domain_cases_num = len(self.similar_domain_cases)
@@ -714,7 +713,7 @@ class ArgAgent(Agent):
             attack: Optional[Argument] = None
             support = False
             if (not inc_support_set.premises and not inc_support_set.exceptions and not inc_support_set.presumptions
-                    and not inc_support_set.counter_examples_arg_cases and not inc_support_set.counter_examples_dom_cases):
+                and not inc_support_set.counter_examples_arg_cases and not inc_support_set.counter_examples_dom_cases):
                 support = True
 
             if support:
@@ -889,28 +888,28 @@ class ArgAgent(Agent):
                 current_arg_support = current_arg.support_set
 
                 if (arg_support.argument_cases and current_arg_support.argument_cases
-                        and len(arg_support.argument_cases) == len(current_arg_support.argument_cases)
-                        and arg_support.argument_cases[0] == current_arg_support.argument_cases[0]):
+                    and len(arg_support.argument_cases) == len(current_arg_support.argument_cases)
+                    and arg_support.argument_cases[0] == current_arg_support.argument_cases[0]):
                     logger.info("{}: SAME argument cases\n".format(self.name))
                     return True
 
                 if (arg_support.domain_cases and current_arg_support.domain_cases
-                        and len(arg_support.domain_cases) == len(current_arg_support.domain_cases)
-                        and arg_support.domain_cases[0] == current_arg_support.domain_cases[0]):
+                    and len(arg_support.domain_cases) == len(current_arg_support.domain_cases)
+                    and arg_support.domain_cases[0] == current_arg_support.domain_cases[0]):
                     logger.info("{}: SAME domain cases\n".format(self.name))
                     return True
 
                 if (arg_support.counter_examples_dom_cases and current_arg_support.counter_examples_dom_cases
-                        and len(arg_support.counter_examples_dom_cases) == len(current_arg_support.
-                                                                                       counter_examples_dom_cases)
-                        and arg_support.counter_examples_dom_cases[0] == current_arg_support.
-                                counter_examples_dom_cases[0]):
+                    and len(arg_support.counter_examples_dom_cases) == len(current_arg_support.
+                                                                               counter_examples_dom_cases)
+                    and arg_support.counter_examples_dom_cases[0] == current_arg_support.
+                        counter_examples_dom_cases[0]):
                     logger.info("{}: SAME counter example domain cases\n".format(self.name))
                     return True
 
                 if (arg_support.counter_examples_arg_cases and current_arg_support.counter_examples_arg_cases
-                        and len(arg_support.counter_examples_arg_cases) == len(current_arg_support.
-                                                                                       counter_examples_arg_cases)):
+                    and len(arg_support.counter_examples_arg_cases) == len(current_arg_support.
+                                                                               counter_examples_arg_cases)):
                     case1 = arg_support.counter_examples_arg_cases[0]
                     case2 = current_arg_support.counter_examples_arg_cases[0]
                     if case1.id == case2.id:
@@ -924,8 +923,8 @@ class ArgAgent(Agent):
                         return True
 
                 if (arg_support.dist_premises and current_arg_support.dist_premises
-                        and len(arg_support.dist_premises) == len(current_arg_support.dist_premises)
-                        and self.are_same_premises(arg_support.dist_premises, current_arg_support.dist_premises)):
+                    and len(arg_support.dist_premises) == len(current_arg_support.dist_premises)
+                    and self.are_same_premises(arg_support.dist_premises, current_arg_support.dist_premises)):
                     logger.info("{}: SAME distinguising premises".format(self.name))
                     return True
 
@@ -962,7 +961,7 @@ class ArgAgent(Agent):
 
     @staticmethod
     def get_useful_premises(problem_premises: Mapping[int, Premise], my_premises: Mapping[int, Premise]) -> \
-            Dict[int, Premise]:
+        Dict[int, Premise]:
         """Returns a dictionary of the useful premises of the agent of the current problem to solve
         (the premises of the position that are specified in the problem characterisation).
 
@@ -981,7 +980,7 @@ class ArgAgent(Agent):
 
     @staticmethod
     def get_distinguishing_premises(my_premises: Mapping[int, Premise], its_premises: Mapping[int, Premise]) -> \
-            List[Premise]:
+        List[Premise]:
         """Returns a list with distinguishing premises between the dictionaries given as arguments
 
         Args:
@@ -1032,8 +1031,8 @@ class ArgAgent(Agent):
                     asked_pos_agent_id = asked_pos.agent_id
                     pos_agent_id = pos.agent_id
                     if (pos_agent_id == asked_pos_agent_id
-                            and asked_pos.solution.conclusion.id == pos.solution.conclusion.id
-                            and asked_pos.solution.value == pos.solution.value):
+                        and asked_pos.solution.conclusion.id == pos.solution.conclusion.id
+                        and asked_pos.solution.value == pos.solution.value):
                         logger.info("{}: position already asked".format(self.name))
                         asked = True
                         break
@@ -1170,7 +1169,7 @@ class ArgAgent(Agent):
         return -1
 
     def create_message(self, agent_id: str, performative: str, dialogue_id: str, content_object: Optional[Any]) -> \
-            ArgMessage:
+        ArgMessage:
         """Creates and returns an message with the given arguments.
 
         Args:
@@ -1316,7 +1315,7 @@ class ArgAgent(Agent):
         if my_last_used_arg:
             # If attack was a counter-example
             if (against_argument.support_set.counter_examples_dom_cases
-                    or against_argument.support_set.counter_examples_arg_cases):
+                or against_argument.support_set.counter_examples_arg_cases):
                 my_last_used_arg.add_received_attacks_counter_examples(against_argument)
             else:  # It is a distinguishing premises attack
                 my_last_used_arg.add_received_attacks_dist_premises(against_argument)
