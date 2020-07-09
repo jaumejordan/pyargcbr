@@ -2,6 +2,12 @@
 History
 =======
 
+0.2.3 (2020-07-09)
+------------------
+
+* Tests fixed for build.
+
+
 0.2.2 (2020-07-07)
 ------------------
 
@@ -12,7 +18,7 @@ History
 
 * Modified package structure
 * API documentation generated
- 
+
 
 0.2.0 (2020-07-06)
 ------------------
