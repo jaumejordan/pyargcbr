@@ -1,0 +1,288 @@
+{"domain_case": [
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"3",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"398",
+					"description":"revisar_logs_en_el_servidor_y-o_correos_para_comprobar_si_ha_fallado_la_copia_completa_o_solamente_algun_fichero_sin_importancia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"3",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"398",
+					"description":"revisar_logs_en_el_servidor_y-o_correos_para_comprobar_si_ha_fallado_la_copia_completa_o_solamente_algun_fichero_sin_importancia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"51",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"hp"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"laserjet_4000n"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"1",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"25",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"hp"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"2100_tn"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"51",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	}
+]}

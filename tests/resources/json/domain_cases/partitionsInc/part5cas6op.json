@@ -1,0 +1,402 @@
+{"domain_case": [
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_ha_confirmado_averia_con_el_informatico_del_area",
+						"content":"2649"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"bull_compuprint"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"914n"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"55",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"612",
+					"description":"comunicar_incidencia_a_bull_anotar_numero_de_incidencia_para_posibles_reclamaciones"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"NT_Client",
+						"content":"56"
+					},
+
+					{
+						"id":"26",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"27",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"28",
+						"name":"()",
+						"content":"cplc_caido"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"4",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"391",
+					"description":"parar_el_proceso_cplc_si_todabia_esta_activo_y_arrancarlo_de_nuevo"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_ha_confirmado_averia_con_el_informatico_del_area",
+						"content":"2649"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"bull_compuprint"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"914n"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"55",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"612",
+					"description":"comunicar_incidencia_a_bull_anotar_numero_de_incidencia_para_posibles_reclamaciones"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Error_mostrado_en_DISPLAY",
+						"content":"1959"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"3",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"20",
+						"name":"()",
+						"content":"error_50_service"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"canon"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"laser_lbp-83_mark"
+					},
+
+					{
+						"id":"7",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"8",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"10",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"31",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_ha_confirmado_averia_con_el_informatico_del_area",
+						"content":"2649"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"bull_compuprint"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"914n"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"55",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"612",
+					"description":"comunicar_incidencia_a_bull_anotar_numero_de_incidencia_para_posibles_reclamaciones"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	}
+]}

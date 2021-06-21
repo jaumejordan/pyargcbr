@@ -1,0 +1,3441 @@
+{"argument_case": [
+	{
+		"id":"3568261546202156",
+		"creation_date":"Sat Sep 16 12:50:02 CEST 115043",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"hp"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"laserjet_4000n"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			},
+			"social_context":
+			{
+				"proponent":
+				{
+						"id":"8",
+						"name":"ArgLearnAgOperator8",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"opponent":
+				{
+						"id":"2",
+						"name":"ArgLearnAgOperator2",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"group":
+				{
+						"id":"1",
+						"name":"group1",
+						"role":"",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"ahorro",
+								"rapidez",
+								"calidad"
+							]
+						}
+				},
+				"relation":"CHARITY"
+			}
+		},
+		"solution":
+		{
+			"times_used":"0",
+			"value":"ahorro",
+			"conclusion":
+			{
+					"id":"51",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+			},
+			"argument_type":"INDUCTIVE",
+			"acceptability_state":"",
+			"dist_premises":
+			[
+
+			],
+			"presumptions":
+			[
+
+			],
+			"exceptions":
+			[
+
+			],
+			"counter_examples_arg_case_id_list":
+			[
+				3568261647957777
+			],
+			"counter_examples_dom_case_id_list":
+			[
+				
+			]
+		},
+		"justification":
+		{
+			"description":"",
+			"domain_cases_ids":
+			[
+				-1
+			],
+			"argument_cases_ids":
+			[
+				
+			],
+			"schemes":
+			[
+
+			],
+			"dialog_graphs":
+			[
+
+			]
+		},
+		"times_used":"1"
+	},
+	{
+		"id":"3568274270921032",
+		"creation_date":"Sat Feb 10 18:28:41 CET 115044",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"hp"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"2100_tn"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			},
+			"social_context":
+			{
+				"proponent":
+				{
+						"id":"8",
+						"name":"ArgLearnAgOperator8",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"opponent":
+				{
+						"id":"2",
+						"name":"ArgLearnAgOperator2",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"group":
+				{
+						"id":"1",
+						"name":"group1",
+						"role":"",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"ahorro",
+								"rapidez",
+								"calidad"
+							]
+						}
+				},
+				"relation":"CHARITY"
+			}
+		},
+		"solution":
+		{
+			"times_used":"0",
+			"value":"ahorro",
+			"conclusion":
+			{
+					"id":"51",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+			},
+			"argument_type":"INDUCTIVE",
+			"acceptability_state":"",
+			"dist_premises":
+			[
+
+			],
+			"presumptions":
+			[
+
+			],
+			"exceptions":
+			[
+
+			],
+			"counter_examples_arg_case_id_list":
+			[
+				
+			],
+			"counter_examples_dom_case_id_list":
+			[
+				
+			]
+		},
+		"justification":
+		{
+			"description":"",
+			"domain_cases_ids":
+			[
+				-1
+			],
+			"argument_cases_ids":
+			[
+				
+			],
+			"schemes":
+			[
+
+			],
+			"dialog_graphs":
+			[
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3568274270921032",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				}
+			]
+		},
+		"times_used":"1"
+	},
+	{
+		"id":"3568627721084132",
+		"creation_date":"Tue Apr 24 16:04:44 CEST 115055",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"hp"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"laserjet_4000n"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			},
+			"social_context":
+			{
+				"proponent":
+				{
+						"id":"8",
+						"name":"ArgLearnAgOperator8",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"opponent":
+				{
+						"id":"1",
+						"name":"ArgLearnAgOperator1",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"group":
+				{
+						"id":"1",
+						"name":"group1",
+						"role":"",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"ahorro",
+								"rapidez",
+								"calidad"
+							]
+						}
+				},
+				"relation":"CHARITY"
+			}
+		},
+		"solution":
+		{
+			"times_used":"1",
+			"value":"ahorro",
+			"conclusion":
+			{
+					"id":"25",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+			},
+			"argument_type":"INDUCTIVE",
+			"acceptability_state":"",
+			"dist_premises":
+			[
+
+			],
+			"presumptions":
+			[
+
+			],
+			"exceptions":
+			[
+
+			],
+			"counter_examples_arg_case_id_list":
+			[
+				
+			],
+			"counter_examples_dom_case_id_list":
+			[
+				
+			]
+		},
+		"justification":
+		{
+			"description":"",
+			"domain_cases_ids":
+			[
+				-1, -1
+			],
+			"argument_cases_ids":
+			[
+				
+			],
+			"schemes":
+			[
+
+			],
+			"dialog_graphs":
+			[
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3568627721084132",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				},
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3568627721084132",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				}
+			]
+		},
+		"times_used":"2"
+	},
+	{
+		"id":"3568625306834012",
+		"creation_date":"Tue Mar 27 17:27:14 CEST 115055",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"hp"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"laserjet_4000n"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			},
+			"social_context":
+			{
+				"proponent":
+				{
+						"id":"8",
+						"name":"ArgLearnAgOperator8",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"opponent":
+				{
+						"id":"4",
+						"name":"ArgLearnAgOperator4",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"group":
+				{
+						"id":"1",
+						"name":"group1",
+						"role":"",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"ahorro",
+								"rapidez",
+								"calidad"
+							]
+						}
+				},
+				"relation":"CHARITY"
+			}
+		},
+		"solution":
+		{
+			"times_used":"1",
+			"value":"ahorro",
+			"conclusion":
+			{
+					"id":"25",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+			},
+			"argument_type":"INDUCTIVE",
+			"acceptability_state":"",
+			"dist_premises":
+			[
+
+			],
+			"presumptions":
+			[
+
+			],
+			"exceptions":
+			[
+
+			],
+			"counter_examples_arg_case_id_list":
+			[
+				
+			],
+			"counter_examples_dom_case_id_list":
+			[
+				
+			]
+		},
+		"justification":
+		{
+			"description":"",
+			"domain_cases_ids":
+			[
+				-1, -1, -1, -1, -1
+			],
+			"argument_cases_ids":
+			[
+				
+			],
+			"schemes":
+			[
+
+			],
+			"dialog_graphs":
+			[
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3568625306834012",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				},
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3568625306834012",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				},
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3568625306834012",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				},
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3568625306834012",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				},
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3568625306834012",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				}
+			]
+		},
+		"times_used":"5"
+	},
+	{
+		"id":"3568625700277561",
+		"creation_date":"Sun Apr 01 06:44:37 CEST 115055",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"hp"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"laserjet_4000n"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			},
+			"social_context":
+			{
+				"proponent":
+				{
+						"id":"8",
+						"name":"ArgLearnAgOperator8",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"opponent":
+				{
+						"id":"5",
+						"name":"ArgLearnAgOperator5",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"group":
+				{
+						"id":"1",
+						"name":"group1",
+						"role":"",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"ahorro",
+								"rapidez",
+								"calidad"
+							]
+						}
+				},
+				"relation":"CHARITY"
+			}
+		},
+		"solution":
+		{
+			"times_used":"1",
+			"value":"ahorro",
+			"conclusion":
+			{
+					"id":"25",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+			},
+			"argument_type":"INDUCTIVE",
+			"acceptability_state":"",
+			"dist_premises":
+			[
+
+			],
+			"presumptions":
+			[
+
+			],
+			"exceptions":
+			[
+
+			],
+			"counter_examples_arg_case_id_list":
+			[
+				
+			],
+			"counter_examples_dom_case_id_list":
+			[
+				
+			]
+		},
+		"justification":
+		{
+			"description":"",
+			"domain_cases_ids":
+			[
+				-1, -1
+			],
+			"argument_cases_ids":
+			[
+				
+			],
+			"schemes":
+			[
+
+			],
+			"dialog_graphs":
+			[
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3568625700277561",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				},
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3568625700277561",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				}
+			]
+		},
+		"times_used":"2"
+	},
+	{
+		"id":"3568639743806359",
+		"creation_date":"Mon Sep 10 19:43:26 CEST 115055",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"hp"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"2100_tn"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			},
+			"social_context":
+			{
+				"proponent":
+				{
+						"id":"8",
+						"name":"ArgLearnAgOperator8",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"opponent":
+				{
+						"id":"6",
+						"name":"ArgLearnAgOperator6",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"group":
+				{
+						"id":"1",
+						"name":"group1",
+						"role":"",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"ahorro",
+								"rapidez",
+								"calidad"
+							]
+						}
+				},
+				"relation":"CHARITY"
+			}
+		},
+		"solution":
+		{
+			"times_used":"0",
+			"value":"ahorro",
+			"conclusion":
+			{
+					"id":"51",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+			},
+			"argument_type":"INDUCTIVE",
+			"acceptability_state":"",
+			"dist_premises":
+			[
+
+			],
+			"presumptions":
+			[
+
+			],
+			"exceptions":
+			[
+
+			],
+			"counter_examples_arg_case_id_list":
+			[
+				
+			],
+			"counter_examples_dom_case_id_list":
+			[
+				
+			]
+		},
+		"justification":
+		{
+			"description":"",
+			"domain_cases_ids":
+			[
+				-1, -1, -1, -1, -1, -1
+			],
+			"argument_cases_ids":
+			[
+				
+			],
+			"schemes":
+			[
+
+			],
+			"dialog_graphs":
+			[
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3568639743806359",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				},
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3568639743806359",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				},
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3568639743806359",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				},
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3568639743806359",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				},
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3568639743806359",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				},
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3568639743806359",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				}
+			]
+		},
+		"times_used":"6"
+	},
+	{
+		"id":"3568637046468717",
+		"creation_date":"Fri Aug 10 14:27:48 CEST 115055",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"hp"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"2100_tn"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			},
+			"social_context":
+			{
+				"proponent":
+				{
+						"id":"8",
+						"name":"ArgLearnAgOperator8",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"opponent":
+				{
+						"id":"7",
+						"name":"ArgLearnAgOperator7",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"group":
+				{
+						"id":"1",
+						"name":"group1",
+						"role":"",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"ahorro",
+								"rapidez",
+								"calidad"
+							]
+						}
+				},
+				"relation":"CHARITY"
+			}
+		},
+		"solution":
+		{
+			"times_used":"0",
+			"value":"ahorro",
+			"conclusion":
+			{
+					"id":"51",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+			},
+			"argument_type":"INDUCTIVE",
+			"acceptability_state":"",
+			"dist_premises":
+			[
+
+			],
+			"presumptions":
+			[
+
+			],
+			"exceptions":
+			[
+
+			],
+			"counter_examples_arg_case_id_list":
+			[
+				
+			],
+			"counter_examples_dom_case_id_list":
+			[
+				
+			]
+		},
+		"justification":
+		{
+			"description":"",
+			"domain_cases_ids":
+			[
+				-1, -1
+			],
+			"argument_cases_ids":
+			[
+				
+			],
+			"schemes":
+			[
+
+			],
+			"dialog_graphs":
+			[
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3568637046468717",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				},
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3568637046468717",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				}
+			]
+		},
+		"times_used":"2"
+	},
+	{
+		"id":"3569385051559588",
+		"creation_date":"Thu Apr 24 01:39:19 CEST 115079",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"hp"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"laserjet_4000n"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			},
+			"social_context":
+			{
+				"proponent":
+				{
+						"id":"8",
+						"name":"ArgLearnAgOperator8",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"opponent":
+				{
+						"id":"0",
+						"name":"ArgLearnAgOperator0",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"group":
+				{
+						"id":"1",
+						"name":"group1",
+						"role":"",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"ahorro",
+								"rapidez",
+								"calidad"
+							]
+						}
+				},
+				"relation":"CHARITY"
+			}
+		},
+		"solution":
+		{
+			"times_used":"1",
+			"value":"ahorro",
+			"conclusion":
+			{
+					"id":"25",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+			},
+			"argument_type":"INDUCTIVE",
+			"acceptability_state":"",
+			"dist_premises":
+			[
+
+			],
+			"presumptions":
+			[
+
+			],
+			"exceptions":
+			[
+
+			],
+			"counter_examples_arg_case_id_list":
+			[
+				
+			],
+			"counter_examples_dom_case_id_list":
+			[
+				
+			]
+		},
+		"justification":
+		{
+			"description":"",
+			"domain_cases_ids":
+			[
+				-1, -1
+			],
+			"argument_cases_ids":
+			[
+				
+			],
+			"schemes":
+			[
+
+			],
+			"dialog_graphs":
+			[
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3569385051559588",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				},
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3569385051559588",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				}
+			]
+		},
+		"times_used":"2"
+	},
+	{
+		"id":"3569729388547110",
+		"creation_date":"Sat Mar 22 09:49:07 CET 115090",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			},
+			"social_context":
+			{
+				"proponent":
+				{
+						"id":"8",
+						"name":"ArgLearnAgOperator8",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"opponent":
+				{
+						"id":"0",
+						"name":"ArgLearnAgOperator0",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"group":
+				{
+						"id":"1",
+						"name":"group1",
+						"role":"",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"ahorro",
+								"rapidez",
+								"calidad"
+							]
+						}
+				},
+				"relation":"CHARITY"
+			}
+		},
+		"solution":
+		{
+			"times_used":"3",
+			"value":"calidad",
+			"conclusion":
+			{
+					"id":"398",
+					"description":"revisar_logs_en_el_servidor_y-o_correos_para_comprobar_si_ha_fallado_la_copia_completa_o_solamente_algun_fichero_sin_importancia"
+			},
+			"argument_type":"INDUCTIVE",
+			"acceptability_state":"",
+			"dist_premises":
+			[
+
+			],
+			"presumptions":
+			[
+
+			],
+			"exceptions":
+			[
+
+			],
+			"counter_examples_arg_case_id_list":
+			[
+				
+			],
+			"counter_examples_dom_case_id_list":
+			[
+				
+			]
+		},
+		"justification":
+		{
+			"description":"",
+			"domain_cases_ids":
+			[
+				-1
+			],
+			"argument_cases_ids":
+			[
+				
+			],
+			"schemes":
+			[
+
+			],
+			"dialog_graphs":
+			[
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3569729388547110",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				}
+			]
+		},
+		"times_used":"1"
+	},
+	{
+		"id":"3569727676739046",
+		"creation_date":"Sun Mar 02 14:18:59 CET 115090",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			},
+			"social_context":
+			{
+				"proponent":
+				{
+						"id":"8",
+						"name":"ArgLearnAgOperator8",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"opponent":
+				{
+						"id":"4",
+						"name":"ArgLearnAgOperator4",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"group":
+				{
+						"id":"1",
+						"name":"group1",
+						"role":"",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"ahorro",
+								"rapidez",
+								"calidad"
+							]
+						}
+				},
+				"relation":"CHARITY"
+			}
+		},
+		"solution":
+		{
+			"times_used":"3",
+			"value":"calidad",
+			"conclusion":
+			{
+					"id":"398",
+					"description":"revisar_logs_en_el_servidor_y-o_correos_para_comprobar_si_ha_fallado_la_copia_completa_o_solamente_algun_fichero_sin_importancia"
+			},
+			"argument_type":"INDUCTIVE",
+			"acceptability_state":"",
+			"dist_premises":
+			[
+
+			],
+			"presumptions":
+			[
+
+			],
+			"exceptions":
+			[
+
+			],
+			"counter_examples_arg_case_id_list":
+			[
+				
+			],
+			"counter_examples_dom_case_id_list":
+			[
+				
+			]
+		},
+		"justification":
+		{
+			"description":"",
+			"domain_cases_ids":
+			[
+				-1, -1, -1, -1
+			],
+			"argument_cases_ids":
+			[
+				
+			],
+			"schemes":
+			[
+
+			],
+			"dialog_graphs":
+			[
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3569727676739046",
+							"child_arg_cases_ids":
+							[
+								3569727660923369
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"FIRST"
+						},
+						{
+							"arg_case_id":"3569727660923369",
+							"child_arg_cases_ids":
+							[
+								3569727676739046
+							],
+							"parent_arg_case_id":"3569727542845867",
+							"node_type":"NODE"
+						},
+						{
+							"arg_case_id":"3569727676739046",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"3569727660923369",
+							"node_type":"AGREE"
+						}
+					]
+				},
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3569727676739046",
+							"child_arg_cases_ids":
+							[
+								3569727660923369
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"FIRST"
+						},
+						{
+							"arg_case_id":"3569727660923369",
+							"child_arg_cases_ids":
+							[
+								3569727676739046
+							],
+							"parent_arg_case_id":"3569727542845867",
+							"node_type":"NODE"
+						},
+						{
+							"arg_case_id":"3569727676739046",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"3569727660923369",
+							"node_type":"AGREE"
+						}
+					]
+				},
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3569727676739046",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				},
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3569727676739046",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				},
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3569727676739046",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				}
+			]
+		},
+		"times_used":"5"
+	},
+	{
+		"id":"3569730225989784",
+		"creation_date":"Tue Apr 01 03:26:29 CEST 115090",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			},
+			"social_context":
+			{
+				"proponent":
+				{
+						"id":"8",
+						"name":"ArgLearnAgOperator8",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"opponent":
+				{
+						"id":"7",
+						"name":"ArgLearnAgOperator7",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"group":
+				{
+						"id":"1",
+						"name":"group1",
+						"role":"",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"ahorro",
+								"rapidez",
+								"calidad"
+							]
+						}
+				},
+				"relation":"CHARITY"
+			}
+		},
+		"solution":
+		{
+			"times_used":"3",
+			"value":"calidad",
+			"conclusion":
+			{
+					"id":"398",
+					"description":"revisar_logs_en_el_servidor_y-o_correos_para_comprobar_si_ha_fallado_la_copia_completa_o_solamente_algun_fichero_sin_importancia"
+			},
+			"argument_type":"INDUCTIVE",
+			"acceptability_state":"",
+			"dist_premises":
+			[
+
+			],
+			"presumptions":
+			[
+
+			],
+			"exceptions":
+			[
+
+			],
+			"counter_examples_arg_case_id_list":
+			[
+				
+			],
+			"counter_examples_dom_case_id_list":
+			[
+				
+			]
+		},
+		"justification":
+		{
+			"description":"",
+			"domain_cases_ids":
+			[
+				-1
+			],
+			"argument_cases_ids":
+			[
+				
+			],
+			"schemes":
+			[
+
+			],
+			"dialog_graphs":
+			[
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3569730225989784",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				}
+			]
+		},
+		"times_used":"1"
+	},
+	{
+		"id":"3570091456814185",
+		"creation_date":"Thu Sep 12 01:20:14 CEST 115101",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			},
+			"social_context":
+			{
+				"proponent":
+				{
+						"id":"8",
+						"name":"ArgLearnAgOperator8",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"opponent":
+				{
+						"id":"0",
+						"name":"ArgLearnAgOperator0",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"group":
+				{
+						"id":"1",
+						"name":"group1",
+						"role":"",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"ahorro",
+								"rapidez",
+								"calidad"
+							]
+						}
+				},
+				"relation":"CHARITY"
+			}
+		},
+		"solution":
+		{
+			"times_used":"3",
+			"value":"calidad",
+			"conclusion":
+			{
+					"id":"398",
+					"description":"revisar_logs_en_el_servidor_y-o_correos_para_comprobar_si_ha_fallado_la_copia_completa_o_solamente_algun_fichero_sin_importancia"
+			},
+			"argument_type":"INDUCTIVE",
+			"acceptability_state":"",
+			"dist_premises":
+			[
+
+			],
+			"presumptions":
+			[
+
+			],
+			"exceptions":
+			[
+
+			],
+			"counter_examples_arg_case_id_list":
+			[
+				3569326584785004, 3569326584785004, 3569326584785004, 3569326584785004
+			],
+			"counter_examples_dom_case_id_list":
+			[
+				
+			]
+		},
+		"justification":
+		{
+			"description":"",
+			"domain_cases_ids":
+			[
+				-1, -1
+			],
+			"argument_cases_ids":
+			[
+				
+			],
+			"schemes":
+			[
+
+			],
+			"dialog_graphs":
+			[
+
+			]
+		},
+		"times_used":"4"
+	},
+	{
+		"id":"3570094542984633",
+		"creation_date":"Thu Oct 17 18:36:24 CEST 115101",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			},
+			"social_context":
+			{
+				"proponent":
+				{
+						"id":"8",
+						"name":"ArgLearnAgOperator8",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"opponent":
+				{
+						"id":"3",
+						"name":"ArgLearnAgOperator3",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"group":
+				{
+						"id":"1",
+						"name":"group1",
+						"role":"",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"ahorro",
+								"rapidez",
+								"calidad"
+							]
+						}
+				},
+				"relation":"CHARITY"
+			}
+		},
+		"solution":
+		{
+			"times_used":"3",
+			"value":"calidad",
+			"conclusion":
+			{
+					"id":"398",
+					"description":"revisar_logs_en_el_servidor_y-o_correos_para_comprobar_si_ha_fallado_la_copia_completa_o_solamente_algun_fichero_sin_importancia"
+			},
+			"argument_type":"INDUCTIVE",
+			"acceptability_state":"",
+			"dist_premises":
+			[
+
+			],
+			"presumptions":
+			[
+
+			],
+			"exceptions":
+			[
+
+			],
+			"counter_examples_arg_case_id_list":
+			[
+				3570094583090335, 3570094583090335, 3570096472253581, 3570096472253581
+			],
+			"counter_examples_dom_case_id_list":
+			[
+				
+			]
+		},
+		"justification":
+		{
+			"description":"",
+			"domain_cases_ids":
+			[
+				-1, -1
+			],
+			"argument_cases_ids":
+			[
+				
+			],
+			"schemes":
+			[
+
+			],
+			"dialog_graphs":
+			[
+
+			]
+		},
+		"times_used":"4"
+	},
+	{
+		"id":"3570092741509311",
+		"creation_date":"Thu Sep 26 22:11:49 CEST 115101",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			},
+			"social_context":
+			{
+				"proponent":
+				{
+						"id":"8",
+						"name":"ArgLearnAgOperator8",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"opponent":
+				{
+						"id":"4",
+						"name":"ArgLearnAgOperator4",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"group":
+				{
+						"id":"1",
+						"name":"group1",
+						"role":"",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"ahorro",
+								"rapidez",
+								"calidad"
+							]
+						}
+				},
+				"relation":"CHARITY"
+			}
+		},
+		"solution":
+		{
+			"times_used":"3",
+			"value":"calidad",
+			"conclusion":
+			{
+					"id":"398",
+					"description":"revisar_logs_en_el_servidor_y-o_correos_para_comprobar_si_ha_fallado_la_copia_completa_o_solamente_algun_fichero_sin_importancia"
+			},
+			"argument_type":"INDUCTIVE",
+			"acceptability_state":"",
+			"dist_premises":
+			[
+
+			],
+			"presumptions":
+			[
+
+			],
+			"exceptions":
+			[
+
+			],
+			"counter_examples_arg_case_id_list":
+			[
+				3569329728766148, 3569329728766148, 3569329728766148
+			],
+			"counter_examples_dom_case_id_list":
+			[
+				
+			]
+		},
+		"justification":
+		{
+			"description":"",
+			"domain_cases_ids":
+			[
+				-1, -1
+			],
+			"argument_cases_ids":
+			[
+				
+			],
+			"schemes":
+			[
+
+			],
+			"dialog_graphs":
+			[
+
+			]
+		},
+		"times_used":"3"
+	},
+	{
+		"id":"3570093414404234",
+		"creation_date":"Fri Oct 04 17:06:44 CEST 115101",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			},
+			"social_context":
+			{
+				"proponent":
+				{
+						"id":"8",
+						"name":"ArgLearnAgOperator8",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"opponent":
+				{
+						"id":"5",
+						"name":"ArgLearnAgOperator5",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"group":
+				{
+						"id":"1",
+						"name":"group1",
+						"role":"",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"ahorro",
+								"rapidez",
+								"calidad"
+							]
+						}
+				},
+				"relation":"CHARITY"
+			}
+		},
+		"solution":
+		{
+			"times_used":"3",
+			"value":"calidad",
+			"conclusion":
+			{
+					"id":"398",
+					"description":"revisar_logs_en_el_servidor_y-o_correos_para_comprobar_si_ha_fallado_la_copia_completa_o_solamente_algun_fichero_sin_importancia"
+			},
+			"argument_type":"INDUCTIVE",
+			"acceptability_state":"",
+			"dist_premises":
+			[
+
+			],
+			"presumptions":
+			[
+
+			],
+			"exceptions":
+			[
+
+			],
+			"counter_examples_arg_case_id_list":
+			[
+				3570093481641146, 3570093481641146, 3570091175803864, 3570091175803864
+			],
+			"counter_examples_dom_case_id_list":
+			[
+				
+			]
+		},
+		"justification":
+		{
+			"description":"",
+			"domain_cases_ids":
+			[
+				-1, -1
+			],
+			"argument_cases_ids":
+			[
+				
+			],
+			"schemes":
+			[
+
+			],
+			"dialog_graphs":
+			[
+
+			]
+		},
+		"times_used":"4"
+	},
+	{
+		"id":"3570093027198443",
+		"creation_date":"Mon Sep 30 05:33:18 CEST 115101",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			},
+			"social_context":
+			{
+				"proponent":
+				{
+						"id":"8",
+						"name":"ArgLearnAgOperator8",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"opponent":
+				{
+						"id":"6",
+						"name":"ArgLearnAgOperator6",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"group":
+				{
+						"id":"1",
+						"name":"group1",
+						"role":"",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"ahorro",
+								"rapidez",
+								"calidad"
+							]
+						}
+				},
+				"relation":"CHARITY"
+			}
+		},
+		"solution":
+		{
+			"times_used":"3",
+			"value":"calidad",
+			"conclusion":
+			{
+					"id":"398",
+					"description":"revisar_logs_en_el_servidor_y-o_correos_para_comprobar_si_ha_fallado_la_copia_completa_o_solamente_algun_fichero_sin_importancia"
+			},
+			"argument_type":"INDUCTIVE",
+			"acceptability_state":"",
+			"dist_premises":
+			[
+
+			],
+			"presumptions":
+			[
+
+			],
+			"exceptions":
+			[
+
+			],
+			"counter_examples_arg_case_id_list":
+			[
+				3569329137734030, 3569329137734030, 3569329137734030, 3569329137734030, 3569329137734030
+			],
+			"counter_examples_dom_case_id_list":
+			[
+				
+			]
+		},
+		"justification":
+		{
+			"description":"",
+			"domain_cases_ids":
+			[
+				-1, -1
+			],
+			"argument_cases_ids":
+			[
+				
+			],
+			"schemes":
+			[
+
+			],
+			"dialog_graphs":
+			[
+
+			]
+		},
+		"times_used":"5"
+	},
+	{
+		"id":"3570092163541177",
+		"creation_date":"Fri Sep 20 05:39:01 CEST 115101",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			},
+			"social_context":
+			{
+				"proponent":
+				{
+						"id":"8",
+						"name":"ArgLearnAgOperator8",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"opponent":
+				{
+						"id":"7",
+						"name":"ArgLearnAgOperator7",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"group":
+				{
+						"id":"1",
+						"name":"group1",
+						"role":"",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"ahorro",
+								"rapidez",
+								"calidad"
+							]
+						}
+				},
+				"relation":"CHARITY"
+			}
+		},
+		"solution":
+		{
+			"times_used":"3",
+			"value":"calidad",
+			"conclusion":
+			{
+					"id":"398",
+					"description":"revisar_logs_en_el_servidor_y-o_correos_para_comprobar_si_ha_fallado_la_copia_completa_o_solamente_algun_fichero_sin_importancia"
+			},
+			"argument_type":"INDUCTIVE",
+			"acceptability_state":"",
+			"dist_premises":
+			[
+
+			],
+			"presumptions":
+			[
+
+			],
+			"exceptions":
+			[
+
+			],
+			"counter_examples_arg_case_id_list":
+			[
+				3569330558263511, 3569330558263511, 3569330558263511
+			],
+			"counter_examples_dom_case_id_list":
+			[
+				
+			]
+		},
+		"justification":
+		{
+			"description":"",
+			"domain_cases_ids":
+			[
+				-1, -1
+			],
+			"argument_cases_ids":
+			[
+				
+			],
+			"schemes":
+			[
+
+			],
+			"dialog_graphs":
+			[
+
+			]
+		},
+		"times_used":"3"
+	},
+	{
+		"id":"3570118107308394",
+		"creation_date":"Thu Jul 17 12:15:08 CEST 115102",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			},
+			"social_context":
+			{
+				"proponent":
+				{
+						"id":"8",
+						"name":"ArgLearnAgOperator8",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"opponent":
+				{
+						"id":"5",
+						"name":"ArgLearnAgOperator5",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"group":
+				{
+						"id":"1",
+						"name":"group1",
+						"role":"",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"ahorro",
+								"rapidez",
+								"calidad"
+							]
+						}
+				},
+				"relation":"CHARITY"
+			}
+		},
+		"solution":
+		{
+			"times_used":"3",
+			"value":"calidad",
+			"conclusion":
+			{
+					"id":"398",
+					"description":"revisar_logs_en_el_servidor_y-o_correos_para_comprobar_si_ha_fallado_la_copia_completa_o_solamente_algun_fichero_sin_importancia"
+			},
+			"argument_type":"INDUCTIVE",
+			"acceptability_state":"",
+			"dist_premises":
+			[
+
+			],
+			"presumptions":
+			[
+
+			],
+			"exceptions":
+			[
+
+			],
+			"counter_examples_arg_case_id_list":
+			[
+				
+			],
+			"counter_examples_dom_case_id_list":
+			[
+				
+			]
+		},
+		"justification":
+		{
+			"description":"",
+			"domain_cases_ids":
+			[
+				-1, -1
+			],
+			"argument_cases_ids":
+			[
+				
+			],
+			"schemes":
+			[
+
+			],
+			"dialog_graphs":
+			[
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3570118107308394",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				}
+			]
+		},
+		"times_used":"1"
+	},
+	{
+		"id":"3570868972243883",
+		"creation_date":"Mon May 03 01:50:43 CEST 115126",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			},
+			"social_context":
+			{
+				"proponent":
+				{
+						"id":"8",
+						"name":"ArgLearnAgOperator8",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"opponent":
+				{
+						"id":"1",
+						"name":"ArgLearnAgOperator1",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"group":
+				{
+						"id":"1",
+						"name":"group1",
+						"role":"",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"ahorro",
+								"rapidez",
+								"calidad"
+							]
+						}
+				},
+				"relation":"CHARITY"
+			}
+		},
+		"solution":
+		{
+			"times_used":"34",
+			"value":"calidad",
+			"conclusion":
+			{
+					"id":"448",
+					"description":"fallan_ficheros_habituales_bloqueados_de_sistema_operativo_backup_bueno"
+			},
+			"argument_type":"INDUCTIVE",
+			"acceptability_state":"",
+			"dist_premises":
+			[
+
+			],
+			"presumptions":
+			[
+
+			],
+			"exceptions":
+			[
+
+			],
+			"counter_examples_arg_case_id_list":
+			[
+				
+			],
+			"counter_examples_dom_case_id_list":
+			[
+				
+			]
+		},
+		"justification":
+		{
+			"description":"",
+			"domain_cases_ids":
+			[
+				-1
+			],
+			"argument_cases_ids":
+			[
+				
+			],
+			"schemes":
+			[
+
+			],
+			"dialog_graphs":
+			[
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3570868972243883",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				}
+			]
+		},
+		"times_used":"1"
+	},
+	{
+		"id":"3571242122710262",
+		"creation_date":"Sun Feb 27 21:45:10 CET 115138",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			},
+			"social_context":
+			{
+				"proponent":
+				{
+						"id":"8",
+						"name":"ArgLearnAgOperator8",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"opponent":
+				{
+						"id":"2",
+						"name":"ArgLearnAgOperator2",
+						"role":"operator",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"rapidez",
+								"calidad",
+								"ahorro"
+							]
+						}
+				},
+				"group":
+				{
+						"id":"1",
+						"name":"group1",
+						"role":"",
+						"norms":
+						[
+
+						],
+						"val_pref":
+						{
+							"values":
+							[
+								"ahorro",
+								"rapidez",
+								"calidad"
+							]
+						}
+				},
+				"relation":"CHARITY"
+			}
+		},
+		"solution":
+		{
+			"times_used":"34",
+			"value":"calidad",
+			"conclusion":
+			{
+					"id":"448",
+					"description":"fallan_ficheros_habituales_bloqueados_de_sistema_operativo_backup_bueno"
+			},
+			"argument_type":"INDUCTIVE",
+			"acceptability_state":"",
+			"dist_premises":
+			[
+
+			],
+			"presumptions":
+			[
+
+			],
+			"exceptions":
+			[
+
+			],
+			"counter_examples_arg_case_id_list":
+			[
+				
+			],
+			"counter_examples_dom_case_id_list":
+			[
+				
+			]
+		},
+		"justification":
+		{
+			"description":"",
+			"domain_cases_ids":
+			[
+				-1
+			],
+			"argument_cases_ids":
+			[
+				
+			],
+			"schemes":
+			[
+
+			],
+			"dialog_graphs":
+			[
+				{
+					"nodes":
+					[
+						{
+							"arg_case_id":"3571242122710262",
+							"child_arg_cases_ids":
+							[
+								
+							],
+							"parent_arg_case_id":"-1",
+							"node_type":"AGREE"
+						}
+					]
+				}
+			]
+		},
+		"times_used":"1"
+	}
+]}

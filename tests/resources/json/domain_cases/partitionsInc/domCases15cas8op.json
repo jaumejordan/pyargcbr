@@ -1,0 +1,648 @@
+{"domain_case": [
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Unix_Client",
+						"content":"61"
+					},
+
+					{
+						"id":"64",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"26",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"27",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"28",
+						"name":"()",
+						"content":"error_en_cambio_de_conexion"
+					},
+
+					{
+						"id":"63",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"3",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"394",
+					"description":"se_levanta_el_recurso_xmui_con_el_comamdo_correspondiente_de_syop_y_se_revisa_el_log_por_si_aparecen_otros_posibles_problemas_relacionados"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_bloquea",
+						"content":"1798"
+					},
+
+					{
+						"id":"42",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"43",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"44",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"80",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"306",
+					"description":"pulsar_5_segundos_el_boton_de_arranque"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Monitor_en_negro",
+						"content":"2231"
+					},
+
+					{
+						"id":"33",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"34",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"35",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"29",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"30",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"13",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"65",
+					"description":"apagar_el_monitor_desde_el_boton_y_volver_a_encenderlo_pulsar_la_barra_del_espacio_para_reestablecer_la_senyal_de_video"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Acreditacion_provisional_Menor_de_3_meses",
+						"content":"1528"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"2"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"99",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"559",
+					"description":"se_ha_informado_al_ciudadano_que_tiene_que_esperr_al_cruce_con_la_tesorerira_de_la_ss"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Acreditacion_provisional_mayor_de_3_meses_y_tras_verificar_datos_son_correctos",
+						"content":"1526"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"4"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"313",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"562",
+					"description":"se_deriva_al_centro_de_salud"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"hp"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"laserjet_4000n"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"2",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"25",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"hp"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"2100_tn"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"1",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"51",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Unix_Client",
+						"content":"61"
+					},
+
+					{
+						"id":"64",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"26",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"27",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"28",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"63",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"2",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"394",
+					"description":"se_levanta_el_recurso_xmui_con_el_comamdo_correspondiente_de_syop_y_se_revisa_el_log_por_si_aparecen_otros_posibles_problemas_relacionados"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"3",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"398",
+					"description":"revisar_logs_en_el_servidor_y-o_correos_para_comprobar_si_ha_fallado_la_copia_completa_o_solamente_algun_fichero_sin_importancia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Tras_mirar_Fecha_de_paso_en_la_pantalla__Situacion_de_tarjeta_desde_esta_fecha_hasta_hoy_no_ha_pasado_un_mes",
+						"content":"1519"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"0"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"29",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"575",
+					"description":"se_informa_al_ciudadano_que_debe_esperar"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"51",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	}
+]}

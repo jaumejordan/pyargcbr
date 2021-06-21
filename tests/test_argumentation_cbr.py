@@ -63,7 +63,7 @@ class TestArgumentationCBR:
 
     @pytest.fixture
     def arg_cbr_setup(self):
-        file = os.path.abspath("tests/argument_cases_py.dat")
+        file = os.path.abspath("resources/data/argument_cases/test_cases_dom1_arg2.dat")
         self.cbr = ArgCBR(file, "/tmp/null")
 
     def test_content(self, arg_cbr_setup):

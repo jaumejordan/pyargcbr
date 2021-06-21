@@ -1,0 +1,294 @@
+{"domain_case": [
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Error_mostrado_en_DISPLAY",
+						"content":"1959"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"3",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"20",
+						"name":"()",
+						"content":"error_50_service"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"canon"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"laser_lbp-83_mark"
+					},
+
+					{
+						"id":"7",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"8",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"10",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"31",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Tras_mirar_Fecha_de_paso_en_la_pantalla__Situacion_de_tarjeta_desde_esta_fecha_hasta_hoy_no_ha_pasado_un_mes",
+						"content":"1519"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"0"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"29",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"575",
+					"description":"se_informa_al_ciudadano_que_debe_esperar"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_bloquea",
+						"content":"1798"
+					},
+
+					{
+						"id":"42",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"43",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"44",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"79",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"306",
+					"description":"pulsar_5_segundos_el_boton_de_arranque"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Tras_mirar_Fecha_de_paso_en_la_pantalla__Situacion_de_tarjeta_desde_esta_fecha_hasta_hoy_no_ha_pasado_un_mes",
+						"content":"1538"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"0"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"68",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"568",
+					"description":"se_informa_al_ciudadano_que_debe_esperar"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Tras_comprobar_todos_los_datos_imprescindibles_para_recibir_la_tarjeta_falta_alguno",
+						"content":"1529"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"40",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"564",
+					"description":"se_han_completado_y_se_ha_comprobado_que_la_situacion_de_tarjeta_cambia_a_p2_o_p1"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	}
+]}

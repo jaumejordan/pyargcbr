@@ -1,0 +1,664 @@
+{"domain_case": [
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Error_mostrado_en_DISPLAY",
+						"content":"1959"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"3",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"20",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"xerox"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"4030"
+					},
+
+					{
+						"id":"7",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"8",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"10",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"101",
+					"description":"la_impresora_en_cuestion_es_una_xerox_4030_estas_impresoras_tras_cambiar_el_toner_es_necesario_en_la_primera_puesta_en_funcionamiento_mantener_presionado_un_boton_pequenyo_tipo_reset_que_existe_al_lado_del_interruptor_de_encendido"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"51",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_bloquea",
+						"content":"1798"
+					},
+
+					{
+						"id":"42",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"43",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"44",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"79",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"306",
+					"description":"pulsar_5_segundos_el_boton_de_arranque"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_ha_confirmado_averia_con_el_informatico_del_area",
+						"content":"2649"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"bull_compuprint"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"914n"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"55",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"612",
+					"description":"comunicar_incidencia_a_bull_anotar_numero_de_incidencia_para_posibles_reclamaciones"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Tras_mirar_Fecha_de_paso_en_la_pantalla__Situacion_de_tarjeta_desde_esta_fecha_hasta_hoy_no_ha_pasado_un_mes",
+						"content":"1547"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"0"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"32",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"566",
+					"description":"se_informa_al_ciudadano_que_debe_esperar"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_ha_confirmado_averia_con_el_informatico_del_area",
+						"content":"2649"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"bull_compuprint"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"914n"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"55",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"612",
+					"description":"comunicar_incidencia_a_bull_anotar_numero_de_incidencia_para_posibles_reclamaciones"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"NT_Client",
+						"content":"56"
+					},
+
+					{
+						"id":"26",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"27",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"28",
+						"name":"()",
+						"content":"cplc_caido"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"4",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"391",
+					"description":"parar_el_proceso_cplc_si_todabia_esta_activo_y_arrancarlo_de_nuevo"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Hace_ruidos_anormales_al_imprimir",
+						"content":"1957"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"canon"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"bjc_4200"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"29",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Acreditacion_provisional_mayor_de_3_meses_y_tras_verificar_NSS_se_detecta_un_error",
+						"content":"1532"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"4"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"29",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"561",
+					"description":"se_deriva_al_centro_de_salud_con_el_documento_de_acreditacion"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"hp"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"laserjet_4000n"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"1",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"25",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	}
+]}

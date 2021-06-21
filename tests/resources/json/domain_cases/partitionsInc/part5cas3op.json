@@ -1,0 +1,336 @@
+{"domain_case": [
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_ha_confirmado_averia_con_el_informatico_del_area",
+						"content":"2649"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"bull_compuprint"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"914n"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"55",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"612",
+					"description":"comunicar_incidencia_a_bull_anotar_numero_de_incidencia_para_posibles_reclamaciones"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_ha_confirmado_averia_con_el_informatico_del_area",
+						"content":"2649"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"bull_compuprint"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"914n"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"55",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"612",
+					"description":"comunicar_incidencia_a_bull_anotar_numero_de_incidencia_para_posibles_reclamaciones"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"NT_Client",
+						"content":"56"
+					},
+
+					{
+						"id":"26",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"27",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"28",
+						"name":"()",
+						"content":"cplc_caido"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"4",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"391",
+					"description":"parar_el_proceso_cplc_si_todabia_esta_activo_y_arrancarlo_de_nuevo"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"3",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"398",
+					"description":"revisar_logs_en_el_servidor_y-o_correos_para_comprobar_si_ha_fallado_la_copia_completa_o_solamente_algun_fichero_sin_importancia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"NT_Client",
+						"content":"56"
+					},
+
+					{
+						"id":"26",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"27",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"28",
+						"name":"()",
+						"content":"cplc_caido"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"4",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"391",
+					"description":"parar_el_proceso_cplc_si_todabia_esta_activo_y_arrancarlo_de_nuevo"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	}
+]}

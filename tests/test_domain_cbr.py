@@ -113,7 +113,7 @@ class TestDomainCBR:
 
     @pytest.fixture
     def domain_cbr_setup(self):
-        file = os.path.abspath("tests/domain_cases_py.dat")
+        file = os.path.abspath("resources/data/domain_cases/test_cases_dom1.dat")
         self.cbr = DomainCBR(file, "/tmp/null", -1)
 
     def test_content(self, domain_cbr_setup):

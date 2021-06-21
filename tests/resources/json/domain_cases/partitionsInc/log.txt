@@ -1,0 +1,991 @@
+resources/partitionsInc/part45cas6op.dat domain-cases=45 introduced=45 notIntroduced=0 sols: 612 391 612 31 612 391 561 398 612 51 575 385 562 91 568 65 33 557 398 559 612 111 17 448 35 566 101 25 394 34 34 564 73 51 572 570 394 612 612 34 612 571 629 61 306 
+File created: part45cas6op.json
+Successfully wrote to the file part45cas6op
+
+resources/partitionsInc/domCases25cas5op.dat domain-cases=25 introduced=25 notIntroduced=0 sols: 34 29 31 73 111 35 34 629 391 391 25 51 394 394 306 101 61 91 612 612 557 572 566 612 612 
+File created: domCases25cas5op.json
+Successfully wrote to the file domCases25cas5op
+
+resources/partitionsInc/part40cas8op.dat domain-cases=40 introduced=40 notIntroduced=0 sols: 394 612 629 612 91 612 385 612 571 25 612 612 31 51 398 398 34 570 394 34 612 568 391 73 572 564 33 306 612 101 65 17 29 575 391 51 111 612 612 566 
+File created: part40cas8op.json
+Successfully wrote to the file part40cas8op
+
+resources/partitionsInc/domCases5cas3op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 612 612 612 612 101 
+File created: domCases5cas3op.json
+Successfully wrote to the file domCases5cas3op
+
+resources/partitionsInc/domCases15cas3op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 612 612 612 612 101 575 51 25 51 394 35 34 629 391 391 
+File created: domCases15cas3op.json
+Successfully wrote to the file domCases15cas3op
+
+resources/partitionsInc/domCasesExp40cas4op.dat domain-cases=40 introduced=22 notIntroduced=18 sols: 73 111 17 394 394 91 557 385 612 612 17 394 394 391 391 385 612 612 612 612 394 391 391 65 33 612 612 612 612 612 391 65 33 101 31 612 612 612 612 612 
+File created: domCasesExp40cas4op.json
+Successfully wrote to the file domCasesExp40cas4op
+
+resources/partitionsInc/part25cas1op.dat domain-cases=25 introduced=25 notIntroduced=0 sols: 612 572 61 398 564 612 571 51 559 91 25 65 612 101 568 35 629 575 34 51 385 111 17 612 73 
+File created: part25cas1op.json
+Successfully wrote to the file part25cas1op
+
+resources/partitionsInc/domCasesExp15cas2op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 35 34 34 34 448 391 391 65 33 101 571 562 572 61 29 
+File created: domCasesExp15cas2op.json
+Successfully wrote to the file domCasesExp15cas2op
+
+resources/partitionsInc/domCasesExp30cas2op.dat domain-cases=30 introduced=24 notIntroduced=6 sols: 35 34 34 34 448 391 391 65 33 101 571 562 572 61 29 612 612 612 35 34 17 394 394 391 391 566 629 570 571 562 
+File created: domCasesExp30cas2op.json
+Successfully wrote to the file domCasesExp30cas2op
+
+resources/partitionsInc/domCasesExp30cas3op.dat domain-cases=30 introduced=29 notIntroduced=1 sols: 398 398 51 25 51 559 561 566 629 570 612 612 612 35 34 65 33 101 31 575 385 612 612 612 612 51 73 111 17 394 
+File created: domCasesExp30cas3op.json
+Successfully wrote to the file domCasesExp30cas3op
+
+resources/partitionsInc/domCases40cas4op.dat domain-cases=40 introduced=22 notIntroduced=18 sols: 61 91 612 612 568 33 564 561 570 557 612 612 568 34 29 561 570 557 572 566 568 34 29 31 73 557 572 566 612 612 29 31 73 111 17 566 612 612 385 35 
+File created: domCases40cas4op.json
+Successfully wrote to the file domCases40cas4op
+
+resources/partitionsInc/domCases10cas9op.dat domain-cases=10 introduced=7 notIntroduced=3 sols: 33 564 561 570 557 561 570 557 572 566 
+File created: domCases10cas9op.json
+Successfully wrote to the file domCases10cas9op
+
+resources/partitionsInc/part15cas6op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 612 391 612 31 612 391 561 398 612 51 575 385 562 91 568 
+File created: part15cas6op.json
+Successfully wrote to the file part15cas6op
+
+resources/partitionsInc/domCases20cas7op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 575 51 25 51 394 31 73 111 17 448 101 61 91 612 612 391 571 612 34 612 
+File created: domCases20cas7op.json
+Successfully wrote to the file domCases20cas7op
+
+resources/partitionsInc/domCases25cas6op.dat domain-cases=25 introduced=24 notIntroduced=1 sols: 17 448 612 398 398 612 612 101 61 91 612 612 385 35 34 394 394 306 65 559 29 31 73 111 17 
+File created: domCases25cas6op.json
+Successfully wrote to the file domCases25cas6op
+
+resources/partitionsInc/domCases25cas2op.dat domain-cases=25 introduced=21 notIntroduced=4 sols: 391 391 571 612 34 34 29 31 73 111 394 306 65 559 562 35 34 629 391 391 612 612 568 34 29 
+File created: domCases25cas2op.json
+Successfully wrote to the file domCases25cas2op
+
+resources/partitionsInc/domCases45cas7op.dat domain-cases=45 introduced=30 notIntroduced=15 sols: 575 51 25 51 394 31 73 111 17 448 101 61 91 612 612 391 571 612 34 612 566 612 612 385 35 559 562 33 564 561 575 51 25 51 394 31 73 111 17 448 101 61 91 612 612 
+File created: domCases45cas7op.json
+Successfully wrote to the file domCases45cas7op
+
+resources/partitionsInc/part20cas3op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 612 612 391 398 391 561 568 629 73 17 612 101 385 612 612 29 575 571 35 612 
+File created: part20cas3op.json
+Successfully wrote to the file part20cas3op
+
+resources/partitionsInc/part10cas4op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 306 564 31 566 17 29 391 398 34 561 
+File created: part10cas4op.json
+Successfully wrote to the file part10cas4op
+
+resources/partitionsInc/domCases40cas7op.dat domain-cases=40 introduced=30 notIntroduced=10 sols: 575 51 25 51 394 31 73 111 17 448 101 61 91 612 612 391 571 612 34 612 566 612 612 385 35 559 562 33 564 561 575 51 25 51 394 31 73 111 17 448 
+File created: domCases40cas7op.json
+Successfully wrote to the file domCases40cas7op
+
+resources/partitionsInc/part40cas0op.dat domain-cases=40 introduced=40 notIntroduced=0 sols: 101 51 306 612 566 612 391 29 561 25 33 612 385 612 34 398 35 559 91 34 17 568 111 391 612 61 557 448 571 575 572 51 394 65 34 564 398 629 612 612 
+File created: part40cas0op.json
+Successfully wrote to the file part40cas0op
+
+resources/partitionsInc/part45cas1op.dat domain-cases=45 introduced=45 notIntroduced=0 sols: 612 572 61 398 564 612 571 51 559 91 25 65 612 101 568 35 629 575 34 51 385 111 17 612 73 612 566 557 398 391 394 612 612 33 612 29 612 570 306 394 561 448 34 31 612 
+File created: part45cas1op.json
+Successfully wrote to the file part45cas1op
+
+resources/partitionsInc/part10cas1op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 612 572 61 398 564 612 571 51 559 91 
+File created: part10cas1op.json
+Successfully wrote to the file part10cas1op
+
+resources/partitionsInc/domCasesExp30cas1op.dat domain-cases=30 introduced=27 notIntroduced=3 sols: 612 612 612 612 612 398 398 51 25 51 391 391 65 33 101 559 561 566 629 570 91 557 385 612 612 612 612 612 35 34 
+File created: domCasesExp30cas1op.json
+Successfully wrote to the file domCasesExp30cas1op
+
+resources/partitionsInc/domCasesExp10cas6op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 31 575 306 568 564 51 25 51 73 111 
+File created: domCasesExp10cas6op.json
+Successfully wrote to the file domCasesExp10cas6op
+
+resources/partitionsInc/domCasesExp40cas0op.dat domain-cases=40 introduced=40 notIntroduced=0 sols: 612 612 612 612 612 612 612 612 612 612 35 34 34 34 448 398 398 51 25 51 73 111 17 394 394 391 391 65 33 101 31 575 306 568 564 559 561 566 629 570 
+File created: domCasesExp40cas0op.json
+Successfully wrote to the file domCasesExp40cas0op
+
+resources/partitionsInc/domCasesExp15cas0op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 612 612 612 612 612 612 612 612 612 612 35 34 34 34 448 
+File created: domCasesExp15cas0op.json
+Successfully wrote to the file domCasesExp15cas0op
+
+resources/partitionsInc/domCases15cas2op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 391 391 571 612 34 34 29 31 73 111 394 306 65 559 562 
+File created: domCases15cas2op.json
+Successfully wrote to the file domCases15cas2op
+
+resources/partitionsInc/part30cas2op.dat domain-cases=30 introduced=30 notIntroduced=0 sols: 566 29 612 575 31 557 91 25 564 35 33 612 391 73 571 385 612 448 559 562 612 65 570 612 398 51 612 394 51 612 
+File created: part30cas2op.json
+Successfully wrote to the file part30cas2op
+
+resources/partitionsInc/domCasesExp35cas1op.dat domain-cases=35 introduced=29 notIntroduced=6 sols: 612 612 612 612 612 398 398 51 25 51 391 391 65 33 101 559 561 566 629 570 91 557 385 612 612 612 612 612 35 34 51 25 51 73 111 
+File created: domCasesExp35cas1op.json
+Successfully wrote to the file domCasesExp35cas1op
+
+resources/partitionsInc/part10cas3op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 612 612 391 398 391 561 568 629 73 17 
+File created: part10cas3op.json
+Successfully wrote to the file part10cas3op
+
+resources/partitionsInc/part30cas1op.dat domain-cases=30 introduced=30 notIntroduced=0 sols: 612 572 61 398 564 612 571 51 559 91 25 65 612 101 568 35 629 575 34 51 385 111 17 612 73 612 566 557 398 391 
+File created: part30cas1op.json
+Successfully wrote to the file part30cas1op
+
+resources/partitionsInc/part35cas1op.dat domain-cases=35 introduced=35 notIntroduced=0 sols: 612 572 61 398 564 612 571 51 559 91 25 65 612 101 568 35 629 575 34 51 385 111 17 612 73 612 566 557 398 391 394 612 612 33 612 
+File created: part35cas1op.json
+Successfully wrote to the file part35cas1op
+
+resources/partitionsInc/domCasesExp30cas6op.dat domain-cases=30 introduced=28 notIntroduced=2 sols: 31 575 306 568 564 51 25 51 73 111 612 612 612 612 612 570 571 562 572 61 391 65 33 101 31 34 448 398 398 51 
+File created: domCasesExp30cas6op.json
+Successfully wrote to the file domCasesExp30cas6op
+
+resources/partitionsInc/part45cas8op.dat domain-cases=45 introduced=45 notIntroduced=0 sols: 394 612 629 612 91 612 385 612 571 25 612 612 31 51 398 398 34 570 394 34 612 568 391 73 572 564 33 306 612 101 65 17 29 575 391 51 111 612 612 566 557 34 448 562 559 
+File created: part45cas8op.json
+Successfully wrote to the file part45cas8op
+
+resources/partitionsInc/part40cas3op.dat domain-cases=40 introduced=40 notIntroduced=0 sols: 612 612 391 398 391 561 568 629 73 17 612 101 385 612 612 29 575 571 35 612 564 570 559 562 394 111 33 612 394 25 448 398 557 34 34 612 34 306 612 612 
+File created: part40cas3op.json
+Successfully wrote to the file part40cas3op
+
+resources/partitionsInc/domCases25cas9op.dat domain-cases=25 introduced=13 notIntroduced=12 sols: 33 564 561 570 557 561 570 557 572 566 557 572 566 612 612 566 612 612 385 35 612 385 35 34 629 
+File created: domCases25cas9op.json
+Successfully wrote to the file domCases25cas9op
+
+resources/partitionsInc/demoCases1.dat domain-cases=17 introduced=17 notIntroduced=0 sols: 3001 3004 612 34 29 31 73 111 17 448 612 398 398 51 25 51 306 
+File created: demoCases1.json
+Successfully wrote to the file demoCases1
+
+resources/partitionsInc/part25cas9op.dat domain-cases=25 introduced=25 notIntroduced=0 sols: 391 612 612 394 31 398 564 562 398 612 25 91 575 572 51 612 29 34 34 561 35 612 629 306 612 
+File created: part25cas9op.json
+Successfully wrote to the file part25cas9op
+
+resources/partitionsInc/part40cas6op.dat domain-cases=40 introduced=40 notIntroduced=0 sols: 612 391 612 31 612 391 561 398 612 51 575 385 562 91 568 65 33 557 398 559 612 111 17 448 35 566 101 25 394 34 34 564 73 51 572 570 394 612 612 34 
+File created: part40cas6op.json
+Successfully wrote to the file part40cas6op
+
+resources/partitionsInc/domCases35cas4op.dat domain-cases=35 introduced=20 notIntroduced=15 sols: 61 91 612 612 568 33 564 561 570 557 612 612 568 34 29 561 570 557 572 566 568 34 29 31 73 557 572 566 612 612 29 31 73 111 17 
+File created: domCases35cas4op.json
+Successfully wrote to the file domCases35cas4op
+
+resources/partitionsInc/part30cas5op.dat domain-cases=30 introduced=30 notIntroduced=0 sols: 101 612 448 25 29 31 612 562 572 575 612 612 612 391 612 612 34 571 570 33 394 73 568 612 35 566 559 385 61 65 
+File created: part30cas5op.json
+Successfully wrote to the file part30cas5op
+
+resources/partitionsInc/part15cas2op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 566 29 612 575 31 557 91 25 564 35 33 612 391 73 571 
+File created: part15cas2op.json
+Successfully wrote to the file part15cas2op
+
+resources/partitionsInc/domCasesExp10cas2op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 35 34 34 34 448 391 391 65 33 101 
+File created: domCasesExp10cas2op.json
+Successfully wrote to the file domCasesExp10cas2op
+
+resources/partitionsInc/part5cas1op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 612 572 61 398 564 
+File created: part5cas1op.json
+Successfully wrote to the file part5cas1op
+
+resources/partitionsInc/part25cas2op.dat domain-cases=25 introduced=25 notIntroduced=0 sols: 566 29 612 575 31 557 91 25 564 35 33 612 391 73 571 385 612 448 559 562 612 65 570 612 398 
+File created: part25cas2op.json
+Successfully wrote to the file part25cas2op
+
+resources/partitionsInc/part35cas5op.dat domain-cases=35 introduced=35 notIntroduced=0 sols: 101 612 448 25 29 31 612 562 572 575 612 612 612 391 612 612 34 571 570 33 394 73 568 612 35 566 559 385 61 65 111 51 306 394 557 
+File created: part35cas5op.json
+Successfully wrote to the file part35cas5op
+
+resources/partitionsInc/domCases15cas6op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 17 448 612 398 398 612 612 101 61 91 612 612 385 35 34 
+File created: domCases15cas6op.json
+Successfully wrote to the file domCases15cas6op
+
+resources/partitionsInc/domCasesExp35cas4op.dat domain-cases=35 introduced=20 notIntroduced=15 sols: 73 111 17 394 394 91 557 385 612 612 17 394 394 391 391 385 612 612 612 612 394 391 391 65 33 612 612 612 612 612 391 65 33 101 31 
+File created: domCasesExp35cas4op.json
+Successfully wrote to the file domCasesExp35cas4op
+
+resources/partitionsInc/part5cas0op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 101 51 306 612 566 
+File created: part5cas0op.json
+Successfully wrote to the file part5cas0op
+
+resources/partitionsInc/domCases5cas6op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 17 448 612 398 398 
+File created: domCases5cas6op.json
+Successfully wrote to the file domCases5cas6op
+
+resources/partitionsInc/domCasesExp25cas0op.dat domain-cases=25 introduced=25 notIntroduced=0 sols: 612 612 612 612 612 612 612 612 612 612 35 34 34 34 448 398 398 51 25 51 73 111 17 394 394 
+File created: domCasesExp25cas0op.json
+Successfully wrote to the file domCasesExp25cas0op
+
+resources/partitionsInc/domCases30cas0op.dat domain-cases=30 introduced=30 notIntroduced=0 sols: 570 557 572 566 612 612 385 35 34 629 391 391 571 612 34 612 612 612 612 101 61 91 612 612 568 34 29 31 73 111 
+File created: domCases30cas0op.json
+Successfully wrote to the file domCases30cas0op
+
+resources/partitionsInc/part5cas3op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 612 612 391 398 391 
+File created: part5cas3op.json
+Successfully wrote to the file part5cas3op
+
+resources/partitionsInc/domCases15cas1op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 612 385 35 34 629 612 612 612 612 101 34 29 31 73 111 
+File created: domCases15cas1op.json
+Successfully wrote to the file domCases15cas1op
+
+resources/partitionsInc/part10cas0op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 101 51 306 612 566 612 391 29 561 25 
+File created: part10cas0op.json
+Successfully wrote to the file part10cas0op
+
+resources/partitionsInc/domCases20cas1op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 612 385 35 34 629 612 612 612 612 101 34 29 31 73 111 575 51 25 51 394 
+File created: domCases20cas1op.json
+Successfully wrote to the file domCases20cas1op
+
+resources/partitionsInc/domCasesExp20cas1op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 612 612 612 612 612 398 398 51 25 51 391 391 65 33 101 559 561 566 629 570 
+File created: domCasesExp20cas1op.json
+Successfully wrote to the file domCasesExp20cas1op
+
+resources/partitionsInc/domCases20cas4op.dat domain-cases=20 introduced=14 notIntroduced=6 sols: 61 91 612 612 568 33 564 561 570 557 612 612 568 34 29 561 570 557 572 566 
+File created: domCases20cas4op.json
+Successfully wrote to the file domCases20cas4op
+
+resources/partitionsInc/part35cas0op.dat domain-cases=35 introduced=35 notIntroduced=0 sols: 101 51 306 612 566 612 391 29 561 25 33 612 385 612 34 398 35 559 91 34 17 568 111 391 612 61 557 448 571 575 572 51 394 65 34 
+File created: part35cas0op.json
+Successfully wrote to the file part35cas0op
+
+resources/partitionsInc/domCases40cas8op.dat domain-cases=40 introduced=26 notIntroduced=14 sols: 394 306 65 559 562 25 51 394 394 306 398 575 51 25 51 448 612 398 398 575 73 111 17 448 612 34 29 31 73 111 612 612 568 34 29 101 61 91 612 612 
+File created: domCases40cas8op.json
+Successfully wrote to the file domCases40cas8op
+
+resources/partitionsInc/demoCases3.dat domain-cases=17 introduced=17 notIntroduced=0 sols: 3002 3003 91 612 612 34 29 31 73 111 17 448 612 398 398 51 25 
+File created: demoCases3.json
+Successfully wrote to the file demoCases3
+
+resources/partitionsInc/domCases15cas5op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 34 29 31 73 111 35 34 629 391 391 25 51 394 394 306 
+File created: domCases15cas5op.json
+Successfully wrote to the file domCases15cas5op
+
+resources/partitionsInc/domCasesExp40cas6op.dat domain-cases=40 introduced=36 notIntroduced=4 sols: 31 575 306 568 564 51 25 51 73 111 612 612 612 612 612 570 571 562 572 61 391 65 33 101 31 34 448 398 398 51 612 612 612 612 612 559 561 566 629 570 
+File created: domCasesExp40cas6op.json
+Successfully wrote to the file domCasesExp40cas6op
+
+resources/partitionsInc/domCases10cas0op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 570 557 572 566 612 612 385 35 34 629 
+File created: domCases10cas0op.json
+Successfully wrote to the file domCases10cas0op
+
+resources/partitionsInc/domCasesExp10cas5op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 391 391 65 33 101 612 612 612 35 34 
+File created: domCasesExp10cas5op.json
+Successfully wrote to the file domCasesExp10cas5op
+
+resources/partitionsInc/domCases20cas3op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 612 612 612 612 101 575 51 25 51 394 35 34 629 391 391 31 73 111 17 448 
+File created: domCases20cas3op.json
+Successfully wrote to the file domCases20cas3op
+
+resources/partitionsInc/domCasesExp5cas1op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 612 612 612 612 612 
+File created: domCasesExp5cas1op.json
+Successfully wrote to the file domCasesExp5cas1op
+
+resources/partitionsInc/domCasesExp20cas5op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 391 391 65 33 101 612 612 612 35 34 566 629 570 571 562 51 73 111 17 394 
+File created: domCasesExp20cas5op.json
+Successfully wrote to the file domCasesExp20cas5op
+
+resources/partitionsInc/part30cas3op.dat domain-cases=30 introduced=30 notIntroduced=0 sols: 612 612 391 398 391 561 568 629 73 17 612 101 385 612 612 29 575 571 35 612 564 570 559 562 394 111 33 612 394 25 
+File created: part30cas3op.json
+Successfully wrote to the file part30cas3op
+
+resources/partitionsInc/domCases25cas1op.dat domain-cases=25 introduced=25 notIntroduced=0 sols: 612 385 35 34 629 612 612 612 612 101 34 29 31 73 111 575 51 25 51 394 33 564 561 570 557 
+File created: domCases25cas1op.json
+Successfully wrote to the file domCases25cas1op
+
+resources/partitionsInc/part10cas5op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 101 612 448 25 29 31 612 562 572 575 
+File created: part10cas5op.json
+Successfully wrote to the file part10cas5op
+
+resources/partitionsInc/domCases20cas0op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 570 557 572 566 612 612 385 35 34 629 391 391 571 612 34 612 612 612 612 101 
+File created: domCases20cas0op.json
+Successfully wrote to the file domCases20cas0op
+
+resources/partitionsInc/domCasesExp40cas3op.dat domain-cases=40 introduced=36 notIntroduced=4 sols: 398 398 51 25 51 559 561 566 629 570 612 612 612 35 34 65 33 101 31 575 385 612 612 612 612 51 73 111 17 394 570 571 562 572 61 34 34 34 448 398 
+File created: domCasesExp40cas3op.json
+Successfully wrote to the file domCasesExp40cas3op
+
+resources/partitionsInc/part40cas9op.dat domain-cases=40 introduced=40 notIntroduced=0 sols: 391 612 612 394 31 398 564 562 398 612 25 91 575 572 51 612 29 34 34 561 35 612 629 306 612 101 568 612 34 570 17 612 73 571 385 612 394 61 448 65 
+File created: part40cas9op.json
+Successfully wrote to the file part40cas9op
+
+resources/partitionsInc/domCasesExp5cas6op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 31 575 306 568 564 
+File created: domCasesExp5cas6op.json
+Successfully wrote to the file domCasesExp5cas6op
+
+resources/partitionsInc/domCases35cas0op.dat domain-cases=35 introduced=35 notIntroduced=0 sols: 570 557 572 566 612 612 385 35 34 629 391 391 571 612 34 612 612 612 612 101 61 91 612 612 568 34 29 31 73 111 17 448 612 398 398 
+File created: domCases35cas0op.json
+Successfully wrote to the file domCases35cas0op
+
+resources/partitionsInc/part5cas4op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 306 564 31 566 17 
+File created: part5cas4op.json
+Successfully wrote to the file part5cas4op
+
+resources/partitionsInc/domCases40cas1op.dat domain-cases=40 introduced=31 notIntroduced=9 sols: 612 385 35 34 629 612 612 612 612 101 34 29 31 73 111 575 51 25 51 394 33 564 561 570 557 35 34 629 391 391 612 612 101 61 91 31 73 111 17 448 
+File created: domCases40cas1op.json
+Successfully wrote to the file domCases40cas1op
+
+resources/partitionsInc/domCasesExp35cas5op.dat domain-cases=35 introduced=35 notIntroduced=0 sols: 391 391 65 33 101 612 612 612 35 34 566 629 570 571 562 51 73 111 17 394 612 612 612 612 612 575 306 568 564 559 34 448 398 398 51 
+File created: domCasesExp35cas5op.json
+Successfully wrote to the file domCasesExp35cas5op
+
+resources/partitionsInc/part5cas7op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 612 391 448 612 612 
+File created: part5cas7op.json
+Successfully wrote to the file part5cas7op
+
+resources/partitionsInc/domCases5cas8op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 394 306 65 559 562 
+File created: domCases5cas8op.json
+Successfully wrote to the file domCases5cas8op
+
+resources/partitionsInc/part15cas1op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 612 572 61 398 564 612 571 51 559 91 25 65 612 101 568 
+File created: part15cas1op.json
+Successfully wrote to the file part15cas1op
+
+resources/partitionsInc/part5cas9op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 391 612 612 394 31 
+File created: part5cas9op.json
+Successfully wrote to the file part5cas9op
+
+resources/partitionsInc/domCases20cas8op.dat domain-cases=20 introduced=14 notIntroduced=6 sols: 394 306 65 559 562 25 51 394 394 306 398 575 51 25 51 448 612 398 398 575 
+File created: domCases20cas8op.json
+Successfully wrote to the file domCases20cas8op
+
+resources/partitionsInc/domCasesExp5cas3op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 398 398 51 25 51 
+File created: domCasesExp5cas3op.json
+Successfully wrote to the file domCasesExp5cas3op
+
+resources/partitionsInc/part15cas0op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 101 51 306 612 566 612 391 29 561 25 33 612 385 612 34 
+File created: part15cas0op.json
+Successfully wrote to the file part15cas0op
+
+resources/partitionsInc/domCasesExp25cas5op.dat domain-cases=25 introduced=25 notIntroduced=0 sols: 391 391 65 33 101 612 612 612 35 34 566 629 570 571 562 51 73 111 17 394 612 612 612 612 612 
+File created: domCasesExp25cas5op.json
+Successfully wrote to the file domCasesExp25cas5op
+
+resources/partitionsInc/domCases10cas2op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 391 391 571 612 34 34 29 31 73 111 
+File created: domCases10cas2op.json
+Successfully wrote to the file domCases10cas2op
+
+resources/partitionsInc/domCasesExp10cas0op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 612 612 612 612 612 612 612 612 612 612 
+File created: domCasesExp10cas0op.json
+Successfully wrote to the file domCasesExp10cas0op
+
+resources/partitionsInc/part35cas9op.dat domain-cases=35 introduced=35 notIntroduced=0 sols: 391 612 612 394 31 398 564 562 398 612 25 91 575 572 51 612 29 34 34 561 35 612 629 306 612 101 568 612 34 570 17 612 73 571 385 
+File created: part35cas9op.json
+Successfully wrote to the file part35cas9op
+
+resources/partitionsInc/domCases20cas6op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 17 448 612 398 398 612 612 101 61 91 612 612 385 35 34 394 394 306 65 559 
+File created: domCases20cas6op.json
+Successfully wrote to the file domCases20cas6op
+
+resources/partitionsInc/domCases40cas2op.dat domain-cases=40 introduced=30 notIntroduced=10 sols: 391 391 571 612 34 34 29 31 73 111 394 306 65 559 562 35 34 629 391 391 612 612 568 34 29 25 51 394 394 306 612 612 385 35 34 101 61 91 612 612 
+File created: domCases40cas2op.json
+Successfully wrote to the file domCases40cas2op
+
+resources/partitionsInc/domCases30cas1op.dat domain-cases=30 introduced=27 notIntroduced=3 sols: 612 385 35 34 629 612 612 612 612 101 34 29 31 73 111 575 51 25 51 394 33 564 561 570 557 35 34 629 391 391 
+File created: domCases30cas1op.json
+Successfully wrote to the file domCases30cas1op
+
+resources/partitionsInc/domCases30cas6op.dat domain-cases=30 introduced=28 notIntroduced=2 sols: 17 448 612 398 398 612 612 101 61 91 612 612 385 35 34 394 394 306 65 559 29 31 73 111 17 612 34 612 612 612 
+File created: domCases30cas6op.json
+Successfully wrote to the file domCases30cas6op
+
+resources/partitionsInc/domCasesExp20cas2op.dat domain-cases=20 introduced=18 notIntroduced=2 sols: 35 34 34 34 448 391 391 65 33 101 571 562 572 61 29 612 612 612 35 34 
+File created: domCasesExp20cas2op.json
+Successfully wrote to the file domCasesExp20cas2op
+
+resources/partitionsInc/domCases15cas0op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 570 557 572 566 612 612 385 35 34 629 391 391 571 612 34 
+File created: domCases15cas0op.json
+Successfully wrote to the file domCases15cas0op
+
+resources/partitionsInc/domCases35cas2op.dat domain-cases=35 introduced=27 notIntroduced=8 sols: 391 391 571 612 34 34 29 31 73 111 394 306 65 559 562 35 34 629 391 391 612 612 568 34 29 25 51 394 394 306 612 612 385 35 34 
+File created: domCases35cas2op.json
+Successfully wrote to the file domCases35cas2op
+
+resources/partitionsInc/domCases45cas1op.dat domain-cases=45 introduced=33 notIntroduced=12 sols: 612 385 35 34 629 612 612 612 612 101 34 29 31 73 111 575 51 25 51 394 33 564 561 570 557 35 34 629 391 391 612 612 101 61 91 31 73 111 17 448 25 51 394 394 306 
+File created: domCases45cas1op.json
+Successfully wrote to the file domCases45cas1op
+
+resources/partitionsInc/domCases25cas8op.dat domain-cases=25 introduced=17 notIntroduced=8 sols: 394 306 65 559 562 25 51 394 394 306 398 575 51 25 51 448 612 398 398 575 73 111 17 448 612 
+File created: domCases25cas8op.json
+Successfully wrote to the file domCases25cas8op
+
+resources/partitionsInc/domCases45cas6op.dat domain-cases=45 introduced=40 notIntroduced=5 sols: 17 448 612 398 398 612 612 101 61 91 612 612 385 35 34 394 394 306 65 559 29 31 73 111 17 612 34 612 612 612 570 557 572 566 612 575 51 25 51 394 612 612 568 34 29 
+File created: domCases45cas6op.json
+Successfully wrote to the file domCases45cas6op
+
+resources/partitionsInc/domCasesExp40cas1op.dat domain-cases=40 introduced=31 notIntroduced=9 sols: 612 612 612 612 612 398 398 51 25 51 391 391 65 33 101 559 561 566 629 570 91 557 385 612 612 612 612 612 35 34 51 25 51 73 111 65 33 101 31 575 
+File created: domCasesExp40cas1op.json
+Successfully wrote to the file domCasesExp40cas1op
+
+resources/partitionsInc/domCasesExp45cas2op.dat domain-cases=45 introduced=33 notIntroduced=12 sols: 35 34 34 34 448 391 391 65 33 101 571 562 572 61 29 612 612 612 35 34 17 394 394 391 391 566 629 570 571 562 612 612 612 612 612 51 73 111 17 394 564 559 561 566 629 
+File created: domCasesExp45cas2op.json
+Successfully wrote to the file domCasesExp45cas2op
+
+resources/partitionsInc/domCases5cas4op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 61 91 612 612 568 
+File created: domCases5cas4op.json
+Successfully wrote to the file domCases5cas4op
+
+resources/partitionsInc/part35cas2op.dat domain-cases=35 introduced=35 notIntroduced=0 sols: 566 29 612 575 31 557 91 25 564 35 33 612 391 73 571 385 612 448 559 562 612 65 570 612 398 51 612 394 51 612 34 391 34 612 561 
+File created: part35cas2op.json
+Successfully wrote to the file part35cas2op
+
+resources/partitionsInc/part10cas9op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 391 612 612 394 31 398 564 562 398 612 
+File created: part10cas9op.json
+Successfully wrote to the file part10cas9op
+
+resources/partitionsInc/domCasesExp5cas5op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 391 391 65 33 101 
+File created: domCasesExp5cas5op.json
+Successfully wrote to the file domCasesExp5cas5op
+
+resources/partitionsInc/domCasesExp5cas4op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 73 111 17 394 394 
+File created: domCasesExp5cas4op.json
+Successfully wrote to the file domCasesExp5cas4op
+
+resources/partitionsInc/part15cas4op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 306 564 31 566 17 29 391 398 34 561 398 34 612 391 51 
+File created: part15cas4op.json
+Successfully wrote to the file part15cas4op
+
+resources/partitionsInc/part25cas6op.dat domain-cases=25 introduced=25 notIntroduced=0 sols: 612 391 612 31 612 391 561 398 612 51 575 385 562 91 568 65 33 557 398 559 612 111 17 448 35 
+File created: part25cas6op.json
+Successfully wrote to the file part25cas6op
+
+resources/partitionsInc/domCasesExp40cas2op.dat domain-cases=40 introduced=30 notIntroduced=10 sols: 35 34 34 34 448 391 391 65 33 101 571 562 572 61 29 612 612 612 35 34 17 394 394 391 391 566 629 570 571 562 612 612 612 612 612 51 73 111 17 394 
+File created: domCasesExp40cas2op.json
+Successfully wrote to the file domCasesExp40cas2op
+
+resources/partitionsInc/part5cas5op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 101 612 448 25 29 
+File created: part5cas5op.json
+Successfully wrote to the file part5cas5op
+
+resources/partitionsInc/domCasesExp45cas1op.dat domain-cases=45 introduced=33 notIntroduced=12 sols: 612 612 612 612 612 398 398 51 25 51 391 391 65 33 101 559 561 566 629 570 91 557 385 612 612 612 612 612 35 34 51 25 51 73 111 65 33 101 31 575 566 629 570 571 562 
+File created: domCasesExp45cas1op.json
+Successfully wrote to the file domCasesExp45cas1op
+
+resources/partitionsInc/domCases5cas2op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 391 391 571 612 34 
+File created: domCases5cas2op.json
+Successfully wrote to the file domCases5cas2op
+
+resources/partitionsInc/part10cas6op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 612 391 612 31 612 391 561 398 612 51 
+File created: part10cas6op.json
+Successfully wrote to the file part10cas6op
+
+resources/partitionsInc/domCases30cas3op.dat domain-cases=30 introduced=29 notIntroduced=1 sols: 612 612 612 612 101 575 51 25 51 394 35 34 629 391 391 31 73 111 17 448 561 570 557 572 566 101 61 91 612 612 
+File created: domCases30cas3op.json
+Successfully wrote to the file domCases30cas3op
+
+resources/partitionsInc/domCasesExp30cas0op.dat domain-cases=30 introduced=30 notIntroduced=0 sols: 612 612 612 612 612 612 612 612 612 612 35 34 34 34 448 398 398 51 25 51 73 111 17 394 394 391 391 65 33 101 
+File created: domCasesExp30cas0op.json
+Successfully wrote to the file domCasesExp30cas0op
+
+resources/partitionsInc/domCases30cas2op.dat domain-cases=30 introduced=24 notIntroduced=6 sols: 391 391 571 612 34 34 29 31 73 111 394 306 65 559 562 35 34 629 391 391 612 612 568 34 29 25 51 394 394 306 
+File created: domCases30cas2op.json
+Successfully wrote to the file domCases30cas2op
+
+resources/partitionsInc/domCases40cas3op.dat domain-cases=40 introduced=36 notIntroduced=4 sols: 612 612 612 612 101 575 51 25 51 394 35 34 629 391 391 31 73 111 17 448 561 570 557 572 566 101 61 91 612 612 394 394 306 65 559 391 571 612 34 612 
+File created: domCases40cas3op.json
+Successfully wrote to the file domCases40cas3op
+
+resources/partitionsInc/part25cas5op.dat domain-cases=25 introduced=25 notIntroduced=0 sols: 101 612 448 25 29 31 612 562 572 575 612 612 612 391 612 612 34 571 570 33 394 73 568 612 35 
+File created: part25cas5op.json
+Successfully wrote to the file part25cas5op
+
+resources/partitionsInc/part30cas8op.dat domain-cases=30 introduced=30 notIntroduced=0 sols: 394 612 629 612 91 612 385 612 571 25 612 612 31 51 398 398 34 570 394 34 612 568 391 73 572 564 33 306 612 101 
+File created: part30cas8op.json
+Successfully wrote to the file part30cas8op
+
+resources/partitionsInc/domCases25cas4op.dat domain-cases=25 introduced=16 notIntroduced=9 sols: 61 91 612 612 568 33 564 561 570 557 612 612 568 34 29 561 570 557 572 566 568 34 29 31 73 
+File created: domCases25cas4op.json
+Successfully wrote to the file domCases25cas4op
+
+resources/partitionsInc/part25cas0op.dat domain-cases=25 introduced=25 notIntroduced=0 sols: 101 51 306 612 566 612 391 29 561 25 33 612 385 612 34 398 35 559 91 34 17 568 111 391 612 
+File created: part25cas0op.json
+Successfully wrote to the file part25cas0op
+
+resources/partitionsInc/domCasesExp30cas5op.dat domain-cases=30 introduced=30 notIntroduced=0 sols: 391 391 65 33 101 612 612 612 35 34 566 629 570 571 562 51 73 111 17 394 612 612 612 612 612 575 306 568 564 559 
+File created: domCasesExp30cas5op.json
+Successfully wrote to the file domCasesExp30cas5op
+
+resources/partitionsInc/domCases35cas8op.dat domain-cases=35 introduced=23 notIntroduced=12 sols: 394 306 65 559 562 25 51 394 394 306 398 575 51 25 51 448 612 398 398 575 73 111 17 448 612 34 29 31 73 111 612 612 568 34 29 
+File created: domCases35cas8op.json
+Successfully wrote to the file domCases35cas8op
+
+resources/partitionsInc/domCases35cas5op.dat domain-cases=35 introduced=35 notIntroduced=0 sols: 34 29 31 73 111 35 34 629 391 391 25 51 394 394 306 101 61 91 612 612 557 572 566 612 612 448 612 398 398 575 612 34 612 612 612 
+File created: domCases35cas5op.json
+Successfully wrote to the file domCases35cas5op
+
+resources/partitionsInc/domCases20cas5op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 34 29 31 73 111 35 34 629 391 391 25 51 394 394 306 101 61 91 612 612 
+File created: domCases20cas5op.json
+Successfully wrote to the file domCases20cas5op
+
+resources/partitionsInc/domCasesExp20cas0op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 612 612 612 612 612 612 612 612 612 612 35 34 34 34 448 398 398 51 25 51 
+File created: domCasesExp20cas0op.json
+Successfully wrote to the file domCasesExp20cas0op
+
+resources/partitionsInc/part15cas9op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 391 612 612 394 31 398 564 562 398 612 25 91 575 572 51 
+File created: part15cas9op.json
+Successfully wrote to the file part15cas9op
+
+resources/partitionsInc/domCasesExp20cas6op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 31 575 306 568 564 51 25 51 73 111 612 612 612 612 612 570 571 562 572 61 
+File created: domCasesExp20cas6op.json
+Successfully wrote to the file domCasesExp20cas6op
+
+resources/partitionsInc/domCases5cas9op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 33 564 561 570 557 
+File created: domCases5cas9op.json
+Successfully wrote to the file domCases5cas9op
+
+resources/partitionsInc/part30cas7op.dat domain-cases=30 introduced=30 notIntroduced=0 sols: 612 391 448 612 612 65 51 612 61 564 557 566 29 73 562 559 394 34 391 398 575 385 34 33 35 629 612 25 398 561 
+File created: part30cas7op.json
+Successfully wrote to the file part30cas7op
+
+resources/partitionsInc/part20cas0op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 101 51 306 612 566 612 391 29 561 25 33 612 385 612 34 398 35 559 91 34 
+File created: part20cas0op.json
+Successfully wrote to the file part20cas0op
+
+resources/partitionsInc/part30cas9op.dat domain-cases=30 introduced=30 notIntroduced=0 sols: 391 612 612 394 31 398 564 562 398 612 25 91 575 572 51 612 29 34 34 561 35 612 629 306 612 101 568 612 34 570 
+File created: part30cas9op.json
+Successfully wrote to the file part30cas9op
+
+resources/partitionsInc/domCases10cas1op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 612 385 35 34 629 612 612 612 612 101 
+File created: domCases10cas1op.json
+Successfully wrote to the file domCases10cas1op
+
+resources/partitionsInc/part20cas5op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 101 612 448 25 29 31 612 562 572 575 612 612 612 391 612 612 34 571 570 33 
+File created: part20cas5op.json
+Successfully wrote to the file part20cas5op
+
+resources/partitionsInc/domCases15cas8op.dat domain-cases=15 introduced=11 notIntroduced=4 sols: 394 306 65 559 562 25 51 394 394 306 398 575 51 25 51 
+File created: domCases15cas8op.json
+Successfully wrote to the file domCases15cas8op
+
+resources/partitionsInc/part15cas5op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 101 612 448 25 29 31 612 562 572 575 612 612 612 391 612 
+File created: part15cas5op.json
+Successfully wrote to the file part15cas5op
+
+resources/partitionsInc/domCases25cas7op.dat domain-cases=25 introduced=25 notIntroduced=0 sols: 575 51 25 51 394 31 73 111 17 448 101 61 91 612 612 391 571 612 34 612 566 612 612 385 35 
+File created: domCases25cas7op.json
+Successfully wrote to the file domCases25cas7op
+
+resources/partitionsInc/domCases5cas5op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 34 29 31 73 111 
+File created: domCases5cas5op.json
+Successfully wrote to the file domCases5cas5op
+
+resources/partitionsInc/part25cas3op.dat domain-cases=25 introduced=25 notIntroduced=0 sols: 612 612 391 398 391 561 568 629 73 17 612 101 385 612 612 29 575 571 35 612 564 570 559 562 394 
+File created: part25cas3op.json
+Successfully wrote to the file part25cas3op
+
+resources/partitionsInc/domCasesExp30cas4op.dat domain-cases=30 introduced=18 notIntroduced=12 sols: 73 111 17 394 394 91 557 385 612 612 17 394 394 391 391 385 612 612 612 612 394 391 391 65 33 612 612 612 612 612 
+File created: domCasesExp30cas4op.json
+Successfully wrote to the file domCasesExp30cas4op
+
+resources/partitionsInc/domCases35cas6op.dat domain-cases=35 introduced=32 notIntroduced=3 sols: 17 448 612 398 398 612 612 101 61 91 612 612 385 35 34 394 394 306 65 559 29 31 73 111 17 612 34 612 612 612 570 557 572 566 612 
+File created: domCases35cas6op.json
+Successfully wrote to the file domCases35cas6op
+
+resources/partitionsInc/part45cas0op.dat domain-cases=45 introduced=45 notIntroduced=0 sols: 101 51 306 612 566 612 391 29 561 25 33 612 385 612 34 398 35 559 91 34 17 568 111 391 612 61 557 448 571 575 572 51 394 65 34 564 398 629 612 612 394 562 612 570 31 
+File created: part45cas0op.json
+Successfully wrote to the file part45cas0op
+
+resources/partitionsInc/domCases40cas9op.dat domain-cases=40 introduced=19 notIntroduced=21 sols: 33 564 561 570 557 561 570 557 572 566 557 572 566 612 612 566 612 612 385 35 612 385 35 34 629 35 34 629 391 391 629 391 391 571 612 391 571 612 34 612 
+File created: domCases40cas9op.json
+Successfully wrote to the file domCases40cas9op
+
+resources/partitionsInc/domCasesExp15cas3op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 398 398 51 25 51 559 561 566 629 570 612 612 612 35 34 
+File created: domCasesExp15cas3op.json
+Successfully wrote to the file domCasesExp15cas3op
+
+resources/partitionsInc/part35cas6op.dat domain-cases=35 introduced=35 notIntroduced=0 sols: 612 391 612 31 612 391 561 398 612 51 575 385 562 91 568 65 33 557 398 559 612 111 17 448 35 566 101 25 394 34 34 564 73 51 572 
+File created: part35cas6op.json
+Successfully wrote to the file part35cas6op
+
+resources/partitionsInc/part20cas8op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 394 612 629 612 91 612 385 612 571 25 612 612 31 51 398 398 34 570 394 34 
+File created: part20cas8op.json
+Successfully wrote to the file part20cas8op
+
+resources/partitionsInc/part10cas7op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 612 391 448 612 612 65 51 612 61 564 
+File created: part10cas7op.json
+Successfully wrote to the file part10cas7op
+
+resources/partitionsInc/domCases40cas6op.dat domain-cases=40 introduced=36 notIntroduced=4 sols: 17 448 612 398 398 612 612 101 61 91 612 612 385 35 34 394 394 306 65 559 29 31 73 111 17 612 34 612 612 612 570 557 572 566 612 575 51 25 51 394 
+File created: domCases40cas6op.json
+Successfully wrote to the file domCases40cas6op
+
+resources/partitionsInc/domCasesExp25cas6op.dat domain-cases=25 introduced=24 notIntroduced=1 sols: 31 575 306 568 564 51 25 51 73 111 612 612 612 612 612 570 571 562 572 61 391 65 33 101 31 
+File created: domCasesExp25cas6op.json
+Successfully wrote to the file domCasesExp25cas6op
+
+resources/partitionsInc/domCasesExp45cas4op.dat domain-cases=45 introduced=24 notIntroduced=21 sols: 73 111 17 394 394 91 557 385 612 612 17 394 394 391 391 385 612 612 612 612 394 391 391 65 33 612 612 612 612 612 391 65 33 101 31 612 612 612 612 612 33 101 31 575 306 
+File created: domCasesExp45cas4op.json
+Successfully wrote to the file domCasesExp45cas4op
+
+resources/partitionsInc/part45cas3op.dat domain-cases=45 introduced=45 notIntroduced=0 sols: 612 612 391 398 391 561 568 629 73 17 612 101 385 612 612 29 575 571 35 612 564 570 559 562 394 111 33 612 394 25 448 398 557 34 34 612 34 306 612 612 31 51 65 566 51 
+File created: part45cas3op.json
+Successfully wrote to the file part45cas3op
+
+resources/partitionsInc/domCases20cas2op.dat domain-cases=20 introduced=18 notIntroduced=2 sols: 391 391 571 612 34 34 29 31 73 111 394 306 65 559 562 35 34 629 391 391 
+File created: domCases20cas2op.json
+Successfully wrote to the file domCases20cas2op
+
+resources/partitionsInc/demoCases4.dat domain-cases=16 introduced=16 notIntroduced=0 sols: 3002 51 306 65 33 612 612 35 34 391 391 612 34 612 612 612 
+File created: demoCases4.json
+Successfully wrote to the file demoCases4
+
+resources/partitionsInc/part20cas2op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 566 29 612 575 31 557 91 25 564 35 33 612 391 73 571 385 612 448 559 562 
+File created: part20cas2op.json
+Successfully wrote to the file part20cas2op
+
+resources/partitionsInc/domCasesExp45cas3op.dat domain-cases=45 introduced=39 notIntroduced=6 sols: 398 398 51 25 51 559 561 566 629 570 612 612 612 35 34 65 33 101 31 575 385 612 612 612 612 51 73 111 17 394 570 571 562 572 61 34 34 34 448 398 575 306 568 564 559 
+File created: domCasesExp45cas3op.json
+Successfully wrote to the file domCasesExp45cas3op
+
+resources/partitionsInc/domCases15cas7op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 575 51 25 51 394 31 73 111 17 448 101 61 91 612 612 
+File created: domCases15cas7op.json
+Successfully wrote to the file domCases15cas7op
+
+resources/partitionsInc/domCases5cas1op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 612 385 35 34 629 
+File created: domCases5cas1op.json
+Successfully wrote to the file domCases5cas1op
+
+resources/partitionsInc/domCasesExp40cas5op.dat domain-cases=40 introduced=40 notIntroduced=0 sols: 391 391 65 33 101 612 612 612 35 34 566 629 570 571 562 51 73 111 17 394 612 612 612 612 612 575 306 568 564 559 34 448 398 398 51 61 29 91 557 385 
+File created: domCasesExp40cas5op.json
+Successfully wrote to the file domCasesExp40cas5op
+
+resources/partitionsInc/domCases10cas7op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 575 51 25 51 394 31 73 111 17 448 
+File created: domCases10cas7op.json
+Successfully wrote to the file domCases10cas7op
+
+resources/partitionsInc/part40cas5op.dat domain-cases=40 introduced=40 notIntroduced=0 sols: 101 612 448 25 29 31 612 562 572 575 612 612 612 391 612 612 34 571 570 33 394 73 568 612 35 566 559 385 61 65 111 51 306 394 557 17 51 398 91 629 
+File created: part40cas5op.json
+Successfully wrote to the file part40cas5op
+
+resources/partitionsInc/domCases10cas4op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 61 91 612 612 568 33 564 561 570 557 
+File created: domCases10cas4op.json
+Successfully wrote to the file domCases10cas4op
+
+resources/partitionsInc/domCases45cas8op.dat domain-cases=45 introduced=29 notIntroduced=16 sols: 394 306 65 559 562 25 51 394 394 306 398 575 51 25 51 448 612 398 398 575 73 111 17 448 612 34 29 31 73 111 612 612 568 34 29 101 61 91 612 612 612 612 612 101 61 
+File created: domCases45cas8op.json
+Successfully wrote to the file domCases45cas8op
+
+resources/partitionsInc/domCases5cas7op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 575 51 25 51 394 
+File created: domCases5cas7op.json
+Successfully wrote to the file domCases5cas7op
+
+resources/partitionsInc/domCases40cas5op.dat domain-cases=40 introduced=40 notIntroduced=0 sols: 34 29 31 73 111 35 34 629 391 391 25 51 394 394 306 101 61 91 612 612 557 572 566 612 612 448 612 398 398 575 612 34 612 612 612 559 562 33 564 561 
+File created: domCases40cas5op.json
+Successfully wrote to the file domCases40cas5op
+
+resources/partitionsInc/domCasesExp45cas5op.dat domain-cases=45 introduced=40 notIntroduced=5 sols: 391 391 65 33 101 612 612 612 35 34 566 629 570 571 562 51 73 111 17 394 612 612 612 612 612 575 306 568 564 559 34 448 398 398 51 61 29 91 557 385 391 391 65 33 101 
+File created: domCasesExp45cas5op.json
+Successfully wrote to the file domCasesExp45cas5op
+
+resources/partitionsInc/domCases15cas9op.dat domain-cases=15 introduced=9 notIntroduced=6 sols: 33 564 561 570 557 561 570 557 572 566 557 572 566 612 612 
+File created: domCases15cas9op.json
+Successfully wrote to the file domCases15cas9op
+
+resources/partitionsInc/part40cas4op.dat domain-cases=40 introduced=40 notIntroduced=0 sols: 306 564 31 566 17 29 391 398 34 561 398 34 612 391 51 559 557 612 571 612 612 101 612 33 51 575 111 65 91 25 612 612 448 385 568 61 612 73 612 34 
+File created: part40cas4op.json
+Successfully wrote to the file part40cas4op
+
+resources/partitionsInc/domCasesExp15cas4op.dat domain-cases=15 introduced=12 notIntroduced=3 sols: 73 111 17 394 394 91 557 385 612 612 17 394 394 391 391 
+File created: domCasesExp15cas4op.json
+Successfully wrote to the file domCasesExp15cas4op
+
+resources/partitionsInc/domCases10cas5op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 34 29 31 73 111 35 34 629 391 391 
+File created: domCases10cas5op.json
+Successfully wrote to the file domCases10cas5op
+
+resources/partitionsInc/domCases45cas2op.dat domain-cases=45 introduced=33 notIntroduced=12 sols: 391 391 571 612 34 34 29 31 73 111 394 306 65 559 562 35 34 629 391 391 612 612 568 34 29 25 51 394 394 306 612 612 385 35 34 101 61 91 612 612 398 575 51 25 51 
+File created: domCases45cas2op.json
+Successfully wrote to the file domCases45cas2op
+
+resources/partitionsInc/domCases35cas3op.dat domain-cases=35 introduced=33 notIntroduced=2 sols: 612 612 612 612 101 575 51 25 51 394 35 34 629 391 391 31 73 111 17 448 561 570 557 572 566 101 61 91 612 612 394 394 306 65 559 
+File created: domCases35cas3op.json
+Successfully wrote to the file domCases35cas3op
+
+resources/partitionsInc/domCasesExp10cas1op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 612 612 612 612 612 398 398 51 25 51 
+File created: domCasesExp10cas1op.json
+Successfully wrote to the file domCasesExp10cas1op
+
+resources/partitionsInc/domCasesExp15cas6op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 31 575 306 568 564 51 25 51 73 111 612 612 612 612 612 
+File created: domCasesExp15cas6op.json
+Successfully wrote to the file domCasesExp15cas6op
+
+resources/partitionsInc/domCasesExp5cas0op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 612 612 612 612 612 
+File created: domCasesExp5cas0op.json
+Successfully wrote to the file domCasesExp5cas0op
+
+resources/partitionsInc/domCases45cas4op.dat domain-cases=45 introduced=24 notIntroduced=21 sols: 61 91 612 612 568 33 564 561 570 557 612 612 568 34 29 561 570 557 572 566 568 34 29 31 73 557 572 566 612 612 29 31 73 111 17 566 612 612 385 35 73 111 17 448 612 
+File created: domCases45cas4op.json
+Successfully wrote to the file domCases45cas4op
+
+resources/partitionsInc/domCasesExp45cas6op.dat domain-cases=45 introduced=40 notIntroduced=5 sols: 31 575 306 568 564 51 25 51 73 111 612 612 612 612 612 570 571 562 572 61 391 65 33 101 31 34 448 398 398 51 612 612 612 612 612 559 561 566 629 570 17 394 394 391 391 
+File created: domCasesExp45cas6op.json
+Successfully wrote to the file domCasesExp45cas6op
+
+resources/partitionsInc/part45cas5op.dat domain-cases=45 introduced=45 notIntroduced=0 sols: 101 612 448 25 29 31 612 562 572 575 612 612 612 391 612 612 34 571 570 33 394 73 568 612 35 566 559 385 61 65 111 51 306 394 557 17 51 398 91 629 564 561 612 612 391 
+File created: part45cas5op.json
+Successfully wrote to the file part45cas5op
+
+resources/partitionsInc/part25cas7op.dat domain-cases=25 introduced=25 notIntroduced=0 sols: 612 391 448 612 612 65 51 612 61 564 557 566 29 73 562 559 394 34 391 398 575 385 34 33 35 
+File created: part25cas7op.json
+Successfully wrote to the file part25cas7op
+
+resources/partitionsInc/part25cas4op.dat domain-cases=25 introduced=25 notIntroduced=0 sols: 306 564 31 566 17 29 391 398 34 561 398 34 612 391 51 559 557 612 571 612 612 101 612 33 51 
+File created: part25cas4op.json
+Successfully wrote to the file part25cas4op
+
+resources/partitionsInc/part45cas4op.dat domain-cases=45 introduced=45 notIntroduced=0 sols: 306 564 31 566 17 29 391 398 34 561 398 34 612 391 51 559 557 612 571 612 612 101 612 33 51 575 111 65 91 25 612 612 448 385 568 61 612 73 612 34 612 394 572 394 570 
+File created: part45cas4op.json
+Successfully wrote to the file part45cas4op
+
+resources/partitionsInc/part30cas0op.dat domain-cases=30 introduced=30 notIntroduced=0 sols: 101 51 306 612 566 612 391 29 561 25 33 612 385 612 34 398 35 559 91 34 17 568 111 391 612 61 557 448 571 575 
+File created: part30cas0op.json
+Successfully wrote to the file part30cas0op
+
+resources/partitionsInc/part30cas6op.dat domain-cases=30 introduced=30 notIntroduced=0 sols: 612 391 612 31 612 391 561 398 612 51 575 385 562 91 568 65 33 557 398 559 612 111 17 448 35 566 101 25 394 34 
+File created: part30cas6op.json
+Successfully wrote to the file part30cas6op
+
+resources/partitionsInc/part40cas2op.dat domain-cases=40 introduced=40 notIntroduced=0 sols: 566 29 612 575 31 557 91 25 564 35 33 612 391 73 571 385 612 448 559 562 612 65 570 612 398 51 612 394 51 612 34 391 34 612 561 572 568 111 398 629 
+File created: part40cas2op.json
+Successfully wrote to the file part40cas2op
+
+resources/partitionsInc/part10cas2op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 566 29 612 575 31 557 91 25 564 35 
+File created: part10cas2op.json
+Successfully wrote to the file part10cas2op
+
+resources/partitionsInc/part20cas4op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 306 564 31 566 17 29 391 398 34 561 398 34 612 391 51 559 557 612 571 612 
+File created: part20cas4op.json
+Successfully wrote to the file part20cas4op
+
+resources/partitionsInc/part40cas7op.dat domain-cases=40 introduced=40 notIntroduced=0 sols: 612 391 448 612 612 65 51 612 61 564 557 566 29 73 562 559 394 34 391 398 575 385 34 33 35 629 612 25 398 561 31 612 51 571 306 111 612 612 394 612 
+File created: part40cas7op.json
+Successfully wrote to the file part40cas7op
+
+resources/partitionsInc/domCasesExp45cas0op.dat domain-cases=45 introduced=45 notIntroduced=0 sols: 612 612 612 612 612 612 612 612 612 612 35 34 34 34 448 398 398 51 25 51 73 111 17 394 394 391 391 65 33 101 31 575 306 568 564 559 561 566 629 570 571 562 572 61 29 
+File created: domCasesExp45cas0op.json
+Successfully wrote to the file domCasesExp45cas0op
+
+resources/partitionsInc/part45cas9op.dat domain-cases=45 introduced=45 notIntroduced=0 sols: 391 612 612 394 31 398 564 562 398 612 25 91 575 572 51 612 29 34 34 561 35 612 629 306 612 101 568 612 34 570 17 612 73 571 385 612 394 61 448 65 51 566 559 557 612 
+File created: part45cas9op.json
+Successfully wrote to the file part45cas9op
+
+resources/partitionsInc/demoCases0.dat domain-cases=17 introduced=17 notIntroduced=0 sols: 3001 3004 612 612 35 34 391 391 612 34 612 612 612 612 101 91 612 
+File created: demoCases0.json
+Successfully wrote to the file demoCases0
+
+resources/partitionsInc/part5cas6op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 612 391 612 31 612 
+File created: part5cas6op.json
+Successfully wrote to the file part5cas6op
+
+resources/partitionsInc/domCases15cas4op.dat domain-cases=15 introduced=12 notIntroduced=3 sols: 61 91 612 612 568 33 564 561 570 557 612 612 568 34 29 
+File created: domCases15cas4op.json
+Successfully wrote to the file domCases15cas4op
+
+resources/partitionsInc/domCases30cas5op.dat domain-cases=30 introduced=30 notIntroduced=0 sols: 34 29 31 73 111 35 34 629 391 391 25 51 394 394 306 101 61 91 612 612 557 572 566 612 612 448 612 398 398 575 
+File created: domCases30cas5op.json
+Successfully wrote to the file domCases30cas5op
+
+resources/partitionsInc/part35cas3op.dat domain-cases=35 introduced=35 notIntroduced=0 sols: 612 612 391 398 391 561 568 629 73 17 612 101 385 612 612 29 575 571 35 612 564 570 559 562 394 111 33 612 394 25 448 398 557 34 34 
+File created: part35cas3op.json
+Successfully wrote to the file part35cas3op
+
+resources/partitionsInc/domCasesExp20cas3op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 398 398 51 25 51 559 561 566 629 570 612 612 612 35 34 65 33 101 31 575 
+File created: domCasesExp20cas3op.json
+Successfully wrote to the file domCasesExp20cas3op
+
+resources/partitionsInc/part35cas4op.dat domain-cases=35 introduced=35 notIntroduced=0 sols: 306 564 31 566 17 29 391 398 34 561 398 34 612 391 51 559 557 612 571 612 612 101 612 33 51 575 111 65 91 25 612 612 448 385 568 
+File created: part35cas4op.json
+Successfully wrote to the file part35cas4op
+
+resources/partitionsInc/part15cas8op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 394 612 629 612 91 612 385 612 571 25 612 612 31 51 398 
+File created: part15cas8op.json
+Successfully wrote to the file part15cas8op
+
+resources/partitionsInc/domCases10cas8op.dat domain-cases=10 introduced=8 notIntroduced=2 sols: 394 306 65 559 562 25 51 394 394 306 
+File created: domCases10cas8op.json
+Successfully wrote to the file domCases10cas8op
+
+resources/partitionsInc/demoCases2.dat domain-cases=17 introduced=17 notIntroduced=0 sols: 3001 3003 65 33 612 612 35 34 391 391 612 34 612 612 612 612 101 
+File created: demoCases2.json
+Successfully wrote to the file demoCases2
+
+resources/partitionsInc/part20cas6op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 612 391 612 31 612 391 561 398 612 51 575 385 562 91 568 65 33 557 398 559 
+File created: part20cas6op.json
+Successfully wrote to the file part20cas6op
+
+resources/partitionsInc/part45cas7op.dat domain-cases=45 introduced=45 notIntroduced=0 sols: 612 391 448 612 612 65 51 612 61 564 557 566 29 73 562 559 394 34 391 398 575 385 34 33 35 629 612 25 398 561 31 612 51 571 306 111 612 612 394 612 34 612 572 91 568 
+File created: part45cas7op.json
+Successfully wrote to the file part45cas7op
+
+resources/partitionsInc/domCasesExp25cas4op.dat domain-cases=25 introduced=16 notIntroduced=9 sols: 73 111 17 394 394 91 557 385 612 612 17 394 394 391 391 385 612 612 612 612 394 391 391 65 33 
+File created: domCasesExp25cas4op.json
+Successfully wrote to the file domCasesExp25cas4op
+
+resources/partitionsInc/domCases25cas3op.dat domain-cases=25 introduced=25 notIntroduced=0 sols: 612 612 612 612 101 575 51 25 51 394 35 34 629 391 391 31 73 111 17 448 561 570 557 572 566 
+File created: domCases25cas3op.json
+Successfully wrote to the file domCases25cas3op
+
+resources/partitionsInc/domCases5cas0op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 570 557 572 566 612 
+File created: domCases5cas0op.json
+Successfully wrote to the file domCases5cas0op
+
+resources/partitionsInc/domCasesExp35cas6op.dat domain-cases=35 introduced=32 notIntroduced=3 sols: 31 575 306 568 564 51 25 51 73 111 612 612 612 612 612 570 571 562 572 61 391 65 33 101 31 34 448 398 398 51 612 612 612 612 612 
+File created: domCasesExp35cas6op.json
+Successfully wrote to the file domCasesExp35cas6op
+
+resources/partitionsInc/part35cas8op.dat domain-cases=35 introduced=35 notIntroduced=0 sols: 394 612 629 612 91 612 385 612 571 25 612 612 31 51 398 398 34 570 394 34 612 568 391 73 572 564 33 306 612 101 65 17 29 575 391 
+File created: part35cas8op.json
+Successfully wrote to the file part35cas8op
+
+resources/partitionsInc/domCases25cas0op.dat domain-cases=25 introduced=25 notIntroduced=0 sols: 570 557 572 566 612 612 385 35 34 629 391 391 571 612 34 612 612 612 612 101 61 91 612 612 568 
+File created: domCases25cas0op.json
+Successfully wrote to the file domCases25cas0op
+
+resources/partitionsInc/domCases40cas0op.dat domain-cases=40 introduced=40 notIntroduced=0 sols: 570 557 572 566 612 612 385 35 34 629 391 391 571 612 34 612 612 612 612 101 61 91 612 612 568 34 29 31 73 111 17 448 612 398 398 575 51 25 51 394 
+File created: domCases40cas0op.json
+Successfully wrote to the file domCases40cas0op
+
+resources/partitionsInc/part25cas8op.dat domain-cases=25 introduced=25 notIntroduced=0 sols: 394 612 629 612 91 612 385 612 571 25 612 612 31 51 398 398 34 570 394 34 612 568 391 73 572 
+File created: part25cas8op.json
+Successfully wrote to the file part25cas8op
+
+resources/partitionsInc/domCases45cas5op.dat domain-cases=45 introduced=40 notIntroduced=5 sols: 34 29 31 73 111 35 34 629 391 391 25 51 394 394 306 101 61 91 612 612 557 572 566 612 612 448 612 398 398 575 612 34 612 612 612 559 562 33 564 561 34 29 31 73 111 
+File created: domCases45cas5op.json
+Successfully wrote to the file domCases45cas5op
+
+resources/partitionsInc/part20cas7op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 612 391 448 612 612 65 51 612 61 564 557 566 29 73 562 559 394 34 391 398 
+File created: part20cas7op.json
+Successfully wrote to the file part20cas7op
+
+resources/partitionsInc/domCasesExp35cas2op.dat domain-cases=35 introduced=27 notIntroduced=8 sols: 35 34 34 34 448 391 391 65 33 101 571 562 572 61 29 612 612 612 35 34 17 394 394 391 391 566 629 570 571 562 612 612 612 612 612 
+File created: domCasesExp35cas2op.json
+Successfully wrote to the file domCasesExp35cas2op
+
+resources/partitionsInc/part20cas9op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 391 612 612 394 31 398 564 562 398 612 25 91 575 572 51 612 29 34 34 561 
+File created: part20cas9op.json
+Successfully wrote to the file part20cas9op
+
+resources/partitionsInc/part15cas3op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 612 612 391 398 391 561 568 629 73 17 612 101 385 612 612 
+File created: part15cas3op.json
+Successfully wrote to the file part15cas3op
+
+resources/partitionsInc/part35cas7op.dat domain-cases=35 introduced=35 notIntroduced=0 sols: 612 391 448 612 612 65 51 612 61 564 557 566 29 73 562 559 394 34 391 398 575 385 34 33 35 629 612 25 398 561 31 612 51 571 306 
+File created: part35cas7op.json
+Successfully wrote to the file part35cas7op
+
+resources/partitionsInc/part5cas2op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 566 29 612 575 31 
+File created: part5cas2op.json
+Successfully wrote to the file part5cas2op
+
+resources/partitionsInc/domCases20cas9op.dat domain-cases=20 introduced=11 notIntroduced=9 sols: 33 564 561 570 557 561 570 557 572 566 557 572 566 612 612 566 612 612 385 35 
+File created: domCases20cas9op.json
+Successfully wrote to the file domCases20cas9op
+
+resources/partitionsInc/domCases30cas4op.dat domain-cases=30 introduced=18 notIntroduced=12 sols: 61 91 612 612 568 33 564 561 570 557 612 612 568 34 29 561 570 557 572 566 568 34 29 31 73 557 572 566 612 612 
+File created: domCases30cas4op.json
+Successfully wrote to the file domCases30cas4op
+
+resources/partitionsInc/part5cas8op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 394 612 629 612 91 
+File created: part5cas8op.json
+Successfully wrote to the file part5cas8op
+
+resources/partitionsInc/domCasesExp10cas3op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 398 398 51 25 51 559 561 566 629 570 
+File created: domCasesExp10cas3op.json
+Successfully wrote to the file domCasesExp10cas3op
+
+resources/partitionsInc/domCasesExp35cas0op.dat domain-cases=35 introduced=35 notIntroduced=0 sols: 612 612 612 612 612 612 612 612 612 612 35 34 34 34 448 398 398 51 25 51 73 111 17 394 394 391 391 65 33 101 31 575 306 568 564 
+File created: domCasesExp35cas0op.json
+Successfully wrote to the file domCasesExp35cas0op
+
+resources/partitionsInc/domCases30cas9op.dat domain-cases=30 introduced=15 notIntroduced=15 sols: 33 564 561 570 557 561 570 557 572 566 557 572 566 612 612 566 612 612 385 35 612 385 35 34 629 35 34 629 391 391 
+File created: domCases30cas9op.json
+Successfully wrote to the file domCases30cas9op
+
+resources/partitionsInc/domCases30cas8op.dat domain-cases=30 introduced=20 notIntroduced=10 sols: 394 306 65 559 562 25 51 394 394 306 398 575 51 25 51 448 612 398 398 575 73 111 17 448 612 34 29 31 73 111 
+File created: domCases30cas8op.json
+Successfully wrote to the file domCases30cas8op
+
+resources/partitionsInc/domCasesExp5cas2op.dat domain-cases=5 introduced=5 notIntroduced=0 sols: 35 34 34 34 448 
+File created: domCasesExp5cas2op.json
+Successfully wrote to the file domCasesExp5cas2op
+
+resources/partitionsInc/domCases35cas7op.dat domain-cases=35 introduced=30 notIntroduced=5 sols: 575 51 25 51 394 31 73 111 17 448 101 61 91 612 612 391 571 612 34 612 566 612 612 385 35 559 562 33 564 561 575 51 25 51 394 
+File created: domCases35cas7op.json
+Successfully wrote to the file domCases35cas7op
+
+resources/partitionsInc/domCasesExp15cas1op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 612 612 612 612 612 398 398 51 25 51 391 391 65 33 101 
+File created: domCasesExp15cas1op.json
+Successfully wrote to the file domCasesExp15cas1op
+
+resources/partitionsInc/domCases30cas7op.dat domain-cases=30 introduced=30 notIntroduced=0 sols: 575 51 25 51 394 31 73 111 17 448 101 61 91 612 612 391 571 612 34 612 566 612 612 385 35 559 562 33 564 561 
+File created: domCases30cas7op.json
+Successfully wrote to the file domCases30cas7op
+
+resources/partitionsInc/domCasesExp25cas1op.dat domain-cases=25 introduced=25 notIntroduced=0 sols: 612 612 612 612 612 398 398 51 25 51 391 391 65 33 101 559 561 566 629 570 91 557 385 612 612 
+File created: domCasesExp25cas1op.json
+Successfully wrote to the file domCasesExp25cas1op
+
+resources/partitionsInc/part30cas4op.dat domain-cases=30 introduced=30 notIntroduced=0 sols: 306 564 31 566 17 29 391 398 34 561 398 34 612 391 51 559 557 612 571 612 612 101 612 33 51 575 111 65 91 25 
+File created: part30cas4op.json
+Successfully wrote to the file part30cas4op
+
+resources/partitionsInc/part20cas1op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 612 572 61 398 564 612 571 51 559 91 25 65 612 101 568 35 629 575 34 51 
+File created: part20cas1op.json
+Successfully wrote to the file part20cas1op
+
+resources/partitionsInc/domCases35cas9op.dat domain-cases=35 introduced=17 notIntroduced=18 sols: 33 564 561 570 557 561 570 557 572 566 557 572 566 612 612 566 612 612 385 35 612 385 35 34 629 35 34 629 391 391 629 391 391 571 612 
+File created: domCases35cas9op.json
+Successfully wrote to the file domCases35cas9op
+
+resources/partitionsInc/part40cas1op.dat domain-cases=40 introduced=40 notIntroduced=0 sols: 612 572 61 398 564 612 571 51 559 91 25 65 612 101 568 35 629 575 34 51 385 111 17 612 73 612 566 557 398 391 394 612 612 33 612 29 612 570 306 394 
+File created: part40cas1op.json
+Successfully wrote to the file part40cas1op
+
+resources/partitionsInc/domCases45cas9op.dat domain-cases=45 introduced=21 notIntroduced=24 sols: 33 564 561 570 557 561 570 557 572 566 557 572 566 612 612 566 612 612 385 35 612 385 35 34 629 35 34 629 391 391 629 391 391 571 612 391 571 612 34 612 612 34 612 612 612 
+File created: domCases45cas9op.json
+Successfully wrote to the file domCases45cas9op
+
+resources/partitionsInc/domCasesExp10cas4op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 73 111 17 394 394 91 557 385 612 612 
+File created: domCasesExp10cas4op.json
+Successfully wrote to the file domCasesExp10cas4op
+
+resources/partitionsInc/domCases10cas3op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 612 612 612 612 101 575 51 25 51 394 
+File created: domCases10cas3op.json
+Successfully wrote to the file domCases10cas3op
+
+resources/partitionsInc/domCases35cas1op.dat domain-cases=35 introduced=29 notIntroduced=6 sols: 612 385 35 34 629 612 612 612 612 101 34 29 31 73 111 575 51 25 51 394 33 564 561 570 557 35 34 629 391 391 612 612 101 61 91 
+File created: domCases35cas1op.json
+Successfully wrote to the file domCases35cas1op
+
+resources/partitionsInc/domCasesExp35cas3op.dat domain-cases=35 introduced=33 notIntroduced=2 sols: 398 398 51 25 51 559 561 566 629 570 612 612 612 35 34 65 33 101 31 575 385 612 612 612 612 51 73 111 17 394 570 571 562 572 61 
+File created: domCasesExp35cas3op.json
+Successfully wrote to the file domCasesExp35cas3op
+
+resources/partitionsInc/domCases45cas3op.dat domain-cases=45 introduced=39 notIntroduced=6 sols: 612 612 612 612 101 575 51 25 51 394 35 34 629 391 391 31 73 111 17 448 561 570 557 572 566 101 61 91 612 612 394 394 306 65 559 391 571 612 34 612 448 612 398 398 575 
+File created: domCases45cas3op.json
+Successfully wrote to the file domCases45cas3op
+
+resources/partitionsInc/part10cas8op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 394 612 629 612 91 612 385 612 571 25 
+File created: part10cas8op.json
+Successfully wrote to the file part10cas8op
+
+resources/partitionsInc/domCasesExp15cas5op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 391 391 65 33 101 612 612 612 35 34 566 629 570 571 562 
+File created: domCasesExp15cas5op.json
+Successfully wrote to the file domCasesExp15cas5op
+
+resources/partitionsInc/domCasesExp25cas3op.dat domain-cases=25 introduced=25 notIntroduced=0 sols: 398 398 51 25 51 559 561 566 629 570 612 612 612 35 34 65 33 101 31 575 385 612 612 612 612 
+File created: domCasesExp25cas3op.json
+Successfully wrote to the file domCasesExp25cas3op
+
+resources/partitionsInc/domCases45cas0op.dat domain-cases=45 introduced=45 notIntroduced=0 sols: 570 557 572 566 612 612 385 35 34 629 391 391 571 612 34 612 612 612 612 101 61 91 612 612 568 34 29 31 73 111 17 448 612 398 398 575 51 25 51 394 394 306 65 559 562 
+File created: domCases45cas0op.json
+Successfully wrote to the file domCases45cas0op
+
+resources/partitionsInc/part45cas2op.dat domain-cases=45 introduced=45 notIntroduced=0 sols: 566 29 612 575 31 557 91 25 564 35 33 612 391 73 571 385 612 448 559 562 612 65 570 612 398 51 612 394 51 612 34 391 34 612 561 572 568 111 398 629 394 306 61 612 612 
+File created: part45cas2op.json
+Successfully wrote to the file part45cas2op
+
+resources/partitionsInc/domCasesExp25cas2op.dat domain-cases=25 introduced=21 notIntroduced=4 sols: 35 34 34 34 448 391 391 65 33 101 571 562 572 61 29 612 612 612 35 34 17 394 394 391 391 
+File created: domCasesExp25cas2op.json
+Successfully wrote to the file domCasesExp25cas2op
+
+resources/partitionsInc/domCasesExp20cas4op.dat domain-cases=20 introduced=14 notIntroduced=6 sols: 73 111 17 394 394 91 557 385 612 612 17 394 394 391 391 385 612 612 612 612 
+File created: domCasesExp20cas4op.json
+Successfully wrote to the file domCasesExp20cas4op
+
+resources/partitionsInc/part15cas7op.dat domain-cases=15 introduced=15 notIntroduced=0 sols: 612 391 448 612 612 65 51 612 61 564 557 566 29 73 562 
+File created: part15cas7op.json
+Successfully wrote to the file part15cas7op
+
+resources/partitionsInc/domCases10cas6op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 17 448 612 398 398 612 612 101 61 91 
+File created: domCases10cas6op.json
+Successfully wrote to the file domCases10cas6op

@@ -1,0 +1,767 @@
+File NOT Translated (EXCEPTION): argCasesFull5op.dat
+
+resources/partArgInc/partArg18cas4ValPref8op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 51 51 25 25 25 51 51 25 398 398 398 398 398 398 398 398 398 448 
+18 argCases introduced
+File created: partArg18cas4ValPref8op.json
+Successfully wrote to the file partArg18cas4ValPref8op
+
+resources/partArgInc/argCases1op.dat domain-cases=22 introduced=22 notIntroduced=0 sols: 398 398 51 51 398 51 51 398 398 448 398 398 398 25 398 51 51 398 51 51 398 398 
+22 argCases introduced
+File created: argCases1op.json
+Successfully wrote to the file argCases1op
+
+resources/partArgInc/partArg19cas5ValPref5op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 51 51 51 51 51 51 51 25 25 25 448 448 448 448 448 448 448 448 398 448 
+20 argCases introduced
+File created: partArg19cas5ValPref5op.json
+Successfully wrote to the file partArg19cas5ValPref5op
+
+resources/partArgInc/partArg18cas4ValPref6op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 25 25 25 25 25 25 25 448 448 25 25 448 25 448 398 398 398 25 448 398 
+20 argCases introduced
+File created: partArg18cas4ValPref6op.json
+Successfully wrote to the file partArg18cas4ValPref6op
+
+resources/partArgInc/partArg8cas5op.dat domain-cases=8 introduced=8 notIntroduced=0 sols: 448 448 51 448 398 25 448 51 
+8 argCases introduced
+File created: partArg8cas5op.json
+Successfully wrote to the file partArg8cas5op
+
+resources/partArgInc/partArg19cas0ValPref7op.dat domain-cases=0 introduced=0 notIntroduced=0 sols: 
+0 argCases introduced
+File NOT Translated (Not cases loaded): partArg19cas0ValPref7op
+
+resources/partArgInc/argCases6op.dat domain-cases=21 introduced=21 notIntroduced=0 sols: 25 448 25 25 398 25 25 398 25 448 448 398 25 448 448 25 25 398 25 25 448 
+21 argCases introduced
+File created: argCases6op.json
+Successfully wrote to the file argCases6op
+
+resources/partArgInc/partArg14cas1op.dat domain-cases=14 introduced=14 notIntroduced=0 sols: 398 398 51 51 398 51 51 398 398 448 398 398 398 25 
+14 argCases introduced
+File created: partArg14cas1op.json
+Successfully wrote to the file partArg14cas1op
+
+resources/partArgInc/partArg18cas4ValPref7op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 25 25 25 25 25 25 25 448 448 25 25 448 448 25 51 448 448 448 398 398 
+20 argCases introduced
+File created: partArg18cas4ValPref7op.json
+Successfully wrote to the file partArg18cas4ValPref7op
+
+resources/partArgInc/partArg19cas5ValPref6op.dat domain-cases=19 introduced=19 notIntroduced=0 sols: 25 25 25 25 25 25 25 25 448 25 448 448 25 25 448 398 398 448 448 
+19 argCases introduced
+File created: partArg19cas5ValPref6op.json
+Successfully wrote to the file partArg19cas5ValPref6op
+
+resources/partArgInc/partArg16cas0op.dat domain-cases=16 introduced=16 notIntroduced=0 sols: 448 448 398 51 448 448 51 448 448 51 51 25 51 448 448 398 
+16 argCases introduced
+File created: partArg16cas0op.json
+Successfully wrote to the file partArg16cas0op
+
+resources/partArgInc/partArg6cas1op.dat domain-cases=6 introduced=6 notIntroduced=0 sols: 398 398 51 51 398 51 
+6 argCases introduced
+File created: partArg6cas1op.json
+Successfully wrote to the file partArg6cas1op
+
+resources/partArgInc/partArg10cas5op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 448 448 51 448 398 25 448 51 448 448 
+10 argCases introduced
+File created: partArg10cas5op.json
+Successfully wrote to the file partArg10cas5op
+
+resources/partArgInc/partArg2cas7op.dat domain-cases=2 introduced=2 notIntroduced=0 sols: 398 448 
+2 argCases introduced
+File created: partArg2cas7op.json
+Successfully wrote to the file partArg2cas7op
+
+resources/partArgInc/partArg2cas3op.dat domain-cases=2 introduced=2 notIntroduced=0 sols: 448 448 
+2 argCases introduced
+File created: partArg2cas3op.json
+Successfully wrote to the file partArg2cas3op
+
+resources/partArgInc/partArg18cas3ValPref5op.dat domain-cases=19 introduced=19 notIntroduced=0 sols: 51 51 51 51 51 51 51 25 25 25 448 448 448 448 448 448 448 448 398 
+19 argCases introduced
+File created: partArg18cas3ValPref5op.json
+Successfully wrote to the file partArg18cas3ValPref5op
+
+resources/partArgInc/partArg19cas5ValPref3op.dat domain-cases=14 introduced=14 notIntroduced=0 sols: 398 398 398 398 398 398 398 398 448 398 448 448 51 51 
+14 argCases introduced
+File created: partArg19cas5ValPref3op.json
+Successfully wrote to the file partArg19cas5ValPref3op
+
+resources/partArgInc/partArg18cas3ValPref0op.dat domain-cases=17 introduced=17 notIntroduced=0 sols: 448 51 51 51 448 448 51 51 51 51 448 448 448 448 398 398 25 
+17 argCases introduced
+File created: partArg18cas3ValPref0op.json
+Successfully wrote to the file partArg18cas3ValPref0op
+
+resources/partArgInc/partArg12cas8op.dat domain-cases=12 introduced=12 notIntroduced=0 sols: 398 51 398 25 51 25 398 398 448 398 448 398 
+12 argCases introduced
+File created: partArg12cas8op.json
+Successfully wrote to the file partArg12cas8op
+
+resources/partArgInc/partArg18cas6op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 25 448 25 25 398 25 25 398 25 448 448 398 25 448 448 25 25 398 
+18 argCases introduced
+File created: partArg18cas6op.json
+Successfully wrote to the file partArg18cas6op
+
+resources/partArgInc/partArg19cas0ValPref5op.dat domain-cases=0 introduced=0 notIntroduced=0 sols: 
+0 argCases introduced
+File NOT Translated (Not cases loaded): partArg19cas0ValPref5op
+
+resources/partArgInc/partArg19cas2ValPref3op.dat domain-cases=13 introduced=13 notIntroduced=0 sols: 398 398 398 398 398 398 398 398 448 448 398 448 51 
+13 argCases introduced
+File created: partArg19cas2ValPref3op.json
+Successfully wrote to the file partArg19cas2ValPref3op
+
+resources/partArgInc/partArg8cas1op.dat domain-cases=8 introduced=8 notIntroduced=0 sols: 398 398 51 51 398 51 51 398 
+8 argCases introduced
+File created: partArg8cas1op.json
+Successfully wrote to the file partArg8cas1op
+
+resources/partArgInc/argCases2op.dat domain-cases=19 introduced=19 notIntroduced=0 sols: 25 25 398 398 51 25 398 51 398 25 25 398 398 398 398 25 25 25 398 
+19 argCases introduced
+File created: argCases2op.json
+Successfully wrote to the file argCases2op
+
+resources/partArgInc/partArg2cas4op.dat domain-cases=2 introduced=2 notIntroduced=0 sols: 51 448 
+2 argCases introduced
+File created: partArg2cas4op.json
+Successfully wrote to the file partArg2cas4op
+
+resources/partArgInc/partArg0cas2op.dat domain-cases=0 introduced=0 notIntroduced=0 sols: 
+0 argCases introduced
+File NOT Translated (Not cases loaded): partArg0cas2op
+
+resources/partArgInc/partArg4cas3op.dat domain-cases=4 introduced=4 notIntroduced=0 sols: 448 448 398 398 
+4 argCases introduced
+File created: partArg4cas3op.json
+Successfully wrote to the file partArg4cas3op
+
+resources/partArgInc/partArg14cas5op.dat domain-cases=14 introduced=14 notIntroduced=0 sols: 448 448 51 448 398 25 448 51 448 448 51 25 51 448 
+14 argCases introduced
+File created: partArg14cas5op.json
+Successfully wrote to the file partArg14cas5op
+
+resources/partArgInc/partArg16cas8op.dat domain-cases=16 introduced=16 notIntroduced=0 sols: 398 51 398 25 51 25 398 398 448 398 448 398 25 25 398 398 
+16 argCases introduced
+File created: partArg16cas8op.json
+Successfully wrote to the file partArg16cas8op
+
+resources/partArgInc/partArg18cas4ValPref3op.dat domain-cases=14 introduced=14 notIntroduced=0 sols: 398 398 398 398 398 398 398 448 448 398 448 51 51 51 
+14 argCases introduced
+File created: partArg18cas4ValPref3op.json
+Successfully wrote to the file partArg18cas4ValPref3op
+
+resources/partArgInc/partArg12cas2op.dat domain-cases=12 introduced=12 notIntroduced=0 sols: 25 25 398 398 51 25 398 51 398 25 25 398 
+12 argCases introduced
+File created: partArg12cas2op.json
+Successfully wrote to the file partArg12cas2op
+
+resources/partArgInc/partArg20cas5op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 448 448 51 448 398 25 448 51 448 448 51 25 51 448 51 51 448 51 448 25 
+20 argCases introduced
+File created: partArg20cas5op.json
+Successfully wrote to the file partArg20cas5op
+
+resources/partArgInc/partArg6cas7op.dat domain-cases=6 introduced=6 notIntroduced=0 sols: 398 448 51 25 25 25 
+6 argCases introduced
+File created: partArg6cas7op.json
+Successfully wrote to the file partArg6cas7op
+
+resources/partArgInc/partArg4cas8op.dat domain-cases=4 introduced=4 notIntroduced=0 sols: 398 51 398 25 
+4 argCases introduced
+File created: partArg4cas8op.json
+Successfully wrote to the file partArg4cas8op
+
+resources/partArgInc/partArg16cas2op.dat domain-cases=16 introduced=16 notIntroduced=0 sols: 25 25 398 398 51 25 398 51 398 25 25 398 398 398 398 25 
+16 argCases introduced
+File created: partArg16cas2op.json
+Successfully wrote to the file partArg16cas2op
+
+resources/partArgInc/partArg19cas2ValPref8op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 51 51 25 25 25 51 51 25 398 398 398 398 398 398 398 398 398 448 
+18 argCases introduced
+File created: partArg19cas2ValPref8op.json
+Successfully wrote to the file partArg19cas2ValPref8op
+
+resources/partArgInc/partArg14cas6op.dat domain-cases=14 introduced=14 notIntroduced=0 sols: 25 448 25 25 398 25 25 398 25 448 448 398 25 448 
+14 argCases introduced
+File created: partArg14cas6op.json
+Successfully wrote to the file partArg14cas6op
+
+File NOT Translated (EXCEPTION): partArg19cas2ValPref4op.dat
+
+resources/partArgInc/partArg18cas7op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 398 448 51 25 25 25 448 25 25 448 25 25 25 25 398 448 448 448 
+18 argCases introduced
+File created: partArg18cas7op.json
+Successfully wrote to the file partArg18cas7op
+
+resources/partArgInc/partArg14cas2op.dat domain-cases=14 introduced=14 notIntroduced=0 sols: 25 25 398 398 51 25 398 51 398 25 25 398 398 398 
+14 argCases introduced
+File created: partArg14cas2op.json
+Successfully wrote to the file partArg14cas2op
+
+resources/partArgInc/partArg12cas0op.dat domain-cases=12 introduced=12 notIntroduced=0 sols: 448 448 398 51 448 448 51 448 448 51 51 25 
+12 argCases introduced
+File created: partArg12cas0op.json
+Successfully wrote to the file partArg12cas0op
+
+resources/partArgInc/partArg4cas0op.dat domain-cases=4 introduced=4 notIntroduced=0 sols: 448 448 398 51 
+4 argCases introduced
+File created: partArg4cas0op.json
+Successfully wrote to the file partArg4cas0op
+
+resources/partArgInc/partArg19cas2ValPref7op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 25 25 25 25 25 25 25 25 448 448 25 448 51 448 448 448 448 398 398 448 
+20 argCases introduced
+File created: partArg19cas2ValPref7op.json
+Successfully wrote to the file partArg19cas2ValPref7op
+
+resources/partArgInc/partArg18cas1ValPref1op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 398 398 51 51 398 51 51 398 398 448 398 398 398 25 398 51 51 398 
+18 argCases introduced
+File created: partArg18cas1ValPref1op.json
+Successfully wrote to the file partArg18cas1ValPref1op
+
+File NOT Translated (EXCEPTION): partArg19cas5ValPref4op.dat
+
+resources/partArgInc/partArg19cas5ValPref0op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 448 51 51 51 51 448 448 51 51 51 448 448 448 398 398 25 448 448 
+18 argCases introduced
+File created: partArg19cas5ValPref0op.json
+Successfully wrote to the file partArg19cas5ValPref0op
+
+File NOT Translated (EXCEPTION): partArg18cas1ValPref4op.dat
+
+resources/partArgInc/partArg18cas4ValPref4op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 51 51 51 51 51 51 448 448 448 448 51 448 448 448 448 448 51 51 448 448 
+20 argCases introduced
+File created: partArg18cas4ValPref4op.json
+Successfully wrote to the file partArg18cas4ValPref4op
+
+resources/partArgInc/partArg8cas0op.dat domain-cases=8 introduced=8 notIntroduced=0 sols: 448 448 398 51 448 448 51 448 
+8 argCases introduced
+File created: partArg8cas0op.json
+Successfully wrote to the file partArg8cas0op
+
+File NOT Translated (EXCEPTION): argCasesFull8op.dat
+
+resources/partArgInc/partArg10cas6op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 25 448 25 25 398 25 25 398 25 448 
+10 argCases introduced
+File created: partArg10cas6op.json
+Successfully wrote to the file partArg10cas6op
+
+resources/partArgInc/partArg2cas5op.dat domain-cases=2 introduced=2 notIntroduced=0 sols: 448 448 
+2 argCases introduced
+File created: partArg2cas5op.json
+Successfully wrote to the file partArg2cas5op
+
+resources/partArgInc/partArg6cas0op.dat domain-cases=6 introduced=6 notIntroduced=0 sols: 448 448 398 51 448 448 
+6 argCases introduced
+File created: partArg6cas0op.json
+Successfully wrote to the file partArg6cas0op
+
+resources/partArgInc/partArg10cas7op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 398 448 51 25 25 25 448 25 25 448 
+10 argCases introduced
+File created: partArg10cas7op.json
+Successfully wrote to the file partArg10cas7op
+
+resources/partArgInc/partArg18cas1ValPref6op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 25 448 25 25 398 25 25 398 25 448 448 398 25 448 448 25 25 398 
+18 argCases introduced
+File created: partArg18cas1ValPref6op.json
+Successfully wrote to the file partArg18cas1ValPref6op
+
+resources/partArgInc/partArg18cas3ValPref6op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 25 25 25 25 25 25 25 448 25 25 448 448 25 448 398 398 398 25 448 398 
+20 argCases introduced
+File created: partArg18cas3ValPref6op.json
+Successfully wrote to the file partArg18cas3ValPref6op
+
+resources/partArgInc/partArg12cas6op.dat domain-cases=12 introduced=12 notIntroduced=0 sols: 25 448 25 25 398 25 25 398 25 448 448 398 
+12 argCases introduced
+File created: partArg12cas6op.json
+Successfully wrote to the file partArg12cas6op
+
+resources/partArgInc/partArg12cas1op.dat domain-cases=12 introduced=12 notIntroduced=0 sols: 398 398 51 51 398 51 51 398 398 448 398 398 
+12 argCases introduced
+File created: partArg12cas1op.json
+Successfully wrote to the file partArg12cas1op
+
+resources/partArgInc/partArg8cas3op.dat domain-cases=8 introduced=8 notIntroduced=0 sols: 448 448 398 398 398 398 51 448 
+8 argCases introduced
+File created: partArg8cas3op.json
+Successfully wrote to the file partArg8cas3op
+
+resources/partArgInc/partArg0cas5op.dat domain-cases=0 introduced=0 notIntroduced=0 sols: 
+0 argCases introduced
+File NOT Translated (Not cases loaded): partArg0cas5op
+
+resources/partArgInc/partArg14cas8op.dat domain-cases=14 introduced=14 notIntroduced=0 sols: 398 51 398 25 51 25 398 398 448 398 448 398 25 25 
+14 argCases introduced
+File created: partArg14cas8op.json
+Successfully wrote to the file partArg14cas8op
+
+resources/partArgInc/partArg2cas6op.dat domain-cases=2 introduced=2 notIntroduced=0 sols: 25 448 
+2 argCases introduced
+File created: partArg2cas6op.json
+Successfully wrote to the file partArg2cas6op
+
+resources/partArgInc/partArg12cas7op.dat domain-cases=12 introduced=12 notIntroduced=0 sols: 398 448 51 25 25 25 448 25 25 448 25 25 
+12 argCases introduced
+File created: partArg12cas7op.json
+Successfully wrote to the file partArg12cas7op
+
+resources/partArgInc/partArg0cas0op.dat domain-cases=0 introduced=0 notIntroduced=0 sols: 
+0 argCases introduced
+File NOT Translated (Not cases loaded): partArg0cas0op
+
+resources/partArgInc/partArg0cas3op.dat domain-cases=0 introduced=0 notIntroduced=0 sols: 
+0 argCases introduced
+File NOT Translated (Not cases loaded): partArg0cas3op
+
+resources/partArgInc/partArg4cas4op.dat domain-cases=4 introduced=4 notIntroduced=0 sols: 51 448 448 51 
+4 argCases introduced
+File created: partArg4cas4op.json
+Successfully wrote to the file partArg4cas4op
+
+resources/partArgInc/partArg18cas3op.dat domain-cases=14 introduced=14 notIntroduced=0 sols: 448 448 398 398 398 398 51 448 398 398 51 398 398 51 
+14 argCases introduced
+File created: partArg18cas3op.json
+Successfully wrote to the file partArg18cas3op
+
+File NOT Translated (EXCEPTION): partArg12cas4op.dat
+
+resources/partArgInc/partArg8cas7op.dat domain-cases=8 introduced=8 notIntroduced=0 sols: 398 448 51 25 25 25 448 25 
+8 argCases introduced
+File created: partArg8cas7op.json
+Successfully wrote to the file partArg8cas7op
+
+resources/partArgInc/partArg18cas5op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 448 448 51 448 398 25 448 51 448 448 51 25 51 448 51 51 448 51 
+18 argCases introduced
+File created: partArg18cas5op.json
+Successfully wrote to the file partArg18cas5op
+
+resources/partArgInc/partArg18cas3ValPref3op.dat domain-cases=11 introduced=11 notIntroduced=0 sols: 398 398 398 398 398 398 398 448 448 51 51 
+11 argCases introduced
+File created: partArg18cas3ValPref3op.json
+Successfully wrote to the file partArg18cas3ValPref3op
+
+resources/partArgInc/argCases8op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 398 51 398 25 51 25 398 398 448 398 448 398 25 25 398 398 51 398 51 398 
+20 argCases introduced
+File created: argCases8op.json
+Successfully wrote to the file argCases8op
+
+resources/partArgInc/partArg19cas2ValPref0op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 448 448 51 51 51 448 448 51 51 51 51 448 448 448 398 398 25 448 
+18 argCases introduced
+File created: partArg19cas2ValPref0op.json
+Successfully wrote to the file partArg19cas2ValPref0op
+
+resources/partArgInc/partArg18cas1ValPref7op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 398 448 51 25 25 25 448 25 25 448 25 25 25 25 398 448 448 448 
+18 argCases introduced
+File created: partArg18cas1ValPref7op.json
+Successfully wrote to the file partArg18cas1ValPref7op
+
+resources/partArgInc/partArg20cas8op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 398 51 398 25 51 25 398 398 448 398 448 398 25 25 398 398 51 398 398 51 
+20 argCases introduced
+File created: partArg20cas8op.json
+Successfully wrote to the file partArg20cas8op
+
+resources/partArgInc/partArg19cas5ValPref8op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 51 51 25 25 25 51 51 25 398 398 398 398 398 398 398 398 398 398 448 448 
+20 argCases introduced
+File created: partArg19cas5ValPref8op.json
+Successfully wrote to the file partArg19cas5ValPref8op
+
+File NOT Translated (EXCEPTION): argCasesFull4op.dat
+
+resources/partArgInc/partArg18cas3ValPref4op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 51 51 51 51 448 51 51 448 448 51 448 448 448 448 448 448 51 51 448 448 
+20 argCases introduced
+File created: partArg18cas3ValPref4op.json
+Successfully wrote to the file partArg18cas3ValPref4op
+
+resources/partArgInc/argCases.dat domain-cases=169 introduced=169 notIntroduced=0 sols: 448 448 51 51 51 51 51 51 448 51 448 448 448 448 398 398 25 448 25 51 51 51 51 51 51 51 398 398 398 398 398 398 398 398 51 398 398 398 25 398 25 25 25 25 25 25 25 51 51 25 398 398 398 398 398 398 398 398 398 398 398 398 398 398 398 398 398 448 448 398 51 51 51 51 51 51 51 51 51 448 448 448 51 448 448 448 448 448 448 51 51 448 448 51 51 51 51 51 51 51 25 25 25 448 448 448 448 448 448 448 448 398 25 25 25 25 25 25 25 448 25 25 448 25 448 25 448 398 398 448 398 25 25 25 25 25 25 25 25 448 25 448 448 51 25 448 448 448 448 398 398 51 51 25 25 25 51 51 25 398 398 398 398 398 398 398 398 398 448 
+169 argCases introduced
+File created: argCases.json
+Successfully wrote to the file argCases
+
+File NOT Translated (EXCEPTION): argCasesFull0op.dat
+
+File NOT Translated (EXCEPTION): partArg14cas4op.dat
+
+resources/partArgInc/partArg2cas8op.dat domain-cases=2 introduced=2 notIntroduced=0 sols: 398 51 
+2 argCases introduced
+File created: partArg2cas8op.json
+Successfully wrote to the file partArg2cas8op
+
+resources/partArgInc/partArg0cas4op.dat domain-cases=0 introduced=0 notIntroduced=0 sols: 
+0 argCases introduced
+File NOT Translated (Not cases loaded): partArg0cas4op
+
+resources/partArgInc/partArg19cas5ValPref2op.dat domain-cases=19 introduced=19 notIntroduced=0 sols: 25 25 25 25 25 25 25 51 51 25 398 398 398 398 398 398 398 398 398 
+19 argCases introduced
+File created: partArg19cas5ValPref2op.json
+Successfully wrote to the file partArg19cas5ValPref2op
+
+File NOT Translated (EXCEPTION): partArg16cas4op.dat
+
+resources/partArgInc/partArg6cas2op.dat domain-cases=6 introduced=6 notIntroduced=0 sols: 25 25 398 398 51 25 
+6 argCases introduced
+File created: partArg6cas2op.json
+Successfully wrote to the file partArg6cas2op
+
+File NOT Translated (EXCEPTION): argCasesFull2op.dat
+
+resources/partArgInc/partArg2cas2op.dat domain-cases=2 introduced=2 notIntroduced=0 sols: 25 25 
+2 argCases introduced
+File created: partArg2cas2op.json
+Successfully wrote to the file partArg2cas2op
+
+resources/partArgInc/partArg6cas4op.dat domain-cases=6 introduced=6 notIntroduced=0 sols: 51 448 448 51 448 51 
+6 argCases introduced
+File created: partArg6cas4op.json
+Successfully wrote to the file partArg6cas4op
+
+resources/partArgInc/partArg12cas3op.dat domain-cases=12 introduced=12 notIntroduced=0 sols: 448 448 398 398 398 398 51 448 398 398 51 398 
+12 argCases introduced
+File created: partArg12cas3op.json
+Successfully wrote to the file partArg12cas3op
+
+resources/partArgInc/partArg20cas6op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 25 448 25 25 398 25 25 398 25 448 448 398 25 448 448 25 25 398 25 25 
+20 argCases introduced
+File created: partArg20cas6op.json
+Successfully wrote to the file partArg20cas6op
+
+resources/partArgInc/partArg20cas1op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 398 398 51 51 398 51 51 398 398 448 398 398 398 25 398 51 51 398 398 51 
+20 argCases introduced
+File created: partArg20cas1op.json
+Successfully wrote to the file partArg20cas1op
+
+resources/partArgInc/partArg16cas3op.dat domain-cases=14 introduced=14 notIntroduced=0 sols: 448 448 398 398 398 398 51 448 398 398 51 398 398 51 
+14 argCases introduced
+File created: partArg16cas3op.json
+Successfully wrote to the file partArg16cas3op
+
+File NOT Translated (EXCEPTION): argCasesFull7op.dat
+
+resources/partArgInc/partArg4cas6op.dat domain-cases=4 introduced=4 notIntroduced=0 sols: 25 448 25 25 
+4 argCases introduced
+File created: partArg4cas6op.json
+Successfully wrote to the file partArg4cas6op
+
+resources/partArgInc/partArg6cas3op.dat domain-cases=6 introduced=6 notIntroduced=0 sols: 448 448 398 398 398 398 
+6 argCases introduced
+File created: partArg6cas3op.json
+Successfully wrote to the file partArg6cas3op
+
+resources/partArgInc/argCases7op.dat domain-cases=21 introduced=21 notIntroduced=0 sols: 398 448 51 25 25 25 448 25 25 448 25 25 25 25 398 448 448 448 25 448 448 
+21 argCases introduced
+File created: argCases7op.json
+Successfully wrote to the file argCases7op
+
+resources/partArgInc/partArg18cas1op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 398 398 51 51 398 51 51 398 398 448 398 398 398 25 398 51 51 398 
+18 argCases introduced
+File created: partArg18cas1op.json
+Successfully wrote to the file partArg18cas1op
+
+resources/partArgInc/partArg14cas7op.dat domain-cases=14 introduced=14 notIntroduced=0 sols: 398 448 51 25 25 25 448 25 25 448 25 25 25 25 
+14 argCases introduced
+File created: partArg14cas7op.json
+Successfully wrote to the file partArg14cas7op
+
+resources/partArgInc/partArg16cas5op.dat domain-cases=16 introduced=16 notIntroduced=0 sols: 448 448 51 448 398 25 448 51 448 448 51 25 51 448 51 51 
+16 argCases introduced
+File created: partArg16cas5op.json
+Successfully wrote to the file partArg16cas5op
+
+resources/partArgInc/partArg18cas4ValPref0op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 448 448 51 51 51 448 448 51 51 51 51 448 448 448 398 398 25 448 
+18 argCases introduced
+File created: partArg18cas4ValPref0op.json
+Successfully wrote to the file partArg18cas4ValPref0op
+
+File NOT Translated (EXCEPTION): partArg20cas4op.dat
+
+resources/partArgInc/partArg6cas6op.dat domain-cases=6 introduced=6 notIntroduced=0 sols: 25 448 25 25 398 25 
+6 argCases introduced
+File created: partArg6cas6op.json
+Successfully wrote to the file partArg6cas6op
+
+resources/partArgInc/partArg18cas4ValPref2op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 25 25 25 25 25 25 51 51 25 398 398 398 398 398 398 398 398 398 
+18 argCases introduced
+File created: partArg18cas4ValPref2op.json
+Successfully wrote to the file partArg18cas4ValPref2op
+
+File NOT Translated (EXCEPTION): partArg18cas4op.dat
+
+resources/partArgInc/partArg18cas1ValPref0op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 448 448 398 51 448 448 51 448 448 51 51 25 51 448 448 398 51 51 
+18 argCases introduced
+File created: partArg18cas1ValPref0op.json
+Successfully wrote to the file partArg18cas1ValPref0op
+
+resources/partArgInc/partArg19cas0ValPref0op.dat domain-cases=0 introduced=0 notIntroduced=0 sols: 
+0 argCases introduced
+File NOT Translated (Not cases loaded): partArg19cas0ValPref0op
+
+resources/partArgInc/partArg10cas2op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 25 25 398 398 51 25 398 51 398 25 
+10 argCases introduced
+File created: partArg10cas2op.json
+Successfully wrote to the file partArg10cas2op
+
+resources/partArgInc/partArg19cas5ValPref7op.dat domain-cases=21 introduced=21 notIntroduced=0 sols: 25 25 25 25 25 25 25 25 448 25 448 448 25 51 448 448 448 448 398 398 448 
+21 argCases introduced
+File created: partArg19cas5ValPref7op.json
+Successfully wrote to the file partArg19cas5ValPref7op
+
+resources/partArgInc/partArg19cas5ValPref1op.dat domain-cases=21 introduced=21 notIntroduced=0 sols: 51 51 51 51 51 51 51 398 398 398 398 398 398 398 398 51 398 398 25 398 448 
+21 argCases introduced
+File created: partArg19cas5ValPref1op.json
+Successfully wrote to the file partArg19cas5ValPref1op
+
+resources/partArgInc/partArg16cas1op.dat domain-cases=16 introduced=16 notIntroduced=0 sols: 398 398 51 51 398 51 51 398 398 448 398 398 398 25 398 51 
+16 argCases introduced
+File created: partArg16cas1op.json
+Successfully wrote to the file partArg16cas1op
+
+resources/partArgInc/partArg6cas5op.dat domain-cases=6 introduced=6 notIntroduced=0 sols: 448 448 51 448 398 25 
+6 argCases introduced
+File created: partArg6cas5op.json
+Successfully wrote to the file partArg6cas5op
+
+resources/partArgInc/partArg19cas0ValPref2op.dat domain-cases=0 introduced=0 notIntroduced=0 sols: 
+0 argCases introduced
+File NOT Translated (Not cases loaded): partArg19cas0ValPref2op
+
+resources/partArgInc/partArg0cas1op.dat domain-cases=0 introduced=0 notIntroduced=0 sols: 
+0 argCases introduced
+File NOT Translated (Not cases loaded): partArg0cas1op
+
+resources/partArgInc/partArg18cas3ValPref8op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 51 51 25 25 51 51 25 398 398 25 398 398 398 398 398 398 398 448 
+18 argCases introduced
+File created: partArg18cas3ValPref8op.json
+Successfully wrote to the file partArg18cas3ValPref8op
+
+resources/partArgInc/partArg18cas3ValPref7op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 25 25 25 25 25 25 25 448 25 25 448 448 25 51 448 448 448 398 398 448 
+20 argCases introduced
+File created: partArg18cas3ValPref7op.json
+Successfully wrote to the file partArg18cas3ValPref7op
+
+resources/partArgInc/partArg16cas7op.dat domain-cases=16 introduced=16 notIntroduced=0 sols: 398 448 51 25 25 25 448 25 25 448 25 25 25 25 398 448 
+16 argCases introduced
+File created: partArg16cas7op.json
+Successfully wrote to the file partArg16cas7op
+
+resources/partArgInc/partArg12cas5op.dat domain-cases=12 introduced=12 notIntroduced=0 sols: 448 448 51 448 398 25 448 51 448 448 51 25 
+12 argCases introduced
+File created: partArg12cas5op.json
+Successfully wrote to the file partArg12cas5op
+
+File NOT Translated (EXCEPTION): argCases4op.dat
+
+resources/partArgInc/partArg18cas1ValPref5op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 448 448 51 448 398 25 448 51 448 448 51 25 51 448 51 51 448 51 
+18 argCases introduced
+File created: partArg18cas1ValPref5op.json
+Successfully wrote to the file partArg18cas1ValPref5op
+
+resources/partArgInc/partArg18cas8op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 398 51 398 25 51 25 398 398 448 398 448 398 25 25 398 398 51 398 
+18 argCases introduced
+File created: partArg18cas8op.json
+Successfully wrote to the file partArg18cas8op
+
+resources/partArgInc/partArg19cas2ValPref2op.dat domain-cases=19 introduced=19 notIntroduced=0 sols: 25 25 25 25 25 25 25 51 51 25 398 398 398 398 398 398 398 398 398 
+19 argCases introduced
+File created: partArg19cas2ValPref2op.json
+Successfully wrote to the file partArg19cas2ValPref2op
+
+resources/partArgInc/partArg2cas0op.dat domain-cases=2 introduced=2 notIntroduced=0 sols: 448 448 
+2 argCases introduced
+File created: partArg2cas0op.json
+Successfully wrote to the file partArg2cas0op
+
+resources/partArgInc/partArg10cas0op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 448 448 398 51 448 448 51 448 448 51 
+10 argCases introduced
+File created: partArg10cas0op.json
+Successfully wrote to the file partArg10cas0op
+
+resources/partArgInc/partArg20cas7op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 398 448 51 25 25 25 448 25 25 448 25 25 25 25 398 448 448 448 448 448 
+20 argCases introduced
+File created: partArg20cas7op.json
+Successfully wrote to the file partArg20cas7op
+
+resources/partArgInc/argCases5op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 448 448 51 448 398 25 448 51 448 448 51 25 51 448 51 51 448 51 25 448 
+20 argCases introduced
+File created: argCases5op.json
+Successfully wrote to the file argCases5op
+
+File NOT Translated (EXCEPTION): partArg10cas4op.dat
+
+File NOT Translated (EXCEPTION): partArg8cas4op.dat
+
+resources/partArgInc/partArg0cas7op.dat domain-cases=0 introduced=0 notIntroduced=0 sols: 
+0 argCases introduced
+File NOT Translated (Not cases loaded): partArg0cas7op
+
+resources/partArgInc/partArg18cas0op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 448 448 398 51 448 448 51 448 448 51 51 25 51 448 448 398 51 51 
+18 argCases introduced
+File created: partArg18cas0op.json
+Successfully wrote to the file partArg18cas0op
+
+resources/partArgInc/partArg19cas0ValPref1op.dat domain-cases=0 introduced=0 notIntroduced=0 sols: 
+0 argCases introduced
+File NOT Translated (Not cases loaded): partArg19cas0ValPref1op
+
+resources/partArgInc/partArg18cas3ValPref1op.dat domain-cases=21 introduced=21 notIntroduced=0 sols: 51 51 51 51 51 51 398 398 398 398 51 398 398 398 51 398 398 398 398 25 398 
+21 argCases introduced
+File created: partArg18cas3ValPref1op.json
+Successfully wrote to the file partArg18cas3ValPref1op
+
+resources/partArgInc/partArg18cas1ValPref8op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 398 51 398 25 51 25 398 398 448 398 448 398 25 25 398 398 51 398 
+18 argCases introduced
+File created: partArg18cas1ValPref8op.json
+Successfully wrote to the file partArg18cas1ValPref8op
+
+resources/partArgInc/partArg18cas3ValPref2op.dat domain-cases=19 introduced=19 notIntroduced=0 sols: 25 25 25 25 25 25 51 51 25 25 398 398 398 398 398 398 398 398 398 
+19 argCases introduced
+File created: partArg18cas3ValPref2op.json
+Successfully wrote to the file partArg18cas3ValPref2op
+
+resources/partArgInc/partArg14cas3op.dat domain-cases=14 introduced=14 notIntroduced=0 sols: 448 448 398 398 398 398 51 448 398 398 51 398 398 51 
+14 argCases introduced
+File created: partArg14cas3op.json
+Successfully wrote to the file partArg14cas3op
+
+resources/partArgInc/partArg4cas7op.dat domain-cases=4 introduced=4 notIntroduced=0 sols: 398 448 51 25 
+4 argCases introduced
+File created: partArg4cas7op.json
+Successfully wrote to the file partArg4cas7op
+
+resources/partArgInc/partArg10cas1op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 398 398 51 51 398 51 51 398 398 448 
+10 argCases introduced
+File created: partArg10cas1op.json
+Successfully wrote to the file partArg10cas1op
+
+resources/partArgInc/partArg19cas0ValPref3op.dat domain-cases=0 introduced=0 notIntroduced=0 sols: 
+0 argCases introduced
+File NOT Translated (Not cases loaded): partArg19cas0ValPref3op
+
+File NOT Translated (EXCEPTION): argCasesFull3op.dat
+
+resources/partArgInc/partArg8cas8op.dat domain-cases=8 introduced=8 notIntroduced=0 sols: 398 51 398 25 51 25 398 398 
+8 argCases introduced
+File created: partArg8cas8op.json
+Successfully wrote to the file partArg8cas8op
+
+resources/partArgInc/partArg10cas3op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 448 448 398 398 398 398 51 448 398 398 
+10 argCases introduced
+File created: partArg10cas3op.json
+Successfully wrote to the file partArg10cas3op
+
+resources/partArgInc/argCases3op.dat domain-cases=19 introduced=19 notIntroduced=0 sols: 448 448 398 398 398 398 51 448 398 398 51 398 398 51 398 51 51 51 51 
+19 argCases introduced
+File created: argCases3op.json
+Successfully wrote to the file argCases3op
+
+resources/partArgInc/partArg10cas8op.dat domain-cases=10 introduced=10 notIntroduced=0 sols: 398 51 398 25 51 25 398 398 448 398 
+10 argCases introduced
+File created: partArg10cas8op.json
+Successfully wrote to the file partArg10cas8op
+
+resources/partArgInc/partArg19cas2ValPref6op.dat domain-cases=21 introduced=21 notIntroduced=0 sols: 25 25 25 25 25 25 25 448 448 25 25 448 25 25 448 398 398 398 448 398 448 
+21 argCases introduced
+File created: partArg19cas2ValPref6op.json
+Successfully wrote to the file partArg19cas2ValPref6op
+
+resources/partArgInc/partArg4cas1op.dat domain-cases=4 introduced=4 notIntroduced=0 sols: 398 398 51 51 
+4 argCases introduced
+File created: partArg4cas1op.json
+Successfully wrote to the file partArg4cas1op
+
+resources/partArgInc/partArg18cas1ValPref2op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 25 25 398 398 51 25 398 51 398 25 25 398 398 398 398 25 25 25 
+18 argCases introduced
+File created: partArg18cas1ValPref2op.json
+Successfully wrote to the file partArg18cas1ValPref2op
+
+resources/partArgInc/partArg18cas4ValPref1op.dat domain-cases=21 introduced=21 notIntroduced=0 sols: 51 51 51 51 51 51 51 398 398 398 398 398 398 398 398 51 398 398 398 25 398 
+21 argCases introduced
+File created: partArg18cas4ValPref1op.json
+Successfully wrote to the file partArg18cas4ValPref1op
+
+resources/partArgInc/partArg6cas8op.dat domain-cases=6 introduced=6 notIntroduced=0 sols: 398 51 398 25 51 25 
+6 argCases introduced
+File created: partArg6cas8op.json
+Successfully wrote to the file partArg6cas8op
+
+resources/partArgInc/partArg0cas8op.dat domain-cases=0 introduced=0 notIntroduced=0 sols: 
+0 argCases introduced
+File NOT Translated (Not cases loaded): partArg0cas8op
+
+resources/partArgInc/partArg19cas2ValPref5op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 51 51 51 51 51 51 51 25 25 25 448 448 448 448 448 448 448 448 448 398 
+20 argCases introduced
+File created: partArg19cas2ValPref5op.json
+Successfully wrote to the file partArg19cas2ValPref5op
+
+resources/partArgInc/partArg18cas2op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 25 25 398 398 51 25 398 51 398 25 25 398 398 398 398 25 25 25 
+18 argCases introduced
+File created: partArg18cas2op.json
+Successfully wrote to the file partArg18cas2op
+
+resources/partArgInc/partArg18cas1ValPref3op.dat domain-cases=14 introduced=14 notIntroduced=0 sols: 448 448 398 398 398 398 51 448 398 398 51 398 398 51 
+14 argCases introduced
+File created: partArg18cas1ValPref3op.json
+Successfully wrote to the file partArg18cas1ValPref3op
+
+resources/partArgInc/partArg8cas2op.dat domain-cases=8 introduced=8 notIntroduced=0 sols: 25 25 398 398 51 25 398 51 
+8 argCases introduced
+File created: partArg8cas2op.json
+Successfully wrote to the file partArg8cas2op
+
+resources/partArgInc/partArg2cas1op.dat domain-cases=2 introduced=2 notIntroduced=0 sols: 398 398 
+2 argCases introduced
+File created: partArg2cas1op.json
+Successfully wrote to the file partArg2cas1op
+
+resources/partArgInc/partArg4cas2op.dat domain-cases=4 introduced=4 notIntroduced=0 sols: 25 25 398 398 
+4 argCases introduced
+File created: partArg4cas2op.json
+Successfully wrote to the file partArg4cas2op
+
+resources/partArgInc/partArg14cas0op.dat domain-cases=14 introduced=14 notIntroduced=0 sols: 448 448 398 51 448 448 51 448 448 51 51 25 51 448 
+14 argCases introduced
+File created: partArg14cas0op.json
+Successfully wrote to the file partArg14cas0op
+
+resources/partArgInc/argCases0op.dat domain-cases=18 introduced=18 notIntroduced=0 sols: 448 448 398 51 448 448 51 448 448 51 51 25 51 448 448 398 51 51 
+18 argCases introduced
+File created: argCases0op.json
+Successfully wrote to the file argCases0op
+
+resources/partArgInc/partArg0cas6op.dat domain-cases=0 introduced=0 notIntroduced=0 sols: 
+0 argCases introduced
+File NOT Translated (Not cases loaded): partArg0cas6op
+
+File NOT Translated (EXCEPTION): argCasesFull6op.dat
+
+resources/partArgInc/partArg19cas0ValPref8op.dat domain-cases=0 introduced=0 notIntroduced=0 sols: 
+0 argCases introduced
+File NOT Translated (Not cases loaded): partArg19cas0ValPref8op
+
+resources/partArgInc/partArg16cas6op.dat domain-cases=16 introduced=16 notIntroduced=0 sols: 25 448 25 25 398 25 25 398 25 448 448 398 25 448 448 25 
+16 argCases introduced
+File created: partArg16cas6op.json
+Successfully wrote to the file partArg16cas6op
+
+File NOT Translated (EXCEPTION): argCasesFull1op.dat
+
+resources/partArgInc/partArg4cas5op.dat domain-cases=4 introduced=4 notIntroduced=0 sols: 448 448 51 448 
+4 argCases introduced
+File created: partArg4cas5op.json
+Successfully wrote to the file partArg4cas5op
+
+resources/partArgInc/partArg19cas2ValPref1op.dat domain-cases=20 introduced=20 notIntroduced=0 sols: 51 51 51 51 51 51 398 398 398 398 398 398 398 51 398 398 398 398 25 398 
+20 argCases introduced
+File created: partArg19cas2ValPref1op.json
+Successfully wrote to the file partArg19cas2ValPref1op
+
+resources/partArgInc/partArg19cas0ValPref4op.dat domain-cases=0 introduced=0 notIntroduced=0 sols: 
+0 argCases introduced
+File NOT Translated (Not cases loaded): partArg19cas0ValPref4op
+
+resources/partArgInc/partArg19cas0ValPref6op.dat domain-cases=0 introduced=0 notIntroduced=0 sols: 
+0 argCases introduced
+File NOT Translated (Not cases loaded): partArg19cas0ValPref6op
+
+resources/partArgInc/partArg8cas6op.dat domain-cases=8 introduced=8 notIntroduced=0 sols: 25 448 25 25 398 25 25 398 
+8 argCases introduced
+File created: partArg8cas6op.json
+Successfully wrote to the file partArg8cas6op
+
+resources/partArgInc/partArg18cas4ValPref5op.dat domain-cases=19 introduced=19 notIntroduced=0 sols: 51 51 51 51 51 51 51 25 25 25 448 448 448 448 448 448 448 448 398 
+19 argCases introduced
+File created: partArg18cas4ValPref5op.json
+Successfully wrote to the file partArg18cas4ValPref5op
+

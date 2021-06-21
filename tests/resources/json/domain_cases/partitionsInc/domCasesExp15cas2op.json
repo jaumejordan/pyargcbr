@@ -1,0 +1,932 @@
+{"domain_case": [
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"No_se_puede_examinar_la_red",
+						"content":"1820"
+					},
+
+					{
+						"id":"48",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"49",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"50",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"51",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"47",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"72",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"35",
+					"description":"comprobar_dominio_y_nombre_de_usuario_comprobar_latiguillo_de_red"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"No_se_puede_examinar_la_red",
+						"content":"1820"
+					},
+
+					{
+						"id":"48",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"49",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"50",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"51",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"47",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"27",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"34",
+					"description":"legal-_comprobar_que_introduce_bien_la_contrasenya_si_continua_sin_acceder_pedir_nombre_de_usuario_y_caducar_la_contrasenya"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"No_se_puede_examinar_la_red",
+						"content":"1820"
+					},
+
+					{
+						"id":"48",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"49",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"50",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"51",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"47",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"27",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"34",
+					"description":"legal-_comprobar_que_introduce_bien_la_contrasenya_si_continua_sin_acceder_pedir_nombre_de_usuario_y_caducar_la_contrasenya"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"No_se_puede_examinar_la_red",
+						"content":"1820"
+					},
+
+					{
+						"id":"48",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"49",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"50",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"51",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"47",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"27",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"34",
+					"description":"legal-_comprobar_que_introduce_bien_la_contrasenya_si_continua_sin_acceder_pedir_nombre_de_usuario_y_caducar_la_contrasenya"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"34",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"448",
+					"description":"fallan_ficheros_habituales_bloqueados_de_sistema_operativo_backup_bueno"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"NT_Client",
+						"content":"56"
+					},
+
+					{
+						"id":"26",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"27",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"28",
+						"name":"()",
+						"content":"cplc_caido"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"4",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"391",
+					"description":"parar_el_proceso_cplc_si_todabia_esta_activo_y_arrancarlo_de_nuevo"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"NT_Client",
+						"content":"56"
+					},
+
+					{
+						"id":"26",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"27",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"28",
+						"name":"()",
+						"content":"cplc_caido"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"4",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"391",
+					"description":"parar_el_proceso_cplc_si_todabia_esta_activo_y_arrancarlo_de_nuevo"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Monitor_en_negro",
+						"content":"2231"
+					},
+
+					{
+						"id":"33",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"34",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"35",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"29",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"30",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"13",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"65",
+					"description":"apagar_el_monitor_desde_el_boton_y_volver_a_encenderlo_pulsar_la_barra_del_espacio_para_reestablecer_la_senyal_de_video"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Monitor_en_negro",
+						"content":"2231"
+					},
+
+					{
+						"id":"33",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"34",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"35",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"29",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"30",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"2",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"33",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Error_mostrado_en_DISPLAY",
+						"content":"1959"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"3",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"20",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"xerox"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"4030"
+					},
+
+					{
+						"id":"7",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"8",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"10",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"101",
+					"description":"la_impresora_en_cuestion_es_una_xerox_4030_estas_impresoras_tras_cambiar_el_toner_es_necesario_en_la_primera_puesta_en_funcionamiento_mantener_presionado_un_boton_pequenyo_tipo_reset_que_existe_al_lado_del_interruptor_de_encendido"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Tras_mirar_Fecha_de_paso_en_la_pantalla__Situacion_de_tarjeta_desde_esta_fecha_hasta_hoy_no_ha_pasado_dos_meses",
+						"content":"1551"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"1"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"51",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"571",
+					"description":"se_indica_al_usuario_que_puede_recibirla_y_que_sino_la_ha_recibido_pasados_los_2_meses_vuelva_a_llamar"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Acreditacion_provisional_mayor_de_3_meses_y_tras_verificar_datos_son_correctos",
+						"content":"1526"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"4"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"313",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"562",
+					"description":"se_deriva_al_centro_de_salud"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Tras_mirar_Fecha_de_paso_en_la_pantalla__Situacion_de_tarjeta_desde_esta_fecha_hasta_hoy_ha_pasado_mas_de_dos_meses",
+						"content":"1550"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"3"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"272",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"572",
+					"description":"se_ha_cambiado_manualmente_el_estado_de_tarjeta_a_d8_distribuida_y_no_recibida"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"No_se_puede_Navegar",
+						"content":"1881"
+					},
+
+					{
+						"id":"39",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"40",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"41",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"2",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"61",
+					"description":"micro-_comprobar_si_navega_por_wwwgvaes_si_navega_por_esta_web_comprobar_si_navega_por_wwwyahoocom_o_cualquier_web_que_no_sea_de_la_gva_si_por_esa_no_navega_le_comunico_que_se_ha_cortado_la_conexion_con_el_exteriror_de_gva_y_que_el_pc_funciona_correctamente_si_continua_sin_funcionar_al_cabo_de_unos_dias_que_lo_verifique_con_sus_companyeros_y_vuelva_a_llamar_si_fuese_necesario"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Hace_ruidos_anormales_al_imprimir",
+						"content":"1957"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"canon"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"bjc_4200"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"29",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	}
+]}

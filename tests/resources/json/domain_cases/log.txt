@@ -1,0 +1,11 @@
+resources/Helpdesk-DomainCasesNew.dat domain-cases=32 introduced=32 notIntroduced=0 sols: 612 612 35 34 391 391 612 34 612 612 612 612 101 91 612 612 34 29 31 73 111 17 448 612 398 398 51 25 51 306 65 33 
+File created: Helpdesk-DomainCasesNew.json
+Successfully wrote to the file Helpdesk-DomainCasesNew
+
+resources/Helpdesk-DomainCasesOrdered.dat domain-cases=48 introduced=48 notIntroduced=0 sols: 612 612 612 612 612 612 612 612 612 612 35 34 34 34 448 398 398 51 25 51 73 111 17 394 394 391 391 65 33 101 31 575 306 568 564 559 561 566 629 570 571 562 572 61 29 91 557 385 
+File created: Helpdesk-DomainCasesOrdered.json
+Successfully wrote to the file Helpdesk-DomainCasesOrdered
+
+resources/Helpdesk-DomainCases.dat domain-cases=48 introduced=48 notIntroduced=0 sols: 570 557 572 566 612 612 385 35 34 629 391 391 571 612 34 612 612 612 612 101 61 91 612 612 568 34 29 31 73 111 17 448 612 398 398 575 51 25 51 394 394 306 65 559 562 33 564 561 
+File created: Helpdesk-DomainCases.json
+Successfully wrote to the file Helpdesk-DomainCases

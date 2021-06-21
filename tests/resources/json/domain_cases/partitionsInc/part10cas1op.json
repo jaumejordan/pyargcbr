@@ -1,0 +1,586 @@
+{"domain_case": [
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_ha_confirmado_averia_con_el_informatico_del_area",
+						"content":"2649"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"bull_compuprint"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"914n"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"55",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"612",
+					"description":"comunicar_incidencia_a_bull_anotar_numero_de_incidencia_para_posibles_reclamaciones"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Tras_mirar_Fecha_de_paso_en_la_pantalla__Situacion_de_tarjeta_desde_esta_fecha_hasta_hoy_ha_pasado_mas_de_dos_meses",
+						"content":"1550"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"3"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"272",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"572",
+					"description":"se_ha_cambiado_manualmente_el_estado_de_tarjeta_a_d8_distribuida_y_no_recibida"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"No_se_puede_Navegar",
+						"content":"1881"
+					},
+
+					{
+						"id":"39",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"40",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"41",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"2",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"61",
+					"description":"micro-_comprobar_si_navega_por_wwwgvaes_si_navega_por_esta_web_comprobar_si_navega_por_wwwyahoocom_o_cualquier_web_que_no_sea_de_la_gva_si_por_esa_no_navega_le_comunico_que_se_ha_cortado_la_conexion_con_el_exteriror_de_gva_y_que_el_pc_funciona_correctamente_si_continua_sin_funcionar_al_cabo_de_unos_dias_que_lo_verifique_con_sus_companyeros_y_vuelva_a_llamar_si_fuese_necesario"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"3",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"398",
+					"description":"revisar_logs_en_el_servidor_y-o_correos_para_comprobar_si_ha_fallado_la_copia_completa_o_solamente_algun_fichero_sin_importancia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Tras_comprobar_todos_los_datos_imprescindibles_para_recibir_la_tarjeta_falta_alguno",
+						"content":"1529"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"40",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"564",
+					"description":"se_han_completado_y_se_ha_comprobado_que_la_situacion_de_tarjeta_cambia_a_p2_o_p1"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_ha_confirmado_averia_con_el_informatico_del_area",
+						"content":"2649"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"bull_compuprint"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"914n"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"55",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"612",
+					"description":"comunicar_incidencia_a_bull_anotar_numero_de_incidencia_para_posibles_reclamaciones"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Tras_mirar_Fecha_de_paso_en_la_pantalla__Situacion_de_tarjeta_desde_esta_fecha_hasta_hoy_no_ha_pasado_dos_meses",
+						"content":"1551"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"1"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"51",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"571",
+					"description":"se_indica_al_usuario_que_puede_recibirla_y_que_sino_la_ha_recibido_pasados_los_2_meses_vuelva_a_llamar"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"51",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Acreditacion_provisional_Menor_de_3_meses",
+						"content":"1528"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"2"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"99",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"559",
+					"description":"se_ha_informado_al_ciudadano_que_tiene_que_esperr_al_cruce_con_la_tesorerira_de_la_ss"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Cliente",
+						"content":"1162"
+					},
+
+					{
+						"id":"66",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"3",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"91",
+					"description":"seguir_el_procedimiento_de_instalacion_explicado_en_la_instruccion_de_trabajo_itaplifc-pcl07005_adjunta_a_esta_solucion"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	}
+]}

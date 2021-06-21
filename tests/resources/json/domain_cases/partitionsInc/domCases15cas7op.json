@@ -1,0 +1,1220 @@
+{"domain_case": [
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Tras_mirar_Fecha_de_paso_en_la_pantalla__Situacion_de_tarjeta_desde_esta_fecha_hasta_hoy_no_ha_pasado_un_mes",
+						"content":"1519"
+					},
+
+					{
+						"id":"67",
+						"name":"()",
+						"content":"0"
+					},
+
+					{
+						"id":"68",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"29",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"575",
+					"description":"se_informa_al_ciudadano_que_debe_esperar"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"51",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"hp"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"laserjet_4000n"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"1",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"25",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Atasco_de_papel",
+						"content":"1942"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"hp"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"2100_tn"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"51",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Unix_Client",
+						"content":"61"
+					},
+
+					{
+						"id":"64",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"26",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"27",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"28",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"63",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"2",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"394",
+					"description":"se_levanta_el_recurso_xmui_con_el_comamdo_correspondiente_de_syop_y_se_revisa_el_log_por_si_aparecen_otros_posibles_problemas_relacionados"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Error_mostrado_en_DISPLAY",
+						"content":"1959"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"3",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"20",
+						"name":"()",
+						"content":"error_50_service"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"canon"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"laser_lbp-83_mark"
+					},
+
+					{
+						"id":"7",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"8",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"10",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"31",
+					"description":"legal-_comunico_la_incidencia_al_proveedor_compruebo_si_esta_en_garantia"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"No_imprime",
+						"content":"1958"
+					},
+
+					{
+						"id":"1",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"8",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"11",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"12",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"13",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"14",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"15",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"16",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"17",
+						"name":"()",
+						"content":"letter"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"22",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"73",
+					"description":"reiniciar_pc_por_si_no_pudo_cargar_los_controladores_de_impresion"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"No_imprime",
+						"content":"1958"
+					},
+
+					{
+						"id":"1",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"laserjet"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"4000"
+					},
+
+					{
+						"id":"8",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"11",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"12",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"13",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"14",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"15",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"16",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"17",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"22",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"111",
+					"description":"desenchufar_impresora_y_volverla_a_enchufar_a_la_corriente_electrica"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"No_imprime",
+						"content":"1958"
+					},
+
+					{
+						"id":"1",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"8",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"11",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"12",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"13",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"14",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"15",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"16",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"17",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"22",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"12",
+				"value":"speed",
+				"conclusion":
+				{
+					"id":"17",
+					"description":"legal-_comprobar_que_esta_en_red_consultando_si_puede_ver_los_directorios_xyw_si_esta_en_red_ir_a_inicio-configuracion-impresoras_pulsar_sobre_la_impresora_que_utiliza_el_boton_derecho_del_raton_comprobar_que_tenga_marcada_la_opcion_configurar_como_predeterminada_y_desmarcada_la_opcion_trabajar_sin_conexion_a_la_red"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"fallo_de_copia_incremental",
+						"content":"2273"
+					},
+
+					{
+						"id":"69",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"79",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"34",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"448",
+					"description":"fallan_ficheros_habituales_bloqueados_de_sistema_operativo_backup_bueno"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Error_mostrado_en_DISPLAY",
+						"content":"1959"
+					},
+
+					{
+						"id":"2",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"3",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"20",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"xerox"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"4030"
+					},
+
+					{
+						"id":"7",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"8",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"10",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"0",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"101",
+					"description":"la_impresora_en_cuestion_es_una_xerox_4030_estas_impresoras_tras_cambiar_el_toner_es_necesario_en_la_primera_puesta_en_funcionamiento_mantener_presionado_un_boton_pequenyo_tipo_reset_que_existe_al_lado_del_interruptor_de_encendido"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"No_se_puede_Navegar",
+						"content":"1881"
+					},
+
+					{
+						"id":"39",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"40",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"41",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"2",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"61",
+					"description":"micro-_comprobar_si_navega_por_wwwgvaes_si_navega_por_esta_web_comprobar_si_navega_por_wwwyahoocom_o_cualquier_web_que_no_sea_de_la_gva_si_por_esa_no_navega_le_comunico_que_se_ha_cortado_la_conexion_con_el_exteriror_de_gva_y_que_el_pc_funciona_correctamente_si_continua_sin_funcionar_al_cabo_de_unos_dias_que_lo_verifique_con_sus_companyeros_y_vuelva_a_llamar_si_fuese_necesario"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Cliente",
+						"content":"1162"
+					},
+
+					{
+						"id":"66",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"3",
+				"value":"quality",
+				"conclusion":
+				{
+					"id":"91",
+					"description":"seguir_el_procedimiento_de_instalacion_explicado_en_la_instruccion_de_trabajo_itaplifc-pcl07005_adjunta_a_esta_solucion"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_ha_confirmado_averia_con_el_informatico_del_area",
+						"content":"2649"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"bull_compuprint"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"914n"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"()"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"no"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"55",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"612",
+					"description":"comunicar_incidencia_a_bull_anotar_numero_de_incidencia_para_posibles_reclamaciones"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	},
+	{
+		"id":"-1",
+		"creation_date":"",
+		"problem":
+		{
+			"context":
+			{
+				"premises":
+				[
+
+					{
+						"id":"0",
+						"name":"Se_ha_confirmado_averia_con_el_informatico_del_area",
+						"content":"2649"
+					},
+
+					{
+						"id":"18",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"19",
+						"name":"()",
+						"content":"no"
+					},
+
+					{
+						"id":"4",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"21",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"5",
+						"name":"()",
+						"content":"bull_compuprint"
+					},
+
+					{
+						"id":"6",
+						"name":"()",
+						"content":"914n"
+					},
+
+					{
+						"id":"23",
+						"name":"()",
+						"content":"si"
+					},
+
+					{
+						"id":"9",
+						"name":"()",
+						"content":"si"
+					}
+				]
+			}
+		},
+
+		"solutions":
+		[
+
+			{
+				"times_used":"55",
+				"value":"savings",
+				"conclusion":
+				{
+					"id":"612",
+					"description":"comunicar_incidencia_a_bull_anotar_numero_de_incidencia_para_posibles_reclamaciones"
+				}
+			}
+		],
+
+		"justification":
+		{
+			"description":""
+		}
+	}
+]}
