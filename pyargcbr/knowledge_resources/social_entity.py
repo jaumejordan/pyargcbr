@@ -27,3 +27,30 @@ class SocialEntity:
             new_norm (Norm): The norm that will be added
         """
         self.norms.append(new_norm)
+
+    def __ne__(self, o) -> bool:
+        """Returns True if the SocialEntity being compared is equal. Otherwise, return False
+        Args:
+            o (SocialEntity): The other SocialEntity
+        """
+        if self.id != o.id:
+            return True
+        elif self.name != o.name:
+            return True
+        elif self.role != o.role:
+            return True
+        elif self.norms != o.norms:
+            return True
+        elif self.valpref != o.valpref:
+            return True
+        else:
+            return False
+
+    def __eq__(self, other):
+        """Returns True if the SocialEntity being compared is different. Otherwise, return False
+        Args:
+            o (SocialEntity): The other SocialEntity
+        """
+        return not self.__ne__(other)
+
+
