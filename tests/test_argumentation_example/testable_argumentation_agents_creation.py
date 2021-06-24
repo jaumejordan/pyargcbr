@@ -63,7 +63,7 @@ def create_empty_argument_cases_partitions(dest_file_names: Union[Set[str], List
             with open(file, "wb") as f:  # This should clean the file
                 pass
         except (FileNotFoundError, FileExistsError) as e:
-            logger.error(e)
+            logger.exception(e)
 
 
 def create_social_entities(base_name: str, n_operators: int, n_experts: int,
