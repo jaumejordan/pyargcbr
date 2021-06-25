@@ -8,7 +8,7 @@ from .problem import Problem
 class Dialogue:
     """Implementation of the concept Dialogue"""
     dialogue_id: str
-    agent_ids = List[str]
+    agent_ids: List[str]
     problem: Problem
 
     def remove_agent_ids(self, agent_id: str) -> bool:

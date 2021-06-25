@@ -1,6 +1,6 @@
 from datetime import datetime
 from random import random
-from typing import List, Dict, Optional, Any, Mapping, Union
+from typing import List, Dict, Optional, Mapping, Union
 
 from loguru import logger
 from spade.agent import Agent
@@ -13,7 +13,7 @@ from .protocol import ADD_POSITION_PERF, \
     ACCEPT_PERF, PERFORMATIVE, CONVERSATION, WHY_PERF, \
     MSG_TIMEOUT, OPEN_DIALOGUE_PERF, MessageCodification as msg_cod, ACCEPTS_PERF, FINISH_DIALOGUE_PERF, \
     ATTACKS_PERF, ASSERTS_PERF
-from ..agents.arg_message import ArgMessage
+from ..agents.arg_message import ArgMessage, create_message
 from ..cbrs.argumentation_cbr import ArgCBR
 from ..cbrs.domain_cbr import DomainCBR
 from ..knowledge_resources.acceptability_status import AcceptabilityStatus
@@ -267,7 +267,8 @@ class ArgAgent(Agent):
             self.positions_generated = False
 
             self.my_used_locutions += 1
-            return self.create_message(self.commitment_store_id, WITHDRAW_DIALOGUE_PERF, self.current_dialogue_id, None)
+            return create_message(self.my_id, self.commitment_store_id, self.name, self.commitment_store_id,
+                                  WITHDRAW_DIALOGUE_PERF, self.current_dialogue_id, None)
 
     def propose(self, pos: Position, dialogue_id: str) -> ArgMessage:
         """Returns a message with the performative ADD_POSITION_PERF and the position proposed
@@ -292,7 +293,8 @@ class ArgAgent(Agent):
             ArgMessage: The message to be sent
         """
         self.my_used_locutions += 1
-        return self.create_message(agent_id, WHY_PERF, self.current_dialogue_id, pos)
+        return create_message(self.my_id, self.commitment_store_id, self.name, agent_id, WHY_PERF,
+                              self.current_dialogue_id, pos)
 
     def no_commit(self, agent_id: str) -> ArgMessage:
         """Returns a message with the performative NO_COMMIT_PERF to challenge the given position
@@ -312,7 +314,8 @@ class ArgAgent(Agent):
         self.current_position = None
         self.current_pos_accepted = 0
         # (the no commit is received also by the Commitment Store)
-        return self.create_message(agent_id, NO_COMMIT_PERF, self.current_dialogue_id, None)
+        return create_message(self.my_id, self.commitment_store_id, self.name, agent_id, NO_COMMIT_PERF,
+                              self.current_dialogue_id, None)
 
     def asserts(self, agent_id: str, arg: Argument) -> ArgMessage:
         """Returns a message with the performative ASSERT_PERF to challenge the given position
@@ -325,7 +328,8 @@ class ArgAgent(Agent):
             ArgMessage: The message to be sent
         """
         self.my_used_locutions += 1
-        return self.create_message(agent_id, ASSERT_PERF, self.current_dialogue_id, arg)
+        return create_message(self.my_id, self.commitment_store_id, self.name, agent_id, ASSERT_PERF,
+                              self.current_dialogue_id, arg)
 
     def accept(self, agent_id: str) -> ArgMessage:
         """Returns a message with the performative ACCEPT_PERF
@@ -338,7 +342,8 @@ class ArgAgent(Agent):
         """
         # Send it to the other agent
         self.my_used_locutions += 1
-        return self.create_message(agent_id, ACCEPT_PERF, self.current_dialogue_id, None)
+        return create_message(self.my_id, self.commitment_store_id, self.name, agent_id, ACCEPT_PERF,
+                              self.current_dialogue_id, None)
 
     def attack(self, agent_id: str, arg: Argument) -> ArgMessage:
         """Returns a message with the performative ATTACK_PERF and an attack argument
@@ -351,7 +356,8 @@ class ArgAgent(Agent):
             ArgMessage: The message to be sent
         """
         self.my_used_locutions += 1
-        return self.create_message(agent_id, ATTACK_PERF, self.current_dialogue_id, arg)
+        return create_message(self.my_id, self.commitment_store_id, self.name, agent_id, ATTACK_PERF,
+                              self.current_dialogue_id, arg)
 
     def get_my_last_used_argument(self, agent_id: str, arg_id: int) -> Optional[Argument]:
         """Returns the last used argument with another specified agent and with the given id
@@ -1006,7 +1012,8 @@ class ArgAgent(Agent):
             The message to be sent
         """
         self.my_used_locutions += 1
-        return self.create_message(self.commitment_store_id, ADD_POSITION_PERF, dialogue_id, None)
+        return create_message(self.my_id, self.commitment_store_id, self.name, self.commitment_store_id,
+                              ADD_POSITION_PERF, dialogue_id, None)
 
     def get_different_positions(self, positions: List[Position]) -> List[Position]:
         """Returns a list of positions that are different from the defended
@@ -1050,7 +1057,8 @@ class ArgAgent(Agent):
             ArgMessage: The message to be sent
         """
         self.my_used_locutions += 1
-        return self.create_message(self.commitment_store_id, ENTER_DIALOGUE_PERF, dialogue_id, None)
+        return create_message(self.my_id, self.commitment_store_id, self.name, self.commitment_store_id,
+                              ENTER_DIALOGUE_PERF, dialogue_id, None)
 
     @staticmethod
     def domain_cases_to_int_ids(domain_cases: List[DomainCase]) -> List[int]:
@@ -1167,44 +1175,6 @@ class ArgAgent(Agent):
                 return index
             index += 1
         return -1
-
-    def create_message(self, agent_id: str, performative: str, dialogue_id: str, content_object: Optional[Any]) -> \
-        ArgMessage:
-        """Creates and returns an message with the given arguments.
-
-        Args:
-            agent_id (str): The agent ID to send the message to
-            performative (str): The performative for the message
-            dialogue_id (str): The dialogue ID
-            content_object (Any): The object to be attached to the message
-
-        Returns:
-            ArgMessage: The message to be sent
-        """
-        msg = ArgMessage()
-        msg.sender = self.my_id
-        msg.to.append(agent_id)
-        if performative == NO_COMMIT_PERF or performative == ASSERT_PERF or performative == ATTACK_PERF:
-            msg.to.append(self.commitment_store_id)
-        msg.set_metadata(CONVERSATION, dialogue_id)
-
-        if '=' in performative:
-            index = performative.index("=")
-            content_agent_id = performative[index + 1:]
-            performative = performative[:index]
-            msg.set_metadata("agent_id", content_agent_id)
-        msg.set_metadata(PERFORMATIVE, performative)
-
-        if content_object:
-            msg.body = msg_cod.pickle_object(content_object)
-
-        receivers_str = ""
-        for receiver in msg.to:
-            receivers_str += receiver[:receiver.index("@")] + " "
-
-        logger.info("{} message to send to: {} | performative: {}", self.name, receivers_str,
-                    msg.get_metadata(PERFORMATIVE))
-        return msg
 
     def do_propose(self, msg: Message) -> bool:
         """
@@ -1425,7 +1395,8 @@ class ArgAgent(Agent):
         Args:
             msg (ArgMessage): Message to send to the Commitment Store with the performative GET_ALL_POSITIONS_PERF
         """
-        msg = self.create_message(self.commitment_store_id, GET_ALL_POSITIONS_PERF, self.current_dialogue_id, None)
+        msg = create_message(self.my_id, self.commitment_store_id, self.name, self.commitment_store_id,
+                             GET_ALL_POSITIONS_PERF, self.current_dialogue_id, None)
 
     def do_get_positions(self, msg: Message):
         """Get the positions of the agents in the dialogue sent by the Commitment Store as an object
@@ -1501,8 +1472,9 @@ class ArgAgent(Agent):
             msg: A message to send with the position defended by the agent
         """
         if self.current_position:
-            msg = self.create_message(self.commitment_store_id, ADD_POSITION_PERF, self.current_dialogue_id,
-                                      self.current_position)
+            msg = create_message(self.my_id, self.commitment_store_id, self.name, self.commitment_store_id,
+                                 ADD_POSITION_PERF, self.current_dialogue_id,
+                                 self.current_position)
         else:
             logger.error("{}: NONE CURRENT POSITION".format(self.my_id))
 
