@@ -1562,7 +1562,7 @@ class ArgAgent(Agent):
 class ArgBehaviour(FSMBehaviour):
     async def send(self, msg: ArgMessage):
         for receiver in msg.to:  # TODO Is this the way to do it?
-            yield await super().send(Message(to=receiver, sender=msg.sender, metadata=msg.metadata, body=msg.body))
+            await super().send(Message(to=receiver, sender=msg.sender, metadata=msg.metadata, body=msg.body))
 
     def __init__(self):
         super().__init__()

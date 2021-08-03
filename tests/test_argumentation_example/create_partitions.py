@@ -16,7 +16,7 @@ here is used because we consider it more appropriate for a Python project
 def create_domain_cases_partitions_incremental(n_cases: int, n_operators: int, cases_per_incremental: int = 5,
                                                original_filepath: str = "../resources/data/domain_cases/Helpdesk"
                                                                         "-DomainCases.dat",
-                                               destination_dir_path: str = "partitionsInc/") -> None:
+                                               destination_dir_path: str = "partitions_inc/") -> None:
     """Creates the data files with the domain-cases serialized as Python Objects
 
     Args:
@@ -50,7 +50,7 @@ def create_argument_cases_partitions_incremental(n_cases: int, n_operators: int,
 def create_domain_cases_partitions_continued(n_cases: int, n_operators: int, cases_per_incremental: int = 5,
                                              original_filepath: str = "../resources/data/domain_cases/Helpdesk"
                                                                       "-DomainCases.dat",
-                                             destination_dir_path: str = "partitionsInc/") -> None:
+                                             destination_dir_path: str = "partitions_inc/") -> None:
     """Creates the data files with the domain-cases serialized as Python Objects
 
     Args:

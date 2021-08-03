@@ -337,9 +337,10 @@ def create_and_launch_argumentation_agents(social_entities: List[SocialEntity], 
                                            dependency_relations: List[List[DependencyRelation]], group: Group,
                                            commitment_store_id: str,
                                            ini_domain_cases_file_path: List[str], fin_domain_cases_file_path: List[str],
-                                           dom_cbr_index: int, dom_cbr_threshold: float, ini_arg_cases_file_path: str,
-                                           fin_arg_cases_file_path: str, wpd: float, wsd: float, wrd: float, wad: float,
-                                           wed: float, wep: float) -> List[ArgAgent]:
+                                           dom_cbr_index: int, dom_cbr_threshold: float,
+                                           ini_arg_cases_file_path: List[str], fin_arg_cases_file_path: List[str],
+                                           wpd: float = 1.0, wsd: float = 1.0, wrd: float = 1.0, wad: float = 1.0,
+                                           wed: float = 1.0, wep: float = 1.0) -> List[ArgAgent]:
     agents: List[ArgAgent] = []
     for entity in social_entities:
         new_agent = ArgAgent(jid="qpid://" + entity.name + "@localhost:8000", password="password",
@@ -349,8 +350,8 @@ def create_and_launch_argumentation_agents(social_entities: List[SocialEntity], 
                              ini_domain_cases_file_path=ini_domain_cases_file_path[entity.id],
                              fin_domain_cases_file_path=fin_domain_cases_file_path[entity.id],
                              dom_cbr_index=dom_cbr_index, dom_cbr_threshold=dom_cbr_threshold,
-                             ini_arg_cases_file_path=ini_arg_cases_file_path,
-                             fin_arg_cases_file_path=fin_arg_cases_file_path,
+                             ini_arg_cases_file_path=ini_arg_cases_file_path[entity.id],
+                             fin_arg_cases_file_path=fin_arg_cases_file_path[entity.id],
                              wpd=wpd, wsd=wsd, wrd=wrd, wad=wad, wed=wed, wep=wep)
         await new_agent.start()
         agents.append(new_agent)

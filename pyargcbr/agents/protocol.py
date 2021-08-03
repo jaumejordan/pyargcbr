@@ -36,6 +36,8 @@ ACCEPTS_PERF = "accepts"
 ATTACKS_PERF = "attack"
 ASSERTS_PERF = "asserts"
 
+SOLUTION_PERF = "SOLUTION"
+
 CONVERSATION = "conversation"
 
 MSG_TIMEOUT = 5
