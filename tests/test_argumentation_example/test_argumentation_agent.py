@@ -5,6 +5,7 @@ from time import sleep
 from typing import List
 
 from loguru import logger
+import pytest
 
 from pyargcbr.agents.commitment_store_agent import CommitmentStore
 from pyargcbr.knowledge_resources.domain_case import DomainCase
@@ -70,20 +71,24 @@ class TestForArgumentationAgents:
                                                              dom_cbr_index=0, dom_cbr_threshold=0.5,
                                                              ini_arg_cases_file_path=self.initial_argument_file_names,
                                                              fin_arg_cases_file_path=self.initial_argument_file_names)
+        self.tester_agent = None
+
+    @pytest.fixture
+    def domain_cbr_setup(self):
         self.tester_agent = TestTriggerAgent(jid="testeragent@localhost", password="secret",
                                              social_entities=self.social_entities, commitment_store_id=self.cs_id,
                                              finish_filename=self.finish_file_name, domain_cases=self.dom_cases_vector,
                                              agents=self.agents)
 
-
-    def run(self):
+    def test_argumentation(self, domain_cbr_setup):
         while True:
             sleep(1.5)
             try:
                 with open(self.finish_file_name, "wr") as f:
                     content = f.read()
                     if content:
+                        assert True
                         break
             except EOFError as e:
                 logger.error(e)
-
+                assert False

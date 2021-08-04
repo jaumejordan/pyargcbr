@@ -1615,7 +1615,7 @@ class EnterState(State):
             await self.send(msg)
             if enter_dialogue:
                 self.next_state(PROPOSE_STATE)
-            else:
+            else:  # Withdraw dialogue
                 self.next_state(OPEN_STATE)
 
 
@@ -1626,6 +1626,7 @@ class DieState(State):
         logger.info("{}: Entering DieState")
 
     async def run(self):
+        # TODO: I suppose this is not actually necessary
         msg = await self.receive(timeout=MSG_TIMEOUT)
         if msg:
             self.agent.do_die()
@@ -1644,7 +1645,7 @@ class ProposeState(State):
             await self.send(msg)
             if propose:
                 self.next_state(CENTRAL_STATE)
-            else:
+            else:  # Withdraw dialogue
                 self.next_state(OPEN_STATE)
 
 
@@ -1668,7 +1669,9 @@ class CentralState(State):
                 self.agent.do_my_position_accepted(msg)
                 self.next_state(CENTRAL_STATE)
         else:
-            self.next_state(CENTRAL_STATE)
+            #self.next_state(CENTRAL_STATE)
+            # TODO: Ensure that this is the correct disposition of transitions
+            self.next_state(QUERY_POSITIONS_STATE)
 
 
 class AssertState(State):
@@ -1687,7 +1690,7 @@ class AssertState(State):
             elif asserts == NO_COMMIT_PERF:
                 self.agent.do_no_commit(msg)
                 self.next_state(PROPOSE_STATE)
-            else:
+            else:  # Already responded
                 self.next_state(CENTRAL_STATE)
 
 
@@ -1723,7 +1726,7 @@ class DefendState(State):
             attack = self.agent.do_attack(msg_to_send, msg, True)
             if attack:
                 self.next_state(WAIT_ATTACK_STATE)
-            else:
+            else:  # No commit
                 self.agent.do_no_commit(msg)
                 self.next_state(PROPOSE_STATE)
 
@@ -1785,6 +1788,7 @@ class GetPositionsState(State):
                 self.next_state(SEND_POSITION_STATE)
             elif performative == GET_ALL_POSITIONS_PERF:
                 self.agent.do_get_positions(msg)
+                self.next_state(WHY_STATE)
             else:
                 self.next_state(CENTRAL_STATE)
 
@@ -1836,7 +1840,7 @@ class AttackState(State):
             attack = self.agent.do_attack(msg_to_send, msg, False)
             if attack:
                 self.next_state(ATTACK2_STATE)
-            else:
+            else:  # No commit; TODO: accept?
                 self.agent.do_no_commit(msg)
                 self.next_state(CENTRAL_STATE)
 
@@ -1856,5 +1860,5 @@ class Attack2State(State):
             elif performative == NO_COMMIT_PERF:
                 self.agent.do_other_no_commit(msg)
                 self.next_state(CENTRAL_STATE)
-            else:
+            else:  # TODO: This happens in all the states: the "timeouts" are bad implemented as "else" clauses
                 self.next_state(CENTRAL_STATE)
