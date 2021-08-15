@@ -278,7 +278,7 @@ class TestTriggerBehaviour(CyclicBehaviour):
         except FileNotFoundError as e:
             logger.exception(e)
 
-    def get_all_positions(self, dialogue_id: str) -> List[Position]:
+    async def get_all_positions(self, dialogue_id: str) -> List[Position]:
         get_pos_msg = create_message(self.agent.my_id, self.agent.commitment_store_id, self.agent.name,
                                      self.agent.commitment_store_id, GET_ALL_POSITIONS_PERF, dialogue_id, None)
         await self.send(get_pos_msg)

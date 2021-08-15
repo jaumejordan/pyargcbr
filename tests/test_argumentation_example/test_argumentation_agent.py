@@ -61,20 +61,21 @@ class TestForArgumentationAgents:
         self.cs_id = "commitment_store@localhost"
         self.cs = CommitmentStore(self.cs_id, "secret")
 
-        self.agents = create_and_launch_argumentation_agents(social_entities=self.social_entities,
-                                                             friends_lists=self.friend_lists,
-                                                             commitment_store_id=self.cs_id,
-                                                             dependency_relations=self.dependency_res_lists,
-                                                             group=self.group,
-                                                             ini_domain_cases_file_path=self.initial_domain_file_names,
-                                                             fin_domain_cases_file_path=self.initial_domain_file_names,
-                                                             dom_cbr_index=0, dom_cbr_threshold=0.5,
-                                                             ini_arg_cases_file_path=self.initial_argument_file_names,
-                                                             fin_arg_cases_file_path=self.initial_argument_file_names)
+        self.agents = None
         self.tester_agent = None
 
     @pytest.fixture
-    def domain_cbr_setup(self):
+    async def test_setup(self):
+        self.agents = await create_and_launch_argumentation_agents(social_entities=self.social_entities,
+                                                     friends_lists=self.friend_lists,
+                                                     commitment_store_id=self.cs_id,
+                                                     dependency_relations=self.dependency_res_lists,
+                                                     group=self.group,
+                                                     ini_domain_cases_file_path=self.initial_domain_file_names,
+                                                     fin_domain_cases_file_path=self.initial_domain_file_names,
+                                                     dom_cbr_index=0, dom_cbr_threshold=0.5,
+                                                     ini_arg_cases_file_path=self.initial_argument_file_names,
+                                                     fin_arg_cases_file_path=self.initial_argument_file_names)
         self.tester_agent = TestTriggerAgent(jid="testeragent@localhost", password="secret",
                                              social_entities=self.social_entities, commitment_store_id=self.cs_id,
                                              finish_filename=self.finish_file_name, domain_cases=self.dom_cases_vector,

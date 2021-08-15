@@ -333,7 +333,7 @@ def create_dependency_relations_from_list(social_entities: List[SocialEntity]) -
     return dependency_relations
 
 
-def create_and_launch_argumentation_agents(social_entities: List[SocialEntity], friends_lists: List[List[SocialEntity]],
+async def create_and_launch_argumentation_agents(social_entities: List[SocialEntity], friends_lists: List[List[SocialEntity]],
                                            dependency_relations: List[List[DependencyRelation]], group: Group,
                                            commitment_store_id: str,
                                            ini_domain_cases_file_path: List[str], fin_domain_cases_file_path: List[str],
